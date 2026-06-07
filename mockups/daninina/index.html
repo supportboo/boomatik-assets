@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Da Ninina · Pizzeria Napoletana · Barcelona</title>
+<meta name="description" content="Pizzería napolitana en Sant Gervasi. Pizza al horno de leña, pasta fresca y dolci della nonna. Reservas en Laforja 134, Barcelona.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,900&family=Italianno&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F5EFE2;
+  --paper-deep: #ECE3CF;
+  --paper-dark: #1F1A14;
+  --ink: #14110D;
+  --ink-soft: #4A3F33;
+  --gold: #C9A962;
+  --gold-deep: #8B7544;
+  --gold-glow: #F0DDA8;
+  --tomato: #B83A1F;
+  --basil: #5C7A48;
+  --line: rgba(20, 17, 13, 0.12);
+  --display: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --script: 'Italianno', cursive;
+  --body: 'Inter', -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--body);
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.55;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  cursor: none;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; background: none; border: none; cursor: pointer; color: inherit; }
+
+/* ============= CUSTOM CURSOR · PIATTO ============= */
+.cursor-plate {
+  position: fixed; top: 0; left: 0;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  background:
+    radial-gradient(circle at 35% 30%, #FFFFFF 0%, #F5EFE2 45%, #E0D6C0 100%);
+  border: 1.5px solid var(--gold);
+  box-shadow:
+    0 0 0 2px rgba(201,169,98,0.16),
+    inset 0 -3px 8px rgba(20,17,13,0.08),
+    inset 0 3px 8px rgba(255,255,255,0.6),
+    0 8px 22px rgba(20,17,13,0.18);
+  transition: width 0.4s cubic-bezier(.2,.8,.2,1), height 0.4s cubic-bezier(.2,.8,.2,1), opacity 0.3s;
+}
+.cursor-plate::before {
+  content: "";
+  position: absolute; inset: 5px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,169,98,0.32);
+  pointer-events: none;
+}
+.cursor-plate .food {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #D14A2C 0%, var(--tomato) 60%, #7A2614 100%);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.4);
+  transition: all 0.4s ease;
+}
+.cursor-plate.hover {
+  width: 60px; height: 60px;
+  border-color: var(--gold-deep);
+}
+.cursor-plate.hover .food {
+  width: 11px; height: 11px;
+}
+.cursor-plate.taste {
+  width: 130px; height: 130px;
+  background: radial-gradient(circle at 35% 30%, #FFFFFF 0%, #F5EFE2 45%, #E0D6C0 100%);
+  border-color: var(--gold);
+}
+.cursor-plate.taste .food {
+  width: 0; height: 0;
+  opacity: 0;
+}
+.cursor-plate.taste::after {
+  content: "buon\Aappetito";
+  white-space: pre; text-align: center;
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--script);
+  font-size: 34px;
+  color: var(--gold-deep);
+  line-height: 0.85;
+  letter-spacing: 0.01em;
+}
+.cursor-plate.flip {
+  width: 80px; height: 80px;
+  border-color: var(--gold-deep);
+}
+.cursor-plate.flip .food { opacity: 0; }
+.cursor-plate.flip::after {
+  content: "← sfoglia →";
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  white-space: nowrap;
+}
+@media (max-width: 900px) {
+  body { cursor: auto; }
+  .cursor-plate { display: none; }
+}
+
+/* ============= NOISE OVERLAY ============= */
+.noise {
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 9997;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.7'/></svg>");
+}
+
+/* ============= DEMO BADGE ============= */
+.demo-badge {
+  position: fixed; top: 14px; right: 14px; z-index: 9999;
+  background: rgba(20, 17, 13, 0.92);
+  color: var(--gold-glow);
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.15em;
+  padding: 8px 14px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+.demo-badge::before {
+  content: "●"; color: var(--tomato); margin-right: 6px;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse { 50% { opacity: 0.3; } }
+
+/* ============= TOP TICKER ============= */
+.top-bar {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 9px 0;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid rgba(201,169,98,0.25);
+}
+.top-bar .marquee { display: flex; gap: 56px; animation: marquee 36s linear infinite; white-space: nowrap; width: max-content; }
+.top-bar .marquee span { display: inline-flex; align-items: center; gap: 14px; color: rgba(245,239,226,0.75); }
+.top-bar .marquee .dot { color: var(--gold); }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ============= NAV ============= */
+header.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(245, 239, 226, 0.86);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  padding: 16px 36px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: padding 0.3s, background 0.3s;
+}
+header.nav.scrolled { padding: 10px 36px; background: rgba(245,239,226,0.95); }
+header.nav .brand { display: flex; align-items: center; gap: 12px; }
+header.nav .brand img { height: 60px; width: auto; transition: height 0.3s; }
+header.nav.scrolled .brand img { height: 44px; }
+header.nav nav { display: flex; gap: 32px; align-items: center; }
+header.nav nav a {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500;
+  color: var(--ink-soft);
+  position: relative;
+  padding: 4px 0;
+}
+header.nav nav a::after {
+  content: ""; position: absolute; bottom: 0; left: 0;
+  width: 0; height: 1px; background: var(--gold);
+  transition: width 0.3s ease;
+}
+header.nav nav a:hover { color: var(--ink); }
+header.nav nav a:hover::after { width: 100%; }
+header.nav .actions { display: flex; gap: 10px; align-items: center; }
+
+.btn {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 13px 22px; border-radius: 0;
+  border: 1px solid var(--ink);
+  background: transparent; color: var(--ink);
+  cursor: none;
+  transition: all .3s cubic-bezier(.2,.8,.2,1);
+  display: inline-flex; align-items: center; gap: 10px;
+  position: relative; overflow: hidden;
+}
+.btn::before {
+  content: ""; position: absolute; inset: 0;
+  background: var(--ink); transform: translateY(101%);
+  transition: transform 0.4s cubic-bezier(.2,.8,.2,1);
+  z-index: -1;
+}
+.btn:hover { color: var(--paper); }
+.btn:hover::before { transform: translateY(0); }
+.btn-gold { border-color: var(--gold); background: var(--gold); color: var(--ink); }
+.btn-gold::before { background: var(--ink); }
+.btn-gold:hover { color: var(--gold-glow); border-color: var(--ink); }
+.btn-ghost { border-color: rgba(245,239,226,0.5); color: var(--paper); }
+.btn-ghost::before { background: var(--gold); }
+.btn-ghost:hover { color: var(--ink); border-color: var(--gold); }
+.btn-lg { padding: 18px 32px; font-size: 12px; }
+.btn .arrow { transition: transform 0.3s; }
+.btn:hover .arrow { transform: translateX(4px); }
+
+/* ============= HERO ============= */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--paper-dark);
+  overflow: hidden;
+  color: var(--paper);
+}
+.hero .left {
+  position: relative; z-index: 3;
+  padding: 80px 60px 80px 80px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.hero .right {
+  position: relative;
+  overflow: hidden;
+}
+.hero .right::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(20,17,13,0.85) 0%, transparent 30%);
+  pointer-events: none;
+}
+.hero .right img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: contrast(1.05) saturate(0.95);
+  transform: scale(1.06);
+  animation: heroZoom 20s ease-in-out infinite alternate;
+}
+@keyframes heroZoom { to { transform: scale(1.16); } }
+
+.hero .meta {
+  display: flex; align-items: center; gap: 14px;
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 40px;
+}
+.hero .meta::before { content: ""; width: 32px; height: 1px; background: var(--gold); }
+
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(72px, 11vw, 168px);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  margin-bottom: 0;
+  font-variation-settings: "opsz" 144;
+}
+.hero h1 .da { font-style: italic; font-weight: 300; opacity: 0.7; display: block; font-size: 0.45em; line-height: 1; margin-bottom: 8px; letter-spacing: 0; }
+.hero h1 .ninina { color: var(--gold-glow); font-style: italic; }
+.hero .script-tag {
+  font-family: var(--script);
+  font-size: clamp(46px, 5vw, 78px);
+  color: var(--gold);
+  line-height: 0.9;
+  margin: -10px 0 20px;
+  display: inline-block;
+  transform: rotate(-3deg);
+  transform-origin: left;
+}
+
+.hero .desc {
+  max-width: 460px;
+  font-size: 16px; line-height: 1.7;
+  color: rgba(245,239,226,0.7);
+  margin: 32px 0 40px;
+}
+
+.hero .actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.hero .corner-info {
+  position: absolute; bottom: 36px; left: 80px;
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: rgba(245,239,226,0.5);
+  display: flex; gap: 32px;
+  z-index: 4;
+}
+.hero .corner-info .dot { color: var(--gold); margin-right: 8px; }
+
+.hero .scroll-line {
+  position: absolute; right: 36px; top: 50%; transform: translateY(-50%);
+  z-index: 4;
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.4em; text-transform: uppercase;
+  color: var(--gold-glow);
+  writing-mode: vertical-rl;
+  display: flex; align-items: center; gap: 14px;
+}
+.hero .scroll-line::after {
+  content: ""; width: 1px; height: 70px;
+  background: linear-gradient(to bottom, var(--gold-glow), transparent);
+  animation: scrollLine 2.5s ease-in-out infinite;
+}
+@keyframes scrollLine {
+  0%, 100% { transform: scaleY(0.4); transform-origin: top; opacity: 0.5; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+
+.hero .ribbon {
+  position: absolute; top: 60px; right: -60px;
+  background: var(--gold);
+  color: var(--ink);
+  padding: 8px 80px;
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  transform: rotate(35deg);
+  z-index: 5;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+/* ============= SECTIONS ============= */
+section { padding: 140px 36px; position: relative; }
+.container { max-width: 1280px; margin: 0 auto; }
+.container-narrow { max-width: 920px; margin: 0 auto; }
+
+.eyebrow {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.4em;
+  text-transform: uppercase; color: var(--gold-deep);
+  margin-bottom: 24px;
+  display: flex; align-items: center; gap: 14px;
+}
+.eyebrow::before { content: ""; width: 32px; height: 1px; background: var(--gold); }
+
+.eyebrow.center { justify-content: center; }
+.eyebrow.center::before { display: none; }
+.eyebrow.center::after { content: ""; width: 32px; height: 1px; background: var(--gold); margin-left: 14px; }
+.eyebrow.center::before { content: ""; display: block; width: 32px; height: 1px; background: var(--gold); margin-right: 14px; }
+
+h2.display {
+  font-family: var(--display);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 1.0; letter-spacing: -0.02em;
+  margin-bottom: 28px;
+  font-variation-settings: "opsz" 144;
+}
+h2.display em { font-style: italic; color: var(--gold-deep); }
+h2.display .ninina-script { font-family: var(--script); font-style: normal; color: var(--gold-deep); font-weight: 400; font-size: 1.2em; vertical-align: -0.05em; }
+
+.lead {
+  font-size: 18px; line-height: 1.7; color: var(--ink-soft);
+  max-width: 640px;
+}
+
+/* ============= MANIFESTO ============= */
+.manifesto {
+  background: var(--paper);
+  text-align: center;
+  padding: 160px 36px 100px;
+  position: relative;
+  overflow: hidden;
+}
+.manifesto::before {
+  content: "Cucina italiana";
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  font-family: var(--display);
+  font-style: italic; font-weight: 300;
+  font-size: clamp(120px, 25vw, 380px);
+  color: rgba(201,169,98,0.06);
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: -0.03em;
+}
+.manifesto > * { position: relative; z-index: 2; }
+.manifesto h2 { max-width: 920px; margin: 0 auto 32px; }
+.manifesto .lead { margin: 0 auto 32px; font-size: 19px; }
+.manifesto .signature {
+  font-family: var(--script); font-size: 64px;
+  color: var(--gold-deep); line-height: 1;
+  margin-top: 36px;
+}
+.manifesto .stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 100px;
+  padding-top: 60px;
+  border-top: 1px solid var(--line);
+}
+.manifesto .stat .num {
+  font-family: var(--display); font-style: italic; font-weight: 400;
+  font-size: clamp(48px, 6vw, 88px);
+  line-height: 1; color: var(--ink);
+  font-variation-settings: "opsz" 144;
+}
+.manifesto .stat .num .small { font-size: 0.5em; color: var(--gold-deep); }
+.manifesto .stat .lbl {
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 12px;
+}
+
+/* ============= LIVE STRIP ============= */
+.live-strip {
+  background: var(--ink); color: var(--paper);
+  padding: 22px 0; overflow: hidden;
+  border-top: 1px solid rgba(201,169,98,0.3);
+  border-bottom: 1px solid rgba(201,169,98,0.3);
+}
+.live-strip .track {
+  display: flex; gap: 64px;
+  animation: marquee 50s linear infinite;
+  white-space: nowrap;
+  font-family: var(--display); font-style: italic;
+  font-weight: 300;
+  font-size: 32px;
+  width: max-content;
+  font-variation-settings: "opsz" 144;
+}
+.live-strip .track span { display: inline-flex; align-items: center; gap: 24px; }
+.live-strip .track .dot { color: var(--gold); font-size: 16px; }
+.live-strip .track .gold { color: var(--gold-glow); }
+
+/* ============= SPECIALTIES (LA COMIDA TIENE VIDA) ============= */
+.specialties {
+  background: var(--paper-dark);
+  color: var(--paper);
+  padding: 160px 36px;
+  position: relative;
+  overflow: hidden;
+}
+.specialties::before {
+  content: "menù"; position: absolute;
+  top: 80px; right: -40px;
+  font-family: var(--display); font-style: italic;
+  font-size: 320px; line-height: 1;
+  color: rgba(201,169,98,0.05);
+  pointer-events: none;
+}
+.specialties .head {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; align-items: end;
+  margin-bottom: 100px;
+}
+.specialties .eyebrow { color: var(--gold-glow); }
+.specialties .eyebrow::before { background: var(--gold); }
+.specialties h2 { color: var(--paper); margin: 0; }
+.specialties .head-text { color: rgba(245,239,226,0.6); font-size: 16px; max-width: 480px; }
+
+.dish-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+.dish-card {
+  position: relative;
+  perspective: 1200px;
+}
+.dish-card .inner {
+  position: relative;
+  display: grid; grid-template-columns: 1.1fr 1fr;
+  gap: 32px; align-items: center;
+  padding: 32px;
+  background: rgba(245,239,226,0.03);
+  border: 1px solid rgba(245,239,226,0.08);
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(.2,.8,.2,1), border-color 0.4s;
+  overflow: hidden;
+}
+.dish-card:hover .inner {
+  border-color: rgba(201,169,98,0.4);
+  background: rgba(201,169,98,0.04);
+}
+.dish-card.tilt-active .inner {
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateZ(0);
+}
+
+/* PHOTO with LIFE */
+.dish-card .photo {
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: visible;
+  transform: translateZ(40px);
+}
+.dish-card .photo .frame {
+  position: relative;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,169,98,0.15) inset;
+  animation: floatIdle 6s ease-in-out infinite;
+}
+.dish-card:nth-child(2) .photo .frame { animation-delay: -2s; }
+.dish-card:nth-child(3) .photo .frame { animation-delay: -4s; }
+.dish-card:nth-child(4) .photo .frame { animation-delay: -1s; }
+@keyframes floatIdle {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-10px) rotate(0.4deg); }
+}
+.dish-card .photo .frame img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1.4s cubic-bezier(.2,.8,.2,1), filter 0.6s;
+  transform: scale(1.05);
+}
+.dish-card:hover .photo .frame img {
+  transform: scale(1.18) rotate(2deg);
+  filter: saturate(1.15) contrast(1.05);
+}
+
+/* GOLD GLOW PULSE */
+.dish-card .photo::before {
+  content: "";
+  position: absolute; inset: -8%;
+  background: radial-gradient(circle, rgba(201,169,98,0.35) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.8s;
+  z-index: -1;
+  filter: blur(20px);
+}
+.dish-card:hover .photo::before { opacity: 1; animation: glowPulse 3s ease-in-out infinite; }
+@keyframes glowPulse { 50% { transform: scale(1.1); opacity: 0.7; } }
+
+/* STEAM */
+.dish-card .steam {
+  position: absolute;
+  top: 8%; left: 50%;
+  width: 80%; height: 70%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+.dish-card:hover .steam { opacity: 0.55; }
+.dish-card .steam span {
+  position: absolute;
+  bottom: 10%;
+  width: 18px; height: 18px;
+  background: radial-gradient(circle, rgba(245,239,226,0.6), transparent 70%);
+  border-radius: 50%;
+  filter: blur(8px);
+  animation: steamRise 4s ease-in infinite;
+}
+.dish-card .steam span:nth-child(1) { left: 18%; animation-delay: 0s; }
+.dish-card .steam span:nth-child(2) { left: 38%; animation-delay: 0.8s; width: 22px; height: 22px; }
+.dish-card .steam span:nth-child(3) { left: 58%; animation-delay: 1.4s; }
+.dish-card .steam span:nth-child(4) { left: 78%; animation-delay: 2s; width: 14px; height: 14px; }
+@keyframes steamRise {
+  0% { bottom: 10%; opacity: 0; transform: scale(0.6); }
+  20% { opacity: 1; }
+  100% { bottom: 95%; opacity: 0; transform: scale(2.2); }
+}
+
+/* PRICE BURST */
+.dish-card .price-burst {
+  position: absolute;
+  top: -8px; right: -8px;
+  width: 84px; height: 84px;
+  background: var(--gold);
+  color: var(--ink);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+  font-family: var(--mono);
+  z-index: 4;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+  animation: spinSlow 30s linear infinite;
+}
+.dish-card .price-burst .euro { font-size: 12px; opacity: 0.6; }
+.dish-card .price-burst .num { font-size: 22px; font-weight: 600; }
+@keyframes spinSlow { to { transform: rotate(360deg); } }
+
+/* TEXT */
+.dish-card .meta {
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+  display: flex; align-items: center; gap: 12px;
+}
+.dish-card .meta .num { color: rgba(245,239,226,0.4); }
+.dish-card h3 {
+  font-family: var(--display); font-style: italic;
+  font-weight: 400;
+  font-size: 32px; line-height: 1.05;
+  color: var(--gold-glow);
+  margin-bottom: 14px;
+  font-variation-settings: "opsz" 144;
+}
+.dish-card p {
+  color: rgba(245,239,226,0.7);
+  font-size: 14px; line-height: 1.65;
+  margin-bottom: 18px;
+}
+.dish-card .ingredients {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.dish-card .ing {
+  font-family: var(--mono); font-size: 9px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(245,239,226,0.5);
+  padding: 5px 10px;
+  border: 1px solid rgba(201,169,98,0.2);
+  border-radius: 999px;
+}
+
+/* INGREDIENT FLOAT */
+.float-ing {
+  position: absolute;
+  font-size: 28px;
+  opacity: 0;
+  transition: opacity 0.6s;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+  z-index: 2;
+}
+.dish-card:hover .float-ing { opacity: 1; animation: floatBy 5s ease-in-out infinite; }
+.float-ing.f1 { top: 12%; left: 8%; animation-delay: 0s; }
+.float-ing.f2 { top: 64%; left: 12%; animation-delay: 1.5s; }
+.float-ing.f3 { top: 22%; right: 8%; animation-delay: 0.7s; }
+@keyframes floatBy {
+  0%, 100% { transform: translate(0,0) rotate(-8deg); }
+  50% { transform: translate(8px, -16px) rotate(8deg); }
+}
+
+/* ============= NUMBERS BIG ============= */
+.numbers-bar {
+  background: var(--paper);
+  padding: 100px 36px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.numbers-bar .grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  max-width: 1100px; margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+.numbers-bar .item .big {
+  font-family: var(--display); font-style: italic;
+  font-weight: 300;
+  font-size: clamp(72px, 9vw, 132px);
+  line-height: 0.9;
+  background: linear-gradient(180deg, var(--ink) 60%, var(--gold-deep) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-variation-settings: "opsz" 144;
+}
+.numbers-bar .item .lbl {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 16px;
+}
+.numbers-bar .item .sub { color: var(--gold-deep); font-family: var(--display); font-style: italic; font-size: 14px; margin-top: 6px; }
+.numbers-bar .divider {
+  width: 1px; height: 80px;
+  background: var(--line);
+  margin: 0 auto;
+}
+
+/* ============= FLIPBOOK 3D REAL ============= */
+.flipbook-wrap {
+  background: linear-gradient(180deg, var(--paper) 0%, var(--paper-deep) 100%);
+  padding: 140px 24px 160px;
+  position: relative;
+  overflow: hidden;
+}
+.flipbook-wrap::before {
+  content: "la carta"; position: absolute;
+  top: 50px; left: 50%; transform: translateX(-50%);
+  font-family: var(--script);
+  font-size: clamp(140px, 24vw, 380px);
+  color: rgba(201,169,98,0.07);
+  pointer-events: none;
+  white-space: nowrap;
+  line-height: 1;
+}
+.flipbook-wrap .head {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+.flipbook-wrap .head h2 { margin: 0 auto 16px; }
+
+.flipbook {
+  position: relative;
+  max-width: 1100px; margin: 0 auto;
+  perspective: 2800px;
+  perspective-origin: 50% 30%;
+}
+
+.book {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/11;
+  background: transparent;
+  transform-style: preserve-3d;
+}
+
+/* Lados fijos del libro (cover frontal y back, visible cuando no hay hojas tapando) */
+.book-side {
+  position: absolute; top: 0; bottom: 0;
+  width: 50%;
+  background: linear-gradient(135deg, var(--paper-dark) 0%, #2A231A 100%);
+  color: var(--paper);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 40px;
+  box-shadow: 0 50px 100px rgba(20,17,13,0.32), 0 30px 60px rgba(20,17,13,0.18);
+}
+.book-side.front { left: 0; z-index: 0; border-radius: 4px 0 0 4px; }
+.book-side.back { right: 0; z-index: 0; border-radius: 0 4px 4px 0; }
+.book-side::before {
+  content: ""; position: absolute; inset: 24px;
+  border: 1px solid rgba(201,169,98,0.4);
+  pointer-events: none;
+}
+.book-side .deco {
+  font-family: var(--mono); font-size: 9px;
+  letter-spacing: 0.4em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 28px;
+}
+.book-side .logo-img { width: 180px; margin-bottom: 16px; filter: drop-shadow(0 0 28px rgba(201,169,98,0.4)); }
+.book-side .ttl {
+  font-family: var(--script); font-size: 84px; line-height: 0.9;
+  color: var(--gold-glow); margin-bottom: 8px;
+}
+.book-side .sub {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.45em; text-transform: uppercase;
+  color: var(--gold);
+}
+.book-side.back .ttl { font-size: 64px; margin-bottom: 16px; }
+.book-side .quote {
+  margin-top: 36px; max-width: 280px;
+  font-family: var(--display); font-style: italic;
+  font-size: 15px; color: rgba(245,239,226,0.65);
+  line-height: 1.6;
+  font-variation-settings: "opsz" 14;
+}
+.book-side .foot {
+  position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%);
+  font-family: var(--mono); font-size: 9px;
+  letter-spacing: 0.4em; color: rgba(245,239,226,0.4);
+  white-space: nowrap;
+}
+
+/* Lomo del libro */
+.book-spine {
+  position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 16px; transform: translateX(-50%);
+  background: linear-gradient(90deg,
+    rgba(20,17,13,0.32) 0%,
+    rgba(20,17,13,0.06) 50%,
+    rgba(20,17,13,0.32) 100%);
+  z-index: 12; pointer-events: none;
+}
+
+/* Stack de hojas en lado derecho */
+.leaves {
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 50%;
+  transform-style: preserve-3d;
+}
+
+.leaf {
+  position: absolute; inset: 0;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: transform 1.1s cubic-bezier(.55, 0, .15, 1);
+}
+.leaf.flipped { transform: rotateY(-180deg); }
+
+.face {
+  position: absolute; inset: 0;
+  background: var(--paper);
+  padding: 50px 48px 70px;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow:
+    inset 0 0 0 1px rgba(201,169,98,0.12),
+    inset 12px 0 24px -16px rgba(20,17,13,0.18);
+  background-image:
+    radial-gradient(circle at 100% 0%, rgba(201,169,98,0.05) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(201,169,98,0.04) 0%, transparent 50%);
+}
+.face.front { transform: rotateY(0deg); }
+.face.back {
+  transform: rotateY(180deg);
+  box-shadow:
+    inset 0 0 0 1px rgba(201,169,98,0.12),
+    inset -12px 0 24px -16px rgba(20,17,13,0.18);
+  background-image:
+    radial-gradient(circle at 0% 0%, rgba(201,169,98,0.05) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(201,169,98,0.04) 0%, transparent 50%);
+}
+
+/* Sombra en el borde de la hoja al voltearse */
+.leaf::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(20,17,13,0.25) 0%, transparent 12%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.1s;
+}
+.leaf.flipping::after { opacity: 1; }
+
+.page-eyebrow {
+  font-family: var(--mono); font-size: 9px;
+  letter-spacing: 0.4em; text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 12px;
+}
+.page-title {
+  font-family: var(--display); font-style: italic;
+  font-weight: 300;
+  font-size: clamp(32px, 3.6vw, 48px);
+  line-height: 0.95;
+  margin-bottom: 26px;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+  font-variation-settings: "opsz" 144;
+  display: flex; align-items: baseline; gap: 16px;
+}
+.page-title em { color: var(--gold-deep); font-style: italic; }
+.page-title::after {
+  content: ""; flex: 1; height: 1px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  align-self: center;
+}
+
+.page-section + .page-section { margin-top: 26px; }
+.page-section h4 {
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.page-section h4::before { content: "✦"; color: var(--gold); }
+
+.dish-line {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 14px;
+  padding: 7px 0;
+  border-bottom: 1px dotted rgba(20,17,13,0.12);
+}
+.dish-line:last-child { border-bottom: none; }
+.dish-line .name {
+  font-family: var(--display); font-size: 14.5px;
+  font-weight: 500; color: var(--ink);
+  font-variation-settings: "opsz" 14;
+}
+.dish-line .price {
+  font-family: var(--mono); font-size: 11.5px;
+  font-weight: 500; color: var(--gold-deep);
+  white-space: nowrap;
+}
+.dish-line .desc {
+  grid-column: 1 / -1;
+  font-size: 11px; color: var(--ink-soft);
+  line-height: 1.45;
+  font-style: italic;
+}
+.dish-line.featured .name::before {
+  content: "★"; color: var(--gold); margin-right: 5px; font-size: 9px;
+}
+
+.page-num {
+  position: absolute; bottom: 22px;
+  font-family: var(--mono); font-size: 9px;
+  letter-spacing: 0.3em; color: var(--ink-soft);
+}
+.face.front .page-num { right: 48px; }
+.face.back .page-num { left: 48px; }
+
+.wine-table {
+  display: grid; grid-template-columns: 1fr 60px 50px;
+  gap: 8px;
+  padding: 7px 0;
+  border-bottom: 1px dotted rgba(20,17,13,0.12);
+  align-items: baseline;
+}
+.wine-table.hd { border-bottom: 1px solid var(--ink); padding-bottom: 4px; margin-bottom: 4px; }
+.wine-table.hd > * { font-family: var(--mono); font-size: 8px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-soft); }
+.wine-table .nm { font-family: var(--display); font-size: 13px; font-variation-settings: "opsz" 14; }
+.wine-table .px { font-family: var(--mono); font-size: 11px; color: var(--gold-deep); text-align: right; }
+.wine-table .desc { grid-column: 1 / -1; font-size: 10.5px; color: var(--ink-soft); font-style: italic; line-height: 1.45; padding-bottom: 2px; }
+
+/* CONTROLES */
+.book-controls {
+  display: flex; align-items: center; justify-content: center;
+  gap: 24px; margin-top: 50px;
+}
+.book-btn {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  background: var(--paper);
+  transition: all 0.35s cubic-bezier(.2,.8,.2,1);
+  font-size: 20px;
+  color: var(--ink);
+}
+.book-btn:hover:not(:disabled) {
+  background: var(--ink); color: var(--gold-glow);
+  border-color: var(--ink); transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(20,17,13,0.18);
+}
+.book-btn:disabled { opacity: 0.25; cursor: default; }
+.book-counter {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--ink-soft);
+  min-width: 90px; text-align: center;
+}
+.book-counter strong { color: var(--gold-deep); font-family: var(--display); font-style: italic; font-size: 22px; vertical-align: -3px; font-variation-settings: "opsz" 14; }
+
+.book-dots {
+  display: flex; gap: 10px;
+  justify-content: center;
+  margin-top: 22px;
+}
+.book-dots button {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--line);
+  transition: all 0.3s;
+  border: none; padding: 0; cursor: pointer;
+}
+.book-dots button.active { background: var(--gold); transform: scale(1.5); }
+.book-dots button:hover { background: var(--gold-deep); }
+
+/* ============= GALLERY ============= */
+.gallery {
+  background: var(--paper);
+  padding: 100px 0;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.gallery .head { text-align: center; padding: 0 36px; margin-bottom: 70px; }
+.marquee-row {
+  display: flex; gap: 18px;
+  animation: scrollX 70s linear infinite;
+  width: max-content;
+  align-items: center;
+}
+.marquee-row.reverse { animation: scrollX 60s linear infinite reverse; margin-top: 18px; }
+.marquee-row .item { position: relative; flex-shrink: 0; }
+.marquee-row .item::after {
+  content: attr(data-cap); position: absolute; bottom: 14px; left: 14px;
+  font-family: var(--mono); font-size: 9px;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--paper);
+  background: rgba(20,17,13,0.7);
+  padding: 5px 10px;
+  backdrop-filter: blur(6px);
+}
+.marquee-row img {
+  height: 320px; width: auto;
+  object-fit: cover;
+  filter: saturate(0.95);
+  transition: transform 0.6s, filter 0.6s;
+}
+.marquee-row .item:hover img { transform: scale(1.04); filter: saturate(1.1); }
+@keyframes scrollX {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ============= REVIEWS ============= */
+.reviews {
+  background: var(--paper-deep);
+  padding: 160px 36px;
+  position: relative;
+  overflow: hidden;
+}
+.reviews .head { text-align: center; max-width: 760px; margin: 0 auto 80px; }
+.reviews .head h2 { margin: 0 auto 16px; }
+
+.rating-hero {
+  display: flex; align-items: center; justify-content: center;
+  gap: 32px; margin: 0 auto 40px;
+  flex-wrap: wrap;
+}
+.rating-block { text-align: center; }
+.rating-block .num {
+  font-family: var(--display); font-style: italic;
+  font-size: 96px; line-height: 1;
+  color: var(--gold-deep);
+  font-variation-settings: "opsz" 144;
+}
+.rating-block .stars { color: var(--gold); font-size: 16px; letter-spacing: 0.2em; margin: 8px 0; }
+.rating-block .src {
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.rating-divider { width: 1px; height: 100px; background: var(--line); }
+
+.reviews-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px; max-width: 1240px; margin: 0 auto;
+}
+.review {
+  background: var(--paper);
+  padding: 36px 32px;
+  border: 1px solid var(--line);
+  position: relative;
+  transition: transform 0.4s, box-shadow 0.4s;
+  display: flex; flex-direction: column;
+}
+.review:hover { transform: translateY(-6px); box-shadow: 0 30px 60px rgba(20,17,13,0.12); }
+.review .platform {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 9px;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 16px;
+}
+.review .platform .ico {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink);
+  font-family: var(--display); font-style: italic;
+  font-size: 10px; font-weight: 700;
+}
+.review .stars {
+  color: var(--gold); font-size: 13px; letter-spacing: 0.18em;
+  margin-bottom: 16px;
+}
+.review .quote {
+  font-family: var(--display); font-style: italic;
+  font-weight: 400;
+  font-size: 17px; line-height: 1.55;
+  color: var(--ink);
+  margin-bottom: 24px;
+  flex: 1;
+  font-variation-settings: "opsz" 14;
+}
+.review .quote::first-letter { color: var(--gold-deep); font-size: 1.4em; font-weight: 600; }
+.review .author {
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-soft);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.review .author strong { color: var(--ink); font-weight: 600; }
+
+.review-distrib {
+  margin-top: 60px; max-width: 480px;
+  margin-left: auto; margin-right: auto;
+  font-family: var(--mono); font-size: 11px;
+}
+.review-distrib .row {
+  display: grid; grid-template-columns: 60px 1fr 50px;
+  gap: 14px; align-items: center;
+  padding: 4px 0;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.review-distrib .bar {
+  height: 4px; background: var(--line); position: relative; border-radius: 2px;
+  overflow: hidden;
+}
+.review-distrib .bar::after {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0;
+  background: var(--gold);
+  width: var(--w, 0%);
+  transform-origin: left;
+  animation: barFill 1.6s ease-out forwards;
+  transform: scaleX(0);
+}
+@keyframes barFill { to { transform: scaleX(1); } }
+
+/* ============= RESERVATION ============= */
+.reservation {
+  background: var(--paper-dark); color: var(--paper);
+  padding: 160px 36px;
+  position: relative;
+  overflow: hidden;
+}
+.reservation::before {
+  content: "Buon appetito";
+  position: absolute; top: 30%; left: -2%;
+  font-family: var(--script);
+  font-size: clamp(160px, 24vw, 360px);
+  color: rgba(201,169,98,0.07);
+  pointer-events: none;
+  white-space: nowrap;
+  line-height: 1;
+}
+.reservation .container {
+  position: relative;
+  display: grid; grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px; align-items: center;
+}
+.reservation .text .eyebrow { color: var(--gold-glow); }
+.reservation .text .eyebrow::before { background: var(--gold); }
+.reservation h2 { color: var(--paper); margin-bottom: 28px; }
+.reservation .lead { color: rgba(245,239,226,0.7); font-size: 18px; max-width: 100%; margin-bottom: 36px; }
+.reservation .info-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+  margin: 36px 0;
+  padding: 28px 0;
+  border-top: 1px solid rgba(240,221,168,0.18);
+  border-bottom: 1px solid rgba(240,221,168,0.18);
+}
+.reservation .info-grid div { display: flex; flex-direction: column; gap: 6px; }
+.reservation .info-grid .label {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.35em;
+  text-transform: uppercase; color: var(--gold);
+}
+.reservation .info-grid .value { font-family: var(--display); font-size: 26px; color: var(--paper); font-style: italic; font-variation-settings: "opsz" 14; }
+.reservation .info-grid .small { font-family: var(--mono); font-size: 11px; color: rgba(245,239,226,0.5); letter-spacing: 0.05em; }
+.reservation .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.reservation .visual {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+}
+.reservation .visual img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s; }
+.reservation .visual:hover img { transform: scale(1.06); }
+.reservation .visual::after {
+  content: "Laforja, 134";
+  position: absolute; bottom: 28px; left: 28px;
+  font-family: var(--script);
+  font-size: 56px; color: var(--gold-glow);
+  text-shadow: 0 4px 24px rgba(0,0,0,0.7);
+  line-height: 1;
+}
+.reservation .visual::before {
+  content: "Sant Gervasi · BCN"; position: absolute; top: 28px; right: 28px;
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold-glow);
+  background: rgba(20,17,13,0.6);
+  padding: 8px 14px;
+  backdrop-filter: blur(8px);
+  z-index: 2;
+}
+
+/* ============= HOURS ============= */
+.hours {
+  background: var(--paper);
+  padding: 140px 36px;
+}
+.hours .container {
+  display: grid; grid-template-columns: 1fr 1.4fr;
+  gap: 80px; align-items: start;
+}
+.hours h2 { margin-bottom: 16px; }
+.hours-table {
+  font-family: var(--display); font-size: 19px;
+  font-variation-settings: "opsz" 14;
+}
+.hours-table .row {
+  display: grid; grid-template-columns: 160px 1fr;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+.hours-table .row:last-child { border-bottom: none; }
+.hours-table .day { font-style: italic; color: var(--gold-deep); font-weight: 500; }
+.hours-table .schedule { font-family: var(--mono); font-size: 13px; color: var(--ink); letter-spacing: 0.05em; }
+.hours-table .row.closed .schedule { color: var(--tomato); font-style: italic; }
+
+/* ============= MAP ============= */
+.map-section { padding: 0; height: 520px; position: relative; background: var(--ink); }
+.map-section iframe { width: 100%; height: 100%; border: 0; filter: grayscale(0.5) contrast(0.95); }
+.map-overlay {
+  position: absolute; top: 50%; left: 36px; transform: translateY(-50%);
+  background: var(--paper); padding: 40px 36px;
+  max-width: 400px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+  z-index: 5;
+  border-left: 3px solid var(--gold);
+}
+.map-overlay h3 {
+  font-family: var(--display); font-style: italic;
+  font-size: 36px; font-weight: 400; margin-bottom: 18px;
+  font-variation-settings: "opsz" 144;
+}
+.map-overlay p { font-size: 14px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 24px; }
+.map-overlay .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* ============= FOOTER ============= */
+footer {
+  background: var(--ink); color: var(--paper);
+  padding: 120px 36px 40px;
+  position: relative;
+  overflow: hidden;
+}
+footer::before {
+  content: "Da Ninina";
+  position: absolute; bottom: -60px; left: 50%; transform: translateX(-50%);
+  font-family: var(--display); font-style: italic;
+  font-size: clamp(160px, 22vw, 320px);
+  color: rgba(201,169,98,0.06);
+  white-space: nowrap;
+  letter-spacing: -0.03em;
+  pointer-events: none;
+}
+footer .container { position: relative; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 60px; }
+footer .brand-block img { height: 110px; margin-bottom: 22px; filter: brightness(1.1); }
+footer .brand-block p { font-size: 14px; color: rgba(245,239,226,0.6); line-height: 1.7; max-width: 340px; }
+footer .col h4 {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 22px;
+}
+footer .col ul { list-style: none; }
+footer .col li { padding: 7px 0; font-size: 14px; color: rgba(245,239,226,0.78); }
+footer .col li a { transition: color 0.3s; }
+footer .col li a:hover { color: var(--gold-glow); }
+footer .col li.line { display: flex; gap: 10px; align-items: baseline; }
+footer .col li.line .day { color: var(--gold-glow); font-family: var(--display); font-style: italic; min-width: 78px; font-variation-settings: "opsz" 14; }
+footer .col li.line .time { font-family: var(--mono); font-size: 12px; }
+
+footer .bottom {
+  margin-top: 100px; padding-top: 30px;
+  border-top: 1px solid rgba(240,221,168,0.15);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 14px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: rgba(245,239,226,0.4);
+  position: relative; z-index: 2;
+}
+footer .bottom a { color: var(--gold); }
+
+/* ============= ANIMATIONS ============= */
+.fade-up { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
+.fade-up.in { opacity: 1; transform: translateY(0); }
+.reveal-text {
+  display: inline-block; overflow: hidden;
+}
+.reveal-text > span {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 1s cubic-bezier(.2,.8,.2,1);
+}
+.reveal-text.in > span { transform: translateY(0); }
+
+/* ============= RESPONSIVE ============= */
+@media (max-width: 960px) {
+  section { padding: 90px 22px; }
+  header.nav { padding: 12px 18px; }
+  header.nav nav { display: none; }
+  header.nav .brand img { height: 46px; }
+  .top-bar { font-size: 10px; padding: 7px 0; }
+  .hero { grid-template-columns: 1fr; min-height: 100vh; }
+  .hero .left { padding: 80px 28px 220px; }
+  .hero .right { position: absolute; inset: 0; z-index: 1; opacity: 0.45; }
+  .hero .left { position: relative; z-index: 3; }
+  .hero .corner-info { left: 28px; bottom: 24px; gap: 18px; flex-direction: column; }
+  .hero .scroll-line { display: none; }
+  .hero .ribbon { font-size: 10px; padding: 6px 60px; right: -50px; top: 40px; }
+  .specialties .head { grid-template-columns: 1fr; gap: 24px; }
+  .dish-grid { grid-template-columns: 1fr; gap: 30px; }
+  .dish-card .inner { grid-template-columns: 1fr; gap: 24px; padding: 24px; }
+  .dish-card .photo { aspect-ratio: 1/1; max-width: 280px; margin: 0 auto; }
+  .numbers-bar .grid { grid-template-columns: 1fr; gap: 30px; }
+  .numbers-bar .divider { display: none; }
+  .manifesto .stats { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  .flipbook .book { aspect-ratio: 9/13; }
+  .book-side, .leaves { width: 100%; }
+  .book-side.front { display: none; }
+  .leaves { right: 0; left: 0; }
+  .face { padding: 28px 22px 50px; }
+  .page-title { font-size: 26px; margin-bottom: 20px; }
+  .book-spine { display: none; }
+  .leaf { transform-origin: center center; }
+  .leaf.flipped { transform: rotateY(-180deg); }
+  .face .page-num { font-size: 8px; bottom: 16px; }
+  .face.front .page-num { right: 22px; }
+  .face.back .page-num { left: 22px; }
+  .reservation .container { grid-template-columns: 1fr; gap: 40px; }
+  .hours .container { grid-template-columns: 1fr; gap: 32px; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .map-section { height: auto; min-height: 600px; padding: 60px 22px; display: flex; align-items: center; }
+  .map-overlay { position: static; transform: none; max-width: 100%; }
+  .map-section iframe { display: none; }
+  footer .container { grid-template-columns: 1fr; gap: 36px; }
+  footer { padding: 80px 22px 30px; }
+}
+@media (max-width: 480px) {
+  .demo-badge { font-size: 9px; padding: 6px 10px; }
+  .live-strip .track { font-size: 22px; gap: 36px; }
+  h2.display { font-size: clamp(38px, 9vw, 56px); }
+}
+</style>
+</head>
+<body>
+
+<div class="cursor-plate"><div class="food"></div></div>
+<div class="noise"></div>
+<div class="demo-badge">DEMO MOCKUP · Powered by Boomatik</div>
+
+<!-- TOP TICKER -->
+<div class="top-bar">
+  <div class="marquee">
+    <span><span class="dot">●</span> Forno a legna acceso</span>
+    <span><span class="dot">●</span> Reservas 699 56 19 06</span>
+    <span><span class="dot">●</span> Carrer de Laforja 134 · Sant Gervasi · Barcelona</span>
+    <span><span class="dot">●</span> Cucina italiana di casa dal 2023</span>
+    <span><span class="dot">●</span> Mozzarella di bufala D.O.P.</span>
+    <span><span class="dot">●</span> Pasta fatta in casa</span>
+    <span><span class="dot">●</span> Forno a legna acceso</span>
+    <span><span class="dot">●</span> Reservas 699 56 19 06</span>
+    <span><span class="dot">●</span> Carrer de Laforja 134 · Sant Gervasi · Barcelona</span>
+    <span><span class="dot">●</span> Cucina italiana di casa dal 2023</span>
+    <span><span class="dot">●</span> Mozzarella di bufala D.O.P.</span>
+    <span><span class="dot">●</span> Pasta fatta in casa</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a href="#" class="brand">
+    <img src="assets/logo_dorado_-_copia.png" alt="Da Ninina">
+  </a>
+  <nav>
+    <a href="#storia">Storia</a>
+    <a href="#specialita">Specialità</a>
+    <a href="#carta">La Carta</a>
+    <a href="#reseñas">Reseñas</a>
+    <a href="#reserva">Reservar</a>
+  </nav>
+  <div class="actions">
+    <a href="tel:699561906" class="btn">Llamar</a>
+    <a href="#reserva" class="btn btn-gold">Reservar</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="left">
+    <div class="meta">EST · 2023 · BARCELONA</div>
+    <h1>
+      <span class="da">Pizzeria · ristorante</span>
+      <span class="ninina">Da Ninina</span>
+    </h1>
+    <div class="script-tag">cucina napoletana</div>
+    <p class="desc">Pizza al horno de leña, pasta fresca y los postres de la nonna. En el corazón de Sant Gervasi, una trattoria que hace lo que sabe hacer y lo hace despacio.</p>
+    <div class="actions">
+      <a href="#reserva" class="btn btn-gold btn-lg">Reservar mesa <span class="arrow">→</span></a>
+      <a href="#carta" class="btn btn-ghost btn-lg">Abrir la carta</a>
+    </div>
+  </div>
+  <div class="right">
+    <img src="assets/_C1A3191.webp" alt="Interior Da Ninina">
+    <div class="ribbon">9.4/10 · TheFork</div>
+  </div>
+  <div class="corner-info">
+    <span><span class="dot">●</span> Carrer de Laforja, 134</span>
+    <span><span class="dot">●</span> Mar – Dom · 13:00 – 23:30</span>
+    <span><span class="dot">●</span> @daninina_bcn</span>
+  </div>
+  <div class="scroll-line">scorri ↓</div>
+</section>
+
+<!-- LIVE STRIP -->
+<div class="live-strip">
+  <div class="track">
+    <span><em>Forno a legna</em><span class="dot">●</span></span>
+    <span><span class="gold">Pizza napoletana</span><span class="dot">●</span></span>
+    <span><em>Pasta fatta in casa</em><span class="dot">●</span></span>
+    <span><span class="gold">Mozzarella di bufala D.O.P.</span><span class="dot">●</span></span>
+    <span><em>Tartufo nero</em><span class="dot">●</span></span>
+    <span><span class="gold">Vini italiani</span><span class="dot">●</span></span>
+    <span><em>Tiramisù della nonna</em><span class="dot">●</span></span>
+    <span><em>Forno a legna</em><span class="dot">●</span></span>
+    <span><span class="gold">Pizza napoletana</span><span class="dot">●</span></span>
+    <span><em>Pasta fatta in casa</em><span class="dot">●</span></span>
+    <span><span class="gold">Mozzarella di bufala D.O.P.</span><span class="dot">●</span></span>
+    <span><em>Tartufo nero</em><span class="dot">●</span></span>
+    <span><span class="gold">Vini italiani</span><span class="dot">●</span></span>
+    <span><em>Tiramisù della nonna</em><span class="dot">●</span></span>
+  </div>
+</div>
+
+<!-- MANIFESTO -->
+<section class="manifesto" id="storia">
+  <div class="container-narrow">
+    <div class="eyebrow center">La nostra storia · da casa nostra</div>
+    <h2 class="display">Una <em>trattoria napolitana</em><br>que late en <span class="ninina-script">Sant Gervasi</span></h2>
+    <p class="lead">Trajimos a Barcelona la masa madre de la pizza, la receta del ragú boloñés que cocía durante seis horas en casa de la nonna y el rito de cenar despacio, con vino, pan caliente y sobremesa larga. Cada plato sale del horno como saldría en cualquier mesa de Nápoles. Sin atajos, sin filtros, sin prisa.</p>
+    <div class="signature">— famiglia Ninina</div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="num">9.4<span class="small">/10</span></div>
+        <div class="lbl">TheFork verified</div>
+      </div>
+      <div class="stat">
+        <div class="num">+60</div>
+        <div class="lbl">Platos en carta</div>
+      </div>
+      <div class="stat">
+        <div class="num">100<span class="small">%</span></div>
+        <div class="lbl">Cocina italiana</div>
+      </div>
+      <div class="stat">
+        <div class="num">450<span class="small">°C</span></div>
+        <div class="lbl">Forno a legna</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALTIES (LA COMIDA TIENE VIDA) -->
+<section class="specialties" id="specialita">
+  <div class="container">
+    <div class="head">
+      <div>
+        <div class="eyebrow">Le nostre specialità</div>
+        <h2 class="display"><em>Los platos</em><br>que nos hacen volver.</h2>
+      </div>
+      <div class="head-text">Cuatro firmas de la casa. Receta original, ingredientes traídos de Italia, ejecución diaria. Pasa el cursor sobre cada plato — sí, también huele.</div>
+    </div>
+
+    <div class="dish-grid">
+      <article class="dish-card" data-tilt>
+        <div class="inner">
+          <div class="photo">
+            <div class="frame"><img src="assets/_C1A3705-2.webp" alt="Pizza Mortadella e Pistacchio"></div>
+            <div class="steam"><span></span><span></span><span></span><span></span></div>
+            <div class="float-ing f1">🌿</div>
+            <div class="float-ing f2">🧀</div>
+            <div class="float-ing f3">🌰</div>
+            <div class="price-burst"><span class="euro">€</span><span class="num">17,90</span></div>
+          </div>
+          <div class="info">
+            <div class="meta"><span class="num">01</span> · Pizza dal forno · 450°C</div>
+            <h3>Mortadella e<br>Pistacchio</h3>
+            <p>Base de pesto genovés, mozzarella, burrata cremosa, pesto de pistacho, mortadella italiana y escamas de parmesano D.O.P. La pizza que más se pide y la que mejor cuenta lo que somos.</p>
+            <div class="ingredients">
+              <span class="ing">Burrata Pugliese</span>
+              <span class="ing">Pistacho di Bronte</span>
+              <span class="ing">Parmesano 36m</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="dish-card" data-tilt>
+        <div class="inner">
+          <div class="photo">
+            <div class="frame"><img src="assets/_C1A3721.webp" alt="Lasagna Ninina"></div>
+            <div class="steam"><span></span><span></span><span></span><span></span></div>
+            <div class="float-ing f1">🍅</div>
+            <div class="float-ing f2">🌿</div>
+            <div class="float-ing f3">🧄</div>
+            <div class="price-burst"><span class="euro">€</span><span class="num">13,90</span></div>
+          </div>
+          <div class="info">
+            <div class="meta"><span class="num">02</span> · Pasta al forno · 6h cottura</div>
+            <h3>Lasagna<br>Ninina</h3>
+            <p>Lasaña de pasta fresca con ragú boloñés tradicional, cocido a fuego lento durante horas. Acabada al horno con corteza dorada de parmesano. Sabe a domingo en familia.</p>
+            <div class="ingredients">
+              <span class="ing">Ragù bolognese</span>
+              <span class="ing">Pasta fresca</span>
+              <span class="ing">Parmigiano</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="dish-card" data-tilt>
+        <div class="inner">
+          <div class="photo">
+            <div class="frame"><img src="assets/_C1A3719.webp" alt="Parmigiana di Melanzane"></div>
+            <div class="steam"><span></span><span></span><span></span><span></span></div>
+            <div class="float-ing f1">🍆</div>
+            <div class="float-ing f2">🌿</div>
+            <div class="float-ing f3">🧀</div>
+            <div class="price-burst"><span class="euro">€</span><span class="num">13,50</span></div>
+          </div>
+          <div class="info">
+            <div class="meta"><span class="num">03</span> · Antipasto caldo · ricetta napoletana</div>
+            <h3>Parmigiana<br>di Melanzane</h3>
+            <p>Berenjenas a la napolitana con scamorza ahumada y ragú tradicional. Receta del sur, fundente, intensa. Una de esas que pides para compartir y acabas pidiendo otra.</p>
+            <div class="ingredients">
+              <span class="ing">Scamorza affumicata</span>
+              <span class="ing">Melanzane DOP</span>
+              <span class="ing">Basilico</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="dish-card" data-tilt>
+        <div class="inner">
+          <div class="photo">
+            <div class="frame"><img src="assets/_C1A3769.webp" alt="Pastiera Napolitana"></div>
+            <div class="steam"><span></span><span></span><span></span><span></span></div>
+            <div class="float-ing f1">🍯</div>
+            <div class="float-ing f2">🌸</div>
+            <div class="float-ing f3">🌾</div>
+            <div class="price-burst"><span class="euro">€</span><span class="num">5,20</span></div>
+          </div>
+          <div class="info">
+            <div class="meta"><span class="num">04</span> · Dolce della nonna · ricetta originale</div>
+            <h3>Pastiera<br>della Nonna</h3>
+            <p>Tarta tradicional napolitana de trigo cocido, ricotta y aroma de azahar. Típica de Pascua, presente todo el año. Receta exacta de la abuela, sin modernizar nada.</p>
+            <div class="ingredients">
+              <span class="ing">Grano cotto</span>
+              <span class="ing">Ricotta</span>
+              <span class="ing">Acqua di fiori</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS BAR -->
+<section class="numbers-bar">
+  <div class="grid">
+    <div class="item">
+      <div class="big">9.4<span style="font-size: 0.5em; color: var(--gold-deep);">/10</span></div>
+      <div class="lbl">Puntuación TheFork</div>
+      <div class="sub">— sobre opiniones verificadas</div>
+    </div>
+    <div class="divider"></div>
+    <div class="item">
+      <div class="big">2<span style="font-size: 0.4em; color: var(--gold-deep);">·</span>3</div>
+      <div class="lbl">Años cocinando en Barcelona</div>
+      <div class="sub">— desde Laforja, 134</div>
+    </div>
+    <div class="divider"></div>
+    <div class="item">
+      <div class="big">+60</div>
+      <div class="lbl">Platos en carta</div>
+      <div class="sub">— pizza · pasta · secondi · vini</div>
+    </div>
+  </div>
+</section>
+
+<!-- FLIPBOOK CARTA -->
+<section class="flipbook-wrap" id="carta">
+  <div class="head">
+    <div class="eyebrow center">Sfoglia il menù</div>
+    <h2 class="display">La carta <em>completa</em>,<br>como en la mesa.</h2>
+    <p class="lead" style="margin: 0 auto;">Pasa las páginas. Diez secciones, +60 platos, vinos italianos seleccionados y un buen <em>amaro</em> para terminar.</p>
+  </div>
+
+  <div class="flipbook">
+    <div class="book" id="book">
+
+      <!-- COVER FRONT FIJO (lado izquierdo cuando libro cerrado) -->
+      <div class="book-side front">
+        <div class="deco">★ menu della casa ★</div>
+        <img src="assets/logo_dorado_-_copia.png" alt="Da Ninina" class="logo-img">
+        <div class="ttl">il menù</div>
+        <div class="sub">Cucina napoletana</div>
+        <div class="quote">«Mangiare è una necessità.<br>Mangiare bene è un'arte.»<br>— François de la Rochefoucauld</div>
+        <div class="foot">edizione 2026 · Barcelona</div>
+      </div>
+
+      <!-- BACK COVER FIJO (lado derecho cuando libro cerrado, visible al final) -->
+      <div class="book-side back">
+        <div class="ttl">grazie</div>
+        <div class="sub">a presto</div>
+        <div class="quote" style="margin-top: 28px;">«Mangiare in compagnia<br>raddoppia il sapore.»</div>
+        <a href="#reserva" class="btn btn-gold" style="margin-top: 36px; color: var(--ink); border-color: var(--gold-glow);">Reservar mesa</a>
+        <div class="foot">Carrer de Laforja, 134 · Sant Gervasi · Barcelona</div>
+      </div>
+
+      <div class="book-spine"></div>
+
+      <!-- HOJAS FÍSICAS · cada hoja tiene front (visible derecha sin voltear) y back (visible izquierda al voltear) -->
+      <div class="leaves" id="leaves">
+
+        <!-- HOJA 1: ÍNDICE (front) / ANTIPASTI (back) -->
+        <div class="leaf">
+          <div class="face front">
+            <div class="page-eyebrow">Indice</div>
+            <div class="page-title"><em>Sommario</em></div>
+            <ol style="list-style: none; padding: 0; font-family: var(--display); font-style: italic; font-size: 16px; line-height: 1.8;">
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dotted var(--line); padding: 10px 0;"><span>Antipasti · Del Huerto</span><span style="font-family: var(--mono); font-size: 10px; color: var(--gold-deep);">02</span></li>
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dotted var(--line); padding: 10px 0;"><span>Pasta &amp; Risotti</span><span style="font-family: var(--mono); font-size: 10px; color: var(--gold-deep);">04</span></li>
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dotted var(--line); padding: 10px 0;"><span>Pizze · forno a legna</span><span style="font-family: var(--mono); font-size: 10px; color: var(--gold-deep);">05</span></li>
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dotted var(--line); padding: 10px 0;"><span>Secondi · Acompañamientos</span><span style="font-family: var(--mono); font-size: 10px; color: var(--gold-deep);">06</span></li>
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dotted var(--line); padding: 10px 0;"><span>Dolci · Caffè</span><span style="font-family: var(--mono); font-size: 10px; color: var(--gold-deep);">07</span></li>
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dotted var(--line); padding: 10px 0;"><span>Vini Rossi · Bianchi</span><span style="font-family: var(--mono); font-size: 10px; color: var(--gold-deep);">08</span></li>
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dotted var(--line); padding: 10px 0;"><span>Bollicine · Cocktails</span><span style="font-family: var(--mono); font-size: 10px; color: var(--gold-deep);">09</span></li>
+              <li style="display: flex; justify-content: space-between; padding: 10px 0;"><span>Bevande · Digestivi</span><span style="font-family: var(--mono); font-size: 10px; color: var(--gold-deep);">10</span></li>
+            </ol>
+            <div class="page-num">— 01 —</div>
+          </div>
+          <div class="face back">
+            <div class="page-eyebrow">— Capitolo I —</div>
+            <div class="page-title"><em>Antipasti</em></div>
+            <div class="page-section" style="overflow: hidden;">
+              <div class="dish-line"><span class="name">Olive e Parmigiano</span><span class="price">5,50</span><span class="desc">Olivas D.O.P. y parmesano estacionado 36 meses.</span></div>
+              <div class="dish-line"><span class="name">Focaccia Classica</span><span class="price">5,90</span><span class="desc">Focaccia con orégano, sal y aceite de oliva.</span></div>
+              <div class="dish-line featured"><span class="name">Focaccia Ninina</span><span class="price">9,50</span><span class="desc">Tomate cherry, rúcula, parmesano y aceite con trufa.</span></div>
+              <div class="dish-line"><span class="name">Bruschetta</span><span class="price">7,00</span><span class="desc">Pan artesanal tostado con ajo, tomate fresco, albahaca y aceite.</span></div>
+              <div class="dish-line"><span class="name">Tegamino</span><span class="price">11,90</span><span class="desc">Queso fundente con chimichurri.</span></div>
+              <div class="dish-line"><span class="name">Polpete al Ragù</span><span class="price">13,50</span><span class="desc">Albóndigas al ragú con parmesano y albahaca.</span></div>
+              <div class="dish-line"><span class="name">Parmigiana di Melanzane</span><span class="price">13,50</span><span class="desc">Berenjenas a la napolitana, scamorza ahumada y ragú.</span></div>
+              <div class="dish-line featured"><span class="name">Vitello Tonnato</span><span class="price">16,90</span><span class="desc">Ternera con salsa de atún, alcaparras y anchoas.</span></div>
+              <div class="dish-line"><span class="name">Carpaccio di Bresaola</span><span class="price">16,50</span><span class="desc">Ternera curada con rúcula y parmesano.</span></div>
+              <div class="dish-line"><span class="name">La Salumeria</span><span class="price">18,90</span><span class="desc">Tabla de quesos italianos y embutidos de la casa.</span></div>
+            </div>
+            <div class="page-num">— 02 —</div>
+          </div>
+        </div>
+
+        <!-- HOJA 2: DEL HUERTO + RISOTTI (front) / PASTA (back) -->
+        <div class="leaf">
+          <div class="face front">
+            <div class="page-eyebrow">— Capitolo II —</div>
+            <div class="page-title"><em>Del Huerto</em></div>
+            <div class="page-section">
+              <div class="dish-line"><span class="name">Ensalada Mixta</span><span class="price">7,50</span><span class="desc">Ensalada variada con tomate, maíz y olivas negras.</span></div>
+              <div class="dish-line"><span class="name">Ensalada Caprese</span><span class="price">13,90</span><span class="desc">Tomates mixtos, pesto y mozzarella di bufala D.O.P.</span></div>
+              <div class="dish-line featured"><span class="name">Ensalada Ninina</span><span class="price">15,80</span><span class="desc">Burrata Pugliese con mezclum, tomates y mix de semillas.</span></div>
+              <div class="dish-line"><span class="name">Ensalada con Queso de Cabra</span><span class="price">16,50</span><span class="desc">Queso de cabra, frutas de temporada, miel y frutos secos.</span></div>
+              <div class="dish-line"><span class="name">Rucola e Parmigiano</span><span class="price">6,90</span><span class="desc">Rúcula con lascas de parmesano y aceite virgen extra.</span></div>
+            </div>
+            <div class="page-section">
+              <h4>Risotti</h4>
+              <div class="dish-line"><span class="name">Risotto Quattro Formaggi</span><span class="price">16,50</span><span class="desc">Cuatro quesos italianos, textura sedosa.</span></div>
+              <div class="dish-line featured"><span class="name">Risotto ai Funghi</span><span class="price">17,50</span><span class="desc">Funghi muy cremoso, intenso sabor a setas y parmesano.</span></div>
+            </div>
+            <div class="page-num">— 03 —</div>
+          </div>
+          <div class="face back">
+            <div class="page-eyebrow">— Capitolo III —</div>
+            <div class="page-title"><em>Pasta</em></div>
+            <div class="page-section">
+              <div class="dish-line"><span class="name">Penne alla Arrabbiata</span><span class="price">11,50</span><span class="desc">Salsa de tomate, ajo, guindilla y perejil.</span></div>
+              <div class="dish-line"><span class="name">Rigatoni alla Amatriciana</span><span class="price">13,50</span><span class="desc">Tomate, guanciale y cebolla.</span></div>
+              <div class="dish-line"><span class="name">Rigatoni al Pesto</span><span class="price">12,90</span><span class="desc">Pesto de albahaca fresco casero.</span></div>
+              <div class="dish-line"><span class="name">Gnocchi alla Sorrentina</span><span class="price">13,90</span><span class="desc">Ragú napolitano y mozzarella di bufala al horno.</span></div>
+              <div class="dish-line"><span class="name">Spaghettoni alla Nerano</span><span class="price">13,50</span><span class="desc">Calabacines salteados y provolone rallado.</span></div>
+              <div class="dish-line featured"><span class="name">Lasagna Ninina</span><span class="price">13,90</span><span class="desc">Pasta fresca con ragú boloñés tradicional.</span></div>
+              <div class="dish-line"><span class="name">Spaghetti alla Carbonara</span><span class="price">15,90</span><span class="desc">Guanciale, yema, pimienta negra y pecorino.</span></div>
+              <div class="dish-line featured"><span class="name">Fettuccine al Tartufo</span><span class="price">16,50</span><span class="desc">Crema de parmesano y trufa negra.</span></div>
+              <div class="dish-line"><span class="name">Scialatielli ai Frutti di Mare</span><span class="price">17,90</span><span class="desc">Pasta fresca con ragú de mariscos y perejil.</span></div>
+              <div class="dish-line"><span class="name">Paccheri alla Genovese</span><span class="price">17,90</span><span class="desc">Carne y cebolla caramelizada cocinada lento.</span></div>
+            </div>
+            <div class="page-num">— 04 —</div>
+          </div>
+        </div>
+
+        <!-- HOJA 3: PIZZE (front) / SECONDI + CONTORNI (back) -->
+        <div class="leaf">
+          <div class="face front">
+            <div class="page-eyebrow">— Capitolo IV —</div>
+            <div class="page-title"><em>Pizze</em><span style="font-size: 0.5em; color: var(--gold-deep); font-style: italic; align-self: center;">— forno a legna —</span></div>
+            <div class="page-section">
+              <div class="dish-line"><span class="name">Marinara</span><span class="price">9,50</span><span class="desc">Tomate, ajo, orégano y aceite de oliva.</span></div>
+              <div class="dish-line"><span class="name">Margherita</span><span class="price">10,50</span><span class="desc">Tomate, mozzarella y albahaca fresca.</span></div>
+              <div class="dish-line"><span class="name">Bùfala</span><span class="price">12,50</span><span class="desc">Tomate, albahaca y mozzarella di bufala D.O.P.</span></div>
+              <div class="dish-line"><span class="name">Diavola</span><span class="price">13,50</span><span class="desc">Tomate, mozzarella y salame picante.</span></div>
+              <div class="dish-line"><span class="name">Jamón cocido y Champiñones</span><span class="price">13,90</span><span class="desc">Tomate, mozzarella, jamón, champiñones y albahaca.</span></div>
+              <div class="dish-line"><span class="name">Sorrento</span><span class="price">13,50</span><span class="desc">Tomate, anchoas, cherry, olivas, ajo y albahaca.</span></div>
+              <div class="dish-line"><span class="name">Salchichas e Friarielli</span><span class="price">14,50</span><span class="desc">Mozzarella, salsiccia italiana y grelos napolitanos.</span></div>
+              <div class="dish-line"><span class="name">Quattro Formaggi</span><span class="price">14,50</span><span class="desc">Mozzarella, gorgonzola, parmesano y fontina.</span></div>
+              <div class="dish-line"><span class="name">Ortolana</span><span class="price">15,90</span><span class="desc">Berenjena, calabacín, pimientos, cebolla, champiñones y alcachofas.</span></div>
+              <div class="dish-line"><span class="name">Calzone</span><span class="price">16,50</span><span class="desc">Tomate, mozzarella, ricotta, pimienta y jamón cocido.</span></div>
+              <div class="dish-line"><span class="name">Quattro Stagioni</span><span class="price">16,50</span><span class="desc">¼ jamón, ¼ alcachofas, ¼ champiñones, ¼ salami.</span></div>
+              <div class="dish-line"><span class="name">Rúcula, Cherry e Jamón curado</span><span class="price">16,50</span><span class="desc">Rúcula fresca, cherry, jamón curado y ralladura de limón.</span></div>
+              <div class="dish-line featured"><span class="name">Tartufo, Speck e Funghi</span><span class="price">16,90</span><span class="desc">Crema de trufa, speck ahumado, champiñones y provola.</span></div>
+              <div class="dish-line featured"><span class="name">Mortadella e Pistacchio</span><span class="price">17,90</span><span class="desc">Pesto genovés, burrata, mortadella, pistacho y parmesano.</span></div>
+              <div class="dish-line"><span class="name">Carbonara</span><span class="price">18,20</span><span class="desc">Mozzarella, yema, pecorino romano D.O.P. y guanciale.</span></div>
+            </div>
+            <div class="page-num">— 05 —</div>
+          </div>
+          <div class="face back">
+            <div class="page-eyebrow">— Capitolo V —</div>
+            <div class="page-title"><em>Secondi</em></div>
+            <div class="page-section">
+              <div class="dish-line"><span class="name">Milanesa de Pollo</span><span class="price">14,90</span><span class="desc">Pechuga rebozada y frita con patatas fritas.</span></div>
+              <div class="dish-line featured"><span class="name">Milanesa de Ternera</span><span class="price">17,90</span><span class="desc">Solomillo empanado al momento, tierno y crujiente, con patatas.</span></div>
+              <div class="dish-line"><span class="name">Solomillo a la plancha</span><span class="price">23,90</span><span class="desc">Con patatas fritas, rúcula y parmesano.</span></div>
+              <div class="dish-line featured"><span class="name">Tagliata di Manzo</span><span class="price">27,90</span><span class="desc">Lomo alto a la plancha con patatas, rúcula y parmesano.</span></div>
+              <div class="dish-line"><span class="name">Pulpo a la plancha</span><span class="price">21,90</span><span class="desc">Crema suave de patatas y aceite al perejil.</span></div>
+              <div class="dish-line"><span class="name">Bacalao alla Siciliana</span><span class="price">18,50</span><span class="desc">Ajo, tomate cherry, aceitunas, alcaparras y perejil.</span></div>
+            </div>
+            <div class="page-section">
+              <h4>Contorni · acompañamientos</h4>
+              <div class="dish-line"><span class="name">Patatas Fritas</span><span class="price">5,50</span></div>
+              <div class="dish-line"><span class="name">Verduras al horno</span><span class="price">6,90</span><span class="desc">Aceite virgen extra, ajo, perejil y aceto balsámico.</span></div>
+              <div class="dish-line"><span class="name">Rucola e Parmigiano</span><span class="price">6,90</span><span class="desc">Rúcula con lascas de parmesano.</span></div>
+            </div>
+            <div class="page-num">— 06 —</div>
+          </div>
+        </div>
+
+        <!-- HOJA 4: DOLCI + CAFFÈ (front) / VINI ROSSI + BIANCHI (back) -->
+        <div class="leaf">
+          <div class="face front">
+            <div class="page-eyebrow">— Capitolo VI —</div>
+            <div class="page-title"><em>Dolci</em><span style="font-size: 0.5em; color: var(--gold-deep); font-style: italic; align-self: center;">— della casa —</span></div>
+            <div class="page-section">
+              <div class="dish-line featured"><span class="name">Pastiera Napoletana della Nonna</span><span class="price">5,20</span><span class="desc">Tarta tradicional de trigo cocido, ricotta y aroma de azahar. Típica de Pascua.</span></div>
+              <div class="dish-line"><span class="name">Babà al Rum</span><span class="price">5,90</span><span class="desc">Bizcocho esponjoso empapado en almíbar de ron.</span></div>
+              <div class="dish-line"><span class="name">Pan di Stelle</span><span class="price">5,90</span><span class="desc">Galletas de cacao y avellanas, mascarpone, nata y Nutella.</span></div>
+              <div class="dish-line featured"><span class="name">Tiramisù Ninina</span><span class="price">6,50</span><span class="desc">Pavesini de café, mascarpone y cacao amargo.</span></div>
+              <div class="dish-line"><span class="name">Tiramisù al Pistacchio</span><span class="price">7,50</span><span class="desc">Mascarpone, cacao amargo y crema de pistacho.</span></div>
+              <div class="dish-line"><span class="name">Calzone di Nutella</span><span class="price">13,00</span><span class="desc">Calzone dulce relleno de Nutella.</span></div>
+            </div>
+            <div class="page-section">
+              <h4>Caffè · Infusioni</h4>
+              <div class="dish-line"><span class="name">Espresso</span><span class="price">1,80</span></div>
+              <div class="dish-line"><span class="name">Cortado</span><span class="price">2,00</span></div>
+              <div class="dish-line"><span class="name">Con leche</span><span class="price">2,20</span></div>
+              <div class="dish-line"><span class="name">Americano</span><span class="price">2,50</span></div>
+              <div class="dish-line"><span class="name">Carajillo</span><span class="price">3,60</span></div>
+              <div class="dish-line"><span class="name">Manzanilla · Poleo · Té</span><span class="price">2,00</span></div>
+            </div>
+            <div class="page-num">— 07 —</div>
+          </div>
+          <div class="face back">
+            <div class="page-eyebrow">— Capitolo VII —</div>
+            <div class="page-title"><em>Vini</em><span style="font-size: 0.5em; color: var(--gold-deep); font-style: italic; align-self: center;">— rossi · bianchi —</span></div>
+            <div class="page-section">
+              <h4>Vini Rossi</h4>
+              <div class="wine-table hd"><span>vino</span><span>botella</span><span>copa</span></div>
+              <div class="wine-table"><span class="nm">Monólogo Crianza Rioja</span><span class="px">14,90</span><span class="px">3,80</span><span class="desc">Tempranillo, La Rioja, 12 meses en barrica.</span></div>
+              <div class="wine-table"><span class="nm">Bardolino Pasqua</span><span class="px">18,00</span><span class="px">4,20</span><span class="desc">Tinto ligero del Véneto, Corvina · Rondinella · Molinara.</span></div>
+              <div class="wine-table"><span class="nm">Chianti Classico Serristori</span><span class="px">25,00</span><span class="px">6,00</span><span class="desc">DOCG Toscana, Sangiovese.</span></div>
+              <div class="wine-table"><span class="nm">Langhe Nebbiolo Ca'Bianca</span><span class="px">28,00</span><span class="px">6,50</span><span class="desc">Piemonte, taninos finos, elegante.</span></div>
+            </div>
+            <div class="page-section">
+              <h4>Vini Bianchi</h4>
+              <div class="wine-table hd"><span>vino</span><span>botella</span><span>copa</span></div>
+              <div class="wine-table"><span class="nm">Monologo Verdejo D.O. Rueda</span><span class="px">14,90</span><span class="px">3,80</span><span class="desc">Verdejo joven, muy aromático.</span></div>
+              <div class="wine-table"><span class="nm">Ariddu Grillo Valdibella Bio</span><span class="px">25,00</span><span class="px">6,00</span><span class="desc">Sicilia ecológico, mineral y aromático.</span></div>
+              <div class="wine-table"><span class="nm">Falanghina DOC Bellaria</span><span class="px">27,00</span><span class="px">6,50</span><span class="desc">Campania, fresco y floral.</span></div>
+            </div>
+            <div class="page-num">— 08 —</div>
+          </div>
+        </div>
+
+        <!-- HOJA 5: BOLLICINE + COCKTAILS (front) / BEVANDE (back) -->
+        <div class="leaf">
+          <div class="face front">
+            <div class="page-eyebrow">— Capitolo VIII —</div>
+            <div class="page-title"><em>Bollicine</em><span style="font-size: 0.45em; color: var(--gold-deep); font-style: italic; align-self: center;">— rosati · prosecco · cocktails —</span></div>
+            <div class="page-section">
+              <h4>Vini Rosati</h4>
+              <div class="wine-table hd"><span>vino</span><span>botella</span><span>copa</span></div>
+              <div class="wine-table"><span class="nm">Sole Rosato Sorso Divino</span><span class="px">18,00</span><span class="px">4,20</span><span class="desc">Rosado italiano fresco y frutal.</span></div>
+              <div class="wine-table"><span class="nm">Monólogo Rosado</span><span class="px">14,90</span><span class="px">3,80</span><span class="desc">Garnacha joven, cítricos y fruta de hueso.</span></div>
+            </div>
+            <div class="page-section">
+              <h4>Cava · Prosecco · Dolce</h4>
+              <div class="wine-table"><span class="nm">Prosecco Conca d'Oro Brut</span><span class="px">24,00</span><span class="px">6,00</span><span class="desc">Brut del Véneto, seco y elegante.</span></div>
+              <div class="wine-table"><span class="nm">Moscato d'Asti Rinaldi DOCG</span><span class="px">26,00</span><span class="px">6,50</span><span class="desc">Espumoso dulce del Piamonte, Moscato Bianco.</span></div>
+            </div>
+            <div class="page-section">
+              <h4>Cocktails</h4>
+              <div class="wine-table"><span class="nm">Aperol Spritz</span><span class="px">7,50</span><span></span></div>
+              <div class="wine-table"><span class="nm">Limoncello Spritz</span><span class="px">7,50</span><span></span></div>
+              <div class="wine-table"><span class="nm">Campari Spritz</span><span class="px">8,00</span><span></span></div>
+              <div class="wine-table"><span class="nm">Gin Tonic</span><span class="px">8,00</span><span></span></div>
+              <div class="wine-table"><span class="nm">Negroni</span><span class="px">9,00</span><span></span></div>
+              <div class="wine-table"><span class="nm">Old Fashioned</span><span class="px">9,00</span><span></span></div>
+            </div>
+            <div class="page-num">— 09 —</div>
+          </div>
+          <div class="face back">
+            <div class="page-eyebrow">— Capitolo IX —</div>
+            <div class="page-title"><em>Bevande</em></div>
+            <div class="page-section">
+              <h4>Refrescos</h4>
+              <div class="dish-line"><span class="name">Agua</span><span class="price">2,00</span></div>
+              <div class="dish-line"><span class="name">San Pellegrino</span><span class="price">3,00</span></div>
+              <div class="dish-line"><span class="name">Coca-Cola · Sprite</span><span class="price">3,00</span></div>
+              <div class="dish-line"><span class="name">Fanta Naranja · Limón</span><span class="price">3,00</span></div>
+              <div class="dish-line"><span class="name">Fuze Tea · Aquarius</span><span class="price">3,00</span></div>
+              <div class="dish-line"><span class="name">Tónica Royal Bliss</span><span class="price">3,50</span></div>
+            </div>
+            <div class="page-section">
+              <h4>Cerveza</h4>
+              <div class="dish-line"><span class="name">San Miguel · caña</span><span class="price">2,70</span></div>
+              <div class="dish-line"><span class="name">San Miguel · copa</span><span class="price">3,50</span></div>
+              <div class="dish-line"><span class="name">Alhambra Reserva 1925</span><span class="price">4,00</span></div>
+              <div class="dish-line"><span class="name">Alhambra Especial sin alcohol</span><span class="price">4,20</span></div>
+            </div>
+            <div class="page-num">— 10 —</div>
+          </div>
+        </div>
+
+        <!-- HOJA 6: DIGESTIVI (front) / FINE (back) -->
+        <div class="leaf">
+          <div class="face front">
+            <div class="page-eyebrow">— Capitolo X —</div>
+            <div class="page-title"><em>Digestivi</em></div>
+            <div class="page-section">
+              <div class="wine-table hd"><span>amaro</span><span>copa</span><span>doppio</span></div>
+              <div class="wine-table"><span class="nm">Limoncello</span><span class="px">3,50</span><span class="px">4,50</span></div>
+              <div class="wine-table"><span class="nm">Meloncello</span><span class="px">3,50</span><span class="px">4,50</span></div>
+              <div class="wine-table"><span class="nm">Montenegro</span><span class="px">3,50</span><span class="px">4,50</span></div>
+              <div class="wine-table"><span class="nm">Amaro del Capo</span><span class="px">3,50</span><span class="px">4,50</span></div>
+              <div class="wine-table"><span class="nm">Fernet Branca</span><span class="px">3,50</span><span class="px">4,50</span></div>
+              <div class="wine-table"><span class="nm">Grappa</span><span class="px">3,50</span><span class="px">4,50</span></div>
+              <div class="wine-table"><span class="nm">Baileys</span><span class="px">3,50</span><span class="px">4,50</span></div>
+              <div class="wine-table"><span class="nm">Jagermeister</span><span class="px">3,50</span><span class="px">4,50</span></div>
+              <div class="wine-table"><span class="nm">Whisky</span><span class="px">3,50</span><span class="px">5,50</span></div>
+              <div class="wine-table"><span class="nm">Coñac</span><span class="px">3,50</span><span class="px">5,50</span></div>
+            </div>
+            <div class="page-num">— 11 —</div>
+          </div>
+          <div class="face back" style="background: linear-gradient(135deg, #FFFFFF 0%, var(--paper-deep) 100%);">
+            <div style="margin: auto; text-align: center;">
+              <div class="page-eyebrow" style="justify-content: center; display: flex;">★ ★ ★</div>
+              <div style="font-family: var(--script); font-size: 88px; line-height: 0.9; color: var(--gold-deep); margin: 14px 0 14px;">grazie</div>
+              <p style="font-family: var(--display); font-style: italic; font-size: 18px; color: var(--ink-soft); margin: 0 auto 30px; max-width: 280px; line-height: 1.5;">«Si la cocina italiana es famosa, no es por casualidad. Es por la nonna.»</p>
+              <a href="#reserva" class="btn btn-gold">Reservar mesa →</a>
+            </div>
+            <div class="page-num">— 12 —</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="book-controls">
+      <button class="book-btn" id="bookPrev" aria-label="Anterior">←</button>
+      <div class="book-counter"><strong id="bookCur">01</strong> / 07</div>
+      <button class="book-btn" id="bookNext" aria-label="Siguiente">→</button>
+    </div>
+    <div class="book-dots" id="bookDots"></div>
+    <p style="text-align: center; margin-top: 20px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ink-soft);">— sfoglia · ← → · clic en el libro —</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="galeria">
+  <div class="head">
+    <div class="eyebrow center">Da Ninina · dentro</div>
+    <h2 class="display"><em>Una trattoria</em> con alma de barrio.</h2>
+  </div>
+  <div class="marquee-row">
+    <div class="item" data-cap="Sala Principal"><img src="assets/_C1A3191.webp" alt=""></div>
+    <div class="item" data-cap="Sala Posteriore"><img src="assets/_C1A3190.webp" alt=""></div>
+    <div class="item" data-cap="Sala Mezzanine"><img src="assets/_C1A3217.webp" alt=""></div>
+    <div class="item" data-cap="Tavolo Riservato"><img src="assets/_C1A3200.webp" alt=""></div>
+    <div class="item" data-cap="Terrazza"><img src="assets/D6094D76-9891-47E7-B6EB-125DF9B41097.webp" alt=""></div>
+    <div class="item" data-cap="Saletta"><img src="assets/_C1A3208.webp" alt=""></div>
+    <div class="item" data-cap="Sala Principal"><img src="assets/_C1A3191.webp" alt=""></div>
+    <div class="item" data-cap="Sala Posteriore"><img src="assets/_C1A3190.webp" alt=""></div>
+    <div class="item" data-cap="Sala Mezzanine"><img src="assets/_C1A3217.webp" alt=""></div>
+    <div class="item" data-cap="Tavolo Riservato"><img src="assets/_C1A3200.webp" alt=""></div>
+    <div class="item" data-cap="Terrazza"><img src="assets/D6094D76-9891-47E7-B6EB-125DF9B41097.webp" alt=""></div>
+    <div class="item" data-cap="Saletta"><img src="assets/_C1A3208.webp" alt=""></div>
+  </div>
+  <div class="marquee-row reverse">
+    <div class="item" data-cap="Pizza Mortadella"><img src="assets/_C1A3705-2.webp" alt=""></div>
+    <div class="item" data-cap="Lasagna Ninina"><img src="assets/_C1A3721.webp" alt=""></div>
+    <div class="item" data-cap="Parmigiana"><img src="assets/_C1A3719.webp" alt=""></div>
+    <div class="item" data-cap="Pastiera"><img src="assets/_C1A3769.webp" alt=""></div>
+    <div class="item" data-cap="Sala"><img src="assets/_C1A3208.webp" alt=""></div>
+    <div class="item" data-cap="Decoración"><img src="assets/_C1A3217.webp" alt=""></div>
+    <div class="item" data-cap="Pizza Mortadella"><img src="assets/_C1A3705-2.webp" alt=""></div>
+    <div class="item" data-cap="Lasagna Ninina"><img src="assets/_C1A3721.webp" alt=""></div>
+    <div class="item" data-cap="Parmigiana"><img src="assets/_C1A3719.webp" alt=""></div>
+    <div class="item" data-cap="Pastiera"><img src="assets/_C1A3769.webp" alt=""></div>
+    <div class="item" data-cap="Sala"><img src="assets/_C1A3208.webp" alt=""></div>
+    <div class="item" data-cap="Decoración"><img src="assets/_C1A3217.webp" alt=""></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reseñas">
+  <div class="head">
+    <div class="eyebrow center">Quel che dicono di noi</div>
+    <h2 class="display">El boca a boca <em>del barrio</em>.</h2>
+    <p class="lead" style="margin: 0 auto;">Reseñas verificadas de quienes ya han venido. Reseñas extraídas de TheFork y Google Maps.</p>
+  </div>
+
+  <div class="rating-hero">
+    <div class="rating-block">
+      <div class="num">4.8</div>
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <div class="src">Google · 148 reseñas</div>
+    </div>
+    <div class="rating-divider"></div>
+    <div class="rating-block">
+      <div class="num">9.4<span style="font-size: 0.4em; color: var(--gold-deep);">/10</span></div>
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <div class="src">TheFork · Verified</div>
+    </div>
+    <div class="rating-divider"></div>
+    <div class="rating-block">
+      <div class="num">98<span style="font-size: 0.4em; color: var(--gold-deep);">%</span></div>
+      <div class="stars" style="color: var(--basil); font-size: 11px; letter-spacing: 0.15em;">RECOMENDARÍAN</div>
+      <div class="src">Sobre opiniones verified</div>
+    </div>
+  </div>
+
+  <div class="reviews-grid">
+    <div class="review">
+      <div class="platform"><span class="ico">G</span> Google · Sant Gervasi</div>
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p class="quote">La pizza de mortadella y pistacho es de las mejores que he probado fuera de Nápoles. La masa, el horno, el servicio. Lugar acogedor con encanto. Volveré seguro.</p>
+      <div class="author"><strong>Laura M.</strong><span>Cena · pareja</span></div>
+    </div>
+    <div class="review">
+      <div class="platform"><span class="ico">F</span> TheFork · 9,6/10</div>
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p class="quote">Sitio acogedor, trato cercano y comida casera de verdad. La lasagna y el tiramisù saben a familia italiana. Gran descubrimiento en Laforja.</p>
+      <div class="author"><strong>Andrea G.</strong><span>Cena · grupo</span></div>
+    </div>
+    <div class="review">
+      <div class="platform"><span class="ico">G</span> Google · Eixample</div>
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p class="quote">Pizza espectacular: masa fina, ingredientes frescos y sabor italiano auténtico. De las mejores que he probado en Barcelona. Y la pasta al dente como toca.</p>
+      <div class="author"><strong>Marco T.</strong><span>Comida · pareja</span></div>
+    </div>
+    <div class="review">
+      <div class="platform"><span class="ico">F</span> TheFork · 9,2/10</div>
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p class="quote">Reservamos para una cena de cumpleaños y se portaron de lujo. Vinos italianos a buen precio, postres caseros y mesa sin prisa. Perfetto.</p>
+      <div class="author"><strong>Marta &amp; Paolo</strong><span>Cumpleaños · 6 pax</span></div>
+    </div>
+    <div class="review">
+      <div class="platform"><span class="ico">G</span> Google · Gracia</div>
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p class="quote">Comida auténticamente italiana, pizzas memorables y la parmigiana de berenjena es un must. Servicio atento y cercano. Precios razonables para la calidad.</p>
+      <div class="author"><strong>Sergi P.</strong><span>Cena · familia</span></div>
+    </div>
+    <div class="review">
+      <div class="platform"><span class="ico">F</span> TheFork · 9,5/10</div>
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p class="quote">Ambiente acogedor y romántico, ideal para una velada tranquila. Decoración moderna pero cálida. La pasta fresca casera es de otro nivel. Volveremos.</p>
+      <div class="author"><strong>Cristina V.</strong><span>Aniversario</span></div>
+    </div>
+  </div>
+
+  <div class="review-distrib">
+    <div class="row"><span>5 ★</span><div class="bar"><span style="--w: 88%;"></span></div><span>88%</span></div>
+    <div class="row"><span>4 ★</span><div class="bar"><span style="--w: 9%;"></span></div><span>9%</span></div>
+    <div class="row"><span>3 ★</span><div class="bar"><span style="--w: 2%;"></span></div><span>2%</span></div>
+    <div class="row"><span>2 ★</span><div class="bar"><span style="--w: 1%;"></span></div><span>1%</span></div>
+    <div class="row"><span>1 ★</span><div class="bar"><span style="--w: 0%;"></span></div><span>0%</span></div>
+  </div>
+
+  <div style="text-align: center; margin-top: 80px;">
+    <a href="https://www.google.com/maps/place/Restaurante+Da+Ninina/@41.4017,2.139,17z" target="_blank" class="btn btn-gold btn-lg">Leer las 148 reseñas en Google →</a>
+    <p style="margin-top: 18px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft);">— Reseñas reales verificadas · Google Maps + TheFork —</p>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section class="reservation" id="reserva">
+  <div class="container">
+    <div class="text">
+      <div class="eyebrow">Tavoli disponibili</div>
+      <h2 class="display"><em>Tu mesa</em><br>te espera en Laforja, 134.</h2>
+      <p class="lead">Reserva por WhatsApp, llamada o TheFork. Pequeños grupos, mesa para celebraciones, terraza en temporada y barra para una copa rápida con focaccia. Recomendamos reservar especialmente jueves a sábado.</p>
+      <div class="info-grid">
+        <div>
+          <span class="label">Dirección</span>
+          <span class="value">Laforja, 134</span>
+          <span class="small">08021 · Sant Gervasi · BCN</span>
+        </div>
+        <div>
+          <span class="label">Reservas</span>
+          <span class="value">699 56 19 06</span>
+          <span class="small">danininalaforja@gmail.com</span>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a href="tel:699561906" class="btn btn-gold btn-lg">Llamar al restaurante</a>
+        <a href="https://widget.thefork.com/299b1798-b2b7-4a0e-a8a4-932459e3af71" target="_blank" class="btn btn-ghost btn-lg">Reservar en TheFork</a>
+        <a href="https://wa.me/34699561906" target="_blank" class="btn btn-ghost btn-lg">WhatsApp</a>
+      </div>
+    </div>
+    <div class="visual">
+      <img src="assets/D6094D76-9891-47E7-B6EB-125DF9B41097.webp" alt="Terraza Da Ninina">
+    </div>
+  </div>
+</section>
+
+<!-- HOURS -->
+<section class="hours">
+  <div class="container">
+    <div>
+      <div class="eyebrow">Orari · cocina italiana</div>
+      <h2 class="display"><em>Cuándo</em><br>nos encuentras.</h2>
+      <p class="lead">Mediodía y noche, martes a domingo. Lunes <em>riposo</em>.</p>
+    </div>
+    <div class="hours-table">
+      <div class="row closed"><span class="day">Lunes</span><span class="schedule">cerrado · giorno di riposo</span></div>
+      <div class="row"><span class="day">Martes</span><span class="schedule">13:00 – 16:30 &nbsp;·&nbsp; 20:00 – 23:30</span></div>
+      <div class="row"><span class="day">Miércoles</span><span class="schedule">13:00 – 16:30 &nbsp;·&nbsp; 20:00 – 23:30</span></div>
+      <div class="row"><span class="day">Jueves</span><span class="schedule">13:00 – 16:30 &nbsp;·&nbsp; 20:00 – 23:30</span></div>
+      <div class="row"><span class="day">Viernes</span><span class="schedule">13:00 – 16:30 &nbsp;·&nbsp; 20:00 – 23:30</span></div>
+      <div class="row"><span class="day">Sábado</span><span class="schedule">13:00 – 16:00 &nbsp;·&nbsp; 20:00 – 00:00</span></div>
+      <div class="row"><span class="day">Domingo</span><span class="schedule">13:00 – 17:00 (continuo)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-section">
+  <iframe src="https://maps.google.com/maps?q=Carrer%20de%20Laforja%20134%20Barcelona&t=m&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+  <div class="map-overlay">
+    <div class="eyebrow">Vieni a trovarci</div>
+    <h3><em>Laforja, 134</em></h3>
+    <p>A 3 minutos de la parada FGC Sant Gervasi. Calle peatonal con terraza en primavera y verano. Recomendamos llegar 5 min antes de tu reserva.</p>
+    <div class="btn-row">
+      <a href="https://maps.google.com/maps?q=Carrer+de+Laforja+134+Barcelona" target="_blank" class="btn">Cómo llegar</a>
+      <a href="tel:699561906" class="btn btn-gold">699 56 19 06</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="brand-block">
+      <img src="assets/logo_dorado_-_copia.png" alt="Da Ninina">
+      <p>Pizzeria napoletana e cucina italiana di casa. Sant Gervasi, Barcelona. Familia Ninina · desde 2023.</p>
+    </div>
+    <div class="col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="tel:699561906">699 56 19 06</a></li>
+        <li><a href="mailto:danininalaforja@gmail.com">danininalaforja@gmail.com</a></li>
+        <li>Carrer de Laforja, 134</li>
+        <li>08021 Barcelona</li>
+        <li><a href="https://instagram.com/daninina_bcn" target="_blank">@daninina_bcn</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Horarios</h4>
+      <ul>
+        <li class="line"><span class="day">Lun</span><span class="time">cerrado</span></li>
+        <li class="line"><span class="day">Mar–Vie</span><span class="time">13:00 · 20:00</span></li>
+        <li class="line"><span class="day">Sáb</span><span class="time">13:00 · 20:00</span></li>
+        <li class="line"><span class="day">Dom</span><span class="time">13:00 – 17:00</span></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Reserva</h4>
+      <ul>
+        <li><a href="https://widget.thefork.com/299b1798-b2b7-4a0e-a8a4-932459e3af71" target="_blank">TheFork</a></li>
+        <li><a href="tel:699561906">Por teléfono</a></li>
+        <li><a href="https://wa.me/34699561906" target="_blank">WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom">
+    <span>© 2026 Restaurante Da Ninina · Tutti i diritti riservati</span>
+    <span>Mockup demo · <a href="https://boomatik.com" target="_blank">boomatik.com</a></span>
+  </div>
+</footer>
+
+<script>
+  // ===== CURSOR PIATTO =====
+  const plate = document.querySelector('.cursor-plate');
+  let mx = 0, my = 0, px = 0, py = 0;
+  document.addEventListener('mousemove', (e) => { mx = e.clientX; my = e.clientY; });
+  (function loop() {
+    px += (mx - px) * 0.22;
+    py += (my - py) * 0.22;
+    plate.style.transform = `translate(${px}px, ${py}px) translate(-50%, -50%)`;
+    requestAnimationFrame(loop);
+  })();
+  document.querySelectorAll('a, button, .review, .marquee-row .item').forEach(el => {
+    el.addEventListener('mouseenter', () => plate.classList.add('hover'));
+    el.addEventListener('mouseleave', () => plate.classList.remove('hover', 'taste', 'flip'));
+  });
+  document.querySelectorAll('.dish-card').forEach(el => {
+    el.addEventListener('mouseenter', () => plate.classList.add('taste'));
+    el.addEventListener('mouseleave', () => plate.classList.remove('taste', 'hover'));
+  });
+  document.querySelectorAll('.book, .leaf').forEach(el => {
+    el.addEventListener('mouseenter', () => plate.classList.add('flip'));
+    el.addEventListener('mouseleave', () => plate.classList.remove('flip', 'hover'));
+  });
+
+  // ===== NAV SHRINK =====
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ===== FADE UP =====
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up, .reveal-text').forEach(el => io.observe(el));
+
+  // ===== TILT 3D EN PLATOS =====
+  document.querySelectorAll('[data-tilt]').forEach(card => {
+    const inner = card.querySelector('.inner');
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width;
+      const y = (e.clientY - rect.top) / rect.height;
+      const rx = (0.5 - y) * 8;
+      const ry = (x - 0.5) * 10;
+      inner.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateZ(0)`;
+      card.classList.add('tilt-active');
+    });
+    card.addEventListener('mouseleave', () => {
+      inner.style.transform = '';
+      card.classList.remove('tilt-active');
+    });
+  });
+
+  // ===== FLIPBOOK 3D REAL · hojas físicas =====
+  const book = document.getElementById('book');
+  const leaves = Array.from(document.querySelectorAll('#leaves .leaf'));
+  const total = leaves.length + 1; // estados: 0=cerrado, 1..N=cada hoja volteada
+  let cur = 0; // estado actual
+  const prevBtn = document.getElementById('bookPrev');
+  const nextBtn = document.getElementById('bookNext');
+  const counter = document.getElementById('bookCur');
+  const counterTotal = document.querySelector('.book-counter');
+  const dotsBox = document.getElementById('bookDots');
+
+  if (counterTotal) counterTotal.innerHTML = `<strong id="bookCur">01</strong> / ${String(total).padStart(2, '0')}`;
+  const counterEl = document.getElementById('bookCur');
+
+  // Build dots (uno por estado)
+  for (let i = 0; i < total; i++) {
+    const b = document.createElement('button');
+    b.dataset.idx = i;
+    b.setAttribute('aria-label', `Página ${i + 1}`);
+    b.addEventListener('click', () => goTo(i));
+    dotsBox.appendChild(b);
+  }
+  const dots = Array.from(dotsBox.querySelectorAll('button'));
+
+  function update() {
+    leaves.forEach((leaf, i) => {
+      if (i < cur) {
+        leaf.classList.add('flipped');
+        leaf.style.zIndex = String(i + 1);
+      } else {
+        leaf.classList.remove('flipped');
+        leaf.style.zIndex = String(leaves.length - i + 10);
+      }
+    });
+    counterEl.textContent = String(cur + 1).padStart(2, '0');
+    dots.forEach((d, i) => d.classList.toggle('active', i === cur));
+    prevBtn.disabled = cur === 0;
+    nextBtn.disabled = cur >= leaves.length;
+  }
+
+  function goTo(idx) {
+    if (idx < 0 || idx > leaves.length || idx === cur) return;
+    // Animar la hoja que se voltea con sombra temporal
+    if (idx > cur) {
+      const flipping = leaves[cur];
+      if (flipping) {
+        flipping.classList.add('flipping');
+        setTimeout(() => flipping.classList.remove('flipping'), 1200);
+      }
+    } else if (idx < cur) {
+      const flipping = leaves[cur - 1];
+      if (flipping) {
+        flipping.classList.add('flipping');
+        setTimeout(() => flipping.classList.remove('flipping'), 1200);
+      }
+    }
+    cur = idx;
+    update();
+  }
+
+  prevBtn.addEventListener('click', () => goTo(cur - 1));
+  nextBtn.addEventListener('click', () => goTo(cur + 1));
+  update();
+
+  // Click derecho de la hoja → siguiente; click izquierdo → anterior
+  leaves.forEach((leaf, i) => {
+    leaf.addEventListener('click', (e) => {
+      const rect = leaf.getBoundingClientRect();
+      const xRel = (e.clientX - rect.left) / rect.width;
+      if (xRel > 0.5) goTo(cur + 1);
+      else goTo(cur - 1);
+    });
+  });
+  // Click en el lado fijo izquierdo (cover front) abre el libro
+  document.querySelector('.book-side.front')?.addEventListener('click', () => { if (cur === 0) goTo(1); });
+
+  // Keyboard
+  document.addEventListener('keydown', (e) => {
+    const r = book.getBoundingClientRect();
+    if (r.top > window.innerHeight || r.bottom < 0) return;
+    if (e.key === 'ArrowLeft') goTo(cur - 1);
+    if (e.key === 'ArrowRight') goTo(cur + 1);
+  });
+
+  // Swipe táctil
+  let tStartX = 0;
+  book.addEventListener('touchstart', (e) => { tStartX = e.touches[0].clientX; }, { passive: true });
+  book.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - tStartX;
+    if (Math.abs(dx) < 40) return;
+    if (dx < 0) goTo(cur + 1);
+    else goTo(cur - 1);
+  });
+</script>
+</body>
+</html>
