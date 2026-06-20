@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demo MotoStore Odoo · v7.1 educativo 2:26</title>
+<style>
+:root { --bg:#0A0A0E; --bg-2:#101018; --fg:#F5F5FA; --muted:#A0A0AF; --accent:#A855F7; --emerald:#10b981; --rose:#f43f5e; --border:rgba(255,255,255,0.08); }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,Segoe UI,Inter,sans-serif; background:var(--bg); color:var(--fg); padding:40px 20px; }
+.wrap { max-width:1080px; margin:0 auto; }
+h1 { margin:0 0 6px; font-size:28px; }
+.sub { color:var(--muted); margin:0 0 24px; font-size:14px; }
+.player { background:var(--bg-2); border:1px solid var(--border); border-radius:16px; overflow:hidden; box-shadow:0 30px 80px rgba(168,85,247,0.08); }
+video { width:100%; display:block; background:#000; }
+.row { display:flex; gap:24px; flex-wrap:wrap; margin:24px 0 0; }
+.card { flex:1; min-width:180px; background:var(--bg-2); border:1px solid var(--border); border-radius:12px; padding:18px 20px; }
+.card h3 { margin:0 0 6px; font-size:12px; color:var(--accent); text-transform:uppercase; letter-spacing:0.06em; }
+.card .big { font-size:22px; font-weight:700; }
+.fixes { margin:24px 0 0; padding:18px 20px; background:rgba(16,185,129,0.06); border:1px solid rgba(16,185,129,0.3); border-radius:12px; }
+.fixes h2 { margin:0 0 10px; font-size:15px; color:var(--emerald); }
+.fixes ul { margin:0; padding:0 0 0 18px; font-size:13px; line-height:1.7; color:var(--fg); }
+.fixes ul b { color:var(--emerald); }
+.issues { margin:14px 0 0; padding:18px 20px; background:rgba(244,63,94,0.06); border:1px solid rgba(244,63,94,0.3); border-radius:12px; }
+.issues h2 { margin:0 0 10px; font-size:15px; color:var(--rose); }
+.issues ul { margin:0; padding:0 0 0 18px; font-size:13px; line-height:1.7; color:var(--fg); }
+.issues ul b { color:var(--rose); }
+.actions { display:flex; gap:10px; flex-wrap:wrap; margin:24px 0 0; }
+.actions a { color:var(--fg); text-decoration:none; background:var(--bg-2); border:1px solid var(--border); padding:10px 16px; border-radius:8px; font-size:13px; font-weight:600; }
+.actions a:hover { border-color:var(--accent); color:var(--accent); }
+.actions a.primary { background:var(--accent); color:#000; border-color:var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Demo MotoStore · v7.1 educativo 2:26</h1>
+  <p class="sub">Voz Marc clonada nueva · 21 escenas paso a paso · datos motos ES inyectados · 1 sola pestaña + pre-warm cache</p>
+
+  <div class="player">
+    <video src="demo_motos_v7_2026-06-20.mp4" controls autoplay muted playsinline preload="auto"></video>
+  </div>
+
+  <div class="row">
+    <div class="card"><h3>Duracion</h3><p class="big">2:26</p></div>
+    <div class="card"><h3>Tamano</h3><p class="big">11 MB</p></div>
+    <div class="card"><h3>Escenas</h3><p class="big">21</p></div>
+    <div class="card"><h3>Backend</h3><p class="big">14/21</p></div>
+  </div>
+
+  <div class="fixes">
+    <h2>Lo que SI funciona en v7.1</h2>
+    <ul>
+      <li><b>Voz Marc clonada nueva</b> · re-cloned from canon MP3 (voice_id TOsblDhWMjTlfJnuNMBV) · eleven_multilingual_v2 + similarity 0.88</li>
+      <li><b>Subtitulos TikTok sin fondo gris</b> · frase completa visible + palabra activa fontsize 48 violeta + outline 2.5</li>
+      <li><b>Reemplazos motos ES funcionando</b> · "MotoStore Espana SL", "Distribuidora Moto Levante", "Casco Schuberth C5" visibles en el pipeline CRM</li>
+      <li><b>Cursor 18px + ripple centrado</b> en la punta · cursor_preview validado</li>
+      <li><b>1 pestana + pre-warm cache</b> · arquitectura corregida vs v7 multi-tab que grababa solo outletcascos</li>
+      <li><b>Pre-load 4 URLs</b> antes del cronometro · navegaciones posteriores aprovechan cache</li>
+      <li><b>Mux SIN -shortest</b> · video preserva 146s frente a 142s de audio · no pierde escenas</li>
+      <li><b>CTA Nextdoo final</b> aterriza en nextdoo.cloud/contactus</li>
+    </ul>
+  </div>
+
+  <div class="issues">
+    <h2>Lo que aun necesita v8</h2>
+    <ul>
+      <li><b>Clicks app Sales/Inventory/Accounting</b> fallaron timeout 5s porque tras click CRM, Odoo navega a /odoo/crm y los iconos ya no son accesibles. Fix v8: navegar back a /odoo home ANTES de cada click_app + esperar a que aparezcan los iconos.</li>
+      <li><b>Avatar HeyGen pendiente</b> · necesita HEYGEN_API_KEY + HEYGEN_AVATAR_ID. Posicion D inf-dcha 150px ya disenada.</li>
+      <li><b>Money words sin pausa</b> · "automaticamente", "sin re-introducir", "solo" no llevan los 0.5s de pausa que prometia el storyboard.</li>
+      <li><b>Zoom limitado</b> · zoom_to solo funciono en outletcascos shop, no se aplico en backend Odoo porque los selectores no acertaron.</li>
+    </ul>
+  </div>
+
+  <div class="actions">
+    <a class="primary" href="demo_motos_v7_2026-06-20.mp4" download>Descargar MP4</a>
+    <a href="v6-samples/STORYBOARD_V7.md">Storyboard v7</a>
+    <a href="demo-motos.html">Comparativa v3-v5</a>
+    <a href="../INDEX.html">Catalogo Odoo</a>
+  </div>
+</div>
+</body>
+</html>
