@@ -48,7 +48,13 @@ def main() -> None:
         alt = e.get("alt", "")
         source_url = e.get("source_url", "")
         cdn = e.get("cdn", "")
+        width = e.get("width", 0)
+        height = e.get("height", 0)
         tags_str = " ".join([module, feature, kind, fmt, best_for]).lower()
+        # Snippets para copy
+        html_snippet = f'<img src="{cdn}" alt="{alt}" loading="lazy" />'
+        md_snippet = f'![{alt}]({cdn})'
+        py_snippet = f'IMG = "{cdn}"  # {alt}'
         cards_html.append(f'''<figure class="card"
   data-module="{html.escape(module)}"
   data-feature="{html.escape(feature)}"
@@ -56,8 +62,15 @@ def main() -> None:
   data-format="{html.escape(fmt)}"
   data-best="{html.escape(best_for)}"
   data-score="{score}"
-  data-text="{html.escape(tags_str)} {html.escape(path)}">
-  <a href="{html.escape(path)}" target="_blank"><img src="{html.escape(path)}" loading="lazy" alt="{html.escape(alt)}"/></a>
+  data-text="{html.escape(tags_str)} {html.escape(path)}"
+  data-cdn="{html.escape(cdn)}"
+  data-html='{html.escape(html_snippet, quote=True)}'
+  data-md='{html.escape(md_snippet, quote=True)}'
+  data-py='{html.escape(py_snippet, quote=True)}'
+  data-alt="{html.escape(alt)}"
+  data-w="{width}"
+  data-h="{height}">
+  <a class="zoom" href="{html.escape(path)}" target="_blank"><img src="{html.escape(path)}" loading="lazy" alt="{html.escape(alt)}"/></a>
   <figcaption>
     <div class="row1">
       <span class="best best-{html.escape(best_for or 'none')}">{html.escape(best_for or '?')}</span>
@@ -70,7 +83,13 @@ def main() -> None:
       {f'<span class="tag tag-kind">{html.escape(kind)}</span>' if kind else ''}
       {f'<span class="tag tag-format">{html.escape(fmt)}</span>' if fmt else ''}
     </div>
-    <div class="meta">{size_kb} KB · <a href="{html.escape(cdn)}" target="_blank">CDN</a>{f' · <a href="{html.escape(source_url)}" target="_blank">fuente</a>' if source_url else ''}</div>
+    <div class="copy-row">
+      <button class="copy" data-target="cdn" title="Copiar URL CDN">URL</button>
+      <button class="copy" data-target="html" title="Copiar &lt;img&gt; HTML">HTML</button>
+      <button class="copy" data-target="md" title="Copiar markdown">MD</button>
+      <button class="copy" data-target="py" title="Copiar snippet Python">PY</button>
+    </div>
+    <div class="meta">{width}×{height} · {size_kb} KB{f' · <a href="{html.escape(source_url)}" target="_blank">fuente</a>' if source_url else ''}</div>
   </figcaption>
 </figure>''')
 
@@ -114,6 +133,10 @@ header.top .sub { color:var(--muted); margin-top:4px; font-size:12px; }
 .meta a { color:var(--muted); }
 .meta a:hover { color:var(--accent); }
 .card.hidden { display:none; }
+.copy-row { display:flex; gap:4px; margin:8px 0 4px; }
+.copy { flex:1; background:var(--bg-3); border:1px solid var(--border); color:var(--muted); padding:5px 0; border-radius:6px; font-size:10px; font-weight:700; cursor:pointer; font-family:inherit; letter-spacing:0.05em; }
+.copy:hover { background:rgba(168,85,247,0.15); color:var(--accent); border-color:var(--accent); }
+.copy.ok { background:rgba(16,185,129,0.18); color:var(--emerald); border-color:var(--emerald); }
 .empty { padding:60px; text-align:center; color:var(--muted); display:none; }
 .empty.show { display:block; }
 """
@@ -156,6 +179,21 @@ clearBtn.addEventListener('click', () => {
   q.value = ''; fModule.value = ''; fFeature.value = '';
   fBest.value = ''; fKind.value = ''; fFormat.value = '';
   apply();
+});
+
+// Copy buttons
+document.addEventListener('click', (ev) => {
+  const btn = ev.target.closest('.copy');
+  if (!btn) return;
+  const card = btn.closest('.card');
+  const target = btn.dataset.target;
+  const value = card.dataset[target] || '';
+  navigator.clipboard.writeText(value).then(() => {
+    const original = btn.textContent;
+    btn.textContent = '✓';
+    btn.classList.add('ok');
+    setTimeout(() => { btn.textContent = original; btn.classList.remove('ok'); }, 900);
+  });
 });
 """
 
