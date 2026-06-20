@@ -3,20 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Demo MotoStore Odoo - Marc voz</title>
+<title>Demo MotoStore Odoo - v3 vs v4</title>
 <style>
-:root { --bg:#0A0A0E; --bg-2:#101018; --fg:#F5F5FA; --muted:#A0A0AF; --accent:#A855F7; --border:rgba(255,255,255,0.08); }
+:root { --bg:#0A0A0E; --bg-2:#101018; --fg:#F5F5FA; --muted:#A0A0AF; --accent:#A855F7; --border:rgba(255,255,255,0.08); --emerald:#10b981; }
 * { box-sizing:border-box; }
 body { margin:0; font-family:-apple-system,Segoe UI,Inter,sans-serif; background:var(--bg); color:var(--fg); padding:40px 20px; }
 .wrap { max-width:1080px; margin:0 auto; }
 h1 { margin:0 0 6px; font-size:28px; letter-spacing:-0.02em; }
 .sub { color:var(--muted); margin:0 0 32px; font-size:14px; }
-.player { background:var(--bg-2); border:1px solid var(--border); border-radius:16px; overflow:hidden; box-shadow:0 30px 80px rgba(168,85,247,0.08); }
-video { width:100%; display:block; background:#000; }
-.row { display:flex; gap:24px; flex-wrap:wrap; margin:24px 0 0; }
-.card { flex:1; min-width:180px; background:var(--bg-2); border:1px solid var(--border); border-radius:12px; padding:18px 20px; }
-.card h3 { margin:0 0 6px; font-size:12px; color:var(--accent); text-transform:uppercase; letter-spacing:0.06em; }
-.card .big { font-size:24px; font-weight:700; }
+.versions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom:32px; }
+.ver { flex:1; min-width:300px; background:var(--bg-2); border:1px solid var(--border); border-radius:16px; overflow:hidden; }
+.ver header { padding:14px 18px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+.ver header h2 { margin:0; font-size:14px; }
+.ver header .tag { font-size:10px; font-weight:700; padding:4px 10px; border-radius:999px; }
+.ver.v4 header .tag { background:rgba(16,185,129,0.18); color:var(--emerald); }
+.ver.v3 header .tag { background:rgba(160,160,175,0.12); color:var(--muted); }
+.ver video { width:100%; display:block; background:#000; }
+.feat { padding:14px 18px; }
+.feat ul { margin:0; padding:0 0 0 18px; color:var(--muted); font-size:12px; line-height:1.7; }
+.feat ul li b { color:var(--fg); }
+.row { display:flex; gap:16px; flex-wrap:wrap; margin:14px 0 0; padding:14px 18px; background:rgba(255,255,255,0.02); }
+.kpi { color:var(--muted); font-size:11px; }
+.kpi b { color:var(--fg); font-size:14px; display:block; }
 .row2 { margin:24px 0 0; padding:18px 20px; background:var(--bg-2); border:1px solid var(--border); border-radius:12px; }
 .row2 h2 { margin:0 0 12px; font-size:16px; }
 .row2 ol { margin:0; padding:0 0 0 20px; color:var(--muted); font-size:13px; line-height:1.7; }
@@ -25,45 +33,81 @@ video { width:100%; display:block; background:#000; }
 .actions a { color:var(--fg); text-decoration:none; background:var(--bg-2); border:1px solid var(--border); padding:10px 16px; border-radius:8px; font-size:13px; font-weight:600; }
 .actions a:hover { border-color:var(--accent); color:var(--accent); }
 .actions a.primary { background:var(--accent); color:#000; border-color:var(--accent); }
-.note { margin-top:24px; padding:14px 18px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.3); border-radius:10px; color:#fbbf24; font-size:12px; line-height:1.5; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>Demo MotoStore - Recorrido Odoo end-to-end</h1>
-  <p class="sub">Frontend OutletCascos + backend demo.odoo.com - voz Marc ElevenLabs v3 (preset COACH) - subtitulos quemados</p>
-  <div class="player">
-    <video src="demo_motos_v3_2026-06-20.mp4" controls autoplay muted playsinline preload="auto"></video>
+  <p class="sub">Voz Marc ElevenLabs v3 preset COACH - 12 escenas - frontend outletcascos + backend Odoo</p>
+
+  <div class="versions">
+    <div class="ver v4">
+      <header>
+        <h2>v4 (recomendada)</h2>
+        <span class="tag">CURSOR + ZOOM</span>
+      </header>
+      <video src="demo_motos_v4_2026-06-20.mp4" controls autoplay muted playsinline preload="auto"></video>
+      <div class="feat">
+        <ul>
+          <li><b>Cursor visible</b> robusto - guard inteligente re-inyecta tras SPA navigation</li>
+          <li><b>Clicks reales</b> con selector .o_app:has-text() en backend Odoo</li>
+          <li><b>Ripple Material Design</b> visible en cada click</li>
+          <li><b>Zoom 1.3-1.5x</b> en precio del casco, pipeline CRM, tabla de pedidos</li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="kpi"><b>67,2 s</b>Duracion</div>
+        <div class="kpi"><b>5,1 MB</b>Tamano</div>
+        <div class="kpi"><b>12</b>Escenas</div>
+        <div class="kpi"><b>0 EUR</b>Coste</div>
+      </div>
+    </div>
+
+    <div class="ver v3">
+      <header>
+        <h2>v3 (referencia)</h2>
+        <span class="tag">BASE</span>
+      </header>
+      <video src="demo_motos_v3_2026-06-20.mp4" controls muted playsinline preload="metadata"></video>
+      <div class="feat">
+        <ul>
+          <li>Voz Marc OK · subtitulos OK</li>
+          <li>Cursor solo se ve en outletcascos.com</li>
+          <li>Backend Odoo sin cursor visible</li>
+          <li>Sin zoom dinamico</li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="kpi"><b>68,7 s</b>Duracion</div>
+        <div class="kpi"><b>3,7 MB</b>Tamano</div>
+        <div class="kpi"><b>12</b>Escenas</div>
+        <div class="kpi"><b>0 EUR</b>Coste</div>
+      </div>
+    </div>
   </div>
-  <div class="row">
-    <div class="card"><h3>Duracion</h3><p class="big">68,7 s</p></div>
-    <div class="card"><h3>Tamano</h3><p class="big">3,7 MB</p></div>
-    <div class="card"><h3>Voz</h3><p class="big">Marc v3</p></div>
-    <div class="card"><h3>Escenas</h3><p class="big">12</p></div>
-  </div>
+
   <div class="row2">
-    <h2>Escenas grabadas</h2>
+    <h2>Escenas v4 (con cursor + zoom)</h2>
     <ol>
-      <li><b>00:00</b> Intro - outletcascos.com home</li>
-      <li><b>00:08</b> Scroll - "una tienda real de cascos hecha con Odoo"</li>
-      <li><b>00:13</b> Catalogo - /shop con precios y stock</li>
-      <li><b>00:21</b> Pivote - "cuando un cliente compra... te lo enseno"</li>
-      <li><b>00:28</b> Escritorio Odoo - todas las apps</li>
-      <li><b>00:34</b> CRM - oportunidad de venta</li>
-      <li><b>00:38</b> Pipeline CRM scroll</li>
-      <li><b>00:43</b> Ventas - pedido confirmado</li>
-      <li><b>00:48</b> Inventario - movimiento de almacen</li>
-      <li><b>00:53</b> Contabilidad - asiento contable</li>
-      <li><b>00:58</b> Cierre - "Una sola plataforma. Sin re-introducir datos."</li>
+      <li><b>00:00</b> Intro outletcascos.com - "Te enseno una tienda online real..."</li>
+      <li><b>00:07</b> Scroll - "una tienda real de cascos con Odoo eCommerce"</li>
+      <li><b>00:13</b> Catalogo /shop + <b>ZOOM 1.5x</b> sobre precio</li>
+      <li><b>00:17</b> Pivote - "te lo enseno" -> demo.odoo.com</li>
+      <li><b>00:23</b> Escritorio Odoo con todas las apps</li>
+      <li><b>00:29</b> <b>CLICK</b> CRM con ripple visible</li>
+      <li><b>00:32</b> Pipeline CRM + <b>ZOOM 1.3x</b> sobre tarjetas kanban</li>
+      <li><b>00:38</b> <b>CLICK</b> Sales con ripple</li>
+      <li><b>00:46</b> Lista pedidos + <b>ZOOM 1.25x</b> sobre data_row</li>
+      <li><b>00:51</b> <b>CLICK</b> Inventory con ripple</li>
+      <li><b>00:56</b> <b>CLICK</b> Accounting con ripple</li>
+      <li><b>01:01</b> Cierre - "Una sola plataforma. Sin re-introducir datos."</li>
     </ol>
   </div>
-  <div class="note">
-    Esta es la version 3 (v3). Cursor visible + ripple en clicks funcionan en outletcascos.com pero se pierden en navegacion SPA del backend Odoo. v4 lo arregla con reinyeccion robusta del motor + zoom dinamico en regiones clave (precio del casco, pipeline CRM, asiento contable).
-  </div>
+
   <div class="actions">
-    <a class="primary" href="demo_motos_v3_2026-06-20.mp4" download>Descargar MP4</a>
+    <a class="primary" href="demo_motos_v4_2026-06-20.mp4" download>Descargar v4 MP4</a>
+    <a href="demo_motos_v3_2026-06-20.mp4" download>Descargar v3 MP4</a>
     <a href="../INDEX.html">Catalogo de imagenes Odoo</a>
-    <a href="index.html">POC anterior Nextdoo</a>
   </div>
 </div>
 </body>
