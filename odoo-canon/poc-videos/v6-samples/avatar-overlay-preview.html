@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Avatar HeyGen overlay - donde lo quieres</title>
+<style>
+:root { --bg:#0A0A0E; --bg-2:#101018; --fg:#F5F5FA; --muted:#A0A0AF; --accent:#A855F7; --border:rgba(255,255,255,0.08); --emerald:#10b981; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,Segoe UI,Inter,sans-serif; background:var(--bg); color:var(--fg); padding:40px 20px; }
+.wrap { max-width:1080px; margin:0 auto; }
+h1 { margin:0 0 6px; font-size:28px; }
+.sub { color:var(--muted); margin:0 0 24px; font-size:14px; }
+.opts { display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; }
+.opt { background:var(--bg-2); border:1px solid var(--border); border-radius:14px; overflow:hidden; cursor:pointer; transition:border-color 0.2s; }
+.opt:hover { border-color:var(--accent); }
+.opt header { padding:14px 18px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+.opt header h2 { margin:0; font-size:14px; }
+.opt header .pill { font-size:10px; font-weight:700; padding:3px 10px; border-radius:999px; background:rgba(168,85,247,0.18); color:var(--accent); }
+.opt .canvas { position:relative; aspect-ratio:16/10; background:linear-gradient(120deg, #1a1a26 0%, #0a0a0e 100%); overflow:hidden; }
+.opt .canvas::before {
+  content:""; position:absolute; inset:30px; border-radius:8px;
+  background:repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0 10px, transparent 10px 20px);
+}
+.label { position:absolute; top:14px; left:14px; background:rgba(0,0,0,0.5); padding:4px 10px; border-radius:6px; font-size:11px; color:var(--muted); }
+.avatar {
+  position:absolute;
+  width:160px; height:160px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, #6d4cf0 0%, #2a1561 70%);
+  border:3px solid #fff;
+  box-shadow:0 18px 50px rgba(0,0,0,0.6), 0 0 0 6px rgba(168,85,247,0.25);
+  overflow:hidden;
+}
+.avatar::after {
+  content:"Marc"; position:absolute; inset:0; display:grid; place-items:center;
+  color:#fff; font-size:34px; font-weight:700; letter-spacing:-0.02em;
+}
+.cap {
+  position:absolute; bottom:8px; left:50%; transform:translate(-50%, 0);
+  background:rgba(0,0,0,0.7); color:#fff; font-size:10px; padding:3px 8px; border-radius:6px;
+  white-space:nowrap;
+}
+.opt .cap2 { padding:14px 18px; font-size:12px; color:var(--muted); border-top:1px solid var(--border); }
+.opt .cap2 b { color:var(--fg); }
+.actions { margin-top:32px; padding:18px 20px; background:var(--bg-2); border:1px solid var(--border); border-radius:12px; }
+.actions h2 { margin:0 0 10px; font-size:16px; }
+.actions ul { margin:0; padding:0 0 0 20px; color:var(--muted); font-size:13px; line-height:1.7; }
+.actions ul b { color:var(--fg); }
+
+/* Variantes de posicion */
+.pos-tl .avatar { top:20px; left:20px; }
+.pos-tr .avatar { top:20px; right:20px; }
+.pos-bl .avatar { bottom:20px; left:20px; }
+.pos-br .avatar { bottom:20px; right:20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Avatar HeyGen overlay - elige posicion</h1>
+  <p class="sub">Tu avatar Marc circular hablando sobre el screencast Odoo. Elige donde va.</p>
+
+  <div class="opts">
+    <div class="opt pos-tl">
+      <header><h2>Esquina superior izquierda</h2><span class="pill">A</span></header>
+      <div class="canvas">
+        <div class="label">Odoo backend - escritorio apps</div>
+        <div class="avatar"><div class="cap">en directo</div></div>
+      </div>
+      <div class="cap2"><b>Profesional clasico.</b> Como Loom o tutoriales corporate. No tapa el menu top de Odoo.</div>
+    </div>
+
+    <div class="opt pos-tr">
+      <header><h2>Esquina superior derecha</h2><span class="pill">B</span></header>
+      <div class="canvas">
+        <div class="label">Odoo backend - escritorio apps</div>
+        <div class="avatar"><div class="cap">en directo</div></div>
+      </div>
+      <div class="cap2"><b>Estilo broadcaster.</b> Tipo telediario. Encaja con CTA en la esquina opuesta.</div>
+    </div>
+
+    <div class="opt pos-bl">
+      <header><h2>Esquina inferior izquierda</h2><span class="pill">C</span></header>
+      <div class="canvas">
+        <div class="label">Odoo backend - escritorio apps</div>
+        <div class="avatar"><div class="cap">en directo</div></div>
+      </div>
+      <div class="cap2"><b>TikTok / Reels.</b> Encima de los subtitulos. Lo mas frescos para social.</div>
+    </div>
+
+    <div class="opt pos-br">
+      <header><h2>Esquina inferior derecha</h2><span class="pill">D</span></header>
+      <div class="canvas">
+        <div class="label">Odoo backend - escritorio apps</div>
+        <div class="avatar"><div class="cap">en directo</div></div>
+      </div>
+      <div class="cap2"><b>Webcam clasica.</b> Como Twitch. No tapa el contenido principal.</div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <h2>Necesito de ti para generar tu avatar HeyGen real:</h2>
+    <ul>
+      <li><b>HEYGEN_API_KEY</b> - tu key de https://app.heygen.com/settings/api</li>
+      <li><b>AVATAR_ID</b> - id de tu avatar Marc entrenado (en HeyGen Studio > Avatars)</li>
+      <li><b>Posicion</b>: A, B, C, o D</li>
+      <li><b>Modo</b>:
+        <ul>
+          <li><b>FULL</b> - avatar habla TODA la demo (~$0.30/30s en HeyGen)</li>
+          <li><b>INTRO+OUTRO</b> - avatar solo en intro (3s) y outro (5s), screencast con voz ElevenLabs en medio</li>
+          <li><b>MONEY MOMENTS</b> - avatar aparece y se va en los 4 picos de la demo (~$0.05 por aparicion)</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
