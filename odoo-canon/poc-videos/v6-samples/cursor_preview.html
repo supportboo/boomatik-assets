@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cursor v6 preview</title>
+<style>
+body { margin:0; background:#0A0A0E; color:#fff; font-family:Inter,sans-serif; min-height:100vh; cursor:none; }
+* { cursor: none !important; }
+.wrap { padding:60px; }
+h1 { font-size:24px; margin:0 0 12px; }
+.sub { color:#999; margin:0 0 40px; }
+.targets { display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; max-width:900px; }
+.target { background:#1a1a26; border:1px solid #333; border-radius:12px; padding:30px; text-align:center; cursor:none; }
+.target h3 { margin:0 0 8px; }
+.note { margin-top:30px; padding:14px; background:rgba(168,85,247,0.1); border:1px solid rgba(168,85,247,0.4); border-radius:8px; font-size:13px; }
+#cursor { position:fixed; top:0; left:0; width:18px; height:18px; pointer-events:none; z-index:9999; transition:transform 380ms cubic-bezier(.22,.61,.36,1); transform:translate(50px, 50px); }
+.ripple { position:fixed; border-radius:50%; pointer-events:none; z-index:9998; background:radial-gradient(circle, rgba(168,85,247,0.55) 0%, rgba(168,85,247,0) 70%); border:2px solid rgba(168,85,247,0.85); animation:ripple 600ms ease-out forwards; }
+@keyframes ripple { 0% { width:0; height:0; opacity:1; } 100% { width:72px; height:72px; opacity:0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Cursor v6 — preview</h1>
+  <p class="sub">Mueve el ratón sobre las cards. Click para ver ripple. La punta del cursor está en la esquina sup-izda del SVG — el ripple va desde ahí.</p>
+  <div class="targets">
+    <div class="target"><h3>CRM</h3><p>Click</p></div>
+    <div class="target"><h3>Sales</h3><p>Click</p></div>
+    <div class="target"><h3>Inventory</h3><p>Click</p></div>
+    <div class="target"><h3>Accounting</h3><p>Click</p></div>
+    <div class="target"><h3>Website</h3><p>Click</p></div>
+    <div class="target"><h3>Settings</h3><p>Click</p></div>
+  </div>
+  <div class="note">
+    Diferencia clave vs v5: cursor 18 px (era 32), punta arriba-izda (era centro), ripple emana de la punta (era del centro del elemento). Cursor del sistema oculto con <code>cursor:none</code>.
+  </div>
+</div>
+<div id="cursor">
+  <svg viewBox="0 0 16 16" width="18" height="18">
+    <path d="M0,0 L0,12 L3.5,9 L6,15 L8,14 L5.5,8.5 L10,8.5 Z" fill="#FFFFFF" stroke="#0A0A0E" stroke-width="1.2" stroke-linejoin="round"/>
+  </svg>
+</div>
+<script>
+const c = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  c.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
+document.addEventListener('click', e => {
+  const r = document.createElement('div');
+  r.className = 'ripple';
+  r.style.left = (e.clientX - 0) + 'px';
+  r.style.top = (e.clientY - 0) + 'px';
+  document.body.appendChild(r);
+  setTimeout(() => r.remove(), 700);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>v6 samples para validar antes de grabar</title>
+<style>
+:root { --bg:#0A0A0E; --bg-2:#101018; --fg:#F5F5FA; --muted:#A0A0AF; --accent:#A855F7; --emerald:#10b981; --rose:#f43f5e; --border:rgba(255,255,255,0.08); }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,Segoe UI,Inter,sans-serif; background:var(--bg); color:var(--fg); padding:40px 20px; }
+.wrap { max-width:980px; margin:0 auto; }
+h1 { margin:0 0 6px; font-size:28px; letter-spacing:-0.02em; }
+.sub { color:var(--muted); margin:0 0 32px; font-size:14px; }
+section.s { background:var(--bg-2); border:1px solid var(--border); border-radius:14px; padding:24px; margin-bottom:20px; }
+section.s h2 { margin:0 0 14px; font-size:18px; }
+section.s p { color:var(--muted); font-size:13px; line-height:1.5; margin:0 0 14px; }
+audio, video { width:100%; display:block; margin:8px 0; }
+.iframe-wrap { position:relative; width:100%; height:480px; border-radius:10px; overflow:hidden; background:#000; border:1px solid var(--border); }
+.iframe-wrap iframe { width:100%; height:100%; border:0; }
+.actions { display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; }
+.actions a { color:var(--fg); text-decoration:none; padding:9px 14px; border:1px solid var(--border); border-radius:8px; font-size:12px; font-weight:600; }
+.actions a:hover { border-color:var(--accent); color:var(--accent); }
+.actions a.primary { background:var(--emerald); color:#000; border-color:var(--emerald); }
+.actions a.reject { background:rgba(244,63,94,0.12); color:var(--rose); border-color:rgba(244,63,94,0.4); }
+.list { color:var(--muted); font-size:13px; line-height:1.7; padding-left:20px; }
+.list b { color:var(--fg); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>v6 samples · validar antes de grabar la demo</h1>
+  <p class="sub">3 muestras pequenas para confirmar voz, cursor y subtitulos antes de invertir en grabacion completa de 72s.</p>
+
+  <section class="s">
+    <h2>1. Voz Marc · settings v6 (eleven_multilingual_v2 + speed 1.0 + similarity 0.88 + language es)</h2>
+    <p>Sample de 6,5s. Compara contra tu MP3 canon <code>marc-voz-CANON-OPTIMIZADO-pro.mp3</code>. Debe sonar Marc espanol, no LATAM.</p>
+    <audio src="voz_v6_settings.mp3" controls preload="auto"></audio>
+    <ul class="list">
+      <li><b>OK</b> -> sigue siendo tu voz Marc espanol</li>
+      <li><b>NO</b> -> reporta que palabras suenan raras, retry con stability 0.65+</li>
+    </ul>
+  </section>
+
+  <section class="s">
+    <h2>2. Subtitulos TikTok v6 · sin fondo, fontsize 48 activa / 32 contexto</h2>
+    <p>Sample 3s mostrando como se ven los subtitulos sobre fondo oscuro. Palabra activa en violeta, contexto en blanco. Sin recuadro gris.</p>
+    <video src="sub_sample_v6.mp4" controls autoplay muted preload="auto"></video>
+    <ul class="list">
+      <li><b>OK fontsize</b> -> v5 era 16-22, v6 es 32-48 (x3 mas grande como pediste)</li>
+      <li><b>OK sin fondo gris</b> -> solo outline negro, sin BorderStyle 3 ni BackColour</li>
+      <li><b>NO</b> -> dime si quieres mas pequeno, mas grande, otro color, otra fuente</li>
+    </ul>
+  </section>
+
+  <section class="s">
+    <h2>3. Cursor + ripple v6 · pointer 18px, ripple en la punta</h2>
+    <p>Cursor SVG con punta en (0,0). Ripple centrado en la punta cuando haces click. Cursor del sistema oculto. Mueve el raton en el preview e interactua.</p>
+    <div class="iframe-wrap"><iframe src="cursor_preview.html"></iframe></div>
+    <ul class="list">
+      <li><b>OK tamano</b> -> 18px (v5 era 32px)</li>
+      <li><b>OK ripple en punta</b> -> sale exactamente desde el punto del click</li>
+      <li><b>NO</b> -> dime si quieres otro estilo (dedo Apple, cursor macOS, otro)</li>
+    </ul>
+  </section>
+
+  <section class="s">
+    <h2>Storyboard time-coded v6</h2>
+    <p>5 actos · 14 escenas · 72s · 10/14 backend. Cada palabra trigger sincronizada con su accion visual mediante schedule de tiempos absolutos.</p>
+    <p>Datos demo Odoo reemplazados por motos espanoles via JS injection: Demo Company -> MotoStore Espana SL, Office Design -> Casco Shoei NXR2, $80,000 -> 4.250 EUR, etc.</p>
+    <div class="actions">
+      <a href="STORYBOARD_V6.md" target="_blank">Leer plan completo en markdown</a>
+    </div>
+  </section>
+
+  <section class="s">
+    <h2>Tu decision</h2>
+    <p>Si las 3 muestras encajan, lanzo grabacion v6 completa (72s) en menos de 5 minutos. Si algo no encaja, itero esa pieza y volvemos a validar.</p>
+    <div class="actions">
+      <a class="primary" href="javascript:void(0)">"v6, dale" (respondeme en chat)</a>
+      <a class="reject" href="javascript:void(0)">"Cambia X" (dime el fix)</a>
+    </div>
+  </section>
+</div>
+</body>
+</html>
