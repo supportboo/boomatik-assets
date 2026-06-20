@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Avatar HeyGen overlay - donde lo quieres</title>
+<title>Avatar HeyGen overlay - posicion D + tamano</title>
 <style>
 :root { --bg:#0A0A0E; --bg-2:#101018; --fg:#F5F5FA; --muted:#A0A0AF; --accent:#A855F7; --border:rgba(255,255,255,0.08); --emerald:#10b981; }
 * { box-sizing:border-box; }
@@ -11,106 +11,116 @@ body { margin:0; font-family:-apple-system,Segoe UI,Inter,sans-serif; background
 .wrap { max-width:1080px; margin:0 auto; }
 h1 { margin:0 0 6px; font-size:28px; }
 .sub { color:var(--muted); margin:0 0 24px; font-size:14px; }
-.opts { display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; }
-.opt { background:var(--bg-2); border:1px solid var(--border); border-radius:14px; overflow:hidden; cursor:pointer; transition:border-color 0.2s; }
-.opt:hover { border-color:var(--accent); }
-.opt header { padding:14px 18px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
-.opt header h2 { margin:0; font-size:14px; }
-.opt header .pill { font-size:10px; font-weight:700; padding:3px 10px; border-radius:999px; background:rgba(168,85,247,0.18); color:var(--accent); }
-.opt .canvas { position:relative; aspect-ratio:16/10; background:linear-gradient(120deg, #1a1a26 0%, #0a0a0e 100%); overflow:hidden; }
-.opt .canvas::before {
-  content:""; position:absolute; inset:30px; border-radius:8px;
-  background:repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0 10px, transparent 10px 20px);
+.tag { display:inline-block; background:rgba(16,185,129,0.18); color:var(--emerald); padding:3px 10px; border-radius:999px; font-size:11px; font-weight:700; margin-left:8px; vertical-align:middle; }
+
+section.chosen { background:var(--bg-2); border:1px solid var(--emerald); border-radius:14px; padding:24px; margin-bottom:24px; }
+.canvas {
+  position:relative; aspect-ratio:16/9; background:linear-gradient(135deg, #1a1a26 0%, #0a0a0e 50%, #1a1a26 100%);
+  border-radius:10px; overflow:hidden; margin:14px 0;
 }
-.label { position:absolute; top:14px; left:14px; background:rgba(0,0,0,0.5); padding:4px 10px; border-radius:6px; font-size:11px; color:var(--muted); }
+.canvas::before {
+  content:"Demo Odoo - escritorio backend"; position:absolute; top:20px; left:20px;
+  background:rgba(0,0,0,0.5); padding:5px 12px; border-radius:6px; font-size:11px; color:var(--muted);
+}
+.canvas::after {
+  content:""; position:absolute; inset:60px 30px 80px 30px;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.04) 0 8%, transparent 8%),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.04) 0 8%, transparent 8%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.04) 0 8%, transparent 8%);
+}
+
+/* AVATAR FINAL · 150 px diametro · inf-dcha */
 .avatar {
-  position:absolute;
-  width:160px; height:160px;
+  position:absolute; bottom:24px; right:24px;
+  width:150px; height:150px;
   border-radius:50%;
-  background:radial-gradient(circle at 30% 30%, #6d4cf0 0%, #2a1561 70%);
+  background:radial-gradient(circle at 30% 30%, #714B67 0%, #2a1e30 80%);
   border:3px solid #fff;
-  box-shadow:0 18px 50px rgba(0,0,0,0.6), 0 0 0 6px rgba(168,85,247,0.25);
+  box-shadow:
+    0 12px 32px rgba(0,0,0,0.5),
+    0 0 0 4px rgba(168,85,247,0.22),
+    0 0 24px rgba(168,85,247,0.15);
   overflow:hidden;
+  z-index:5;
 }
 .avatar::after {
   content:"Marc"; position:absolute; inset:0; display:grid; place-items:center;
-  color:#fff; font-size:34px; font-weight:700; letter-spacing:-0.02em;
+  color:#fff; font-size:30px; font-weight:700; letter-spacing:-0.02em;
 }
-.cap {
+.live {
   position:absolute; bottom:8px; left:50%; transform:translate(-50%, 0);
-  background:rgba(0,0,0,0.7); color:#fff; font-size:10px; padding:3px 8px; border-radius:6px;
-  white-space:nowrap;
+  background:rgba(0,0,0,0.7); color:#fff; font-size:9px; padding:2px 7px; border-radius:6px;
+  white-space:nowrap; letter-spacing:0.04em;
 }
-.opt .cap2 { padding:14px 18px; font-size:12px; color:var(--muted); border-top:1px solid var(--border); }
-.opt .cap2 b { color:var(--fg); }
-.actions { margin-top:32px; padding:18px 20px; background:var(--bg-2); border:1px solid var(--border); border-radius:12px; }
-.actions h2 { margin:0 0 10px; font-size:16px; }
-.actions ul { margin:0; padding:0 0 0 20px; color:var(--muted); font-size:13px; line-height:1.7; }
-.actions ul b { color:var(--fg); }
 
-/* Variantes de posicion */
-.pos-tl .avatar { top:20px; left:20px; }
-.pos-tr .avatar { top:20px; right:20px; }
-.pos-bl .avatar { bottom:20px; left:20px; }
-.pos-br .avatar { bottom:20px; right:20px; }
+/* Comparativa 220 vs 150 */
+.compare { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; }
+.compare > div { position:relative; aspect-ratio:16/9; background:linear-gradient(135deg, #1a1a26, #0a0a0e); border-radius:8px; overflow:hidden; }
+.compare > div .lbl { position:absolute; top:8px; left:8px; background:rgba(0,0,0,0.5); padding:3px 8px; border-radius:5px; font-size:10px; color:var(--muted); }
+.compare > div .lbl b { color:var(--fg); }
+.compare > div::after {
+  content:""; position:absolute; inset:40px 20px 50px 20px;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0 12%, transparent 12%);
+}
+.compare .big .av { width:220px; height:220px; }
+.compare .small .av { width:150px; height:150px; }
+.compare .av {
+  position:absolute; bottom:14px; right:14px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, #714B67 0%, #2a1e30 80%);
+  border:3px solid #fff;
+  box-shadow:0 8px 22px rgba(0,0,0,0.5), 0 0 0 4px rgba(168,85,247,0.22);
+  z-index:5;
+}
+.compare .av::after {
+  content:"Marc"; position:absolute; inset:0; display:grid; place-items:center;
+  color:#fff; font-weight:700;
+}
+.compare .big .av::after { font-size:36px; }
+.compare .small .av::after { font-size:24px; }
+
+.next { margin-top:24px; padding:18px 20px; background:rgba(168,85,247,0.06); border:1px solid rgba(168,85,247,0.3); border-radius:12px; }
+.next h2 { margin:0 0 10px; font-size:15px; color:var(--accent); }
+.next pre { margin:0; background:rgba(0,0,0,0.4); padding:12px 14px; border-radius:8px; font-size:12px; color:var(--fg); overflow-x:auto; font-family:Consolas, Monaco, monospace; }
+.next ul { margin:10px 0 0; padding:0 0 0 18px; color:var(--muted); font-size:12px; line-height:1.7; }
+.next ul b { color:var(--fg); }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>Avatar HeyGen overlay - elige posicion</h1>
-  <p class="sub">Tu avatar Marc circular hablando sobre el screencast Odoo. Elige donde va.</p>
+  <h1>Avatar HeyGen v6 · posicion D, tamano 150px <span class="tag">VALIDADO</span></h1>
+  <p class="sub">"No muy grande, lo importante es la demo" - Marc 2026-06-20. Diametro bajado de 220 a 150px (32% mas pequeno).</p>
 
-  <div class="opts">
-    <div class="opt pos-tl">
-      <header><h2>Esquina superior izquierda</h2><span class="pill">A</span></header>
-      <div class="canvas">
-        <div class="label">Odoo backend - escritorio apps</div>
-        <div class="avatar"><div class="cap">en directo</div></div>
-      </div>
-      <div class="cap2"><b>Profesional clasico.</b> Como Loom o tutoriales corporate. No tapa el menu top de Odoo.</div>
+  <section class="chosen">
+    <h2 style="margin:0 0 4px; font-size:16px;">Tu eleccion: posicion D + tamano discreto</h2>
+    <p style="color:var(--muted); font-size:12px; margin:0 0 14px;">Esquina inferior derecha, 150px de diametro. No tapa el contenido principal.</p>
+    <div class="canvas">
+      <div class="avatar"><div class="live">EN DIRECTO</div></div>
     </div>
+  </section>
 
-    <div class="opt pos-tr">
-      <header><h2>Esquina superior derecha</h2><span class="pill">B</span></header>
-      <div class="canvas">
-        <div class="label">Odoo backend - escritorio apps</div>
-        <div class="avatar"><div class="cap">en directo</div></div>
-      </div>
-      <div class="cap2"><b>Estilo broadcaster.</b> Tipo telediario. Encaja con CTA en la esquina opuesta.</div>
+  <h2 style="margin:24px 0 8px; font-size:14px; color:var(--muted);">Comparativa tamano antes / despues</h2>
+  <div class="compare">
+    <div class="big">
+      <div class="lbl"><b>220 px</b> · v5 (demasiado grande)</div>
+      <div class="av"></div>
     </div>
-
-    <div class="opt pos-bl">
-      <header><h2>Esquina inferior izquierda</h2><span class="pill">C</span></header>
-      <div class="canvas">
-        <div class="label">Odoo backend - escritorio apps</div>
-        <div class="avatar"><div class="cap">en directo</div></div>
-      </div>
-      <div class="cap2"><b>TikTok / Reels.</b> Encima de los subtitulos. Lo mas frescos para social.</div>
-    </div>
-
-    <div class="opt pos-br">
-      <header><h2>Esquina inferior derecha</h2><span class="pill">D</span></header>
-      <div class="canvas">
-        <div class="label">Odoo backend - escritorio apps</div>
-        <div class="avatar"><div class="cap">en directo</div></div>
-      </div>
-      <div class="cap2"><b>Webcam clasica.</b> Como Twitch. No tapa el contenido principal.</div>
+    <div class="small">
+      <div class="lbl"><b>150 px</b> · v6 (lo importante es la demo)</div>
+      <div class="av"></div>
     </div>
   </div>
 
-  <div class="actions">
-    <h2>Necesito de ti para generar tu avatar HeyGen real:</h2>
+  <div class="next">
+    <h2>Listo para arrancar. Pegame:</h2>
+    <pre>HEYGEN_API_KEY=hg_xxxxxxxxxx
+HEYGEN_AVATAR_ID=tu_avatar_id</pre>
     <ul>
-      <li><b>HEYGEN_API_KEY</b> - tu key de https://app.heygen.com/settings/api</li>
-      <li><b>AVATAR_ID</b> - id de tu avatar Marc entrenado (en HeyGen Studio > Avatars)</li>
-      <li><b>Posicion</b>: A, B, C, o D</li>
-      <li><b>Modo</b>:
-        <ul>
-          <li><b>FULL</b> - avatar habla TODA la demo (~$0.30/30s en HeyGen)</li>
-          <li><b>INTRO+OUTRO</b> - avatar solo en intro (3s) y outro (5s), screencast con voz ElevenLabs en medio</li>
-          <li><b>MONEY MOMENTS</b> - avatar aparece y se va en los 4 picos de la demo (~$0.05 por aparicion)</li>
-        </ul>
-      </li>
+      <li>En cuanto los reciba, lanzo render v6 en <b>~5 min</b></li>
+      <li>Tu avatar dira <b>intro 3s</b> + <b>outro 5s</b> (modo INTRO+OUTRO recomendado para no agotar creditos)</li>
+      <li>Dentro del screencast, voz ElevenLabs ya validada</li>
+      <li>Datos Odoo en espanol motero, cursor centrado, ripple en punta, subtitulos TikTok sin fondo</li>
     </ul>
   </div>
 </div>
