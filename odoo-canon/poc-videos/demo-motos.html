@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demo MotoStore Odoo - Marc voz</title>
+<style>
+:root { --bg:#0A0A0E; --bg-2:#101018; --fg:#F5F5FA; --muted:#A0A0AF; --accent:#A855F7; --border:rgba(255,255,255,0.08); }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,Segoe UI,Inter,sans-serif; background:var(--bg); color:var(--fg); padding:40px 20px; }
+.wrap { max-width:1080px; margin:0 auto; }
+h1 { margin:0 0 6px; font-size:28px; letter-spacing:-0.02em; }
+.sub { color:var(--muted); margin:0 0 32px; font-size:14px; }
+.player { background:var(--bg-2); border:1px solid var(--border); border-radius:16px; overflow:hidden; box-shadow:0 30px 80px rgba(168,85,247,0.08); }
+video { width:100%; display:block; background:#000; }
+.row { display:flex; gap:24px; flex-wrap:wrap; margin:24px 0 0; }
+.card { flex:1; min-width:180px; background:var(--bg-2); border:1px solid var(--border); border-radius:12px; padding:18px 20px; }
+.card h3 { margin:0 0 6px; font-size:12px; color:var(--accent); text-transform:uppercase; letter-spacing:0.06em; }
+.card .big { font-size:24px; font-weight:700; }
+.row2 { margin:24px 0 0; padding:18px 20px; background:var(--bg-2); border:1px solid var(--border); border-radius:12px; }
+.row2 h2 { margin:0 0 12px; font-size:16px; }
+.row2 ol { margin:0; padding:0 0 0 20px; color:var(--muted); font-size:13px; line-height:1.7; }
+.row2 ol li b { color:var(--fg); }
+.actions { display:flex; gap:10px; flex-wrap:wrap; margin:24px 0 0; }
+.actions a { color:var(--fg); text-decoration:none; background:var(--bg-2); border:1px solid var(--border); padding:10px 16px; border-radius:8px; font-size:13px; font-weight:600; }
+.actions a:hover { border-color:var(--accent); color:var(--accent); }
+.actions a.primary { background:var(--accent); color:#000; border-color:var(--accent); }
+.note { margin-top:24px; padding:14px 18px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.3); border-radius:10px; color:#fbbf24; font-size:12px; line-height:1.5; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Demo MotoStore - Recorrido Odoo end-to-end</h1>
+  <p class="sub">Frontend OutletCascos + backend demo.odoo.com - voz Marc ElevenLabs v3 (preset COACH) - subtitulos quemados</p>
+  <div class="player">
+    <video src="demo_motos_v3_2026-06-20.mp4" controls autoplay muted playsinline preload="auto"></video>
+  </div>
+  <div class="row">
+    <div class="card"><h3>Duracion</h3><p class="big">68,7 s</p></div>
+    <div class="card"><h3>Tamano</h3><p class="big">3,7 MB</p></div>
+    <div class="card"><h3>Voz</h3><p class="big">Marc v3</p></div>
+    <div class="card"><h3>Escenas</h3><p class="big">12</p></div>
+  </div>
+  <div class="row2">
+    <h2>Escenas grabadas</h2>
+    <ol>
+      <li><b>00:00</b> Intro - outletcascos.com home</li>
+      <li><b>00:08</b> Scroll - "una tienda real de cascos hecha con Odoo"</li>
+      <li><b>00:13</b> Catalogo - /shop con precios y stock</li>
+      <li><b>00:21</b> Pivote - "cuando un cliente compra... te lo enseno"</li>
+      <li><b>00:28</b> Escritorio Odoo - todas las apps</li>
+      <li><b>00:34</b> CRM - oportunidad de venta</li>
+      <li><b>00:38</b> Pipeline CRM scroll</li>
+      <li><b>00:43</b> Ventas - pedido confirmado</li>
+      <li><b>00:48</b> Inventario - movimiento de almacen</li>
+      <li><b>00:53</b> Contabilidad - asiento contable</li>
+      <li><b>00:58</b> Cierre - "Una sola plataforma. Sin re-introducir datos."</li>
+    </ol>
+  </div>
+  <div class="note">
+    Esta es la version 3 (v3). Cursor visible + ripple en clicks funcionan en outletcascos.com pero se pierden en navegacion SPA del backend Odoo. v4 lo arregla con reinyeccion robusta del motor + zoom dinamico en regiones clave (precio del casco, pipeline CRM, asiento contable).
+  </div>
+  <div class="actions">
+    <a class="primary" href="demo_motos_v3_2026-06-20.mp4" download>Descargar MP4</a>
+    <a href="../INDEX.html">Catalogo de imagenes Odoo</a>
+    <a href="index.html">POC anterior Nextdoo</a>
+  </div>
+</div>
+</body>
+</html>
