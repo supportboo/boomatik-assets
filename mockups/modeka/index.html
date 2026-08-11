@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MODEKA · Serie Touring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<style>
+  :root{--bg:#08080a;--txt:#f5f5f6;--muted:#9a9aa2;--red:#e11d2a;--line:#22222a;--pad:clamp(28px,6vw,90px)}
+  *{margin:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--txt);font-family:"Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .anton{font-family:"Anton",sans-serif;text-transform:uppercase;letter-spacing:.01em}
+  a{color:inherit;text-decoration:none}
+  h2{font-family:"Anton",sans-serif;text-transform:uppercase;line-height:1.02;letter-spacing:.01em}
+  h2 em{font-style:normal;color:var(--red)}
+  .k{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--red);font-weight:600;display:block;margin-bottom:16px}
+  .lead{color:var(--muted);font-size:clamp(14px,1.4vw,17px);margin-top:20px;line-height:1.65;max-width:440px}
+  .btn{display:inline-block;margin-top:28px;background:var(--red);color:#fff;font-weight:700;padding:16px 36px;border-radius:999px;letter-spacing:.02em}
+  .grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.045;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
+  .top{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;padding:18px var(--pad);mix-blend-mode:difference;pointer-events:none}
+  .top .b{font-family:"Anton",sans-serif;font-size:20px}.top .t{font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+  .snd{position:fixed;right:18px;bottom:18px;z-index:55;display:flex;gap:8px;align-items:center;background:rgba(12,12,15,.8);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:999px;padding:10px 16px;cursor:pointer;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+  .snd svg{width:16px;height:16px}.snd .on{display:none}.snd.active .on{display:inline}.snd.active .off{display:none}
+
+  /* ===== segmento fijado con escenas ===== */
+  .pin{position:relative}
+  .pin__sticky{position:sticky;top:0;height:100vh;overflow:hidden;background:var(--bg)}
+  .pscene{position:absolute;inset:0;display:grid;overflow:hidden;will-change:clip-path,transform,opacity}
+  .pscene .wrap{position:relative;z-index:3;width:100%;max-width:1240px;margin:0 auto;padding:0 var(--pad);opacity:0;transition:opacity .5s ease}
+  .pscene .num{position:absolute;z-index:1;font-family:"Anton",sans-serif;font-size:clamp(120px,18vw,320px);line-height:.72;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.06);pointer-events:none}
+  .pscene .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .pscene .grad{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(6,6,7,.94),transparent 50%),linear-gradient(90deg,rgba(6,6,7,.7),transparent 55%)}
+  .center{place-items:center;text-align:center}.center .wrap h2{font-size:clamp(48px,9vw,140px)}.center .lead{margin-inline:auto}
+  .split{place-items:center}.split .wrap{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center}.split.rev .vis{order:2}.split h2{font-size:clamp(34px,5vw,84px)}
+  .vis{position:relative;aspect-ratio:4/5;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#0e0e12;box-shadow:0 40px 90px -40px #000}
+  .vis>img,.vis>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .vis.contain>img{object-fit:contain;padding:12%;background:radial-gradient(120% 80% at 50% 15%,#1b1b22,#0a0a0e)}
+  .full{place-items:end start}.full .wrap{padding-bottom:10vh}.full h2{font-size:clamp(40px,6.5vw,104px)}
+
+  /* ===== bloque normal ===== */
+  .block{padding:clamp(80px,12vw,160px) 0;position:relative}
+  .bhead{max-width:820px;margin:0 auto clamp(36px,5vw,60px);padding:0 var(--pad);text-align:center}
+  .bhead h2{font-size:clamp(34px,5.6vw,80px)}.bhead p{color:var(--muted);font-size:16px;line-height:1.65;margin-top:16px;max-width:600px;margin-inline:auto}
+
+  /* coverflow móviles */
+  .cov__stage{position:relative;height:74vh;min-height:520px;perspective:1700px;transform-style:preserve-3d;cursor:grab}
+  .cov__stage.grab{cursor:grabbing}
+  .pcard{position:absolute;left:50%;top:50%;width:clamp(188px,20vw,272px);aspect-ratio:9/19;transform-origin:center;will-change:transform,opacity;backface-visibility:hidden}
+  .fr{position:relative;width:100%;height:100%;border-radius:12%/5.6%;padding:9px;background:linear-gradient(160deg,#1c1c22,#0a0a0c);border:1px solid #303038;box-shadow:0 40px 80px -30px rgba(0,0,0,.9)}
+  .pcard.center .fr{border-color:rgba(225,29,42,.55);box-shadow:0 55px 110px -30px rgba(225,29,42,.4)}
+  .notch{position:absolute;top:9px;left:50%;transform:translateX(-50%);z-index:6;width:34%;height:15px;background:#0a0a0c;border-radius:0 0 12px 12px}
+  .sbar{position:absolute;top:11px;left:22px;right:22px;z-index:6;display:flex;justify-content:space-between;font-size:10px;font-weight:600;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+  .screen{position:relative;width:100%;height:100%;border-radius:9%/4.4%;overflow:hidden;background:#000;scrollbar-width:none}
+  .screen::-webkit-scrollbar{display:none}
+  .pcard.center .screen{overflow-y:scroll;scroll-snap-type:y mandatory}
+  .screen::after{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;background:linear-gradient(125deg,rgba(255,255,255,.12),rgba(255,255,255,0) 26%,rgba(255,255,255,0) 74%,rgba(255,255,255,.05))}
+  .pane{position:relative;width:100%;height:100%;scroll-snap-align:start;overflow:hidden}
+  .pane img{width:100%;height:100%;object-fit:cover}
+  .pane.prod{background:radial-gradient(120% 80% at 50% 16%,#20202a,#0a0a0e);display:grid;place-items:center}
+  .pane.prod img{object-fit:contain;padding:14%}
+  .plab{position:absolute;left:14px;bottom:14px;z-index:5;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(8,8,10,.55);backdrop-filter:blur(6px);padding:5px 9px;border-radius:999px}
+  .pv{position:absolute;inset:0;opacity:0;transition:opacity .4s;z-index:1}.pv.on{opacity:1}
+  .pcard:not(.center) .pv.on img{animation:phf 5s ease-in-out infinite}
+  .pcard:nth-child(2n) .pv.on img{animation-duration:6.5s}.pcard:nth-child(3n) .pv.on img{animation-delay:-2.4s}
+  @keyframes phf{0%,100%{transform:scale(1.03)}50%{transform:scale(1.09) translateY(-1.2%)}}
+  .pv>img{width:100%;height:100%;object-fit:cover}
+  .pv.p{background:radial-gradient(120% 80% at 50% 16%,#20202a,#0a0a0e);display:grid;place-items:center}.pv.p img{object-fit:contain;padding:14%}
+  .rotb{position:absolute;right:12px;bottom:12px;z-index:7;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(8,8,10,.55);backdrop-filter:blur(6px);color:#fff;display:none;place-items:center;cursor:pointer}
+  .pcard.center .rotb{display:grid}.rotb svg{width:19px;height:19px}.pcard.roton .rotb{background:var(--red);border-color:var(--red)}
+  .rotv{position:absolute;inset:9px;z-index:6;border-radius:9%/4.4%;overflow:hidden;background:#000;opacity:0;pointer-events:none;transition:opacity .35s}
+  .pcard.roton .rotv{opacity:1}.rotv video{width:100%;height:100%;object-fit:cover}
+  .vdots{position:absolute;right:11px;top:50%;transform:translateY(-50%);z-index:7;display:none;flex-direction:column;gap:8px}
+  .pcard.center .vdots{display:flex}
+  .vdots b{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.32);cursor:pointer;transition:.25s}
+  .vdots b.on{background:var(--red);height:22px;border-radius:4px}
+  .cov__meta{text-align:center;margin-top:3vh}
+  .cov__name{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(30px,5vw,64px)}
+  .cov__line{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-top:5px}
+  .cov__tog{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;margin-top:16px}
+  .cov__tog button{background:transparent;color:var(--muted);border:0;padding:10px 20px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+  .cov__tog button.on{background:var(--red);color:#fff}
+  .cov__hint{position:relative;display:inline-flex;align-items:center;gap:9px;margin:0 auto 22px;padding:8px 12px 8px 16px;border-radius:999px;background:linear-gradient(90deg,rgba(225,29,42,.2),rgba(225,29,42,.04));border:1px solid rgba(225,29,42,.6);color:#fff;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;animation:hintflash 1.5s ease-in-out infinite;backdrop-filter:blur(6px)}
+  .cov__hint::after{content:"";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%) rotate(45deg);width:11px;height:11px;background:rgba(225,29,42,.13);border-right:1px solid rgba(225,29,42,.6);border-bottom:1px solid rgba(225,29,42,.6)}
+  .cov__hint em{font-style:normal;color:#ff5763}
+  .cov__hint .x{width:17px;height:17px;border-radius:50%;display:inline-grid;place-items:center;background:rgba(255,255,255,.14);font-size:11px;line-height:1;cursor:pointer;transition:.2s;letter-spacing:0}
+  .cov__hint .x:hover{background:var(--red);transform:scale(1.12)}
+  .cov__hint.off{display:none}
+  @keyframes hintflash{0%,100%{opacity:.66;box-shadow:0 0 0 0 rgba(225,29,42,0),0 0 16px rgba(225,29,42,0)}50%{opacity:1;box-shadow:0 0 0 4px rgba(225,29,42,.1),0 0 28px rgba(225,29,42,.5)}}
+
+  /* iconos lookbook */
+  .lb{max-width:1280px;margin:0 auto;padding:0 var(--pad)}
+  .lb__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,56px);align-items:center}
+  .lb__stage{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:#0e0e12;border:1px solid var(--line)}
+  .lb__stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;clip-path:inset(0 0 0 100%);transition:clip-path .7s cubic-bezier(.16,1,.3,1),opacity .5s}
+  .lb__stage img.on{opacity:1;clip-path:inset(0 0 0 0);animation:lbkb 6s ease-out forwards}
+  @keyframes lbkb{from{transform:scale(1.12)}to{transform:scale(1)}}
+  .lb__list{list-style:none}.lb__list li{padding:18px 0;border-top:1px solid var(--line);cursor:pointer;opacity:.45;transition:.35s}
+  .lb__list li:last-child{border-bottom:1px solid var(--line)}.lb__list li.on{opacity:1;padding-left:14px}
+  .lb__list .row{display:flex;gap:16px;align-items:baseline}.lb__list .num{font-family:"Anton",sans-serif;color:var(--red);font-size:15px;min-width:28px}
+  .lb__list h3{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(20px,2.6vw,38px)}
+  .lb__list p{color:var(--muted);font-size:13.5px;max-height:0;overflow:hidden;opacity:0;transition:.4s;padding-left:44px}.lb__list li.on p{max-height:70px;opacity:1;margin-top:8px}
+  /* gear marquee */
+  .gear__track{display:flex;gap:20px;width:max-content;animation:gmv 48s linear infinite;padding:0 20px}
+  .gear:hover .gear__track{animation-play-state:paused}
+  .gcard{position:relative;flex:0 0 auto;width:clamp(220px,22vw,320px);aspect-ratio:3/4;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+  .gcard img,.gcard video{width:100%;height:100%;object-fit:cover;animation:gk1 9s ease-in-out infinite}
+  .gcard:nth-child(3n) img,.gcard:nth-child(3n) video{animation-name:gk2;animation-duration:11s}
+  .gcard:nth-child(3n+1) img,.gcard:nth-child(3n+1) video{animation-name:gk3;animation-duration:8s}
+  .gear:hover .gcard img,.gear:hover .gcard video{animation-play-state:paused}
+  @keyframes gk1{0%,100%{transform:scale(1.08)}50%{transform:scale(1.16) translate(-2%,-1.5%)}}
+  @keyframes gk2{0%,100%{transform:scale(1.1) translate(1.5%,1%)}50%{transform:scale(1.17) translate(-1%,-2%)}}
+  @keyframes gk3{0%,100%{transform:scale(1.06) translate(-1.5%,.5%)}50%{transform:scale(1.14) translate(2%,1.5%)}}
+  .gcard.vid{border-color:rgba(225,29,42,.4)}.gcard .pill{position:absolute;top:12px;left:12px;z-index:3;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(225,29,42,.85);padding:4px 8px;border-radius:999px}
+  .gcard::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,6,7,.72),transparent 55%)}
+  .gcard .c{position:absolute;left:15px;bottom:14px;z-index:2;font-family:"Anton",sans-serif;text-transform:uppercase;font-size:20px;color:#fff}
+  @keyframes gmv{to{transform:translateX(-50%)}}
+  .cta{text-align:center;padding:clamp(90px,15vw,200px) var(--pad)}
+  .cta h2{font-size:clamp(40px,9vw,130px)}.cta p{color:var(--muted);margin-top:18px;font-size:17px}
+  /* faq */
+  .faq{max-width:860px;margin:0 auto;padding:clamp(70px,10vw,130px) var(--pad) clamp(20px,4vw,40px)}
+  .faq .k,.faq h2{text-align:center}.faq h2{font-size:clamp(32px,5vw,66px)}
+  .acc{margin-top:clamp(30px,4vw,50px);border-top:1px solid var(--line)}
+  details.acc__i{border-bottom:1px solid var(--line)}
+  details.acc__i>summary{list-style:none;cursor:pointer;position:relative;padding:22px 46px 22px 0;font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(16px,2.2vw,23px);letter-spacing:.01em;transition:color .2s}
+  details.acc__i>summary::-webkit-details-marker{display:none}
+  details.acc__i>summary:hover{color:var(--red)}
+  details.acc__i>summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--red);font-size:28px;line-height:1}
+  details.acc__i[open]>summary::after{content:"–"}
+  details.acc__i .a{color:var(--muted);font-size:15px;line-height:1.72;padding:0 46px 24px 0;max-width:700px}
+  /* captacion leads */
+  .lc{max-width:1240px;margin:0 auto;padding:clamp(60px,8vw,110px) var(--pad) clamp(30px,5vw,50px)}
+  .lc__grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(40px,6vw,96px);align-items:center}
+  .lc__l h2{font-size:clamp(30px,4.6vw,60px)}.lc__l p{color:var(--muted);font-size:16px;line-height:1.65;margin-top:16px;max-width:420px}
+  .lc__ll{list-style:none;margin-top:26px;display:grid;gap:12px}
+  .lc__ll li{display:flex;gap:11px;align-items:flex-start;color:#cfcfd6;font-size:14px}
+  .lc__ll svg{width:18px;height:18px;color:var(--red);flex:0 0 auto;margin-top:1px}
+  form.lf{display:grid;gap:13px}
+  .lf .row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+  form.lf{gap:16px}
+  .lf .row{gap:16px}
+  .lf input,.lf select,.lf textarea{width:100%;background:#0e0e12;border:1px solid var(--line);border-radius:14px;padding:17px 19px;color:var(--txt);font-family:inherit;font-size:15px}
+  .lf input::placeholder,.lf textarea::placeholder{color:#5c5c66}
+  .lf input:focus,.lf select:focus,.lf textarea:focus{outline:none;border-color:var(--red)}
+  .lf textarea{min-height:132px;resize:vertical}
+  .lf button{background:var(--red);color:#fff;font-weight:700;border:0;border-radius:999px;padding:16px;font-size:14px;letter-spacing:.02em;cursor:pointer;transition:.2s}
+  .lf button:hover{filter:brightness(1.12)}
+  .lf .priv{font-size:11px;color:#5c5c66;line-height:1.5}.lf .priv a{color:#8a8a92;text-decoration:underline}
+  .lf .ok{display:none;background:rgba(225,29,42,.09);border:1px solid rgba(225,29,42,.55);border-radius:14px;padding:22px;font-size:15px;line-height:1.6}
+  form.lf.sent .fields{display:none}form.lf.sent .ok{display:block}
+  /* newsletter */
+  .nl{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(30px,5vw,44px) var(--pad)}
+  .nl__in{max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+  .nl h3{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(20px,2.8vw,32px)}.nl p{color:var(--muted);font-size:13.5px;margin-top:6px}
+  .nl form{display:flex;gap:10px;flex-wrap:wrap}
+  .nl input{background:#0e0e12;border:1px solid var(--line);border-radius:999px;padding:13px 18px;color:var(--txt);font-size:13.5px;min-width:230px}
+  .nl input:focus{outline:none;border-color:var(--red)}
+  .nl button{background:#fff;color:#0a0a0c;font-weight:700;border:0;border-radius:999px;padding:13px 24px;font-size:13px;letter-spacing:.04em;text-transform:uppercase;cursor:pointer}
+  .nl.sent form{display:none}.nl .okn{display:none;color:#fff;font-size:14px}.nl.sent .okn{display:block}
+  .ask{position:fixed;left:18px;bottom:18px;z-index:55;background:var(--red);color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:12px 18px;border-radius:999px;box-shadow:0 12px 30px -8px rgba(225,29,42,.6)}
+  @media(max-width:820px){.lc__grid{grid-template-columns:1fr}.lf .row{grid-template-columns:1fr}}
+  /* buscador de talla */
+  .sz{max-width:720px;margin:0 auto;padding:clamp(70px,10vw,120px) var(--pad) 0}
+  .sz .k,.sz h2{text-align:center}.sz h2{font-size:clamp(30px,4.6vw,58px)}
+  .sz__card{margin-top:clamp(28px,4vw,44px);background:linear-gradient(180deg,#101014,#0b0b0e);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,4vw,40px)}
+  .sz__row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+  .sz label{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:7px;font-weight:700}
+  .sz input,.sz select{width:100%;background:#0e0e12;border:1px solid var(--line);border-radius:12px;padding:14px 15px;color:var(--txt);font-size:14px;font-family:inherit}
+  .sz input:focus,.sz select:focus{outline:none;border-color:var(--red)}
+  .sz__btn{margin-top:16px;width:100%;background:var(--red);color:#fff;font-weight:700;border:0;border-radius:999px;padding:16px;font-size:14px;cursor:pointer;transition:.2s}
+  .sz__btn:hover{filter:brightness(1.12)}
+  .sz__res{display:none;margin-top:20px;text-align:center;border-top:1px solid var(--line);padding-top:22px}
+  .sz__card.done .sz__res{display:block}
+  .sz__big{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(40px,7vw,82px);color:#fff;line-height:1}.sz__big em{font-style:normal;color:var(--red)}
+  .sz__sub{color:var(--muted);font-size:14px;margin-top:12px;max-width:420px;margin-inline:auto;line-height:1.6}
+  .sz__mag{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .sz__mag input{min-width:220px;background:#0e0e12;border:1px solid var(--line);border-radius:999px;padding:13px 18px;color:var(--txt);font-size:13.5px}
+  .sz__mag input:focus{outline:none;border-color:var(--red)}
+  .sz__mag button{background:#fff;color:#0a0a0c;font-weight:700;border:0;border-radius:999px;padding:13px 22px;font-size:13px;text-transform:uppercase;letter-spacing:.04em;cursor:pointer}
+  .sz__note{font-size:11px;color:#5c5c66;margin-top:14px}
+  .sz__card.mag-sent .sz__mag{display:none}.sz__magok{display:none;color:#fff;font-size:13.5px;margin-top:12px}.sz__card.mag-sent .sz__magok{display:block}
+  @media(max-width:640px){.sz__row{grid-template-columns:1fr}}
+  /* intro cinematografica */
+  #intro{position:fixed;inset:0;z-index:120;background:#000;transition:opacity .8s ease}
+  #intro.gone{opacity:0;pointer-events:none}
+  #introLogo{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);transform-origin:left center;font-family:"Anton",sans-serif;font-size:clamp(46px,11vw,140px);letter-spacing:.02em;color:#fff;opacity:0;white-space:nowrap;transition:opacity .7s ease,top 1s cubic-bezier(.7,0,.2,1),left 1s cubic-bezier(.7,0,.2,1),font-size 1s cubic-bezier(.7,0,.2,1),transform 1s cubic-bezier(.7,0,.2,1)}
+  #introLogo span{color:var(--red)}
+  #introLogo.in{opacity:1}
+  #introLogo.move{top:28px;left:var(--pad);font-size:20px;transform:translate(0,-50%)}
+  /* modal Preguntanos */
+  .modal{position:fixed;inset:0;z-index:130;display:none;align-items:center;justify-content:center;padding:24px}
+  .modal.open{display:flex}
+  .modal__bg{position:absolute;inset:0;background:rgba(4,5,8,.74);backdrop-filter:blur(9px)}
+  .modal__card{position:relative;z-index:1;width:min(940px,96vw);max-height:92vh;overflow:auto;background:linear-gradient(180deg,#111116,#0a0a0d);border:1px solid var(--line);border-radius:22px;padding:clamp(30px,4vw,54px);box-shadow:0 50px 120px -30px #000;animation:mIn .42s cubic-bezier(.16,1,.3,1)}
+  @keyframes mIn{from{opacity:0;transform:translateY(24px) scale(.985)}to{opacity:1;transform:none}}
+  .modal__x{position:absolute;top:15px;right:15px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid var(--line);color:#fff;cursor:pointer;font-size:14px;display:grid;place-items:center;transition:.2s;z-index:2}
+  .modal__x:hover{background:var(--red);border-color:var(--red)}
+  .modal__grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(24px,4vw,46px);align-items:start}
+  .modal__l h2{font-size:clamp(30px,4vw,50px)}.modal__l .k{margin-bottom:12px}.modal__l p{color:var(--muted);font-size:15px;line-height:1.62;margin-top:14px}
+  @media(max-width:720px){.modal__grid{grid-template-columns:1fr}}
+  /* pantalla de eleccion de perfil (difumina el slider) */
+  .cov-sec{position:relative}
+  .cov__gate{position:absolute;inset:0;z-index:30;background:rgba(8,8,10,.55);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);transition:opacity .6s ease,backdrop-filter .6s ease,visibility .6s}
+  .cov__gate.hide{opacity:0;pointer-events:none;visibility:hidden;backdrop-filter:blur(0);-webkit-backdrop-filter:blur(0)}
+  .cov__gatein{position:sticky;top:0;min-height:100vh;display:grid;place-items:center;text-align:center;padding:var(--pad)}
+  .cov__gate h2{font-size:clamp(50px,9vw,138px)}
+  .cov__gate p{color:var(--muted);margin-top:16px;font-size:clamp(14px,1.5vw,17px);max-width:520px;margin-inline:auto;line-height:1.6}
+  .cov__pick{margin-top:clamp(28px,4vw,44px);display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+  .cov__pick button{min-width:196px;padding:28px 32px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,#15151b,#0c0c0f);color:#fff;cursor:pointer;transition:.25s;display:grid;gap:8px;justify-items:center}
+  .cov__pick button:hover{border-color:var(--red);transform:translateY(-6px);box-shadow:0 30px 60px -22px rgba(225,29,42,.6)}
+  .cov__pick .t{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:28px;letter-spacing:.02em}
+  .cov__pick .s{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .cov__skip{margin-top:clamp(22px,3vw,30px);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#6a6a72;cursor:pointer;background:none;border:0;transition:.2s}
+  .cov__skip:hover{color:#fff}
+  .cov__gate .gin{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s cubic-bezier(.16,1,.3,1)}
+  .cov__gate.in .gin{opacity:1;transform:none}
+  /* ADN Modeka */
+  .adn{padding:clamp(80px,12vw,150px) 0}
+  .adn .bhead p{max-width:660px}
+  .adn__grid{max-width:1240px;margin:clamp(30px,4vw,52px) auto 0;padding:0 var(--pad);display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .adn__c{border:1px solid var(--line);border-radius:18px;padding:30px 26px;background:linear-gradient(180deg,#101014,#0b0b0e);transition:.3s}
+  .adn__c:hover{border-color:rgba(225,29,42,.5);transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(225,29,42,.35)}
+  .adn__n{font-family:"Anton",sans-serif;color:var(--red);font-size:20px}
+  .adn__c h3{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(20px,2.4vw,30px);margin:12px 0 10px}
+  .adn__c p{color:var(--muted);font-size:13.5px;line-height:1.62}
+  @media(max-width:900px){.adn__grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.adn__grid{grid-template-columns:1fr}}
+  /* indicador de scroll + progreso del viaje */
+  .prograil{position:fixed;top:0;right:0;width:3px;height:100vh;z-index:45;background:rgba(255,255,255,.06)}
+  .prograil__fill{position:absolute;top:0;left:0;width:100%;height:0;background:linear-gradient(var(--red),#ff6f78)}
+  .prograil__fill::after{content:"";position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);width:9px;height:9px;border-radius:50%;background:#ff6f78;box-shadow:0 0 10px rgba(225,29,42,.9)}
+  .scrollcue{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:45;text-align:center;opacity:0;transition:opacity .8s ease;pointer-events:none}
+  body.intro-done .scrollcue{opacity:1}
+  .scrollcue.gone{opacity:0!important}
+  .scrollcue__t{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#c2c2ca;font-weight:600}
+  .scrollcue__line{display:block;width:2px;height:46px;margin:12px auto 0;border-radius:2px;background:rgba(255,255,255,.14);position:relative;overflow:hidden}
+  .scrollcue__line::after{content:"";position:absolute;left:0;top:0;width:100%;height:42%;border-radius:2px;background:var(--red);animation:scdrop 1.5s cubic-bezier(.7,0,.3,1) infinite}
+  @keyframes scdrop{0%{transform:translateY(-120%)}70%,100%{transform:translateY(260%)}}
+  /* 4 mundos */
+  .worlds{padding:0 0 clamp(20px,4vw,40px)}
+  .worlds__grid{max-width:1240px;margin:clamp(30px,4vw,50px) auto 0;padding:0 var(--pad);display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .world{position:relative;aspect-ratio:3/4;border-radius:18px;overflow:hidden;border:1px solid var(--line);display:block}
+  .world img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+  .world:hover img{transform:scale(1.08)}
+  .world__o{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;background:linear-gradient(0deg,rgba(6,6,7,.92),rgba(6,6,7,.1) 55%,transparent)}
+  .world__k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:7px}
+  .world__o h3{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(20px,2vw,29px);line-height:1.02}
+  .world__o p{color:var(--muted);font-size:12.5px;line-height:1.5;margin-top:9px;max-height:0;overflow:hidden;opacity:0;transition:.45s}
+  .world:hover p{max-height:80px;opacity:1}
+  @media(max-width:900px){.worlds__grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.worlds__grid{grid-template-columns:1fr}}
+  /* linea de tiempo */
+  .tl{padding:clamp(80px,12vw,150px) 0 clamp(30px,4vw,50px);overflow:hidden}
+  .tl__row{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:clamp(24px,4vw,40px) var(--pad) 12px;scrollbar-width:none}
+  .tl__row::-webkit-scrollbar{display:none}
+  .tl__c{scroll-snap-align:start;flex:0 0 clamp(240px,26vw,320px);border:1px solid var(--line);border-radius:18px;padding:28px 24px;background:linear-gradient(180deg,#101014,#0b0b0e)}
+  .tl__y{font-family:"Anton",sans-serif;color:var(--red);font-size:clamp(26px,3.2vw,42px);line-height:1;text-transform:uppercase}
+  .tl__c h3{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:18px;margin:12px 0 8px}
+  .tl__c p{color:var(--muted);font-size:13px;line-height:1.6}
+  .tl__hint{text-align:center;color:#5c5c66;font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-top:8px}
+  /* manifiesto */
+  .mani{padding:clamp(90px,14vw,180px) var(--pad);text-align:center;background:radial-gradient(800px 500px at 50% 0,#161620,var(--bg))}
+  .mani h2{font-size:clamp(38px,7vw,102px);max-width:15ch;margin:0 auto}
+  .mani p{color:var(--muted);font-size:clamp(15px,1.6vw,18px);max-width:560px;margin:22px auto 0;line-height:1.65}
+  /* localizador */
+  .shop{max-width:1040px;margin:0 auto;padding:clamp(60px,9vw,110px) var(--pad)}
+  .shop__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,44px)}
+  .shop__c{border:1px solid var(--line);border-radius:18px;padding:clamp(26px,3vw,40px);background:linear-gradient(180deg,#101014,#0b0b0e)}
+  .shop__c h3{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(22px,2.6vw,34px)}
+  .shop__c p{color:var(--muted);font-size:14px;line-height:1.6;margin:12px 0 20px}
+  .shop__f{display:flex;gap:10px;flex-wrap:wrap}
+  .shop__f input{flex:1;min-width:180px;background:#0e0e12;border:1px solid var(--line);border-radius:999px;padding:14px 18px;color:var(--txt);font-size:14px}
+  .shop__f input:focus{outline:none;border-color:var(--red)}
+  .shop__f button{background:var(--red);color:#fff;font-weight:700;border:0;border-radius:999px;padding:14px 24px;font-size:13px;text-transform:uppercase;letter-spacing:.04em;cursor:pointer}
+  .shop__c.b2b button{background:#fff;color:#0a0a0c}
+  .shop__ok{display:none;margin-top:14px;color:#fff;font-size:14px;line-height:1.5}
+  .shop__c.sent .shop__f{display:none}.shop__c.sent .shop__ok{display:block}
+  @media(max-width:760px){.shop__grid{grid-template-columns:1fr}}
+  /* línea de tiempo cinematográfica */
+  .tlpin .num{display:none}
+  .erascene .grad{background:linear-gradient(0deg,rgba(6,6,7,.92),rgba(6,6,7,.1) 62%),linear-gradient(180deg,rgba(6,6,7,.55),transparent 42%)}
+  .erascene .wrap{max-width:680px;margin:0;text-shadow:0 2px 24px rgba(0,0,0,.55)}
+  .eyear{font-family:"Anton",sans-serif;color:var(--red);font-size:clamp(56px,12vw,168px);line-height:.82;display:block;margin-bottom:8px}
+  .erascene h2{font-size:clamp(34px,5.6vw,88px)}
+  .erascene .k{margin-top:10px}
+  .erascene.tr{place-items:start end}.erascene.tr .wrap{text-align:right;padding-top:13vh}
+  .erascene.br{place-items:end end}.erascene.br .wrap{text-align:right}
+  .erascene.cc{place-items:center}.erascene.cc .wrap{text-align:center;margin-inline:auto}
+  footer{border-top:1px solid var(--line);padding:34px var(--pad);color:#5c5c66;font-size:12.5px;line-height:1.6}
+  @media(max-width:820px){.split .wrap{grid-template-columns:1fr;gap:24px}.split.rev .vis{order:0}.vis{aspect-ratio:16/10}.lb__grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="intro"><div id="introLogo">MODEKA<span>.</span></div></div>
+<a id="top"></a>
+<div class="prograil"><span class="prograil__fill" id="progFill"></span></div>
+<div class="scrollcue" id="scrollcue"><span class="scrollcue__t">Abre gas hasta el final</span><span class="scrollcue__line"></span></div>
+<div class="grain"></div>
+<div class="top"><a class="b" href="#top" style="pointer-events:auto;cursor:pointer">MODEKA<span style="color:var(--red)">.</span></a><div class="t">Premium · desde 1946</div></div>
+<a class="ask" id="askBtn" role="button" tabindex="0" style="cursor:pointer">Pregúntanos</a>
+
+<!-- ========== PIN 1 · escenas fijadas ========== -->
+<section class="pin" data-tr="_,circle,wipe,doors">
+  <div class="pin__sticky">
+    <div class="pscene center" style="background:radial-gradient(900px 600px at 18% 12%,#17171e,transparent 60%),var(--bg)"><video class="bg" src="hero-cinemagraph.mp4" poster="hero-cine-poster.jpg" muted autoplay loop playsinline preload="auto"></video><div class="grad" style="background:linear-gradient(0deg,rgba(6,6,7,.9),rgba(6,6,7,.3) 52%,rgba(6,6,7,.64)),radial-gradient(1200px 760px at 50% 46%,transparent,rgba(6,6,7,.55))"></div><div class="wrap"><span class="k">Serie Touring · desde 1946</span><h2 class="anton">Tu terreno<br>lo decides <em>tú</em></h2><p class="lead">Equipación premium desarrollada en Alemania, hecha para rutas de verdad. Aquí no hojeas un catálogo: entras en la ruta.</p></div></div>
+    <div class="pscene split"><div class="wrap"><div class="vis"><video src="holo-prod.mp4" muted autoplay loop playsinline></video></div><div><span class="k">Ingeniería</span><h2 class="anton">Se lleva<br>puesta</h2><p class="lead">Protección técnica que desaparece hasta que la necesitas. Pasa el escáner: cada pieza cuenta.</p></div></div></div>
+    <div class="pscene split rev"><div class="wrap"><div class="vis"><video src="fiber-alive.mp4" muted autoplay loop playsinline></video></div><div><span class="k">Origen</span><h2 class="anton">Desde<br>la fibra</h2><p class="lead">Membrana, tejido técnico y protecciones. Donde empieza cada ruta.</p></div></div></div>
+    <div class="pscene full"><video class="bg" src="story-model.mp4" muted autoplay loop playsinline></video></div>
+  </div>
+</section>
+
+<!-- ========== NORMAL · slider de móviles ========== -->
+<section class="block cov-sec" style="background:radial-gradient(1200px 720px at 50% 12%,#15151b,var(--bg))">
+  <div class="cov__gate" id="covGate">
+    <div class="cov__gatein">
+      <span class="k gin">Serie Touring · elige</span>
+      <h2 class="anton gin" style="transition-delay:.04s">Elige tu <em>perfil</em></h2>
+      <p class="gin" style="transition-delay:.09s">Verás cada chaqueta en mujer, en hombre o solo el producto. Tú decides cómo mirarla.</p>
+      <div class="cov__pick gin" style="transition-delay:.14s">
+        <button data-view="w"><span class="t">Chica</span><span class="s">En mujer</span></button>
+        <button data-view="m"><span class="t">Chico</span><span class="s">En hombre</span></button>
+        <button data-view="p"><span class="t">Producto</span><span class="s">Solo la prenda</span></button>
+      </div>
+      <button class="cov__skip gin" id="covSkip" style="transition-delay:.19s">Verlas todas &rarr;</button>
+    </div>
+  </div>
+  <div class="bhead"><span class="k">Familia Touring · desde 1946</span><h2 class="anton">Hecha para<br>rutas de verdad</h2><p>Arrastra los móviles. Dentro de cada uno: mujer, hombre y producto. Cambia de perfil cuando quieras.</p></div>
+  <div class="cov__meta" style="margin:0 0 4vh"><div class="cov__name" id="covName">Lucano</div><div class="cov__line" id="covLine">Touring · 4 estaciones</div>
+    <div class="cov__tog"><button data-view="w" class="on">Chica</button><button data-view="m">Chico</button><button data-view="p">Producto</button></div></div>
+  <div class="cov__stage" id="stage"></div>
+</section>
+
+<!-- ========== PIN 2 · escenas fijadas ========== -->
+<section class="pin" data-tr="_,zoom,slide,blinds">
+  <div class="pin__sticky">
+    <div class="pscene full"><img class="bg" src="lib/cr1.jpg" style="object-position:50% 35%"><div class="grad"></div><div class="wrap"><span class="k">Editorial · Café Racer</span><h2 class="anton">El asfalto<br>tiene memoria</h2></div></div>
+    <div class="pscene full"><img class="bg" src="models/khao-woman.png" style="object-position:50% 30%"><div class="grad"></div><div class="wrap"><span class="k">Touring real · Mediterráneo</span><h2 class="anton">De pueblo<br>en pueblo</h2></div></div>
+    <div class="pscene full"><video class="bg" src="modeka_ad_9x16.mp4" poster="modeka_ad_poster.jpg" muted autoplay loop playsinline></video><div class="grad"></div><div class="wrap"><span class="k">En movimiento</span><h2 class="anton">Cine que<br>responde</h2></div></div>
+    <div class="pscene center" style="background:radial-gradient(800px 500px at 50% 0,#1a1a22,var(--bg))"><div class="wrap"><span class="k">Por qué Boomatik</span><h2 class="anton">80 años no caben<br>en un <em>fondo blanco</em></h2><p class="lead">Vuestra equipación protege, dura y libera desde 1946. Vuestra web debería transmitir justo eso. Cogemos vuestro catálogo real y lo convertimos en una experiencia que se siente, no que se hojea.</p></div></div>
+  </div>
+</section>
+
+<!-- ========== Línea de tiempo cinematográfica (pin, transiciones variadas) ========== -->
+<section class="pin tlpin" data-tr="_,zoom,circle,doors,wipe">
+  <div class="pin__sticky">
+    <div class="pscene full erascene"><img class="bg" src="lib/cr1.jpg" style="object-position:50% 40%"><div class="grad"></div><div class="wrap"><span class="eyear">1946</span><h2 class="anton">Raíces<br>en el cuero</h2><span class="k">Del cuero al asfalto</span><p class="lead">Modeka nace como taller de marroquinería. El respeto por el material y la durabilidad empieza aquí.</p></div></div>
+    <div class="pscene full erascene tr"><img class="bg" src="teardown/k5.png"><div class="grad"></div><div class="wrap"><span class="eyear">El oficio</span><h2 class="anton">Del cuero al<br>textil técnico</h2><span class="k">Evolución</span><p class="lead">La experiencia del cuero se traslada a membranas, laminados y protecciones para la moto.</p></div></div>
+    <div class="pscene full erascene"><img class="bg" src="models/khao-woman.png" style="object-position:50% 24%"><div class="grad"></div><div class="wrap"><span class="eyear">Familia</span><h2 class="anton">Generación tras<br>generación</h2><span class="k">Empresa familiar</span><p class="lead">Con el feedback de la práctica, el comercio y la comunidad. La misma familia, el mismo oficio.</p></div></div>
+    <div class="pscene full erascene br"><img class="bg" src="modeka/line-adventure.jpg" style="object-position:50% 42%"><div class="grad"></div><div class="wrap"><span class="eyear">Hoy</span><h2 class="anton">Cuatro mundos,<br>un oficio</h2><span class="k">Marca internacional</span><p class="lead">Touring, Adventure, Urban y Sport. Desarrollados en Alemania, hechos para rutas de verdad.</p></div></div>
+    <div class="pscene full erascene cc"><img class="bg" src="modeka/line-touring.jpg" style="object-position:50% 35%"><div class="grad"></div><div class="wrap"><span class="eyear">2026</span><h2 class="anton">80 años<br>rodando</h2><span class="k">80 aniversario</span><p class="lead">Listos para cualquier terreno. Un motivo para celebrar, y para seguir rodando.</p></div></div>
+  </div>
+</section>
+
+<!-- ========== ADN Modeka (resonancia de marca) ========== -->
+<section class="block adn">
+  <div class="bhead"><span class="k">Del taller de cuero a la ruta · desde 1946</span><h2 class="anton">Conocemos<br>vuestro <em>ADN</em></h2><p>Empresa familiar, ochenta años, raíces en el cuero. Antes de diseñar nada, estudiamos qué hace a Modeka. Por eso esta web habla vuestro idioma.</p></div>
+  <div class="adn__grid">
+    <div class="adn__c"><span class="adn__n">01</span><h3>Protección</h3><p>Certificación CE y protecciones justo donde hacen falta.</p></div>
+    <div class="adn__c"><span class="adn__n">02</span><h3>Comodidad</h3><p>Patrones y libertad de movimiento que aguantan mil kilómetros.</p></div>
+    <div class="adn__c"><span class="adn__n">03</span><h3>Todo clima</h3><p>Sistemas 3 en 1, membranas y laminados para lluvia, viento y calor.</p></div>
+    <div class="adn__c"><span class="adn__n">04</span><h3>Experiencia</h3><p>Desde 1946, mejorando con la práctica, el comercio y la comunidad.</p></div>
+  </div>
+</section>
+
+<!-- ========== 4 mundos (fotos reales de línea) ========== -->
+<section class="block worlds">
+  <div class="bhead"><span class="k">Cuatro mundos · un mismo oficio</span><h2 class="anton">Listos para<br>cualquier terreno</h2><p>Touring, Adventure, Urban y Sport. Cada mundo con su carácter; todos, la misma ingeniería alemana.</p></div>
+  <div class="worlds__grid">
+    <div class="world"><img loading="lazy" src="modeka/line-touring.jpg" alt="Touring"><div class="world__o"><span class="world__k">Touring</span><h3>La libertad<br>infinita</h3><p>Rutas largas y todo clima, cómodo kilómetro tras kilómetro.</p></div></div>
+    <div class="world"><img loading="lazy" src="modeka/line-adventure.jpg" alt="Adventure"><div class="world__o"><span class="world__k">Adventure</span><h3>Cualquier<br>terreno</h3><p>Donde acaba el asfalto empieza la aventura.</p></div></div>
+    <div class="world"><img loading="lazy" src="modeka/line-urban.jpg" alt="Urban"><div class="world__o"><span class="world__k">Urban</span><h3>El día a día<br>sobre 2 ruedas</h3><p>Protección que no se nota, estilo que sí.</p></div></div>
+    <div class="world"><img loading="lazy" src="modeka/line-sport.jpg" alt="Sport"><div class="world__o"><span class="world__k">Sport</span><h3>La caza de<br>la velocidad</h3><p>Ajuste deportivo y aerodinámica para ir rápido.</p></div></div>
+  </div>
+</section>
+
+<!-- ========== NORMAL · Iconos + gear + muro ========== -->
+<section class="block">
+  <div class="bhead"><span class="k">Los iconos · más allá del Touring</span><h2 class="anton">Iconos</h2><p>Las piezas que la gente elige una y otra vez. Cada icono nació para una forma de rodar —la ruta, la aventura, el asfalto clásico— y lleva dentro el oficio de Modeka desde 1946.</p></div>
+  <div class="lb"><div class="lb__grid"><div class="lb__stage" id="lbStage"></div><ul class="lb__list" id="lbList"></ul></div></div>
+</section>
+<section class="block gear" style="padding-top:0;overflow:hidden">
+  <div class="bhead"><span class="k">Equipación completa</span><h2 class="anton">De la cabeza a la bota</h2></div>
+  <div class="gear__track" id="gearTrack"></div>
+</section>
+
+<!-- ========== Manifiesto de marca ========== -->
+<section class="mani">
+  <span class="k">Manifiesto Modeka</span>
+  <h2 class="anton">La seguridad no<br>debería ser <em>cara</em></h2>
+  <p>Protección certificada, materiales que aguantan y precios que no dejan a nadie fuera. Rodar seguro no es un lujo: es lo mínimo.</p>
+</section>
+
+<!-- ========== Buscador de talla ========== -->
+<section class="sz" id="talla">
+  <span class="k">Encuentra tu talla</span>
+  <h2 class="anton">Tu talla<br>en 20 segundos</h2>
+  <div class="sz__card" id="szCard">
+    <div class="sz__row">
+      <div><label>Altura (cm)</label><input id="szH" type="number" min="140" max="215" placeholder="175"></div>
+      <div><label>Peso (kg)</label><input id="szW" type="number" min="40" max="160" placeholder="78"></div>
+      <div><label>Ajuste</label><select id="szF"><option value="estandar">Estándar</option><option value="cenido">Ceñido</option><option value="holgado">Holgado</option></select></div>
+    </div>
+    <button class="sz__btn" id="szBtn" type="button">Ver mi talla</button>
+    <div class="sz__res">
+      <div class="sz__big" id="szBig">Talla <em>L</em></div>
+      <div class="sz__sub" id="szSub"></div>
+      <div class="sz__mag">
+        <input id="szMail" type="email" placeholder="Tu email">
+        <button id="szMagBtn" type="button">Enviar guía completa</button>
+      </div>
+      <div class="sz__magok">Guía enviada. Revisa tu correo.</div>
+      <div class="sz__note">Orientativo. Confirma siempre con la guía de tallas de cada modelo.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="faq" id="faq">
+  <span class="k">Preguntas frecuentes</span>
+  <h2 class="anton">¿Todavía tienes<br>alguna duda?</h2>
+  <div class="acc">
+    <details class="acc__i"><summary>¿Cómo sé qué talla elegir?</summary><div class="a">Cada modelo incluye su guía de tallas con medidas de pecho, cintura y manga. Si dudas entre dos, escríbenos con tu altura y peso y te orientamos.</div></details>
+    <details class="acc__i"><summary>¿Las chaquetas touring son impermeables?</summary><div class="a">Los modelos touring montan membrana técnica y costuras selladas. El nivel varía según la gama y lo indicamos en cada ficha de producto.</div></details>
+    <details class="acc__i"><summary>¿Llevan protecciones homologadas?</summary><div class="a">Sí. Los modelos con protección integran piezas con certificación CE en hombros y codos, y suelen venir preparados para añadir espaldera.</div></details>
+    <details class="acc__i"><summary>¿Sirve la misma chaqueta para todo el año?</summary><div class="a">Las 3 en 1 combinan chaqueta, membrana y forro térmico: quitas o pones capas según el tiempo, así que las llevas en las cuatro estaciones.</div></details>
+    <details class="acc__i"><summary>¿Hay corte específico de mujer?</summary><div class="a">Muchos superventas tienen versión de mujer con patrón propio, como la Panamericana II Lady. Pregúntanos por el modelo que te interese.</div></details>
+  </div>
+</section>
+
+<!-- ========== Captación de leads ========== -->
+<section class="lc" id="contacto">
+  <div class="lc__grid">
+    <div class="lc__l">
+      <span class="k">Pregúntanos</span>
+      <h2 class="anton">Hablamos<br>de tu ruta</h2>
+      <p>Cuéntanos qué buscas —una talla, disponibilidad, un consejo de equipación o distribución— y te respondemos personalmente.</p>
+      <ul class="lc__ll">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Atención en español, de persona a persona.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Te ayudamos a acertar con la talla y el modelo.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sin compromiso: resolvemos y decides tú.</li>
+      </ul>
+    </div>
+    <form class="lf" id="leadForm">
+      <div class="fields">
+        <div class="row"><input name="nombre" placeholder="Nombre" required><input type="email" name="email" placeholder="Email" required></div>
+        <div class="row"><input name="tel" placeholder="Teléfono (opcional)"><select name="interes"><option value="">¿En qué te ayudamos?</option><option>Consulta de producto</option><option>Talla y equivalencias</option><option>Disponibilidad y tiendas</option><option>Distribución / mayorista</option><option>Prensa y colaboraciones</option></select></div>
+        <textarea name="msg" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar consulta</button>
+        <p class="priv">Al enviar aceptas la <a href="#">política de privacidad</a>. Solo usamos tus datos para responderte.</p>
+      </div>
+      <div class="ok" id="leadOk"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ========== Newsletter / lead magnet ========== -->
+<section class="nl" id="nl">
+  <div class="nl__in">
+    <div><h3 class="anton">Guía de tallas + novedades</h3><p>Recibe la guía para acertar con la talla y entérate de cada lanzamiento.</p></div>
+    <form id="nlForm"><input type="email" name="email" placeholder="Tu email" required><button type="submit">Suscribirme</button></form>
+    <div class="okn">Gracias. Revisa tu correo para descargar la guía.</div>
+  </div>
+</section>
+
+<!-- ========== Localizador / distribuidor ========== -->
+<section class="shop" id="donde">
+  <div class="bhead" style="max-width:820px"><span class="k">¿Dónde comprar?</span><h2 class="anton">Modeka, cerca de ti</h2></div>
+  <div class="shop__grid">
+    <div class="shop__c" id="shopFind">
+      <h3>Encuentra tu tienda</h3><p>Dinos tu ciudad o código postal y te indicamos el punto de venta Modeka más cercano.</p>
+      <div class="shop__f"><input id="shopZip" placeholder="Ciudad o código postal"><button type="button" id="shopBtn">Buscar</button></div>
+      <div class="shop__ok" id="shopOk"></div>
+    </div>
+    <div class="shop__c b2b" id="shopB2B">
+      <h3>¿Tienes tienda?</h3><p>Súmate a la red de distribuidores oficiales de Modeka y lleva la marca a tus clientes.</p>
+      <div class="shop__f"><input id="shopMail" type="email" placeholder="Email de tu negocio"><button type="button" id="shopB2BBtn">Hazte distribuidor</button></div>
+      <div class="shop__ok">Gracias. Nuestro equipo comercial se pondrá en contacto contigo.</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta"><span class="k">Piloto Boomatik</span><h2 class="anton">Imagina<br>la <em>colección</em></h2><p>Todo nace de vuestras fotos de catálogo.</p><a class="btn" href="mailto:support@boomatik.com">Hablemos · Boomatik</a></section>
+<footer>Piloto creativo Boomatik para Modeka. Imágenes y vídeo generados con IA a partir de las fotos reales de modeka.es; las prendas se reproducen sin alterar su diseño. Motos y fondos ilustrativos. Música y voz en el máster.</footer>
+
+<div class="modal" id="askModal" aria-hidden="true">
+  <div class="modal__bg" data-close></div>
+  <div class="modal__card">
+    <button class="modal__x" data-close aria-label="Cerrar">✕</button>
+    <div class="modal__grid">
+      <div class="modal__l">
+        <span class="k">Pregúntanos</span>
+        <h2 class="anton">Hablamos<br>de tu ruta</h2>
+        <p>Cuéntanos qué buscas —una talla, disponibilidad, un consejo de equipación o distribución— y te respondemos personalmente. Sin salir de donde estás.</p>
+      </div>
+      <form class="lf" id="askForm">
+        <div class="fields">
+          <div class="row"><input name="nombre" placeholder="Nombre" required><input type="email" name="email" placeholder="Email" required></div>
+          <div class="row"><input name="tel" placeholder="Teléfono (opcional)"><select name="interes"><option value="">¿En qué te ayudamos?</option><option>Consulta de producto</option><option>Talla y equivalencias</option><option>Disponibilidad y tiendas</option><option>Distribución / mayorista</option><option>Prensa y colaboraciones</option></select></div>
+          <textarea name="msg" placeholder="Tu mensaje" required></textarea>
+          <button type="submit">Enviar consulta</button>
+          <p class="priv">Al enviar aceptas la <a href="#">política de privacidad</a>. Solo usamos tus datos para responderte.</p>
+        </div>
+        <div class="ok" id="askOk"></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+const CF="https://d8j0ntlcm91z4.cloudfront.net/user_3EK1A7UZAYUqpkNAaZJW4e4EYJI/";
+/* ===== motor de segmentos fijados ===== */
+document.querySelectorAll('.pin').forEach(pin=>{
+  const scenes=[...pin.querySelectorAll('.pscene')],M=scenes.length;
+  pin.style.height=(M*130)+'vh';                 // escenas más largas
+  const TR=pin.dataset.tr.split(',');
+  const POS=['top:9vh;right:5vw','bottom:8vh;left:5vw','top:10vh;left:6vw','bottom:9vh;right:5vw'];
+  scenes.forEach((s,i)=>{const n=document.createElement('span');n.className='num';n.textContent=String(i+1).padStart(2,'0');n.style.cssText+=';'+POS[i%4];s.appendChild(n);});
+  function apply(t,inc,l){switch(t){
+    case 'circle':inc.style.clipPath='circle('+(4+l*122)+'% at 50% 50%)';break;
+    case 'blinds':inc.style.clipPath='inset('+((1-l)*50)+'% 0 '+((1-l)*50)+'% 0)';break;
+    case 'doors':inc.style.clipPath='inset(0 '+((1-l)*50)+'% 0 '+((1-l)*50)+'%)';break;
+    case 'wipe':{const p=l*160;inc.style.clipPath='polygon(0 0,'+p+'% 0,'+Math.max(0,p-45)+'% 100%,0 100%)';}break;
+    case 'slide':inc.style.transform='translateX('+((1-l)*100)+'%)';break;
+    default:inc.style.opacity=l;}}
+  pin._render=function(){const r=pin.getBoundingClientRect();const tot=pin.offsetHeight-innerHeight;
+    let p=Math.max(0,Math.min(1,(-r.top)/tot));const f=p*(M-1),idx=Math.min(M-1,Math.floor(f)),l=f-idx;
+    scenes.forEach((s,k)=>{s.style.display=(k===idx||k===idx+1)?'grid':'none';if(k===idx||k===idx+1){s.style.clipPath='';s.style.transform='';s.style.opacity='';}});
+    if(idx+1<M){const t=TR[idx+1],out=scenes[idx],inc=scenes[idx+1],tl=Math.min(1,l/0.36);
+      if(t==='zoom'){out.style.zIndex=2;inc.style.zIndex=1;out.style.transform='scale('+(1+tl*0.4)+')';out.style.opacity=(1-tl);}else{out.style.zIndex=1;inc.style.zIndex=2;apply(t,inc,tl);}
+    }
+    const st=(l>0.46)?idx+1:(l<0.14?idx:-1);
+    scenes.forEach((s,k)=>{const w=s.querySelector('.wrap');if(w)w.style.opacity=(k===st)?'1':'0';});
+  };
+  pin._render();
+});
+
+/* ===== coverflow móviles ===== */
+const P=[
+ {n:"Lucano",l:"Touring · 4 estaciones",s:"tour-lucano",m:"hf_20260730_162030_8131761b-0f05-4fd7-8e8d-997bae3b5444.png",w:"hf_20260730_162035_a2b30dd0-24b4-48dc-994e-d845dd511ee7.png"},
+ {n:"Taran",l:"Touring · premium",s:"tour-taran",m:"models/taran-man-sm.jpg",w:"hf_20260730_170601_07193896-1946-44e3-9635-f62399598a21.png"},
+ {n:"Aeris II",l:"Touring · versátil",s:"tour-aeris-ii",m:"hf_20260730_162851_a107caea-f412-4989-a2bf-b3c9e36f1cee.png",w:"hf_20260730_170557_c3bbb54e-eb4e-48b6-aa45-9d4c3a4c56ef.png"},
+ {n:"Striker III",l:"Touring · polivalente",s:"tour-striker-iii",m:"models/striker-man-sm.jpg",w:"hf_20260730_170512_b31e0a34-3a72-4f42-97e3-d4a1c535a6a8.png"},
+ {n:"Khao Air II",l:"Touring · malla",s:"tour-khao-air-ii",m:"models/khao-man-sm.jpg",w:"models/khao-woman-sm.jpg"},
+ {n:"Veo Air",l:"Verano · malla",s:"tour-veo-air",m:"hf_20260730_163331_d6a59b98-8d62-455e-a248-3f6ddf65cd86.png",w:"hf_20260730_163335_5b735ba8-7ae6-4a0c-a919-b5aeb9fcbba1.png"}];
+const NP=P.length,stage=document.getElementById('stage'),covName=document.getElementById('covName'),covLine=document.getElementById('covLine');
+const SB='<div class="sbar"><span>9:41</span><span>·ıl  ▪</span></div>';
+const ROT='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>';
+let view='w';
+const ROTVIDS={w:'orbit.mp4',m:'ad/c3-mountain.mp4',p:'holo-prod.mp4'},RLAB={w:'360° · mujer',m:'360° · hombre',p:'360° · escáner'};
+const items=P.map((p,i)=>{const el=document.createElement('div');el.className='pcard';el.dataset.i=i;
+  const rot=(p.s==='tour-lucano')?'<button class="rotb" aria-label="360">'+ROT+'</button><div class="rotv"><video muted loop playsinline preload="none"></video><span class="plab" data-rlab>360° · vídeo</span></div>':'';
+  el.innerHTML='<div class="fr"><span class="notch"></span>'+SB+'<div class="screen">'
+    +'<div class="pv w on"><img loading="lazy" src="'+(p.w.indexOf('/')>=0?p.w:CF+p.w)+'"></div><div class="pv m"><img loading="lazy" src="'+(p.m.indexOf('/')>=0?p.m:CF+p.m)+'"></div><div class="pv p"><img loading="lazy" src="cutouts/'+p.s+'.png"></div>'
+    +'<span class="plab" data-lab>Mujer</span>'+rot+'</div></div>';
+  const rb=el.querySelector('.rotb');if(rb){const vd=el.querySelector('.rotv video'),rl=el.querySelector('[data-rlab]');rb.addEventListener('click',ev=>{ev.stopPropagation();const on=el.classList.toggle('roton');if(on){vd.src=ROTVIDS[view];rl.textContent=RLAB[view];vd.play().catch(()=>{});}else vd.pause();});}
+  stage.appendChild(el);return el;});
+function setView(v){view=v;items.forEach(el=>{el.querySelectorAll('.pv').forEach(pv=>pv.classList.toggle('on',pv.classList.contains(v)));const lb=el.querySelector('[data-lab]');if(lb)lb.textContent=(v==='w'?'Mujer':v==='m'?'Hombre':'Producto');if(el.classList.contains('roton')){const vd=el.querySelector('.rotv video'),rl=el.querySelector('[data-rlab]');if(vd){vd.src=ROTVIDS[v];if(rl)rl.textContent=RLAB[v];vd.play().catch(()=>{});}}});}
+let pos=0,vel=0,raf=null,lastCen=-1,curPane=0;
+function sp(){return Math.min(300,innerWidth*0.34);}
+function render(){const s=sp(),cen=((Math.round(pos)%NP)+NP)%NP;
+  items.forEach((el,i)=>{let d=i-pos;d=((d%NP)+NP)%NP;if(d>NP/2)d-=NP;const ax=Math.abs(d);
+    if(ax>3.2){el.style.display='none';return;}el.style.display='block';
+    el.style.transform='translate(-50%,-50%) translate3d('+(d*s)+'px,0,'+(-ax*170)+'px) rotateY('+(Math.max(-1,Math.min(1,d))*-40)+'deg) scale('+Math.max(0.62,1-ax*0.17)+')';
+    el.style.opacity=Math.max(0.12,1-ax*0.34);el.style.zIndex=200-Math.round(ax*10);el.classList.toggle('center',i===cen);});
+  if(cen!==lastCen){items.forEach(x=>{if(x.classList.contains('roton')){x.classList.remove('roton');const rv=x.querySelector('.rotv video');if(rv)rv.pause();}});lastCen=cen;}
+  const pp=P[cen];covName.textContent=pp.n;covLine.textContent=pp.l;}
+function iner(){pos+=vel;vel*=0.9;if(Math.abs(vel)<0.0015){const t=Math.round(pos);pos+=(t-pos)*0.16;if(Math.abs(t-pos)<0.001){pos=t;render();raf=null;return;}}render();raf=requestAnimationFrame(iner);}
+function kick(){if(!raf)raf=requestAnimationFrame(iner);}
+let dn=false,lx=0,mv=0,ic=false;
+stage.addEventListener('pointerdown',e=>{const it=e.target.closest('.pcard');ic=!!(it&&it.classList.contains('center')&&(e.target.closest('.rotb')||e.target.closest('.rotv')));if(ic){dn=false;return;}dn=true;mv=0;lx=e.clientX;vel=0;if(raf){cancelAnimationFrame(raf);raf=null;}stage.classList.add('grab');});
+addEventListener('pointermove',e=>{if(!dn)return;const dx=e.clientX-lx;mv+=Math.abs(dx);lx=e.clientX;const dp=-dx/sp();pos+=dp;vel=dp*0.9;render();});
+addEventListener('pointerup',e=>{stage.classList.remove('grab');if(ic){ic=false;return;}if(!dn)return;dn=false;if(mv<6){const it=e.target.closest('.pcard');if(it){let d=(+it.dataset.i)-pos;d=((d%NP)+NP)%NP;if(d>NP/2)d-=NP;pos+=d;vel=0;}}kick();});
+document.querySelectorAll('.cov__tog button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.cov__tog button').forEach(x=>x.classList.toggle('on',x===b));setView(b.dataset.view);}));
+(function(){var gate=document.getElementById('covGate');if(!gate)return;
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){gate.classList.add('in');io.disconnect();}});},{threshold:.35});io.observe(gate);}else gate.classList.add('in');
+ gate.querySelectorAll('.cov__pick button').forEach(function(btn){btn.addEventListener('click',function(){setView(btn.dataset.view);document.querySelectorAll('.cov__tog button').forEach(function(x){x.classList.toggle('on',x.dataset.view===btn.dataset.view);});gate.classList.add('hide');});});
+ var sk=document.getElementById('covSkip');if(sk)sk.addEventListener('click',function(){gate.classList.add('hide');});})();
+(function(){var h=document.getElementById('covHint'),x=document.getElementById('covHintX');if(!h)return;function hide(){h.classList.add('off');}if(x)x.addEventListener('click',function(e){e.stopPropagation();hide();});document.querySelectorAll('.cov__tog button').forEach(b=>b.addEventListener('click',hide));})();
+addEventListener('resize',render);render();
+
+/* ===== iconos lookbook ===== */
+(function(){const I=[{n:'Atlaz',d:'El compañero de las cuatro estaciones. Una 3 en 1 que se adapta a ti: quitas capas y sigues, llueva o apriete el sol.',img:'modeka/prod-atlaz.jpg'},{n:'Panamericana II',d:'El icono aventurero. Nacida para viajes largos y terreno que cambia, con protección de máximo nivel. La que cruza continentes.',img:'modeka/prod-panamericana.jpg'},{n:'Paneo LT',d:'Ligereza con carácter. Construcción laminada para plantar cara al clima día tras día, sin que se note el peso.',img:'modeka/prod-paneo.jpg'},{n:'Leather Icons',d:'El alma clásica. Cuero atemporal para las motos de siempre; el estilo que nunca pasa de moda.',img:'modeka/prod-leather.jpg'},{n:'Panamericana II Lady',d:'La aventura, en su sitio. El superventas adventure con patrón específico de mujer: mismo temple, corte propio.',img:'modeka/prod-panamericana-lady.jpg'}];
+  const st=document.getElementById('lbStage'),ls=document.getElementById('lbList');if(!st)return;
+  const im=I.map((it,i)=>{const e=document.createElement('img');e.src=it.img;e.loading='lazy';if(i===0)e.className='on';st.appendChild(e);return e;});
+  let c=0;function set(i){c=i;im.forEach((x,k)=>x.classList.toggle('on',k===i));[...ls.children].forEach((x,k)=>x.classList.toggle('on',k===i));}
+  I.forEach((it,i)=>{const li=document.createElement('li');if(i===0)li.className='on';li.innerHTML='<div class="row"><span class="num">0'+(i+1)+'</span><h3>'+it.n+'</h3></div><p>'+it.d+'</p>';li.addEventListener('mouseenter',()=>set(i));li.addEventListener('click',()=>set(i));ls.appendChild(li);});
+  let a=setInterval(()=>set((c+1)%I.length),4200);ls.addEventListener('mouseenter',()=>clearInterval(a));})();
+/* ===== gear ===== */
+(function(){const G=[['lib/helm1.jpg','Cascos','img'],['ad/c1-woman.mp4','En ciudad','vid'],['lib/glove1.jpg','Guantes','img'],['lib/boot1.jpg','Botas','img'],['ad/c3-mountain.mp4','En ruta','vid'],['lib/gear3.jpg','Adventure','img'],['lib/helm5.jpg','Cascos','img'],['orbit.mp4','360°','vid'],['lib/gear1.jpg','Chaquetas','img'],['lib/boot2.jpg','Botas','img']];
+  const t=document.getElementById('gearTrack');if(!t)return;
+  const h=G.map(g=>g[2]==='vid'
+    ?'<div class="gcard vid"><video muted autoplay loop playsinline preload="metadata" src="'+g[0]+'"></video><span class="pill">Vídeo</span><span class="c">'+g[1]+'</span></div>'
+    :'<div class="gcard"><img loading="lazy" src="'+g[0]+'"><span class="c">'+g[1]+'</span></div>').join('');
+  t.innerHTML=h+h;})();
+
+/* ===== scroll global (pins) ===== */
+let tick=false;
+var _pf=document.getElementById('progFill'),_sc=document.getElementById('scrollcue');
+function updateProg(){var h=document.documentElement.scrollHeight-innerHeight,y=window.pageYOffset||document.documentElement.scrollTop,pr=h>0?Math.min(1,Math.max(0,y/h)):0;if(_pf)_pf.style.height=(pr*100)+'%';if(_sc)_sc.classList.toggle('gone',pr>0.02);}
+function onScroll(){tick=false;document.querySelectorAll('.pin').forEach(p=>p._render&&p._render());updateProg();}
+addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(onScroll);}},{passive:true});
+addEventListener('resize',onScroll);onScroll();
+if(window.Lenis){const le=new Lenis({lerp:.09});window.__lenis=le;function rf(t){le.raf(t);requestAnimationFrame(rf);}requestAnimationFrame(rf);le.on('scroll',onScroll);}
+/* ===== captacion leads: formularios + scroll a ancla ===== */
+var lf=document.getElementById('leadForm');
+if(lf)lf.addEventListener('submit',function(e){e.preventDefault();var n=((lf.nombre&&lf.nombre.value)||'').trim().split(' ')[0];document.getElementById('leadOk').textContent='Gracias'+(n?', '+n:'')+'. Hemos recibido tu consulta y te responderemos por email lo antes posible.';lf.classList.add('sent');});
+var nf=document.getElementById('nlForm');
+if(nf)nf.addEventListener('submit',function(e){e.preventDefault();var s=document.getElementById('nl');if(s)s.classList.add('sent');});
+var sfb=document.getElementById('shopBtn');
+if(sfb)sfb.addEventListener('click',function(){var z=(document.getElementById('shopZip').value||'').trim();var ok=document.getElementById('shopOk');ok.textContent=z?('Buscando puntos de venta cerca de «'+z+'». Te enviaremos el más cercano.'):'Escribe tu ciudad o código postal.';document.getElementById('shopFind').classList.add('sent');});
+var sbb=document.getElementById('shopB2BBtn');
+if(sbb)sbb.addEventListener('click',function(){var m=document.getElementById('shopMail');if(m&&/.+@.+\..+/.test(m.value))document.getElementById('shopB2B').classList.add('sent');else if(m)m.focus();});
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=document.querySelector(id);if(!t)return;e.preventDefault();if(window.__lenis){window.__lenis.scrollTo(t,{offset:-20});}else{t.scrollIntoView({behavior:'smooth'});}});});
+/* ===== buscador de talla (captacion) ===== */
+(function(){
+ var card=document.getElementById('szCard'); if(!card)return;
+ var H=document.getElementById('szH'),Wt=document.getElementById('szW'),F=document.getElementById('szF');
+ var big=document.getElementById('szBig'),sub=document.getElementById('szSub');
+ document.getElementById('szBtn').addEventListener('click',function(){
+   var h=+H.value,w=+Wt.value,fit=F.value;
+   if(!h||!w||h<140||w<40){big.innerHTML='Faltan <em>datos</em>';sub.textContent='Introduce tu altura y tu peso para calcular la talla.';card.classList.add('done');return;}
+   var idx; if(w<60)idx=0;else if(w<70)idx=1;else if(w<80)idx=2;else if(w<92)idx=3;else if(w<105)idx=4;else idx=5;
+   if(h>=192&&idx<5)idx++; if(fit==='holgado'&&idx<5)idx++; if(fit==='cenido'&&idx>0)idx--;
+   var L=['S','M','L','XL','2XL','3XL'],EU=[48,50,52,54,56,58];
+   big.innerHTML='Talla <em>'+L[idx]+'</em>';
+   sub.textContent='Equivale a la EU '+EU[idx]+', para chaqueta touring con ajuste '+(fit==='cenido'?'ceñido':fit==='holgado'?'holgado':'estándar')+'. Déjanos tu email y te mandamos la guía completa por modelo.';
+   card.classList.add('done');
+ });
+ var mb=document.getElementById('szMagBtn');
+ if(mb)mb.addEventListener('click',function(){var m=document.getElementById('szMail');if(m&&/.+@.+\..+/.test(m.value)){card.classList.add('mag-sent');}else if(m){m.focus();m.style.borderColor='#e11d2a';}});
+})();
+/* ===== intro cinematográfica ===== */
+(function(){var intro=document.getElementById('intro'),il=document.getElementById('introLogo');if(!intro)return;
+ if(window.__lenis){try{window.__lenis.stop();}catch(e){}}
+ requestAnimationFrame(function(){il.classList.add('in');});
+ setTimeout(function(){il.classList.add('move');},1500);
+ setTimeout(function(){intro.classList.add('gone');},2450);
+ setTimeout(function(){intro.style.display='none';if(window.__lenis){try{window.__lenis.start();}catch(e){}}document.body.classList.add('intro-done');},3300);})();
+/* ===== modal Pregúntanos (no pierde el scroll) ===== */
+(function(){var am=document.getElementById('askModal');if(!am)return;
+ function op(){am.classList.add('open');am.setAttribute('aria-hidden','false');if(window.__lenis){try{window.__lenis.stop();}catch(e){}}}
+ function cl(){am.classList.remove('open');am.setAttribute('aria-hidden','true');if(window.__lenis){try{window.__lenis.start();}catch(e){}}}
+ document.querySelectorAll('.ask').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();op();});});
+ am.querySelectorAll('[data-close]').forEach(function(x){x.addEventListener('click',cl);});
+ addEventListener('keydown',function(e){if(e.key==='Escape')cl();});
+ var af=document.getElementById('askForm');
+ if(af)af.addEventListener('submit',function(e){e.preventDefault();var n=((af.nombre&&af.nombre.value)||'').trim().split(' ')[0];document.getElementById('askOk').textContent='Gracias'+(n?', '+n:'')+'. Te responderemos por email muy pronto.';af.classList.add('sent');});})();
+})();
+</script>
+</body>
+</html>
