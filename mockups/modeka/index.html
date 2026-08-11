@@ -92,8 +92,9 @@
   .lb{max-width:1280px;margin:0 auto;padding:0 var(--pad)}
   .lb__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,56px);align-items:center}
   .lb__stage{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:#0e0e12;border:1px solid var(--line)}
-  .lb__stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;clip-path:inset(0 0 0 100%);transition:clip-path .7s cubic-bezier(.16,1,.3,1),opacity .5s}
+  .lb__stage img,.lb__stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;clip-path:inset(0 0 0 100%);transition:clip-path .7s cubic-bezier(.16,1,.3,1),opacity .5s}
   .lb__stage img.on{opacity:1;clip-path:inset(0 0 0 0);animation:lbkb 6s ease-out forwards}
+  .lb__stage video.on{opacity:1;clip-path:inset(0 0 0 0)}
   @keyframes lbkb{from{transform:scale(1.12)}to{transform:scale(1)}}
   .lb__list{list-style:none}.lb__list li{padding:18px 0;border-top:1px solid var(--line);cursor:pointer;opacity:.45;transition:.35s}
   .lb__list li:last-child{border-bottom:1px solid var(--line)}.lb__list li.on{opacity:1;padding-left:14px}
@@ -580,10 +581,10 @@ document.querySelectorAll('.cov__tog button').forEach(b=>b.addEventListener('cli
 addEventListener('resize',render);render();
 
 /* ===== iconos lookbook ===== */
-(function(){const I=[{n:'Atlaz',d:'El compañero de las cuatro estaciones. Una 3 en 1 que se adapta a ti: quitas capas y sigues, llueva o apriete el sol.',img:'modeka/prod-atlaz.jpg'},{n:'Panamericana II',d:'El icono aventurero. Nacida para viajes largos y terreno que cambia, con protección de máximo nivel. La que cruza continentes.',img:'modeka/prod-panamericana.jpg'},{n:'Paneo LT',d:'Ligereza con carácter. Construcción laminada para plantar cara al clima día tras día, sin que se note el peso.',img:'modeka/prod-paneo.jpg'},{n:'Leather Icons',d:'El alma clásica. Cuero atemporal para las motos de siempre; el estilo que nunca pasa de moda.',img:'modeka/prod-leather.jpg'},{n:'Panamericana II Lady',d:'La aventura, en su sitio. El superventas adventure con patrón específico de mujer: mismo temple, corte propio.',img:'modeka/prod-panamericana-lady.jpg'}];
+(function(){const I=[{n:'Atlaz',d:'El compañero de las cuatro estaciones. Una 3 en 1 que se adapta a ti: quitas capas y sigues, llueva o apriete el sol.',img:'modeka/prod-atlaz.jpg',vid:'lb-atlaz.mp4'},{n:'Panamericana II',d:'El icono aventurero. Nacida para viajes largos y terreno que cambia, con protección de máximo nivel. La que cruza continentes.',img:'modeka/prod-panamericana.jpg',vid:'lb-panamericana.mp4'},{n:'Paneo LT',d:'Ligereza con carácter. Construcción laminada para plantar cara al clima día tras día, sin que se note el peso.',img:'modeka/prod-paneo.jpg',vid:'lb-paneo.mp4'},{n:'Leather Icons',d:'El alma clásica. Cuero atemporal para las motos de siempre; el estilo que nunca pasa de moda.',img:'modeka/prod-leather.jpg',vid:'lb-leather.mp4'},{n:'Panamericana II Lady',d:'La aventura, en su sitio. El superventas adventure con patrón específico de mujer: mismo temple, corte propio.',img:'modeka/prod-panamericana-lady.jpg',vid:'lb-panamericana-lady.mp4'}];
   const st=document.getElementById('lbStage'),ls=document.getElementById('lbList');if(!st)return;
-  const im=I.map((it,i)=>{const e=document.createElement('img');e.src=it.img;e.loading='lazy';if(i===0)e.className='on';st.appendChild(e);return e;});
-  let c=0;function set(i){c=i;im.forEach((x,k)=>x.classList.toggle('on',k===i));[...ls.children].forEach((x,k)=>x.classList.toggle('on',k===i));}
+  const im=I.map((it,i)=>{const e=document.createElement('video');e.src=it.vid;e.poster=it.img;e.muted=true;e.loop=true;e.playsInline=true;e.setAttribute('playsinline','');e.setAttribute('muted','');e.preload=(i===0?'auto':'metadata');if(i===0){e.className='on';e.autoplay=true;}st.appendChild(e);return e;});
+  let c=0;function set(i){c=i;im.forEach((x,k)=>{const on=k===i;x.classList.toggle('on',on);if(on){try{x.currentTime=0;x.play().catch(()=>{});}catch(e){}}else{x.pause();}});[...ls.children].forEach((x,k)=>x.classList.toggle('on',k===i));}
   I.forEach((it,i)=>{const li=document.createElement('li');if(i===0)li.className='on';li.innerHTML='<div class="row"><span class="num">0'+(i+1)+'</span><h3>'+it.n+'</h3></div><p>'+it.d+'</p>';li.addEventListener('mouseenter',()=>set(i));li.addEventListener('click',()=>set(i));ls.appendChild(li);});
   let a=setInterval(()=>set((c+1)%I.length),4200);ls.addEventListener('mouseenter',()=>clearInterval(a));})();
 /* ===== gear ===== */
