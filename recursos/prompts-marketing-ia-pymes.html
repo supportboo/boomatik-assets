@@ -39,7 +39,7 @@ footer{margin-top:36px;font-size:13px;color:var(--mute)}footer a{color:var(--sof
 </style>
 </head>
 <body><div class="w">
-<span class="eb">Guía gratuita · Boomatik · 12 de marketing + 9 de imagen y vídeo</span>
+<span class="eb">Guía gratuita · Boomatik · 12 de marketing + 9 de imagen y vídeo + 5 de webs</span>
 <h1>12 prompts de marketing con IA <em>que trabajan como un especialista</em></h1>
 <p>No son preguntas sueltas. Cada prompt le da a la IA un papel de especialista, un método paso a paso, el formato exacto de la entrega y una autorrevisión antes de responder. Son los mismos criterios con los que trabajan los agentes de la BOO ARMY, adaptados para que los uses tú en ChatGPT, Claude o Gemini.</p>
 
@@ -53,13 +53,17 @@ footer{margin-top:36px;font-size:13px;color:var(--mute)}footer a{color:var(--sof
   </ol>
 </div>
 
-<div class="box"><strong>Índice · Parte 1: marketing</strong><div class="toc" id="toc"></div><strong style="display:block;margin-top:14px">Parte 2: imagen y vídeo con IA</strong><div class="toc" id="toc2"></div></div>
+<div class="box"><strong>Índice · Parte 1: marketing</strong><div class="toc" id="toc"></div><strong style="display:block;margin-top:14px">Parte 2: imagen y vídeo con IA</strong><div class="toc" id="toc2"></div><strong style="display:block;margin-top:14px">Parte 3: webs que paran el scroll</strong><div class="toc" id="toc3"></div></div>
 <div id="list"></div>
 
 <h2 style="font-size:clamp(24px,4vw,32px);margin:44px 0 6px;letter-spacing:-.02em">Parte 2 · Prompts de imagen y vídeo con nivel de director</h2>
 <p>Los modelos de imagen y vídeo (Nano Banana, Midjourney, Seedance, Kling, Veo) responden mejor en inglés y con un orden concreto: tipo de plano, encuadre, cámara y lente, sujeto, acción, entorno, capas de profundidad, paleta, luz, película y efectos. Por eso estos prompts van en inglés y con lo que tienes que cambiar entre [CORCHETES]. Empieza por el 13: convierte cualquier idea tuya de una frase en un prompt completo.</p>
 <div class="box"><strong>Antes de generar</strong><ol><li>Usa fotos reales de tu producto como referencia (el modelo copia mejor que imagina).</li><li>Nunca pidas texto dentro de la imagen: los logos, precios y titulares se ponen después en diseño.</li><li>Si la imagen o el vídeo parecen reales y muestran personas, etiquétalo como contenido creado con IA al publicar.</li><li>Cada generación tiene coste en la herramienta que uses: prueba primero en baja calidad.</li></ol></div>
 <div id="list2"></div>
+
+<h2 style="font-size:clamp(24px,4vw,32px);margin:44px 0 6px;letter-spacing:-.02em">Parte 3 · Webs que paran el scroll</h2>
+<p>Para pegar en un constructor con IA (Claude, Lovable, v0, Bolt, Antigravity). Cada prompt le da el papel de diseñador de primer nivel, el sistema de diseño, la arquitectura del scroll, sección por sección, y le obliga a revisarse antes de entregar. Cambia lo que va entre [CORCHETES] por los datos de tu negocio y usa tus fotos reales.</p>
+<div id="list3"></div>
 
 <div class="cta">
   <strong>¿Y si no tuvieras que copiar y pegar?</strong>
@@ -373,6 +377,105 @@ SFX: light pop on the bounce. Music: playful minimal synth.
 Negatives: no change in the character's colours or proportions, no extra limbs, no text, no lip-sync drift, no background characters.
 Settings: 9:16, 1080p; for perfect voice, generate the audio separately with your brand voice and use an audio-driven lip-sync model.`},
 ];
+const W=[
+{id:'w22',area:'Web · Cinematográfica',t:'Web que se cuenta con el scroll (tipo keynote)',get:'Una web donde cada bajada de scroll avanza una historia: tu producto o servicio revelándose por capítulos.',when:'Web principal o landing de lanzamiento.',time:'30-60 min con el constructor',next:'Prueba en el móvil y pide al constructor que corrija solo lo que falle.',
+prompt:`Actúa como creative developer y motion designer de nivel Awwwards. Construye la web de [NEGOCIO]: [qué vendes en una frase, para quién y dónde]. No es una web normal ni una plantilla: es una película interactiva donde el scroll controla la narración. Sensación de referencia: keynote de Apple, Aman Resorts, Locomotive.
+
+0. MATERIAL QUE TE DOY
+[Lista de fotos o vídeos reales: nombre del archivo y qué muestra.] Si falta algo, usa un marcador elegante con el degradado de marca y grano suave; nunca rompas el diseño ni inventes fotos de producto.
+
+1. TECNOLOGÍA
+Next.js + React + Tailwind, GSAP con ScrollTrigger y Lenis para el scroll suave. Sin plantillas ni kits genéricos. Alternativa sin compilación: HTML, CSS y JS con CDN.
+
+2. SISTEMA DE DISEÑO
+- Paleta: [color principal #HEX], [secundario #HEX], fondo [#HEX], texto [#HEX] y un único acento usado con moderación (líneas finas, numerales, estados hover). Nada de degradados morados por defecto.
+- Tipografía: una display con carácter ([nombre o «elige una de Google Fonts acorde a un negocio de X»]) y una sans legible para el texto; titular del inicio a 8-12 vw; texto con un máximo de 65 caracteres por línea; números de capítulo 01/06.
+- Textura: grano del 2-3 %, viñeta en las secciones con vídeo, radios y sombras coherentes.
+
+3. ARQUITECTURA DEL SCROLL
+- Cada capítulo queda fijado en pantalla durante 300-400 vh y el avance del scroll mueve su contenido (imagen que se acerca, piezas que se ensamblan, texto que se sustituye).
+- Barra fina de progreso del capítulo y número de capítulo fijo en el borde.
+- Nada se reproduce solo: el scroll es el play.
+
+4. ESTRUCTURA (en este orden)
+Pantalla de carga de menos de 2,5 s → Inicio con la promesa principal: [PROMESA] → Capítulo 1, el problema de tu cliente: [PROBLEMA] → Capítulo 2, cómo lo resuelves: [SOLUCIÓN] → Capítulo 3, la prueba: [RESEÑAS, CASOS O DATOS REALES] → Capítulo 4, cómo se trabaja contigo en 3 pasos → Llamada a la acción: [RESERVA / PIDE PRESUPUESTO / COMPRA] con un botón cuyo borde se dibuja al pasar el ratón → Pie de página.
+En cada capítulo indica: imagen o vídeo, etiqueta pequeña, titular, texto (máximo 2 frases), efecto principal y transición al siguiente.
+
+5. MICROINTERACCIONES
+Textos que aparecen línea a línea con máscara, imágenes que pasan de 1,08 a 1,0 al entrar, subrayados que se dibujan, botón con efecto magnético, contadores solo con datos reales.
+
+6. RENDIMIENTO, MÓVIL Y ACCESIBILIDAD
+Lighthouse de 90 o más en escritorio; en móvil (menos de 768 px) sustituye el vídeo con scroll por imagen con movimiento suave; respeta «reducir movimiento» del sistema; contraste AA; prueba en Chrome, Safari e iPhone.
+
+7. ENTREGA
+Código limpio y comentado, instrucciones para ejecutarlo y una autorrevisión sección por sección contra esta especificación. Todo el texto visible en castellano de España, sin inventar cifras, reseñas ni clientes.`},
+{id:'w23',area:'Web · Landing',t:'Landing de captación que convierte',get:'Una página de una sola acción (cita, presupuesto o descarga) estructurada para resolver las dudas del cliente en el orden en que aparecen.',when:'Campañas de anuncios, lanzamiento de un servicio, «Comenta X» de redes.',time:'30 min',next:'Pásala por el prompt 10 (auditoría de conversión) antes de lanzar anuncios.',
+prompt:`Actúa como diseñador de conversión (CRO) y desarrollador front-end sénior. Crea una landing de una sola acción para [NEGOCIO] cuyo objetivo es [ACCIÓN: pedir cita / presupuesto / descargar X]. Cliente ideal: [QUIÉN, QUÉ LE PREOCUPA, QUÉ LE FRENA]. Llega desde [ANUNCIOS DE META / GOOGLE / UN REEL / UN CORREO], así que el titular debe continuar exactamente lo que prometía ese anuncio: «[PROMESA DEL ANUNCIO]».
+
+Estructura obligatoria, en este orden de dudas:
+1. Primera pantalla (sin hacer scroll en móvil): titular con el resultado concreto, subtítulo que dice para quién es, prueba inmediata (valoración de Google real, logos de clientes reales o una cifra con fuente) y el botón de la acción.
+2. El problema contado con las palabras del cliente (3 síntomas reconocibles).
+3. Cómo funciona en 3 pasos, con lo que tiene que hacer el cliente en cada uno.
+4. Lo que obtiene: 4-6 beneficios concretos, cada uno con su prueba.
+5. Objeciones resueltas: [PRECIO / TIEMPO / CONFIANZA / CAMBIO] en formato de preguntas frecuentes.
+6. Prueba social real: reseñas con nombre y fuente, casos con permiso. Si no hay, no las inventes: deja el bloque vacío con un aviso.
+7. Formulario de no más de 4 campos, casilla de privacidad sin marcar y texto de lo que pasa después de enviarlo.
+8. Repetición del botón al final y pie de página con datos legales.
+
+Diseño: paleta [#HEX], tipografía legible, un único color para los botones, mucho espacio en blanco, nada que saque de la página (sin menú completo, sin enlaces a redes en la parte superior). Móvil primero a 360 px.
+Medición: evento al ver el formulario, al empezarlo y al enviarlo, preparado para GA4.
+Autorrevisión antes de entregar: prueba de los 5 segundos (¿se entiende qué es, para quién y qué hacer?) y lista de cada afirmación que necesita una prueba real.`},
+{id:'w24',area:'Web · 3D',t:'Tienda o local en 3D que se puede recorrer',get:'Un espacio 3D navegable de tu tienda, taller o local en el navegador, el formato de las webs que más se comparten.',when:'Comercios con producto visual, restauración, showrooms, inmobiliarias.',time:'45-90 min',next:'Graba con el móvil el portátil mientras recorres la escena: ese vídeo es tu reel.',
+prompt:`Actúa como desarrollador WebGL especializado en Three.js y React Three Fiber. Construye una experiencia 3D navegable en el navegador de [TIPO DE LOCAL: tienda de cascos / taller / cafetería / showroom] de [NEGOCIO].
+
+Escena:
+- Espacio de [MEDIDAS APROXIMADAS] con [ELEMENTOS: estanterías, mostrador, elevadores, mesas…], estilo low-poly limpio con materiales mate y una luz principal cálida más luz ambiente suave.
+- Los productos o zonas principales son [LISTA]; cada uno es interactivo: al pasar el cursor se ilumina y al hacer clic se abre una tarjeta con nombre, una línea de descripción y un botón [VER PRODUCTO / RESERVAR] que lleva a [URL].
+- Señalización con los colores de marca [#HEX] y sin texto ilegible: los rótulos se escriben como texto HTML encima de la escena, nunca como textura generada.
+
+Navegación:
+- Recorrido guiado por el scroll (la cámara avanza por un camino predefinido de [N] paradas) y, en escritorio, movimiento libre opcional con el ratón.
+- Una barra de progreso con el nombre de cada zona.
+
+Rendimiento: menos de 3 MB de modelos en total, texturas comprimidas, carga progresiva con una imagen fija mientras carga, 60 fps en un portátil normal; en móvil, recorrido simplificado y menos sombras. Si el navegador no soporta WebGL, muestra una galería de fotos reales.
+Entrega: código comentado, lista de modelos usados con su licencia (o creados por ti) y autorrevisión de rendimiento.`},
+{id:'w25',area:'Web · Diseño',t:'Que tu web deje de parecer hecha con IA',get:'Un rediseño con criterio de diseñador: sistema propio, jerarquía clara y detalles que la separan de las plantillas.',when:'Webs genéricas, hechas con plantilla o con un constructor de IA.',time:'30 min',next:'Aplica primero el sistema de diseño y después sección por sección.',
+prompt:`Actúa como director de arte de un estudio de diseño exigente. Te paso mi web actual: [URL O CAPTURAS]. Mi negocio: [QUÉ HAGO, PARA QUIÉN, QUÉ ME DIFERENCIA].
+
+Paso 1 · Diagnóstico sin piedad: lista los rasgos que la hacen parecer una plantilla o hecha con IA (degradado morado o azul genérico, tipografía por defecto, tarjetas todas iguales con la misma sombra y radio, iconos decorativos, todo centrado, titulares vagos, fotos de banco de imágenes, emojis como viñetas).
+Paso 2 · Dirección: propón 3 direcciones visuales distintas sacadas del mundo real de mi sector (materiales, herramientas, documentos, señalética que usa mi cliente), cada una con nombre, paleta de 4-6 colores en hex, pareja tipográfica de Google Fonts y una idea de composición. Elige la mejor y explica por qué.
+Paso 3 · Sistema: define los tokens (colores, tipografía con escala, espaciado, radios, sombras, movimiento) y las reglas de uso.
+Paso 4 · Rediseño sección por sección: para cada sección, qué cambia, el texto nuevo (concreto, sin frases huecas) y el detalle que solo tendría mi negocio.
+Paso 5 · Código: implementa el inicio y una sección completa con el sistema nuevo, móvil primero.
+Autorrevisión: compara antes y después con los rasgos del paso 1. Si queda alguno, corrígelo.`},
+{id:'w26',area:'Web · Interfaz',t:'Panel o área de cliente moderna',get:'Un panel limpio y profesional para tu herramienta, tu área de clientes o tu demo, con datos de ejemplo bien presentados.',when:'Demos de producto, áreas de cliente, presentaciones.',time:'30 min',next:'Graba la pantalla mientras el panel se carga: es el formato «interfaz que se monta sola».',
+prompt:`Actúa como diseñador de producto y desarrollador front-end sénior. Construye el panel de [PARA QUÉ SIRVE: seguimiento de pedidos / reservas / resultados de marketing] para [TIPO DE USUARIO].
+
+Contenido:
+- Cabecera con saludo, selector de periodo y un botón de acción principal.
+- Fila de 4 indicadores con su variación frente al periodo anterior, cada uno con su minigráfico.
+- Gráfico principal de evolución con área suavizada y punto final destacado.
+- Tabla de [ELEMENTOS] con estado en forma de etiqueta de color (bien / atención / problema), búsqueda y orden por columnas.
+- Panel lateral con próximos pasos o alertas.
+Usa datos de ejemplo verosímiles y márcalos claramente como «datos de ejemplo».
+
+Diseño: estética minimalista y moderna, fondo [claro u oscuro], un color de acento [#HEX], tipografía con números tabulares, jerarquía por tamaño y peso (no por colores), estados vacíos y de carga diseñados.
+Movimiento: al cargar, los bloques aparecen escalonados (60-80 ms entre ellos), los números cuentan hasta su valor y el gráfico se dibuja de izquierda a derecha; respeta «reducir movimiento».
+Accesibilidad: contraste AA, navegación con teclado y tamaños de toque de 44 px en móvil.
+Entrega: componentes reutilizables, código comentado y autorrevisión de alineación, espaciado y contraste.`},
+];
+const L3=document.getElementById('list3'),T3=document.getElementById('toc3');
+W.forEach((p,i)=>{
+  const a=document.createElement('a');a.href='#'+p.id;a.innerHTML=`<b>${String(i+22).padStart(2,'0')}</b>${p.t}`;T3.appendChild(a);
+  const d=document.createElement('div');d.className='p';d.id=p.id;
+  d.innerHTML=`<span class="area">${String(i+22).padStart(2,'0')} · ${p.area}</span><h2>${p.t}</h2>
+  <div class="meta"><div><b>Qué obtienes</b>${p.get}</div><div><b>Cuándo usarlo</b>${p.when}</div><div><b>Tiempo</b>${p.time}</div></div>
+  <pre></pre><div class="row"><button type="button">Copiar prompt</button><span class="next">Después: ${p.next}</span></div>`;
+  d.querySelector('pre').textContent=p.prompt;
+  const b=d.querySelector('button');
+  b.addEventListener('click',()=>{navigator.clipboard.writeText(p.prompt).then(()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar prompt',1500)}).catch(()=>{const r=document.createRange();r.selectNodeContents(d.querySelector('pre'));const s=getSelection();s.removeAllRanges();s.addRange(r)})});
+  L3.appendChild(d);
+});
 const L=document.getElementById('list'),T=document.getElementById('toc');
 const L2=document.getElementById('list2'),T2=document.getElementById('toc2');
 V.forEach((p,i)=>{
