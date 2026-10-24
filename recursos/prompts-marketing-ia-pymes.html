@@ -3,67 +3,398 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>12 prompts de marketing con IA para pymes · Boomatik</title>
-<meta name="description" content="12 prompts listos para copiar y pegar en ChatGPT, Claude o Gemini: SEO, anuncios, email, redes, ficha de Google, CRO, web y ecommerce. Guía gratuita de Boomatik.">
+<title>Prompts de marketing, imagen y vídeo con IA para pymes · Boomatik</title>
+<meta name="description" content="12 prompts profesionales, listos para copiar en ChatGPT, Claude o Gemini: SEO, Google Ads, Meta Ads, email, redes, reels, ficha de Google, CRO, ecommerce y competencia. Con método, formato de salida y autorrevisión.">
 <meta name="robots" content="noindex">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
-:root{--bg:#070E0F;--panel:#0E1718;--line:#1E2E31;--fg:#ECEAF4;--soft:#B6BEC3;--cyan:#00D4FF;--pink:#EC4899;--violet:#8B5CF6;color-scheme:dark}
+:root{--bg:#070E0F;--panel:#0E1718;--panel2:#132022;--line:#1E2E31;--fg:#ECEAF4;--soft:#B6BEC3;--mute:#7C888D;--cyan:#00D4FF;--pink:#EC4899;--violet:#8B5CF6;color-scheme:dark}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 Inter,system-ui,sans-serif}
-.w{max-width:760px;margin:0 auto;padding:40px max(18px,env(safe-area-inset-left)) 60px max(18px,env(safe-area-inset-right))}
-h1{font-size:clamp(30px,6vw,44px);line-height:1.08;letter-spacing:-.03em;margin:10px 0 12px;text-wrap:balance}
+.w{max-width:820px;margin:0 auto;padding:40px max(18px,env(safe-area-inset-left)) 60px max(18px,env(safe-area-inset-right))}
+h1{font-size:clamp(30px,6vw,46px);line-height:1.08;letter-spacing:-.03em;margin:10px 0 12px;text-wrap:balance}
 h1 em{font-style:normal;background:linear-gradient(120deg,var(--pink),var(--violet) 55%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
 .eb{font:600 12px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan)}
 p{color:var(--soft)}
-.how{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:22px 0}
-.p{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin:16px 0}
-.p h2{font-size:18px;margin:0;letter-spacing:-.01em}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:18px 0}
+.box ol{margin:8px 0 0;padding-left:20px;color:var(--soft)}.box li{margin:4px 0}
+.toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:12px 0 0}
+@media(max-width:600px){.toc{grid-template-columns:1fr}}
+.toc a{color:var(--soft);text-decoration:none;font-size:14px;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel2)}
+.toc a b{color:var(--cyan);font-family:'JetBrains Mono',monospace;font-weight:600;margin-right:6px}
+.p{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;margin:22px 0;scroll-margin-top:16px}
 .p .area{font:600 11px 'JetBrains Mono',monospace;color:var(--cyan);letter-spacing:.08em;text-transform:uppercase}
-.p .use{color:var(--soft);margin:6px 0 10px;font-size:15px}
-pre{white-space:pre-wrap;word-wrap:break-word;background:#050a0b;border:1px solid var(--line);border-radius:10px;padding:12px;font:13.5px/1.55 'JetBrains Mono',monospace;color:#DDE3E6;margin:0}
-button{margin-top:8px;font:600 13px Inter;color:#fff;background:#1a2a2d;border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer}
+.p h2{font-size:20px;margin:4px 0 6px;letter-spacing:-.01em;text-wrap:balance}
+.meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0 12px}
+@media(max-width:640px){.meta{grid-template-columns:1fr}}
+.meta div{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:13.5px;color:var(--soft)}
+.meta b{display:block;font:600 10.5px 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-bottom:2px}
+pre{white-space:pre-wrap;word-wrap:break-word;background:#050a0b;border:1px solid var(--line);border-radius:10px;padding:14px;font:13px/1.6 'JetBrains Mono',monospace;color:#DDE3E6;margin:0;max-height:420px;overflow:auto}
+.row{display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap}
+button{font:600 13px Inter;color:#fff;background:linear-gradient(120deg,var(--pink),var(--violet));border:0;border-radius:8px;padding:8px 14px;cursor:pointer}
+button.ghost{background:#1a2a2d;border:1px solid var(--line)}
+.next{font-size:13.5px;color:var(--mute)}
 .cta{margin-top:32px;padding:20px;border-radius:16px;background:linear-gradient(#0E1718,#0E1718) padding-box,linear-gradient(120deg,var(--pink),var(--violet),var(--cyan)) border-box;border:1px solid transparent}
 .cta a.b{display:inline-block;margin-top:10px;background:linear-gradient(120deg,var(--pink),var(--violet));color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:999px}
-footer{margin-top:36px;font-size:13px;color:#7c888d}footer a{color:var(--soft)}
+footer{margin-top:36px;font-size:13px;color:var(--mute)}footer a{color:var(--soft)}
 </style>
 </head>
 <body><div class="w">
-<span class="eb">Guía gratuita · Boomatik</span>
-<h1>12 prompts de marketing con IA <em>para pymes</em></h1>
-<p>Copia, pega en ChatGPT, Claude o Gemini y cambia lo que va entre [corchetes] por los datos de tu negocio. Cuanto más concreto seas con tu cliente y tu oferta, mejor será la respuesta.</p>
-<div class="how"><strong>Truco:</strong> empieza siempre la conversación con el prompt 1. Así la IA conoce tu negocio y el resto de respuestas salen mucho más afinadas.</div>
+<span class="eb">Guía gratuita · Boomatik · 12 de marketing + 9 de imagen y vídeo</span>
+<h1>12 prompts de marketing con IA <em>que trabajan como un especialista</em></h1>
+<p>No son preguntas sueltas. Cada prompt le da a la IA un papel de especialista, un método paso a paso, el formato exacto de la entrega y una autorrevisión antes de responder. Son los mismos criterios con los que trabajan los agentes de la BOO ARMY, adaptados para que los uses tú en ChatGPT, Claude o Gemini.</p>
 
+<div class="box">
+  <strong>Cómo sacarles todo el partido</strong>
+  <ol>
+    <li>Empieza siempre por el <strong>prompt 0</strong>: crea la ficha de tu negocio. Los demás la usan y las respuestas dejan de ser genéricas.</li>
+    <li>Rellena lo que va entre [CORCHETES]. Si no tienes un dato, déjalo: el prompt obliga a la IA a preguntártelo en lugar de inventarlo.</li>
+    <li>Pega datos reales cuando el prompt los pida (tu web, tus anuncios, tus reseñas). Con datos reales, la IA analiza; sin ellos, adivina.</li>
+    <li>Los prompts están pensados para encadenarse: al final de cada uno te digo cuál usar después.</li>
+  </ol>
+</div>
+
+<div class="box"><strong>Índice · Parte 1: marketing</strong><div class="toc" id="toc"></div><strong style="display:block;margin-top:14px">Parte 2: imagen y vídeo con IA</strong><div class="toc" id="toc2"></div></div>
 <div id="list"></div>
 
+<h2 style="font-size:clamp(24px,4vw,32px);margin:44px 0 6px;letter-spacing:-.02em">Parte 2 · Prompts de imagen y vídeo con nivel de director</h2>
+<p>Los modelos de imagen y vídeo (Nano Banana, Midjourney, Seedance, Kling, Veo) responden mejor en inglés y con un orden concreto: tipo de plano, encuadre, cámara y lente, sujeto, acción, entorno, capas de profundidad, paleta, luz, película y efectos. Por eso estos prompts van en inglés y con lo que tienes que cambiar entre [CORCHETES]. Empieza por el 13: convierte cualquier idea tuya de una frase en un prompt completo.</p>
+<div class="box"><strong>Antes de generar</strong><ol><li>Usa fotos reales de tu producto como referencia (el modelo copia mejor que imagina).</li><li>Nunca pidas texto dentro de la imagen: los logos, precios y titulares se ponen después en diseño.</li><li>Si la imagen o el vídeo parecen reales y muestran personas, etiquétalo como contenido creado con IA al publicar.</li><li>Cada generación tiene coste en la herramienta que uses: prueba primero en baja calidad.</li></ol></div>
+<div id="list2"></div>
+
 <div class="cta">
-  <strong>¿Prefieres que lo haga un equipo de agentes de IA por ti?</strong>
-  <p>La BOO ARMY son 6 agentes de IA (marca, SEO, captación, anuncios, redes y ficha de Google) que trabajan juntos para tu pyme. Sin agencia y sin permanencia.</p>
-  <a class="b" href="https://www.boomatik.com/appointment?utm_source=instagram&amp;utm_medium=dm&amp;utm_campaign=guia_prompts">Pide tu demo gratis</a>
+  <strong>¿Y si no tuvieras que copiar y pegar?</strong>
+  <p>La BOO ARMY son 6 agentes de IA (marca, SEO, captación, anuncios, redes y ficha de Google) que hacen todo esto cada semana para tu pyme, con tus datos reales y midiendo resultados. Sin agencia y sin permanencia.</p>
+  <a class="b" href="https://www.boomatik.com/appointment?utm_source=guia&amp;utm_medium=recurso&amp;utm_campaign=guia_prompts">Pide tu demo gratis</a>
 </div>
-<footer>Boomatik · <a href="https://www.boomatik.com/?utm_source=instagram&amp;utm_medium=dm&amp;utm_campaign=guia_prompts">boomatik.com</a> · <a href="https://www.boomatik.com/politica-de-privacidad">Política de privacidad</a></footer>
+<footer>Boomatik · <a href="https://www.boomatik.com/?utm_source=guia&amp;utm_medium=recurso&amp;utm_campaign=guia_prompts">boomatik.com</a> · <a href="https://www.boomatik.com/politica-de-privacidad">Política de privacidad</a> · Las cifras orientativas (longitudes, plazos) son referencias de trabajo, no reglas oficiales de las plataformas.</footer>
 </div>
 <script>
 const P=[
-['Contexto','Dale a la IA el contexto de tu negocio','Vas a ayudarme con el marketing de mi negocio. Te doy el contexto:\n- Negocio: [qué vendes y dónde]\n- Cliente ideal: [quién es, edad, sector, qué le preocupa]\n- Por qué nos eligen: [3 motivos reales]\n- Competidores: [2-3 nombres]\n- Objetivo de los próximos 3 meses: [ventas, citas, contactos…]\nCuando lo tengas, resúmelo en 5 líneas y dime qué datos te faltan antes de seguir.'],
-['SEO','Encuentra qué busca tu cliente en Google','Con el contexto de mi negocio, dame 20 búsquedas que haría mi cliente ideal en Google antes de comprar lo que vendo. Agrúpalas en: «se está informando», «está comparando» y «quiere comprar ya». Para cada una indica qué página de mi web debería responderla (existente o nueva).'],
-['SEO','Mejora el título y la descripción de una página','Esta es una página de mi web: [pega la URL o el texto]. Escríbeme 3 títulos SEO (máximo 60 caracteres) y 3 meta descripciones (máximo 155) que respondan a la búsqueda «[búsqueda principal]». Sin exageraciones ni promesas que no pueda cumplir.'],
-['Anuncios','Ideas de anuncios para Google y Meta','Para vender [producto o servicio] a [cliente ideal], dame 5 ángulos de anuncio distintos (dolor, deseo, comparación, prueba social y urgencia real). Para cada ángulo: un titular de 30 caracteres, un texto de 90 y la objeción que rebate.'],
-['Anuncios','Palabras negativas para no tirar dinero','Voy a hacer anuncios en Google para «[servicio]» en [ciudad o zona]. Dame una lista de 30 palabras negativas (búsquedas que no son clientes: empleo, gratis, cursos, DIY…) adaptadas a mi sector, con una línea explicando cada grupo.'],
-['Email','Secuencia de bienvenida de 3 correos','Escribe 3 correos de bienvenida para quien deja su email en mi web de [negocio]. Correo 1: lo prometido y quiénes somos. Correo 2: el error más común de mi cliente y cómo evitarlo. Correo 3: caso o ejemplo y una invitación clara a [acción]. Asuntos de menos de 45 caracteres. Tono cercano, sin presión.'],
-['Redes','Un mes de ideas para redes','Dame 12 ideas de publicación para [Instagram/LinkedIn/TikTok] de [negocio] para el próximo mes, repartidas en 4 temas: enseñar, enseñar el detrás de escena, resolver objeciones y casos reales. Para cada idea: el gancho de la primera línea (máximo 12 palabras) y el formato (carrusel, reel o imagen).'],
-['Redes','Convierte un artículo en un carrusel','Convierte este texto en un carrusel de 7 diapositivas para Instagram: [pega el texto]. Diapositiva 1: gancho que pare el dedo. 2 a 6: una idea por diapositiva, máximo 25 palabras. 7: resumen y llamada a la acción. Dame también el texto del pie.'],
-['Ficha de Google','Publicaciones para tu ficha de Google','Escribe 4 publicaciones para la ficha de Google de [negocio] en [ciudad], una por semana: una novedad, un consejo útil, un caso o trabajo reciente y una invitación a [acción]. Máximo 900 caracteres cada una, sin teléfonos en el texto, con el botón que recomiendas usar.'],
-['Ficha de Google','Responde reseñas sin sonar a robot','Ayúdame a responder esta reseña de Google: [pega la reseña]. Dame 2 respuestas: una corta y otra más completa. Agradece, menciona algo concreto de lo que dice el cliente y, si es negativa, reconoce el problema y ofrece una vía de contacto, sin discutir.'],
-['CRO','Detecta por qué tu web no convierte','Analiza el texto de esta página como si fueras mi cliente ideal: [pega el texto o la URL]. Dime: qué entiendes en los primeros 5 segundos, qué dudas te quedan, qué te frenaría para [comprar/pedir cita] y 5 cambios concretos ordenados por impacto.'],
-['Ecommerce','Fichas de producto que venden','Reescribe esta ficha de producto de mi tienda: [pega la ficha]. Estructura: título claro con la búsqueda principal, 3 beneficios en viñetas, para quién es (y para quién no), preguntas frecuentes (3) y un texto de cierre. No inventes características: si falta un dato, márcalo con [FALTA].'],
+{id:'p0',area:'Base',t:'Ficha maestra de tu negocio',get:'Un documento de contexto que convierte cualquier IA en alguien que conoce tu negocio.',when:'Una vez al principio; actualízala cada trimestre.',time:'15 min',next:'Guarda la ficha y pégala al inicio de cualquier otro prompt.',
+prompt:`Actúa como estratega de marketing sénior especializado en pymes españolas. Tu tarea es construir conmigo la FICHA MAESTRA de mi negocio, que usaremos como contexto en todos los trabajos siguientes.
+
+Método:
+1. Hazme las preguntas de una en una (no todas a la vez) sobre estos bloques: (a) qué vendo y a qué precio aproximado, (b) dónde vendo (local, online, toda España), (c) mi cliente ideal: quién decide la compra, qué problema quiere resolver, qué le frena, qué palabras usa para describir su problema, (d) por qué me eligen frente a la competencia (pídeme pruebas: reseñas, casos, datos), (e) mis 3 competidores principales, (f) mis canales actuales y qué resultados dan, (g) objetivo de los próximos 90 días con un número.
+2. Si una respuesta es vaga («calidad», «buen servicio»), repregunta hasta obtener algo concreto y demostrable.
+3. No inventes nada. Si falta un dato, márcalo como [PENDIENTE].
+
+Entrega final (cuando tengas todo):
+- Ficha en este formato: Negocio · Oferta y precios · Cliente ideal (perfil, dolor principal, 3 objeciones, 10 palabras que usa) · Propuesta de valor en una frase · 3 diferenciales con su prueba · Competidores y en qué nos ganan · Canales y resultados · Objetivo 90 días.
+- Lista de huecos: qué datos faltan y por qué importan.
+
+Autorrevisión antes de entregar: ¿cada diferencial tiene una prueba? ¿el dolor del cliente está escrito con sus palabras y no con las mías? Si no, corrígelo.`},
+{id:'p1',area:'SEO',t:'Universo de búsquedas que venden',get:'Un mapa de 40-60 búsquedas agrupadas por intención, con la página de tu web que debe responder cada grupo.',when:'Antes de escribir contenido o rehacer la web.',time:'20 min',next:'Usa el prompt 2 con el grupo de mayor intención de compra.',
+prompt:`[PEGA AQUÍ TU FICHA MAESTRA]
+
+Actúa como consultor SEO especializado en negocios como el mío en España. Vas a construir el universo de búsquedas que harían mis clientes potenciales, partiendo de lo que vendo y no de ideas genéricas.
+
+Método:
+1. Lista mis productos o servicios principales y, para cada uno, las formas reales en que la gente lo busca: nombre técnico, nombre coloquial, problema que resuelve, comparativas («X o Y»), precio («cuánto cuesta X»), cercanía («X en [CIUDAD]») y dudas previas a la compra.
+2. Clasifica cada búsqueda en una intención: INFORMATIVA (aprende), COMPARATIVA (decide), TRANSACCIONAL (quiere comprar o contratar ya) o LOCAL.
+3. Agrupa las búsquedas que piden la misma respuesta en un mismo grupo (una página por grupo, nunca dos páginas para el mismo grupo).
+4. Para cada grupo indica qué tipo de página lo gana (ficha de producto, página de servicio, guía, comparativa, página local) y si ya la tengo: [PEGA LAS URL DE TU WEB O ESCRIBE «NO TENGO»].
+
+Formato de entrega: tabla con columnas Grupo · Búsqueda principal · 3-5 variantes · Intención · Tipo de página · ¿Existe ya? · Prioridad (Alta si es transaccional o comparativa y no la tengo).
+Después, las 5 páginas que crearía primero y por qué.
+
+Reglas: no inventes volúmenes de búsqueda; si quieres estimar demanda, dime que lo compruebe en Google Keyword Planner o Search Console. Escribe en castellano de España.
+Autorrevisión: elimina búsquedas que nunca traerían un cliente (empleo, gratis, cursos, «hazlo tú mismo») y comprueba que no hay dos grupos que compitan por lo mismo.`},
+{id:'p2',area:'SEO',t:'Brief de una página que supere a las de arriba',get:'Un guion completo para escribir una página o artículo que responda mejor que los 10 primeros resultados.',when:'Cada vez que vayas a crear o rehacer una página.',time:'25 min',next:'Escribe la página y pásala por el prompt 3 para el título y la descripción.',
+prompt:`[PEGA AQUÍ TU FICHA MAESTRA]
+
+Búsqueda objetivo: «[BÚSQUEDA]». A continuación pego los títulos y los subtítulos (H2) de los primeros resultados de Google para esa búsqueda: [PEGA LOS TÍTULOS Y SUBTÍTULOS DE 5-10 RESULTADOS].
+
+Actúa como editor SEO sénior. Prepara el brief de una página que responda mejor que esos resultados.
+
+Método:
+1. Deduce qué busca realmente quien hace esa búsqueda (intención principal y dudas secundarias).
+2. Lista lo que cubren todos los resultados (lo mínimo imprescindible) y lo que no cubre ninguno (nuestra oportunidad).
+3. Añade lo que solo yo puedo aportar: experiencia propia, casos, datos de mi negocio, fotos reales. Pregúntamelo si no está en la ficha.
+
+Entrega:
+- Respuesta directa a la búsqueda en 2-3 frases (irá arriba del todo).
+- Estructura: H1 y lista de H2 con 2-3 ideas por H2 y el dato o ejemplo que debe llevar.
+- Preguntas frecuentes reales (máximo 5) que la página debe responder.
+- Enlaces internos: a qué páginas de mi web debe enlazar y con qué texto.
+- Llamada a la acción coherente con la intención (informativa: recurso o newsletter; transaccional: contacto o compra).
+- Lo que NO debe hacer la página (relleno, repetir la palabra clave, promesas sin prueba).
+
+Autorrevisión: ¿aporta algo que no tienen los 10 primeros? Si la respuesta es no, propón un ángulo distinto antes de entregar.`},
+{id:'p3',area:'SEO',t:'Títulos y descripciones que ganan el clic',get:'5 títulos y 5 descripciones por página, distintos entre sí, para subir el porcentaje de clics desde Google.',when:'Páginas que salen en Google pero reciben pocos clics.',time:'10 min',next:'Prueba el nuevo título 4 semanas y compara clics en Search Console.',
+prompt:`Actúa como especialista en CTR para resultados de Google. Página: [URL O TEXTO DE LA PÁGINA]. Búsqueda principal: «[BÚSQUEDA]». Mis competidores en esa búsqueda usan estos títulos: [PEGA 3-5 TÍTULOS].
+
+Método:
+1. Identifica qué promete cada título de la competencia y qué deja sin prometer.
+2. Escribe 5 títulos con enfoques distintos: beneficio concreto, número o lista, pregunta, contraste («sin…», «en lugar de…») y local o de confianza. Longitud orientativa: 50-60 caracteres para que no se corte.
+3. Escribe 5 meta descripciones (orientativo: 140-155 caracteres) que respondan a la duda principal y terminen con una acción.
+4. Cada título debe incluir la búsqueda principal o una variante natural y describir con exactitud la página: nada de prometer lo que la página no da.
+
+Entrega: tabla Título · Caracteres · Enfoque · Por qué destaca frente a la competencia; y otra igual para las descripciones. Marca tu favorito y explica por qué.
+Autorrevisión: descarta los que suenen a clickbait o que pudieran valer para cualquier competidor.`},
+{id:'p4',area:'Google Ads',t:'Campaña de búsqueda sin tirar dinero',get:'La estructura completa de una campaña: grupos, palabras, negativas, anuncios y qué medir.',when:'Antes de lanzar o al rehacer una campaña que no da resultados.',time:'30 min',next:'Revisa los términos de búsqueda reales a los 7 días con el mismo prompt (paso 5).',
+prompt:`[PEGA AQUÍ TU FICHA MAESTRA]
+
+Servicio o producto a anunciar: [SERVICIO]. Zona: [CIUDAD/PROVINCIA/ESPAÑA]. Presupuesto diario aproximado: [IMPORTE]. Qué cuenta como conversión: [LLAMADA / FORMULARIO / COMPRA].
+
+Actúa como especialista en Google Ads para pymes con presupuesto limitado. Diseña una campaña de búsqueda que solo pague por clics con intención de compra.
+
+Método:
+1. Grupos de anuncios: uno por intención (servicio + ciudad, urgencia, precio, comparativa). Máximo 4 grupos para no dispersar el presupuesto.
+2. Palabras clave por grupo en concordancia de frase y exacta, priorizando las que indican intención de contratar.
+3. Lista de 40 palabras negativas para mi sector (empleo, gratis, formación, segunda mano, DIY, marcas que no vendo…) agrupadas por motivo.
+4. Para cada grupo, un anuncio adaptable: 10 titulares (máximo 30 caracteres) y 4 descripciones (máximo 90), con la búsqueda en al menos 3 titulares, un diferencial demostrable y una llamada a la acción.
+5. Plan de revisión: qué mirar a los 7, 14 y 30 días (términos de búsqueda, coste por conversión, porcentaje de impresiones) y qué decisión tomar en cada caso.
+
+Entrega en tablas. No inventes costes por clic: si los necesitas, dime que los consulte en el Planificador de palabras clave.
+Autorrevisión: ¿hay alguna palabra que pueda traer curiosos en lugar de clientes? Muévela a negativas.`},
+{id:'p5',area:'Meta Ads',t:'Matriz de creatividades para Instagram y Facebook',get:'12 creatividades listas para producir: ángulo, gancho, formato y texto, pensadas para probarse entre sí.',when:'Cuando los anuncios se cansan o antes de una campaña.',time:'25 min',next:'Produce 4 de ellas y compara coste por resultado a los 7 días.',
+prompt:`[PEGA AQUÍ TU FICHA MAESTRA]
+
+Objetivo de la campaña: [VENTAS / CONTACTOS / VISITAS A TIENDA]. Oferta concreta: [OFERTA]. Si tienes anuncios anteriores, pega qué funcionó y qué no: [OPCIONAL].
+
+Actúa como director creativo de anuncios de pago en redes. Construye una matriz de creatividades para probar.
+
+Método:
+1. Define 4 ángulos distintos a partir del cliente ideal: dolor (lo que le pasa hoy), deseo (cómo quiere estar), prueba (alguien como él lo consiguió) y objeción (lo que le frena, rebatido).
+2. Para cada ángulo, 3 ganchos para los 2 primeros segundos, cada uno de un tipo: pregunta, afirmación que contradice lo habitual y demostración visual.
+3. Asigna a cada combinación el formato más adecuado (vídeo vertical de 15-30 s, carrusel o imagen) y describe la escena en 2 líneas, sin depender de actores si no los tengo.
+4. Escribe el texto principal (máximo 125 caracteres visibles), el titular y la llamada a la acción.
+
+Entrega: tabla con 12 filas: Ángulo · Gancho · Formato · Escena · Texto · Titular · Llamada a la acción. Después, las 4 que lanzaría primero y qué aprendería de cada una.
+Reglas: nada de urgencias falsas ni cifras sin prueba; si una creatividad necesita un dato, márcalo [DATO REAL].
+Autorrevisión: ¿se entiende sin sonido? ¿el gancho funcionaría sin el logo? Corrige las que no.`},
+{id:'p6',area:'Email',t:'Secuencia de bienvenida que convierte',get:'5 correos completos con asunto, objetivo y disparador, desde el registro hasta la primera venta o cita.',when:'Para quien deja su email en tu web o descarga un recurso.',time:'30 min',next:'Programa la secuencia y mide aperturas y clics por correo; reescribe el peor.',
+prompt:`[PEGA AQUÍ TU FICHA MAESTRA]
+
+Cómo llega el contacto: [DESCARGÓ X / SE SUSCRIBIÓ / PIDIÓ PRESUPUESTO]. Acción que quiero conseguir al final: [CITA / COMPRA / LLAMADA].
+
+Actúa como especialista en email marketing para pymes, con foco en entregabilidad y en no quemar la lista.
+
+Método:
+1. Diseña 5 correos con un único objetivo cada uno: (1) entregar lo prometido y presentarnos, (2) el error más común de mi cliente y cómo evitarlo, (3) caso real o ejemplo concreto, (4) rebatir la objeción principal, (5) invitación directa a la acción con un motivo real para hacerlo ahora.
+2. Para cada correo: día de envío, asunto (orientativo: menos de 45 caracteres, sin mayúsculas ni signos de exclamación en serie), texto de vista previa, cuerpo de 120-200 palabras en tono cercano y una sola llamada a la acción.
+3. Define qué pasa si el contacto hace clic o responde en cualquier momento (sale de la secuencia y pasa a seguimiento personal).
+
+Entrega: los 5 correos completos listos para pegar.
+Reglas: escribir solo a quien dio su permiso; baja visible en cada correo; nada de prometer resultados que no pueda demostrar.
+Autorrevisión: lee cada asunto como si fueras el cliente con 50 correos sin leer: ¿lo abrirías? Reescribe los que no.`},
+{id:'p7',area:'Redes',t:'Sistema de contenidos para un mes',get:'Un calendario de 4 semanas con pilares, ganchos, formatos y la palabra clave de cada llamada a la acción.',when:'A final de mes, para planificar el siguiente.',time:'25 min',next:'Convierte cada idea de vídeo con el prompt 8.',
+prompt:`[PEGA AQUÍ TU FICHA MAESTRA]
+
+Red principal: [INSTAGRAM / LINKEDIN / TIKTOK]. Publicaciones que puedo hacer de verdad por semana: [NÚMERO]. Recurso gratuito que puedo ofrecer: [GUÍA, PLANTILLA, AUDITORÍA…].
+
+Actúa como estratega de contenidos que busca conversaciones y clientes, no solo me gusta.
+
+Método:
+1. Define 4 pilares: enseñar (resolver un problema del cliente), demostrar (el trabajo o el producto funcionando), confianza (casos, detrás de escena, equipo) y objeciones (lo que frena la compra).
+2. Reparte las publicaciones del mes entre los pilares según el objetivo de 90 días de la ficha.
+3. Para cada publicación: gancho de la primera línea o los primeros 2 segundos (máximo 12 palabras, con la promesa completa), formato (reel, carrusel, imagen, texto), idea en 2 líneas y llamada a la acción.
+4. Una de cada tres publicaciones termina con «Comenta [PALABRA] y te envío [RECURSO]»; usa siempre la misma palabra para el mismo recurso.
+
+Entrega: tabla por semanas con Día · Pilar · Formato · Gancho · Idea · Llamada a la acción.
+Reglas: nada de cifras sin fuente; nada de hashtags de relleno (máximo 3-5 relevantes).
+Autorrevisión: ¿algún gancho podría publicarlo cualquier competidor? Hazlo más específico de mi negocio.`},
+{id:'p8',area:'Vídeo',t:'Guion de reel o TikTok segundo a segundo',get:'Un guion de 20-40 segundos con gancho, ritmo, texto en pantalla y subtítulos, listo para grabar o montar.',when:'Para cada vídeo corto.',time:'15 min',next:'Graba, publica y compara la retención a los 3 segundos con tus otros vídeos.',
+prompt:`[PEGA AQUÍ TU FICHA MAESTRA]
+
+Idea del vídeo: [IDEA]. ¿Salgo yo a cámara? [SÍ / NO, SOLO PANTALLA Y VOZ / NO, SIN VOZ]. Recurso que ofrezco al final: [OPCIONAL].
+
+Actúa como guionista de vídeo corto especializado en retención.
+
+Método:
+1. Gancho (0-2 s): la promesa completa en la primera frase y algo moviéndose en pantalla desde el segundo 0. Dame 3 alternativas.
+2. Desarrollo en bloques de 3-6 segundos: cada bloque con lo que se ve, lo que se dice y el texto en pantalla. Un cambio visual (corte, zoom, movimiento) cada 2-3 segundos o una demostración continua que lo sustituya.
+3. Cierre (últimos 3-5 s): resultado visible y llamada a la acción concreta.
+4. Subtítulos siempre: frases de 3-6 palabras, la palabra clave resaltada.
+
+Entrega: tabla Segundo · Imagen · Voz · Texto en pantalla. Después, el pie de publicación (primera línea = gancho) y 3 opciones de portada.
+Reglas: si uso imágenes generadas con IA realistas, indícame que debo etiquetarlas en la red. Música solo de la biblioteca comercial de la plataforma.
+Autorrevisión: ¿se entiende sin sonido? ¿pasa algo en los 2 primeros segundos que haga parar el dedo? Si no, rehaz el gancho.`},
+{id:'p9',area:'Ficha de Google',t:'Ficha de Google que atrae clientes de tu zona',get:'Revisión completa de tu ficha y 4 publicaciones del mes, más respuestas a reseñas sin sonar a robot.',when:'Una vez al mes.',time:'20 min',next:'Pide reseñas a tus últimos 10 clientes con el mensaje del paso 4.',
+prompt:`[PEGA AQUÍ TU FICHA MAESTRA]
+
+Datos de mi ficha de Google: categoría principal [X], categorías secundarias [X], descripción actual [PEGA], servicios [PEGA], últimas 5 reseñas [PEGA].
+
+Actúa como especialista en SEO local para negocios en España.
+
+Método:
+1. Revisa la ficha: ¿la categoría principal describe lo que más vendo? ¿faltan categorías secundarias o servicios? ¿la descripción explica qué hago, para quién y dónde, sin enlaces ni precios? Propón la versión mejorada (máximo 750 caracteres).
+2. Escribe 4 publicaciones para el mes (novedad, consejo útil, trabajo o caso reciente, invitación a la acción), breves, sin números de teléfono en el texto y con el botón que recomiendas.
+3. Responde las 5 reseñas: agradece, menciona algo concreto de lo que dice el cliente y, si es negativa, reconoce el problema, explica qué has cambiado y ofrece un contacto, sin discutir.
+4. Escribe un mensaje corto para pedir reseña a un cliente satisfecho, sin ofrecer nada a cambio.
+
+Entrega: cada bloque por separado, listo para pegar.
+Autorrevisión: ¿alguna frase promete algo que no puedo demostrar? Quítala.`},
+{id:'p10',area:'CRO',t:'Auditoría de conversión de una página',get:'Por qué tu página no convierte y 10 cambios ordenados por impacto y esfuerzo.',when:'Páginas con visitas pero pocas ventas o contactos.',time:'20 min',next:'Aplica los 3 primeros cambios y compara la tasa de conversión 4 semanas.',
+prompt:`[PEGA AQUÍ TU FICHA MAESTRA]
+
+Página a auditar: [URL O PEGA EL TEXTO COMPLETO]. Objetivo de la página: [COMPRA / FORMULARIO / LLAMADA]. Si tienes datos (visitas, conversiones, dónde abandonan), pégalos: [OPCIONAL].
+
+Actúa como especialista en conversión (CRO) y revisa la página como lo haría mi cliente ideal.
+
+Método:
+1. Prueba de los 5 segundos: qué entiendo al llegar, qué ofrece, para quién es y qué tengo que hacer. Si alguna respuesta no está clara, es el primer problema.
+2. Recorrido: lista las preguntas que se hace el cliente en orden (¿es para mí? ¿funciona? ¿cuánto cuesta? ¿me puedo fiar? ¿qué pasa después?) y comprueba si la página las responde en ese orden.
+3. Fricción: campos del formulario que sobran, pasos innecesarios, información que falta antes de la acción, distracciones que sacan de la página.
+4. Confianza: reseñas, casos, garantías, datos de contacto, aspecto profesional en el móvil.
+
+Entrega: diagnóstico en 5 líneas y tabla de 10 cambios con Problema · Cambio concreto · Impacto (alto/medio/bajo) · Esfuerzo (alto/medio/bajo), ordenada por impacto y menor esfuerzo. Incluye el texto nuevo cuando el cambio sea de copy.
+Autorrevisión: ¿cada cambio es concreto y aplicable mañana? Reescribe los que digan «mejorar la confianza» sin decir cómo.`},
+{id:'p11',area:'Ecommerce',t:'Ficha de producto que vende y posiciona',get:'Una ficha de producto completa: título, beneficios, para quién es, preguntas frecuentes y texto para buscadores.',when:'Productos con visitas y pocas ventas, o productos nuevos.',time:'15 min por producto',next:'Repite con tus 10 productos más vistos.',
+prompt:`[PEGA AQUÍ TU FICHA MAESTRA]
+
+Ficha actual del producto: [PEGA TÍTULO, DESCRIPCIÓN Y CARACTERÍSTICAS TÉCNICAS]. Preguntas o quejas habituales de los clientes sobre este producto: [PEGA SI LAS TIENES].
+
+Actúa como especialista en fichas de producto para tiendas online en España.
+
+Método:
+1. Título: nombre del producto con la búsqueda principal, el atributo que más se busca (talla, material, modelo) y sin adornos.
+2. Tres beneficios en viñetas que traduzcan las características técnicas a lo que gana el cliente.
+3. Para quién es y para quién no es: dos líneas honestas que reducen devoluciones.
+4. Preguntas frecuentes (4-6) a partir de las dudas reales; si no hay, las que tendría un comprador antes de pagar.
+5. Descripción ampliada (150-250 palabras) con las variantes de búsqueda de forma natural.
+6. Texto alternativo para las 3 primeras fotos.
+
+Reglas: no inventes características, medidas, certificados ni plazos. Si falta un dato, escribe [FALTA: dato] para que lo complete.
+Autorrevisión: compara con la ficha original: ¿responde a las dudas que antes quedaban sin respuesta?`},
+{id:'p12',area:'Competencia',t:'Radiografía de un competidor',get:'Qué hace bien tu competidor, dónde es débil y 5 movimientos concretos para quitarle clientes.',when:'Cada trimestre, con tus 2-3 competidores principales.',time:'25 min',next:'Lleva los huecos detectados al prompt 7 (contenidos) y al prompt 4 (anuncios).',
+prompt:`[PEGA AQUÍ TU FICHA MAESTRA]
+
+Competidor: [NOMBRE Y WEB]. Pega lo que tengas de él: textos de su web, sus últimas publicaciones en redes, sus anuncios (biblioteca de anuncios de Meta), sus reseñas de Google: [PEGA].
+
+Actúa como analista de competencia. Trabaja solo con lo que te pego; si te falta algo, dime dónde conseguirlo.
+
+Método:
+1. Promesa: qué dice que hace y para quién, con sus propias palabras.
+2. Oferta: productos, servicios y precios que muestra en público.
+3. Canales: dónde está activo y qué tipo de contenido o anuncio repite (lo que repite suele funcionarle).
+4. Lo que dicen sus clientes: patrones en sus reseñas buenas y malas, con citas literales.
+5. Huecos: lo que sus clientes piden y él no da, búsquedas o temas que no cubre, quejas repetidas.
+
+Entrega: tabla comparativa Competidor frente a mí por cada punto, y 5 movimientos concretos ordenados por impacto (mensaje, oferta, contenido, anuncios, servicio) con el primer paso de cada uno.
+Reglas: nada de copiar sus textos; usamos sus huecos, no sus palabras. No afirmes nada que no esté en lo que te he pegado.
+Autorrevisión: ¿cada movimiento aprovecha una debilidad demostrada por sus propias reseñas o contenidos?`},
 ];
-const L=document.getElementById('list');
-P.forEach(([area,t,prompt],i)=>{
-  const d=document.createElement('div');d.className='p';
-  d.innerHTML=`<span class="area">${String(i+1).padStart(2,'0')} · ${area}</span><h2>${t}</h2><pre></pre><button type="button">Copiar prompt</button>`;
-  d.querySelector('pre').textContent=prompt;
+const V=[
+{id:'v13',area:'Expansor',t:'Tu director de prompts (convierte una frase en un prompt completo)',get:'Un asistente que, a partir de una idea de una frase, te devuelve el prompt técnico, la versión para vídeo, los negativos y los ajustes.',when:'Pégalo una vez al inicio de una conversación y úsalo para todas tus ideas.',time:'2 min por idea',next:'Pega el resultado en tu generador y, si falla algo, dile qué y que corrija solo ese bloque.',
+prompt:`You are a senior creative director and prompt engineer for AI image and video models (Nano Banana, Midjourney, Seedance, Kling, Veo). For every idea I give you in one sentence, you will expand it into a production-ready prompt. Never answer with a generic prompt: make every creative decision and state it.
+
+Process for each idea:
+1. If a decision-critical detail is missing (the exact product, the brand colours as hex, the target platform and aspect ratio, whether a real person appears), ask me up to 3 short questions in Spanish. Otherwise decide and continue.
+2. Write the IMAGE PROMPT in English, 5-7 sentences, strictly in this order: shot type · composition and camera angle · camera body, lens and aperture · subject in precise detail (materials, colours, textures) · wardrobe if any · pose, action and expression · environment, location and time of day · depth layers (foreground blur, sharp midground, background bokeh) · colour palette with hex codes · lighting and mood · film stock and grain · lens effects · 2-3 real photographer, director or campaign references.
+3. Write the VIDEO PROMPT (image-to-video) in English with timestamps: camera movement (one main movement per clip: dolly in, orbit left, crane up, rack focus…) · subject action (maximum 2 consecutive actions) · environment motion · SFX · music mood · duration.
+4. Write NEGATIVES: no text, no logos, no extra fingers, no warped hands, no plastic skin, no oversaturated colours, no golden hour, plus anything specific to the scene.
+5. Give SETTINGS: recommended model, aspect ratio for the platform, number of variations, and whether to fix a seed.
+6. Add a 3-line SELF-CHECK in Spanish: what could look fake and how the prompt prevents it.
+
+Rules: realism first (natural skin texture, imperfect framing, real-world light). Never put readable text, prices or logos inside the generated image: those are added later in design. If a realistic person is generated, remind me to label the content as AI-generated when publishing. Output only the sections above, with clear headings.`},
+{id:'v1',area:'Imagen · Ecommerce',t:'Foto de producto de catálogo (fondo limpio)',get:'Una foto de catálogo coherente para toda la tienda, con luz de estudio y detalle de materiales.',when:'Fichas de producto, Google Shopping, marketplaces.',time:'5 min',next:'Genera 3 ángulos (frontal, tres cuartos, detalle) con la misma luz.',
+prompt:`Image type: high-end e-commerce product photograph of [PRODUCT, exact model and colour], shot from a [three-quarter / front-facing / top-down] angle, product centred with generous negative space.
+Camera: Phase One XF IQ4, 120mm macro lens, f/11, tack-sharp focus across the whole product.
+Subject: [describe materials, finishes, seams, textures, logos physically printed on the product], true-to-life colours, no reflections hiding details.
+Environment and lighting: seamless [pure white #FFFFFF / light grey #EDEDED] studio background, large softbox key light at 45 degrees, strip light rim from behind to separate edges, soft contact shadow under the product, high-key commercial look.
+Colour and finish: neutral white balance, accurate colours, subtle micro-contrast, clean and bright, high contrast.
+Reference style: Apple product photography, Muji catalogue.
+Negatives: no text, no added logos, no props, no floating objects, no distorted proportions, no CGI plastic look, no harsh specular blowouts.
+Settings: aspect ratio 1:1 for catalogue or 4:5 for Instagram; use 2-3 real photos of the product as reference images.`},
+{id:'v2',area:'Imagen · Estilo de vida',t:'Producto en uso, foto de estilo de vida',get:'La imagen que vende la sensación de usar el producto, con profundidad de campo cinematográfica.',when:'Anuncios, portada de redes, banner de web.',time:'5 min',next:'Usa esta imagen como fotograma inicial del prompt 5 para animarla.',
+prompt:`Image type: candid lifestyle photograph, medium shot, slightly off-centre composition following the rule of thirds, eye-level angle.
+Camera: Sony A7 IV, 35mm lens, f/1.8, focus on the product in the hands, shallow depth of field.
+Subject: a [age, gender, style] person naturally using [PRODUCT, use the reference image @image1 exactly], real skin texture with small imperfections, relaxed genuine expression, not looking at the camera.
+Action: [specific action, e.g. opening the box / adjusting the helmet strap / pouring the coffee].
+Environment: [realistic location that matches the customer, e.g. small workshop in Valencia, bright modern kitchen], morning light, lived-in details.
+Depth layers: blurred object in the foreground, sharp subject in the midground, soft bokeh background.
+Palette: [brand colours as hex] subtly present in the environment, natural tones elsewhere.
+Lighting and film: soft window light from the left, gentle fill, shot on Kodak Portra 400, fine natural grain.
+Negatives: no text, no logos added, no plastic skin, no extra fingers, no perfect symmetry, no golden hour, no stock-photo smile.
+Settings: 4:5 for Instagram feed, 9:16 for stories, 3 variations.`},
+{id:'v3',area:'Imagen · UGC',t:'Foto tipo UGC hecha con el móvil',get:'Una imagen que parece hecha por un cliente real con su móvil, para redes y anuncios que no parecen anuncio.',when:'Anuncios de Meta y TikTok, prueba social visual.',time:'5 min',next:'Etiqueta como contenido creado con IA si aparece una persona realista.',
+prompt:`Image type: natural UGC smartphone photo, candid and spontaneous, slightly imperfect framing with a small tilt.
+Camera: iPhone 15 Pro main camera, 24mm, natural HDR, slight motion softness, no professional lighting.
+Subject: a [age, look] person holding [PRODUCT, match reference @image1] close to the camera, real skin with pores and small blemishes, casual clothes, genuine expression mid-sentence.
+Environment: [home, car interior, shop counter, street in a Spanish city], everyday mess, real background objects.
+Lighting: mixed ambient light (window daylight and warm indoor bulbs), mild shadows, no studio look.
+Style: authentic social media post, looks like it was taken by a customer, not by a brand.
+Negatives: no text overlays, no watermark, no studio lighting, no flawless skin, no symmetrical pose, no cinematic colour grading, no extra fingers.
+Settings: 9:16 or 4:5, 4 variations with different people and locations.`},
+{id:'v4',area:'Imagen · Local',t:'Tu negocio, el escaparate que da ganas de entrar',get:'Una imagen del negocio o el servicio que transmite confianza y oficio, para la ficha de Google y la web.',when:'Ficha de Google, cabecera de la web, anuncios locales.',time:'5 min',next:'Para la ficha de Google usa fotos reales siempre que puedas; esta imagen sirve para web y anuncios.',
+prompt:`Image type: editorial interior photograph of a [type of business, e.g. motorcycle workshop / dental clinic / bakery] in Spain, wide shot with a strong leading line toward the main work area.
+Camera: Canon EOS R5, 24mm tilt-shift lens, f/5.6, straight verticals, everything in focus.
+Subject: [the main activity, e.g. a mechanic in a branded work shirt adjusting a motorcycle on a lift], hands busy, face partly turned away.
+Environment: clean but real working space, tools in use, natural wear, [brand colour as hex] in details like aprons, signage shapes without readable text, plants or materials typical of the region.
+Lighting: overhead practical lights mixed with daylight from a side window, warm-neutral balance, gentle contrast.
+Film and effects: Fuji Pro 400H look, fine grain, slight haze in the air for depth.
+Reference: Kinfolk magazine interiors, documentary craftsmanship photography.
+Negatives: no readable text or signs, no logos, no fake perfection, no empty sterile room, no fisheye distortion, no oversaturated colours.
+Settings: 16:9 for web header, 4:3 for Google Business Profile, 3 variations.`},
+{id:'v5',area:'Vídeo · Producto',t:'Anima tu foto: plano de producto cinematográfico',get:'Un clip de 5-8 segundos a partir de tu foto, con un movimiento de cámara de anuncio.',when:'Reels, anuncios, fondo de la web.',time:'10 min',next:'Encadena 3 clips con el último fotograma de uno como primero del siguiente.',
+prompt:`Image-to-video. Start frame: @image1 (the product photo). Duration: 6 seconds.
+0-2s: the camera slowly dollies in toward [PRODUCT] while a soft light sweep moves across its surface, revealing the texture of [MATERIAL].
+2-4s: the camera orbits 30 degrees to the left at the same height, keeping the product perfectly centred and stable; subtle particles of dust float through the light beam.
+4-6s: rack focus from the edge of the product to the [KEY DETAIL, e.g. logo stitching / visor mechanism], then the camera settles into a still hero frame.
+Environment motion: background stays dark and still; only the light and particles move.
+SFX: soft whoosh on the light sweep, gentle mechanical click at the rack focus.
+Music: minimal deep pulse, 90 BPM.
+Negatives: no morphing of the product, no changes in shape or colour, no text, no camera shake, no extra objects appearing.
+Settings: 9:16 for reels and TikTok, 1080p; keep one main camera movement per clip.`},
+{id:'v6',area:'Vídeo · Antes y después',t:'Transformación antes y después',get:'Un vídeo que enseña el cambio que consigues para tu cliente, el formato que más se comparte.',when:'Servicios con resultado visible: reformas, estética, webs, talleres, limpieza.',time:'15 min',next:'Usa una foto real del «antes» y otra del «después» como primer y último fotograma.',
+prompt:`First-and-last-frame video. First frame: @image1 (BEFORE: [describe the real situation]). Last frame: @image2 (AFTER: [describe the real result]). Both frames share the same camera position, the same room or object and the same lens, so the transformation stays coherent. Duration: 8 seconds.
+0-1.5s: static shot of the before state, slight handheld breathing to feel real.
+1.5-6s: the transformation happens progressively from left to right as a smooth wipe of light, [specific changes, e.g. walls get painted, the bike gets cleaned and polished, the old website turns into the new one], no magical sparkles.
+6-8s: the camera pushes in slowly on the most impressive detail of the after state and holds.
+SFX: a single soft rising tone during the wipe, quiet room ambience.
+Negatives: no morphing faces, no change of camera angle between first and last frame, no text, no fantasy effects, no flicker.
+Settings: 9:16 and 1:1, 1080p.`},
+{id:'v7',area:'Vídeo · Pantalla',t:'Demo de tu web o tu app que parece un anuncio',get:'Un vídeo de tu web o tu herramienta flotando en un espacio 3D, el formato de las cuentas de tecnología que más crecen.',when:'Lanzamientos, nuevas funciones, portfolio de webs.',time:'15 min',next:'Añade subtítulos palabra a palabra y una llamada a la acción con palabra clave.',
+prompt:`Image-to-video. Start frame: @image1 (a clean screenshot of [YOUR WEBSITE OR APP SCREEN]) placed on a floating glass panel in a dark minimal space, slight perspective tilt of 12 degrees. Duration: 7 seconds.
+0-2s: the panel rotates gently from left to right while the camera dollies in; a soft gradient glow in [brand colours as hex] pulses behind it.
+2-5s: the camera glides down along the panel as if scrolling, revealing the next sections; subtle reflections slide across the glass.
+5-7s: the camera pulls back to show the full panel floating, with a second smaller panel (mobile version) sliding in beside it.
+Environment: deep charcoal background #070E0F, faint grid on the floor, soft volumetric light.
+SFX: subtle UI clicks, airy whoosh on the pull back. Music: modern electronic, 110 BPM.
+Negatives: no distorted interface, no gibberish text generated on screen (use the real screenshot), no flicker, no warping of the panel edges.
+Settings: 9:16, 1080p. Tip: record the real scroll of your site and use the frames as references for better accuracy.`},
+{id:'v8',area:'Vídeo · Comida',t:'Plato que sale de la carta (restauración)',get:'Un clip donde el plato emerge de la carta física, para restaurantes y cafeterías.',when:'Reels de restaurante, web con menú, anuncios locales.',time:'15 min',next:'Usa la carta real y una foto real del plato como referencias; no inventes platos.',
+prompt:`Image-to-video. Start frame: @image1 (top-down photo of the real printed menu of [RESTAURANT] on a wooden table). Reference: @image2 (real photo of [DISH]). Duration: 8 seconds.
+0-2s: slow overhead push-in on the menu, focusing on the name of [DISH] printed on the page.
+2-5s: the dish rises physically out of the page in a natural, tactile way, steam curling up, sauce glistening, ingredients matching @image2 exactly; the paper bends slightly as if pushed from below.
+5-8s: the camera tilts from overhead to a 45-degree hero angle as the dish settles on the table beside the menu; shallow depth of field, menu softly blurred.
+Lighting: warm restaurant practical lights, soft window light, appetising highlights, no oversaturation.
+SFX: gentle sizzle, soft paper rustle, distant restaurant ambience.
+Negatives: no extra dishes, no change of ingredients, no melting objects, no fake text, no cartoon style.
+Settings: 9:16, 1080p.`},
+{id:'v9',area:'Vídeo · Personaje',t:'Mascota o personaje de marca que habla',get:'Un clip corto de tu mascota o personaje de marca con una frase, consistente entre vídeos.',when:'Series de contenido, presentaciones de producto, intros.',time:'20 min',next:'Crea primero una hoja de personaje (5 vistas) y úsala siempre como referencia.',
+prompt:`Image-to-video with character reference. Character: [NAME], [describe the mascot: shape, materials, colours as hex, distinctive accessories], always matching the character sheet @image1. Start frame: @image2 ([NAME] in [scene]). Duration: 6 seconds.
+0-2s: medium shot, eye level; [NAME] turns toward the camera with a curious expression, small bounce of excitement.
+2-5s: [NAME] says, in Spanish from Spain, friendly and energetic tone: "[ONE SHORT LINE, max 12 words]" while gesturing toward [object or screen] with one hand.
+5-6s: the camera pushes in slightly as [NAME] smiles and holds the pose.
+Environment: [scene], soft key light, subtle rim light in brand colour.
+SFX: light pop on the bounce. Music: playful minimal synth.
+Negatives: no change in the character's colours or proportions, no extra limbs, no text, no lip-sync drift, no background characters.
+Settings: 9:16, 1080p; for perfect voice, generate the audio separately with your brand voice and use an audio-driven lip-sync model.`},
+];
+const L=document.getElementById('list'),T=document.getElementById('toc');
+const L2=document.getElementById('list2'),T2=document.getElementById('toc2');
+V.forEach((p,i)=>{
+  const a=document.createElement('a');a.href='#'+p.id;a.innerHTML=`<b>${String(i+13).padStart(2,'0')}</b>${p.t}`;T2.appendChild(a);
+  const d=document.createElement('div');d.className='p';d.id=p.id;
+  d.innerHTML=`<span class="area">${String(i+13).padStart(2,'0')} · ${p.area}</span><h2>${p.t}</h2>
+  <div class="meta"><div><b>Qué obtienes</b>${p.get}</div><div><b>Cuándo usarlo</b>${p.when}</div><div><b>Tiempo</b>${p.time}</div></div>
+  <pre></pre><div class="row"><button type="button">Copiar prompt</button><span class="next">Después: ${p.next}</span></div>`;
+  d.querySelector('pre').textContent=p.prompt;
   const b=d.querySelector('button');
-  b.addEventListener('click',()=>{navigator.clipboard.writeText(prompt).then(()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar prompt',1500)}).catch(()=>{const r=document.createRange();r.selectNodeContents(d.querySelector('pre'));const s=getSelection();s.removeAllRanges();s.addRange(r)})});
+  b.addEventListener('click',()=>{navigator.clipboard.writeText(p.prompt).then(()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar prompt',1500)}).catch(()=>{const r=document.createRange();r.selectNodeContents(d.querySelector('pre'));const s=getSelection();s.removeAllRanges();s.addRange(r)})});
+  L2.appendChild(d);
+});
+P.forEach((p,i)=>{
+  const a=document.createElement('a');a.href='#'+p.id;a.innerHTML=`<b>${String(i).padStart(2,'0')}</b>${p.t}`;T.appendChild(a);
+  const d=document.createElement('div');d.className='p';d.id=p.id;
+  d.innerHTML=`<span class="area">${String(i).padStart(2,'0')} · ${p.area}</span><h2>${p.t}</h2>
+  <div class="meta"><div><b>Qué obtienes</b>${p.get}</div><div><b>Cuándo usarlo</b>${p.when}</div><div><b>Tiempo</b>${p.time}</div></div>
+  <pre></pre><div class="row"><button type="button">Copiar prompt</button><span class="next">Después: ${p.next}</span></div>`;
+  d.querySelector('pre').textContent=p.prompt;
+  const b=d.querySelector('button');
+  b.addEventListener('click',()=>{navigator.clipboard.writeText(p.prompt).then(()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar prompt',1500)}).catch(()=>{const r=document.createRange();r.selectNodeContents(d.querySelector('pre'));const s=getSelection();s.removeAllRanges();s.addRange(r)})});
   L.appendChild(d);
 });
 </script>
