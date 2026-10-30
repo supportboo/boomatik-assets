@@ -1,0 +1,126 @@
+{
+ "generado": "2026-10-30",
+ "regla": "memory feedback_marc_no_graba_heygen_educador (29-oct)",
+ "piezas": [
+  {
+   "id": "C01-FB-P1",
+   "platform": "facebook",
+   "action": "create now",
+   "text": "Ya está fuera el capítulo 1 de «Tu tienda vende más»: los cuatro pasos por donde se escapa una venta online y una prueba de diez minutos para cada uno.\n\nhttps://www.youtube.com/watch?v=xOx3j_BtZZY&utm_source=facebook&utm_medium=social&utm_campaign=tvm-cap01&utm_content=c01-fb-p1\n\nVídeo con mi avatar creado con IA.",
+   "isAiGenerated": null,
+   "images": [],
+   "alt": [],
+   "note": "Link post, no media; the preview is the YouTube thumbnail (mascot + small badge). The «Vídeo con mi avatar creado con IA.» line stays: it describes the linked video."
+  },
+  {
+   "id": "C01-LI-P1",
+   "platform": "linkedin",
+   "action": "create now",
+   "text": "Ya está fuera el capítulo 1 de «Tu tienda vende más».\n\nUna venta online pasa por cuatro pasos: encontrar, entender, comprar y pagar. En el capítulo vemos la señal que delata cada uno en tus números, una prueba de diez minutos para hacerla tú solo y el arreglo.\n\n¿En cuál de los cuatro se le escapa la venta a tu tienda?\n\n#ecommerce #tiendaonline\n\nVídeo con mi avatar creado con IA.",
+   "isAiGenerated": null,
+   "images": [],
+   "alt": [],
+   "firstComment": "El capítulo completo: https://www.youtube.com/watch?v=xOx3j_BtZZY&utm_source=linkedin&utm_medium=social&utm_campaign=tvm-cap01&utm_content=c01-li-p1",
+   "note": "Text post, no media; AI line describes the linked video. Unchanged."
+  },
+  {
+   "id": "C01-IG-H3",
+   "platform": "instagram (story)",
+   "action": "create now",
+   "text": "",
+   "isAiGenerated": false,
+   "images": [
+    "C:\\Users\\march\\boo-manager\\.claude\\worktrees\\social-growth\\.claude\\scratch\\l01\\lanzamiento\\micro\\rehecho\\C01-IG-H3_historia_h3_mas_visitas_no_1080x1920.png"
+   ],
+   "alt": [
+    "Fondo oscuro. Texto: ¿Más visitas? No. Arregla el paso que se rompe. La mascota de los ojos de SkillUp Brandooers mira con una lupa. Logo de SkillUp Brandooers."
+   ],
+   "note": "Marc's photo replaced by the mascot; logo renamed; isAiGenerated true -> false."
+  },
+  {
+   "id": "C01-IG-H5",
+   "platform": "instagram (story)",
+   "action": "create now",
+   "text": "",
+   "isAiGenerated": false,
+   "images": [
+    "C:\\Users\\march\\boo-manager\\.claude\\worktrees\\social-growth\\.claude\\scratch\\l01\\lanzamiento\\micro\\rehecho\\C01-IG-H5_historia_h5_pagar_de_15_a_3_1080x1920.png"
+   ],
+   "alt": [
+    "Los ojos de Brandooers. Texto: Pagar: de 15 a 3. Se pierden 4 de cada 5. Traer más visitas no lo arregla."
+   ],
+   "note": "No face before; only the logo order changed to «SkillUp Brandooers»."
+  },
+  {
+   "id": "C01-IG-P1",
+   "platform": "instagram (feed)",
+   "action": "create now",
+   "text": "Ya está: el capítulo 1 de «Tu tienda vende más».\n\nVa de lo que más se repite en una tienda online: hay visitas, pero no hay ventas. Los cuatro pasos por donde se escapa una venta (encontrar, entender, comprar y pagar) y una prueba de diez minutos para cada uno.\n\nEl capítulo completo, en YouTube: enlace en la bio.\n\n#tiendaonline #ecommerce #ventasonline",
+   "isAiGenerated": false,
+   "images": [
+    "C:\\Users\\march\\boo-manager\\.claude\\worktrees\\social-growth\\.claude\\scratch\\l01\\lanzamiento\\micro\\rehecho\\C01-IG-P1_ya_esta_capitulo1_1080x1350.png"
+   ],
+   "alt": [
+    "La mascota de los ojos de SkillUp Brandooers, con una lupa, sobre fondo oscuro. Texto: Ya está: capítulo 1. Tu tienda vende más, en YouTube. Logo de SkillUp Brandooers."
+   ],
+   "note": "Marc's photo replaced by the mascot; logo renamed; alt no longer says «Marc mira a cámara»; isAiGenerated true -> false."
+  },
+  {
+   "id": "C01-TT-P1",
+   "platform": "tiktok (photo)",
+   "action": "create now",
+   "text": "Ya está disponible el capítulo 1 de «Tu tienda vende más»",
+   "tiktokDescription": "Ya está disponible el capítulo 1 de «Tu tienda vende más»: por qué tu tienda tiene visitas y no vende. Busca SkillUp Brandooers en YouTube.\n\n#tiendaonline #ecommerce #emprender",
+   "isAiGenerated": false,
+   "images": [
+    "C:\\Users\\march\\boo-manager\\.claude\\worktrees\\social-growth\\.claude\\scratch\\l01\\lanzamiento\\micro\\rehecho\\C01-TT-P1_ya_esta_capitulo1_1080x1920.png"
+   ],
+   "alt": [],
+   "note": "Marc's photo replaced by the mascot; «La imagen es mi avatar creado con IA.» removed from the description."
+  },
+  {
+   "id": "C01-IG-C1",
+   "platform": "instagram (feed carousel)",
+   "action": "replace media of scheduled post 6ae323b3af3ce686a185e37d",
+   "scheduledFor_utc": "2026-11-04T10:00:00.000Z",
+   "text": "Cuatro pruebas de diez minutos, una por paso: encontrar, entender, comprar y pagar.\n\nGuárdalo para el día que te sientes a revisar tu tienda. Y si solo tienes tiempo para una, empieza por comprar en tu tienda desde el móvil.\n\nEl capítulo entero, en YouTube (enlace en la bio).\n\n#tiendaonline #ecommerce #ventasonline",
+   "isAiGenerated": false,
+   "images": [
+    "C:\\Users\\march\\boo-manager\\.claude\\worktrees\\social-growth\\.claude\\scratch\\l01\\lanzamiento\\micro\\rehecho\\C01-IG-C1_carrusel_4_pasos_1de8_1080x1350.png",
+    "C:\\Users\\march\\boo-manager\\.claude\\worktrees\\social-growth\\.claude\\scratch\\l01\\lanzamiento\\micro\\rehecho\\C01-IG-C1_carrusel_4_pasos_2de8_1080x1350.png",
+    "C:\\Users\\march\\boo-manager\\.claude\\worktrees\\social-growth\\.claude\\scratch\\l01\\lanzamiento\\micro\\rehecho\\C01-IG-C1_carrusel_4_pasos_3de8_1080x1350.png",
+    "C:\\Users\\march\\boo-manager\\.claude\\worktrees\\social-growth\\.claude\\scratch\\l01\\lanzamiento\\micro\\rehecho\\C01-IG-C1_carrusel_4_pasos_4de8_1080x1350.png",
+    "C:\\Users\\march\\boo-manager\\.claude\\worktrees\\social-growth\\.claude\\scratch\\l01\\lanzamiento\\micro\\rehecho\\C01-IG-C1_carrusel_4_pasos_5de8_1080x1350.png",
+    "C:\\Users\\march\\boo-manager\\.claude\\worktrees\\social-growth\\.claude\\scratch\\l01\\lanzamiento\\micro\\rehecho\\C01-IG-C1_carrusel_4_pasos_6de8_1080x1350.png",
+    "C:\\Users\\march\\boo-manager\\.claude\\worktrees\\social-growth\\.claude\\scratch\\l01\\lanzamiento\\micro\\rehecho\\C01-IG-C1_carrusel_4_pasos_7de8_1080x1350.png",
+    "C:\\Users\\march\\boo-manager\\.claude\\worktrees\\social-growth\\.claude\\scratch\\l01\\lanzamiento\\micro\\rehecho\\C01-IG-C1_carrusel_4_pasos_8de8_1080x1350.png"
+   ],
+   "alt": [
+    "Portada sobre fondo cian: ¿Dónde se rompe? Encontrar, entender, comprar y pagar, con pagar torcido. 4 pruebas de 10 minutos. Abajo, la mascota de los ojos de SkillUp Brandooers mira con una lupa.",
+    "Los 4 pasos de una venta: encontrar, entender, comprar y pagar, con una frase cada uno.",
+    "Paso 1, encontrar: la señal, la prueba de 10 minutos y el arreglo. En claro: llama a tus productos como los llama tu cliente.",
+    "Paso 2, entender: la señal, la prueba de 10 minutos y el arreglo. En claro: en 5 segundos, qué es, cuánto mide y cuándo llega.",
+    "Paso 3, comprar: la señal, la prueba de 10 minutos y el arreglo. En claro: que el carrito diga el total antes de pedir nada.",
+    "Paso 4, pagar: la señal, la prueba de 10 minutos y el arreglo. En claro: compra en tu tienda desde el móvil, una vez al mes.",
+    "Embudo de ejemplo: 100 visitas, 60 ven una ficha, 20 añaden al carrito, 15 empiezan a pagar y 3 compran. El salto más grande está en pagar.",
+    "La prueba del desconocido, 5 minutos: alguien que no conoce tu tienda compra pensando en voz alta. Guárdalo; el capítulo 1 está en YouTube."
+   ],
+   "note": "Slide 1: Marc's photo -> mascot. All 8 slides: logo «Brandooers SkillUp» -> «SkillUp Brandooers»; slide 8 line «YouTube: Brandooers SkillUp.» -> «YouTube: SkillUp Brandooers.». Post scheduled with isAiGenerated true -> set false."
+  },
+  {
+   "id": "C01-IG-H4",
+   "platform": "instagram (story)",
+   "action": "replace media of scheduled post 6ae3241d5a8b63605bebacca",
+   "scheduledFor_utc": "2026-11-04T12:00:00.000Z",
+   "text": "",
+   "isAiGenerated": false,
+   "images": [
+    "C:\\Users\\march\\boo-manager\\.claude\\worktrees\\social-growth\\.claude\\scratch\\l01\\lanzamiento\\micro\\rehecho\\C01-IG-H4_historia_h4_donde_esta_el_salto_1080x1920.png"
+   ],
+   "alt": [
+    "Embudo de ejemplo: 100 visitas, 60 ven ficha, 20 al carrito, 15 empiezan a pagar, 3 compran. ¿Dónde está el salto?"
+   ],
+   "note": "No face before; only the logo order changed."
+  }
+ ]
+}

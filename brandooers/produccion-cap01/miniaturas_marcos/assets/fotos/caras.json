@@ -1,0 +1,80 @@
+{
+ "E7_miniatura": {
+  "src": "escenas/out/E7_miniatura.png",
+  "size_src": [
+   5504,
+   3072
+  ],
+  "face_box_norm": [
+   0.3733,
+   0.2988,
+   0.6089,
+   0.8199
+  ]
+ },
+ "E5v2_terraza": {
+  "src": "escenas/out/E5v2_terraza.png",
+  "size_src": [
+   5504,
+   3072
+  ],
+  "face_box_norm": [
+   0.4526,
+   0.2121,
+   0.6086,
+   0.559
+  ]
+ },
+ "E4_despacho": {
+  "src": "escenas/out/E4_despacho.png",
+  "size_src": [
+   5504,
+   3072
+  ],
+  "face_box_norm": [
+   0.4195,
+   0.2128,
+   0.5927,
+   0.5961
+  ]
+ },
+ "E3_salon_azul": {
+  "src": "escenas/out/E3_salon_azul.png",
+  "size_src": [
+   5504,
+   3072
+  ],
+  "face_box_norm": [
+   0.4151,
+   0.2089,
+   0.5871,
+   0.6007
+  ]
+ },
+ "E6v2_trastienda": {
+  "src": "escenas/out/E6v2_trastienda.png",
+  "size_src": [
+   5504,
+   3072
+  ],
+  "face_box_norm": [
+   0.4148,
+   0.2246,
+   0.5887,
+   0.6132
+  ]
+ },
+ "ref1_base": {
+  "src": "escenas/ref1_base.jpg",
+  "size_src": [
+   3840,
+   2143
+  ],
+  "face_box_norm": [
+   0.4137,
+   0.2131,
+   0.5838,
+   0.5971
+  ]
+ }
+}

@@ -1,0 +1,298 @@
+{
+ "marcos": {
+  "marco_1_aprende": {
+   "face_box_avatar": [
+    815,
+    213,
+    1129,
+    606
+   ],
+   "opaque_px_over_face": 0,
+   "opaque_px_over_widest_caption_box": 0,
+   "opaque_px_over_screen_content_edges": 0,
+   "texts": [
+    {
+     "text": "Aprende",
+     "family": "Space Grotesk",
+     "cap_px": 30,
+     "contrast": {
+      "avatar": 17.5,
+      "pantalla": 17.5
+     },
+     "ok": true
+    },
+    {
+     "text": "Comparte",
+     "family": "Space Grotesk",
+     "cap_px": 30,
+     "contrast": {
+      "avatar": 17.5,
+      "pantalla": 17.5
+     },
+     "ok": true
+    },
+    {
+     "text": "Aplica",
+     "family": "Space Grotesk",
+     "cap_px": 30,
+     "contrast": {
+      "avatar": 17.5,
+      "pantalla": 17.5
+     },
+     "ok": true
+    },
+    {
+     "text": "Brand",
+     "family": "Inter",
+     "cap_px": 32,
+     "contrast": {
+      "avatar": 19.69,
+      "pantalla": 19.69
+     },
+     "ok": true
+    },
+    {
+     "text": "ers",
+     "family": "Inter",
+     "cap_px": 32,
+     "contrast": {
+      "avatar": 19.69,
+      "pantalla": 19.69
+     },
+     "ok": true
+    },
+    {
+     "text": "SkillUp",
+     "family": "Caveat",
+     "cap_px": 30,
+     "contrast": {
+      "avatar": 13.58,
+      "pantalla": 13.58
+     },
+     "ok": true
+    }
+   ]
+  },
+  "marco_2_talento": {
+   "face_box_avatar": [
+    815,
+    213,
+    1129,
+    606
+   ],
+   "opaque_px_over_face": 0,
+   "opaque_px_over_widest_caption_box": 0,
+   "opaque_px_over_screen_content_edges": 0,
+   "texts": [
+    {
+     "text": "TALENTO IMPARABLE",
+     "family": "Space Grotesk",
+     "cap_px": 30,
+     "contrast": {
+      "avatar": 6.04,
+      "pantalla": 6.14
+     },
+     "ok": true
+    },
+    {
+     "text": "Brand",
+     "family": "Inter",
+     "cap_px": 32,
+     "contrast": {
+      "avatar": 19.69,
+      "pantalla": 19.69
+     },
+     "ok": true
+    },
+    {
+     "text": "ers",
+     "family": "Inter",
+     "cap_px": 32,
+     "contrast": {
+      "avatar": 19.69,
+      "pantalla": 19.69
+     },
+     "ok": true
+    },
+    {
+     "text": "SkillUp",
+     "family": "Caveat",
+     "cap_px": 30,
+     "contrast": {
+      "avatar": 13.58,
+      "pantalla": 13.58
+     },
+     "ok": true
+    }
+   ]
+  },
+  "marco_3_educando": {
+   "face_box_avatar": [
+    815,
+    213,
+    1129,
+    606
+   ],
+   "opaque_px_over_face": 0,
+   "opaque_px_over_widest_caption_box": 0,
+   "opaque_px_over_screen_content_edges": 0,
+   "texts": [
+    {
+     "text": "Educando innovación y estrategia",
+     "family": "Caveat",
+     "cap_px": 31,
+     "contrast": {
+      "avatar": 13.58,
+      "pantalla": 13.58
+     },
+     "ok": true
+    },
+    {
+     "text": "Brand",
+     "family": "Inter",
+     "cap_px": 32,
+     "contrast": {
+      "avatar": 19.69,
+      "pantalla": 19.69
+     },
+     "ok": true
+    },
+    {
+     "text": "ers",
+     "family": "Inter",
+     "cap_px": 32,
+     "contrast": {
+      "avatar": 19.69,
+      "pantalla": 19.69
+     },
+     "ok": true
+    },
+    {
+     "text": "SkillUp",
+     "family": "Caveat",
+     "cap_px": 30,
+     "contrast": {
+      "avatar": 13.58,
+      "pantalla": 13.58
+     },
+     "ok": true
+    }
+   ]
+  }
+ },
+ "miniaturas": {
+  "miniatura_1": {
+   "face_box": [
+    764,
+    119,
+    1088,
+    521
+   ],
+   "elements_touching_face": [],
+   "nombre": "Visitas sí, ventas no",
+   "look": "E3 · salón, jersey azul marino",
+   "composicion": "caja blanca gigante + foto a sangre",
+   "texto": "VISITAS SÍ, / VENTAS NO (caja rosa) · «¿te suena?»",
+   "idea": "El dueño se reconoce en el dolor exacto con el que arranca el vídeo.",
+   "en_el_video": "0:00-0:03 «Tu tienda tiene visitas… y no vende. ¿Te suena?»"
+  },
+  "miniatura_2": {
+   "face_box": [
+    152,
+    117,
+    493,
+    542
+   ],
+   "elements_touching_face": [],
+   "nombre": "0 resultados",
+   "look": "E6v2 · trastienda, ropa negra",
+   "composicion": "bloques + tarjeta de interfaz (buscador)",
+   "texto": "buscador «manta» · 0 / RESULTADOS (caja rosa) · «y el producto existe»",
+   "idea": "El fallo a la vista: el buscador de la tienda de ejemplo no encuentra un producto que sí vende.",
+   "en_el_video": "1:36 «Busco manta. Cero resultados. El producto existe»"
+  },
+  "miniatura_3": {
+   "face_box": [
+    809,
+    118,
+    1131,
+    516
+   ],
+   "elements_touching_face": [],
+   "nombre": "¿Dónde se rompe?",
+   "look": "E4 · despacho, sudadera gris",
+   "composicion": "panel de color plano (cian) + panel de foto",
+   "texto": "¿DÓNDE SE / ROMPE? · ENCONTRAR · ENTENDER · COMPRAR · PAGAR (roto) · «10 min por paso»",
+   "idea": "La promesa del método: cuatro pasos y uno se rompe; el espectador quiere saber cuál es el suyo.",
+   "en_el_video": "0:05-0:15 «dónde se te escapa esa venta, paso a paso… en cada paso, una prueba de diez minutos»; 4:02 «Aquí la venta se rompe»"
+  },
+  "miniatura_4": {
+   "face_box": [
+    839,
+    148,
+    1078,
+    450
+   ],
+   "elements_touching_face": [],
+   "nombre": "10 minutos por paso",
+   "look": "E5v2 · terraza, lino blanco",
+   "composicion": "palabra repetida en fundido + panel nítido sobre fondo desenfocado",
+   "texto": "10 MIN ×3 en fundido · «una prueba» · POR PASO (caja rosa)",
+   "idea": "Lo fácil y rápido: diez minutos por paso, sin herramientas.",
+   "en_el_video": "0:13 «En cada paso, una prueba de diez minutos»"
+  },
+  "miniatura_5": {
+   "face_box": [
+    753,
+    102,
+    1074,
+    500
+   ],
+   "elements_touching_face": [],
+   "nombre": "La prueba del desconocido",
+   "look": "ref1 · salón, lino beige, sonriendo",
+   "composicion": "flecha hacia la cara + bloques",
+   "texto": "LA PRUEBA DEL / DESCONOCIDO (caja rosa) · 5 MINUTOS (caja blanca) · «y sabes por dónde empezar»",
+   "idea": "Curiosidad: un nombre de prueba que nadie conoce, y la flecha lleva al presentador que la explica.",
+   "en_el_video": "0:17-0:21 «la prueba del desconocido: cinco minutos, y ya sabes por dónde empezar»; 8:03 la prueba"
+  },
+  "miniatura_6": {
+   "face_box": [
+    684,
+    125,
+    1126,
+    675
+   ],
+   "elements_touching_face": [],
+   "nombre": "¿Más visitas? No",
+   "look": "E7 · salón, primer plano (la foto hecha para la miniatura)",
+   "composicion": "bloques apilados con tachado sobre primer plano",
+   "texto": "¿MÁS / VISITAS? (tachado rosa) · NO (caja cian) · «arregla el paso que se rompe»",
+   "idea": "Contraintuitivo: no hace falta más tráfico; primero, arreglar el paso que falla.",
+   "en_el_video": "7:41 «traer más visitas no arregla nada»; 7:48 «arregla el paso que se rompe»"
+  }
+ },
+ "marcos_contra_las_55_pantallas_del_capitulo": {
+  "marco_1_aprende_capa.png": {
+   "states_checked": 55,
+   "opaque_px_inside_boxes": {
+    "face zone (plan)": 9000
+   },
+   "opaque_px_over_content_plus_12px": {}
+  },
+  "marco_2_talento_capa.png": {
+   "states_checked": 55,
+   "opaque_px_inside_boxes": {
+    "face zone (plan)": 16765
+   },
+   "opaque_px_over_content_plus_12px": {}
+  },
+  "marco_3_educando_capa.png": {
+   "states_checked": 55,
+   "opaque_px_inside_boxes": {
+    "face zone (plan)": 2000
+   },
+   "opaque_px_over_content_plus_12px": {}
+  }
+ }
+}

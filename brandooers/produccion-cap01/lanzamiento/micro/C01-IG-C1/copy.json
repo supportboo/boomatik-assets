@@ -1,0 +1,33 @@
+{
+ "id": "C01-IG-C1",
+ "red": "instagram",
+ "cuenta": "6ae2dd79f681a077b3f325cb",
+ "fecha_madrid": "mié 4-nov-2026 11:00",
+ "scheduledFor_utc": "2026-11-04T10:00:00.000Z",
+ "texto": "Cuatro pruebas de diez minutos, una por paso: encontrar, entender, comprar y pagar.\n\nGuárdalo para el día que te sientes a revisar tu tienda. Y si solo tienes tiempo para una, empieza por comprar en tu tienda desde el móvil.\n\nEl capítulo entero, en YouTube (enlace en la bio).",
+ "hashtags": "#tiendaonline #ecommerce #ventasonline",
+ "alt": [
+  "Portada sobre fondo azul: ¿Dónde se rompe? Encontrar, entender, comprar y pagar, con pagar torcido. 4 pruebas de 10 minutos. Foto de Marc.",
+  "Los 4 pasos de una venta: encontrar, entender, comprar y pagar, con una frase cada uno.",
+  "Paso 1, encontrar: la señal, la prueba de 10 minutos y el arreglo. En claro: llama a tus productos como los llama tu cliente.",
+  "Paso 2, entender: la señal, la prueba de 10 minutos y el arreglo. En claro: en 5 segundos, qué es, cuánto mide y cuándo llega.",
+  "Paso 3, comprar: la señal, la prueba de 10 minutos y el arreglo. En claro: que el carrito diga el total antes de pedir nada.",
+  "Paso 4, pagar: la señal, la prueba de 10 minutos y el arreglo. En claro: compra en tu tienda desde el móvil, una vez al mes.",
+  "Embudo de ejemplo: 100 visitas, 60 ven una ficha, 20 añaden al carrito, 15 empiezan a pagar y 3 compran. El salto más grande está en pagar.",
+  "La prueba del desconocido, 5 minutos: alguien que no conoce tu tienda compra pensando en voz alta. Guárdalo; el capítulo 1 está en YouTube."
+ ],
+ "imagenes": [
+  "../../primeras/carrusel_4_pasos_1de8_1080x1350.png",
+  "../../primeras/carrusel_4_pasos_2de8_1080x1350.png",
+  "../../primeras/carrusel_4_pasos_3de8_1080x1350.png",
+  "../../primeras/carrusel_4_pasos_4de8_1080x1350.png",
+  "../../primeras/carrusel_4_pasos_5de8_1080x1350.png",
+  "../../primeras/carrusel_4_pasos_6de8_1080x1350.png",
+  "../../primeras/carrusel_4_pasos_7de8_1080x1350.png",
+  "../../primeras/carrusel_4_pasos_8de8_1080x1350.png"
+ ],
+ "etiqueta_ia": {
+  "instagram.isAiGenerated": true
+ },
+ "postId": "6ae323b3af3ce686a185e37d"
+}

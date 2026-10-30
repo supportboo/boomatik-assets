@@ -1,0 +1,569 @@
+{
+ "profile": "BRANDOOERS",
+ "pieces": {
+  "C01-IG-C1": {
+   "scheduledFor_utc": "2026-11-04T10:00:00.000Z",
+   "madrid": "mié 4-nov-2026 11:00",
+   "accountId": "6ae2dd79f681a077b3f325cb",
+   "fieldsSent": {
+    "content": "Cuatro pruebas de diez minutos, una por paso: encontrar, entender, comprar y pagar.\n\nGuárdalo para el día que te sientes a revisar tu tienda. Y si solo tienes tiempo para una, empieza por comprar en tu tienda desde el móvil.\n\nEl capítulo entero, en YouTube (enlace en la bio).\n\n#tiendaonline #ecommerce #ventasonline",
+    "mediaItems": [
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793270689814_e0b1636db5efdf4e_carrusel_4_pasos_1de8_1080x1350.png",
+      "altText": "Portada sobre fondo azul: ¿Dónde se rompe? Encontrar, entender, comprar y pagar, con pagar torcido. 4 pruebas de 10 minutos. Foto de Marc."
+     },
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793270690318_a1ff2af8809f760e_carrusel_4_pasos_2de8_1080x1350.png",
+      "altText": "Los 4 pasos de una venta: encontrar, entender, comprar y pagar, con una frase cada uno."
+     },
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793270690665_7ccb4ca260c36256_carrusel_4_pasos_3de8_1080x1350.png",
+      "altText": "Paso 1, encontrar: la señal, la prueba de 10 minutos y el arreglo. En claro: llama a tus productos como los llama tu cliente."
+     },
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793270691054_c1611aa6a5baf849_carrusel_4_pasos_4de8_1080x1350.png",
+      "altText": "Paso 2, entender: la señal, la prueba de 10 minutos y el arreglo. En claro: en 5 segundos, qué es, cuánto mide y cuándo llega."
+     },
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793270691432_f1af543925fccf3c_carrusel_4_pasos_5de8_1080x1350.png",
+      "altText": "Paso 3, comprar: la señal, la prueba de 10 minutos y el arreglo. En claro: que el carrito diga el total antes de pedir nada."
+     },
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793270691766_48d93f174e0ec622_carrusel_4_pasos_6de8_1080x1350.png",
+      "altText": "Paso 4, pagar: la señal, la prueba de 10 minutos y el arreglo. En claro: compra en tu tienda desde el móvil, una vez al mes."
+     },
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793270692102_ca3d1963dd79c3a6_carrusel_4_pasos_7de8_1080x1350.png",
+      "altText": "Embudo de ejemplo: 100 visitas, 60 ven una ficha, 20 añaden al carrito, 15 empiezan a pagar y 3 compran. El salto más grande está en pagar."
+     },
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793270692414_eebdbaea1f2260a7_carrusel_4_pasos_8de8_1080x1350.png",
+      "altText": "La prueba del desconocido, 5 minutos: alguien que no conoce tu tienda compra pensando en voz alta. Guárdalo; el capítulo 1 está en YouTube."
+     }
+    ],
+    "platforms": [
+     {
+      "platform": "instagram",
+      "accountId": "6ae2dd79f681a077b3f325cb",
+      "platformSpecificData": {
+       "isAiGenerated": true
+      }
+     }
+    ],
+    "scheduledFor": "2026-11-04T10:00:00.000Z"
+   },
+   "validate": {
+    "http": 200,
+    "response": {
+     "valid": true,
+     "message": "No validation issues found."
+    }
+   },
+   "idempotencyKey": "fdb48b25-8a1c-44c3-8c80-5e3a99930208",
+   "createHttp": 201,
+   "postId": "6ae323b3af3ce686a185e37d",
+   "status": "scheduled",
+   "scheduledFor_returned": "2026-11-04T10:00:00.000Z",
+   "createResponse": {
+    "post": {
+     "_id": "6ae323b3af3ce686a185e37d",
+     "userId": "69b0767a0c758c4cbd9b3fb1",
+     "title": "",
+     "content": "Cuatro pruebas de diez minutos, una por paso: encontrar, entender, comprar y pagar.\n\nGuárdalo para el día que te sientes a revisar tu tienda. Y si solo tienes tiempo para una, empieza por comprar en tu tienda desde el móvil.\n\nEl capítulo entero, en YouTube (enlace en la bio).\n\n#tiendaonline #ecommerce #ventasonline",
+     "mediaItems": [
+      {
+       "_id": "6ae323b8af3ce686a185e3a1",
+       "url": "https://media.zernio.com/media/1793270689814_e0b1636db5efdf4e_carrusel_4_pasos_1de8_1080x1350.png",
+       "type": "image",
+       "altText": "Portada sobre fondo azul: ¿Dónde se rompe? Encontrar, entender, comprar y pagar, con pagar torcido. 4 pruebas de 10 minutos. Foto de Marc."
+      },
+      {
+       "_id": "6ae323b8af3ce686a185e3a2",
+       "url": "https://media.zernio.com/media/1793270690318_a1ff2af8809f760e_carrusel_4_pasos_2de8_1080x1350.png",
+       "type": "image",
+       "altText": "Los 4 pasos de una venta: encontrar, entender, comprar y pagar, con una frase cada uno."
+      },
+      {
+       "_id": "6ae323b8af3ce686a185e3a3",
+       "url": "https://media.zernio.com/media/1793270690665_7ccb4ca260c36256_carrusel_4_pasos_3de8_1080x1350.png",
+       "type": "image",
+       "altText": "Paso 1, encontrar: la señal, la prueba de 10 minutos y el arreglo. En claro: llama a tus productos como los llama tu cliente."
+      },
+      {
+       "_id": "6ae323b8af3ce686a185e3a4",
+       "url": "https://media.zernio.com/media/1793270691054_c1611aa6a5baf849_carrusel_4_pasos_4de8_1080x1350.png",
+       "type": "image",
+       "altText": "Paso 2, entender: la señal, la prueba de 10 minutos y el arreglo. En claro: en 5 segundos, qué es, cuánto mide y cuándo llega."
+      },
+      {
+       "_id": "6ae323b8af3ce686a185e3a5",
+       "url": "https://media.zernio.com/media/1793270691432_f1af543925fccf3c_carrusel_4_pasos_5de8_1080x1350.png",
+       "type": "image",
+       "altText": "Paso 3, comprar: la señal, la prueba de 10 minutos y el arreglo. En claro: que el carrito diga el total antes de pedir nada."
+      },
+      {
+       "_id": "6ae323b8af3ce686a185e3a6",
+       "url": "https://media.zernio.com/media/1793270691766_48d93f174e0ec622_carrusel_4_pasos_6de8_1080x1350.png",
+       "type": "image",
+       "altText": "Paso 4, pagar: la señal, la prueba de 10 minutos y el arreglo. En claro: compra en tu tienda desde el móvil, una vez al mes."
+      },
+      {
+       "_id": "6ae323b8af3ce686a185e3a7",
+       "url": "https://media.zernio.com/media/1793270692102_ca3d1963dd79c3a6_carrusel_4_pasos_7de8_1080x1350.png",
+       "type": "image",
+       "altText": "Embudo de ejemplo: 100 visitas, 60 ven una ficha, 20 añaden al carrito, 15 empiezan a pagar y 3 compran. El salto más grande está en pagar."
+      },
+      {
+       "_id": "6ae323b8af3ce686a185e3a8",
+       "url": "https://media.zernio.com/media/1793270692414_eebdbaea1f2260a7_carrusel_4_pasos_8de8_1080x1350.png",
+       "type": "image",
+       "altText": "La prueba del desconocido, 5 minutos: alguien que no conoce tu tienda compra pensando en voz alta. Guárdalo; el capítulo 1 está en YouTube."
+      }
+     ],
+     "scheduledFor": "2026-11-04T10:00:00.000Z",
+     "timezone": "Europe/Madrid",
+     "status": "scheduled",
+     "tags": [],
+     "hashtags": [],
+     "mentions": [],
+     "visibility": "public",
+     "crosspostingEnabled": true,
+     "metadata": {
+      "usageCounted": true
+     },
+     "recycling": {
+      "enabled": false,
+      "gapFreq": "month",
+      "recycleCount": 0,
+      "contentVariations": [],
+      "contentVariationIndex": 0
+     },
+     "createdAt": "2026-10-29T10:45:12.432Z",
+     "updatedAt": "2026-10-29T10:45:12.445Z",
+     "platforms": [
+      {
+       "_id": "6ae323b8af3ce686a185e39f",
+       "platform": "instagram",
+       "accountId": {
+        "_id": "6ae2dd79f681a077b3f325cb",
+        "platform": "instagram",
+        "username": "brandooers_skillup",
+        "displayName": "Marc",
+        "profilePicture": "https://scontent-mad1-1.cdninstagram.com/v/t51.82787-19/870141298_17952962103067204_1873479444706075435_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=101&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=8uNA7brZm4MQ7kNvwFt3ULl&_nc_oc=AdrsyGj56WpnxPkdK9SB5-ynLZeZKp7eu4mp-IE_yursP_Bmu1mOivdiPx1O-hGjGOs&_nc_zt=24&_nc_ht=scontent-mad1-1.cdninstagram.com&edm=AP4hL3IEAAAA&_nc_gid=F7Tjsj6IynW7Z_Mz6RiC_g&_nc_tpa=Q5bMBQJPm2jamLmk-gEuG46ZlFvXFFMOXaQvMrfwAKMoJ-TMIoduo6gyAo94UJ1lZwyiBbchTn_7PsFpaQ&oh=00_AQQMPIArRHOl1FwBfTrSMVXTTYK7x0NJz03yhd299mUfGg&oe=6AE8C185",
+        "isActive": true,
+        "profileId": "6ae2d5edd311603d41535e26"
+       },
+       "profileId": "6ae2d5edd311603d41535e26",
+       "customMedia": [],
+       "scheduledFor": "2026-11-04T10:00:00.000Z",
+       "platformSpecificData": {
+        "isAiGenerated": true
+       },
+       "status": "pending",
+       "publishAttempts": 0,
+       "contentHash": "9134419f43d93648b6faf179e468ca10"
+      }
+     ]
+    },
+    "message": "Post scheduled successfully"
+   },
+   "polledAt": "2026-10-29T11:45:12"
+  },
+  "C01-IG-H2": {
+   "mediaUrl": "https://media.zernio.com/temp/1793270801304_8d98abac9baeb00c_historia_h2_capitulo1_manana_1080x1920.png",
+   "scheduledFor_utc": "2026-11-01T20:00:00.000Z",
+   "madrid": "dom 1-nov-2026 21:00",
+   "accountId": "6ae2dd79f681a077b3f325cb",
+   "nota": "historia como imagen, sin adhesivos",
+   "fieldsSent": {
+    "content": "",
+    "mediaItems": [
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793270801304_8d98abac9baeb00c_historia_h2_capitulo1_manana_1080x1920.png"
+     }
+    ],
+    "platforms": [
+     {
+      "platform": "instagram",
+      "accountId": "6ae2dd79f681a077b3f325cb",
+      "platformSpecificData": {
+       "contentType": "story",
+       "isAiGenerated": false
+      }
+     }
+    ],
+    "scheduledFor": "2026-11-01T20:00:00.000Z"
+   },
+   "validate": {
+    "http": 200,
+    "response": {
+     "valid": true,
+     "message": "No validation issues found."
+    }
+   },
+   "idempotencyKey": "35592ed5-0892-4d8c-a7e4-09ac151ce1fc",
+   "createHttp": 201,
+   "postId": "6ae3241c45314e029a35e8c5",
+   "status": "scheduled",
+   "scheduledFor_returned": "2026-11-01T20:00:00.000Z",
+   "createResponse": {
+    "post": {
+     "_id": "6ae3241c45314e029a35e8c5",
+     "userId": "69b0767a0c758c4cbd9b3fb1",
+     "title": "",
+     "content": "",
+     "mediaItems": [
+      {
+       "_id": "6ae3241d45314e029a35e8c9",
+       "url": "https://media.zernio.com/media/1793270801304_8d98abac9baeb00c_historia_h2_capitulo1_manana_1080x1920.png",
+       "type": "image"
+      }
+     ],
+     "scheduledFor": "2026-11-01T20:00:00.000Z",
+     "timezone": "Europe/Madrid",
+     "status": "scheduled",
+     "tags": [],
+     "hashtags": [],
+     "mentions": [],
+     "visibility": "public",
+     "crosspostingEnabled": true,
+     "metadata": {
+      "usageCounted": true
+     },
+     "recycling": {
+      "enabled": false,
+      "gapFreq": "month",
+      "recycleCount": 0,
+      "contentVariations": [],
+      "contentVariationIndex": 0
+     },
+     "createdAt": "2026-10-29T10:46:53.074Z",
+     "updatedAt": "2026-10-29T10:46:53.079Z",
+     "platforms": [
+      {
+       "_id": "6ae3241d45314e029a35e8c7",
+       "platform": "instagram",
+       "accountId": {
+        "_id": "6ae2dd79f681a077b3f325cb",
+        "platform": "instagram",
+        "username": "brandooers_skillup",
+        "displayName": "Marc",
+        "profilePicture": "https://scontent-mad1-1.cdninstagram.com/v/t51.82787-19/870141298_17952962103067204_1873479444706075435_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=101&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=8uNA7brZm4MQ7kNvwFt3ULl&_nc_oc=AdrsyGj56WpnxPkdK9SB5-ynLZeZKp7eu4mp-IE_yursP_Bmu1mOivdiPx1O-hGjGOs&_nc_zt=24&_nc_ht=scontent-mad1-1.cdninstagram.com&edm=AP4hL3IEAAAA&_nc_gid=F7Tjsj6IynW7Z_Mz6RiC_g&_nc_tpa=Q5bMBQJPm2jamLmk-gEuG46ZlFvXFFMOXaQvMrfwAKMoJ-TMIoduo6gyAo94UJ1lZwyiBbchTn_7PsFpaQ&oh=00_AQQMPIArRHOl1FwBfTrSMVXTTYK7x0NJz03yhd299mUfGg&oe=6AE8C185",
+        "isActive": true,
+        "profileId": "6ae2d5edd311603d41535e26"
+       },
+       "profileId": "6ae2d5edd311603d41535e26",
+       "customMedia": [],
+       "scheduledFor": "2026-11-01T20:00:00.000Z",
+       "platformSpecificData": {
+        "contentType": "story",
+        "isAiGenerated": false
+       },
+       "status": "pending",
+       "publishAttempts": 0,
+       "contentHash": "2cd8bdf52179e21885754df038f338ee"
+      }
+     ]
+    },
+    "message": "Post scheduled successfully"
+   },
+   "polledAt": "2026-10-29T11:46:53",
+   "cancelled": {
+    "http": 200,
+    "response": {
+     "message": "Post deleted successfully"
+    },
+    "at": "2026-10-30T07:23:35",
+    "why": "Chapter went public 29-oct; the story says «Capítulo 1, mañana · 17:00» and would be false on 1-nov."
+   }
+  },
+  "C01-IG-H4": {
+   "mediaUrl": "https://media.zernio.com/temp/1793270802088_b6c153e0ebe763d7_historia_h4_donde_esta_el_salto_1080x1920.png",
+   "scheduledFor_utc": "2026-11-04T12:00:00.000Z",
+   "madrid": "mié 4-nov-2026 13:00",
+   "accountId": "6ae2dd79f681a077b3f325cb",
+   "nota": "historia como imagen, sin adhesivos",
+   "fieldsSent": {
+    "content": "",
+    "mediaItems": [
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793270802088_b6c153e0ebe763d7_historia_h4_donde_esta_el_salto_1080x1920.png"
+     }
+    ],
+    "platforms": [
+     {
+      "platform": "instagram",
+      "accountId": "6ae2dd79f681a077b3f325cb",
+      "platformSpecificData": {
+       "contentType": "story",
+       "isAiGenerated": false
+      }
+     }
+    ],
+    "scheduledFor": "2026-11-04T12:00:00.000Z"
+   },
+   "validate": {
+    "http": 200,
+    "response": {
+     "valid": true,
+     "message": "No validation issues found."
+    }
+   },
+   "idempotencyKey": "36f53c37-fa88-45b7-ab32-4a2aa88cb699",
+   "createHttp": 201,
+   "postId": "6ae3241d5a8b63605bebacca",
+   "status": "scheduled",
+   "scheduledFor_returned": "2026-11-04T12:00:00.000Z",
+   "createResponse": {
+    "post": {
+     "_id": "6ae3241d5a8b63605bebacca",
+     "userId": "69b0767a0c758c4cbd9b3fb1",
+     "title": "",
+     "content": "",
+     "mediaItems": [
+      {
+       "_id": "6ae3241e5a8b63605bebacce",
+       "url": "https://media.zernio.com/media/1793270802088_b6c153e0ebe763d7_historia_h4_donde_esta_el_salto_1080x1920.png",
+       "type": "image"
+      }
+     ],
+     "scheduledFor": "2026-11-04T12:00:00.000Z",
+     "timezone": "Europe/Madrid",
+     "status": "scheduled",
+     "tags": [],
+     "hashtags": [],
+     "mentions": [],
+     "visibility": "public",
+     "crosspostingEnabled": true,
+     "metadata": {
+      "usageCounted": true
+     },
+     "recycling": {
+      "enabled": false,
+      "gapFreq": "month",
+      "recycleCount": 0,
+      "contentVariations": [],
+      "contentVariationIndex": 0
+     },
+     "createdAt": "2026-10-29T10:46:54.023Z",
+     "updatedAt": "2026-10-29T10:46:54.027Z",
+     "platforms": [
+      {
+       "_id": "6ae3241e5a8b63605bebaccc",
+       "platform": "instagram",
+       "accountId": {
+        "_id": "6ae2dd79f681a077b3f325cb",
+        "platform": "instagram",
+        "username": "brandooers_skillup",
+        "displayName": "Marc",
+        "profilePicture": "https://scontent-mad1-1.cdninstagram.com/v/t51.82787-19/870141298_17952962103067204_1873479444706075435_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=101&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=8uNA7brZm4MQ7kNvwFt3ULl&_nc_oc=AdrsyGj56WpnxPkdK9SB5-ynLZeZKp7eu4mp-IE_yursP_Bmu1mOivdiPx1O-hGjGOs&_nc_zt=24&_nc_ht=scontent-mad1-1.cdninstagram.com&edm=AP4hL3IEAAAA&_nc_gid=F7Tjsj6IynW7Z_Mz6RiC_g&_nc_tpa=Q5bMBQJPm2jamLmk-gEuG46ZlFvXFFMOXaQvMrfwAKMoJ-TMIoduo6gyAo94UJ1lZwyiBbchTn_7PsFpaQ&oh=00_AQQMPIArRHOl1FwBfTrSMVXTTYK7x0NJz03yhd299mUfGg&oe=6AE8C185",
+        "isActive": true,
+        "profileId": "6ae2d5edd311603d41535e26"
+       },
+       "profileId": "6ae2d5edd311603d41535e26",
+       "customMedia": [],
+       "scheduledFor": "2026-11-04T12:00:00.000Z",
+       "platformSpecificData": {
+        "contentType": "story",
+        "isAiGenerated": false
+       },
+       "status": "pending",
+       "publishAttempts": 0,
+       "contentHash": "e4586a79b6137a6e9023ac6b154b7223"
+      }
+     ]
+    },
+    "message": "Post scheduled successfully"
+   },
+   "polledAt": "2026-10-29T11:46:54"
+  },
+  "C01-FB-P1": {
+   "fieldsSent": {
+    "content": "Ya está fuera el capítulo 1 de «Tu tienda vende más»: los cuatro pasos por donde se escapa una venta online y una prueba de diez minutos para cada uno.\n\nhttps://www.youtube.com/watch?v=xOx3j_BtZZY&utm_source=facebook&utm_medium=social&utm_campaign=tvm-cap01&utm_content=c01-fb-p1\n\nVídeo con mi avatar creado con IA.",
+    "platforms": [
+     {
+      "platform": "facebook",
+      "accountId": "6ae2dfbb81cdbb682c9f2766",
+      "platformSpecificData": {
+       "pageId": "1468362009686872"
+      }
+     }
+    ],
+    "publishNow": true
+   },
+   "publishedNow": true,
+   "validate": {
+    "http": 200,
+    "response": {
+     "valid": true,
+     "message": "No validation issues found."
+    }
+   }
+  },
+  "C01-LI-P1": {
+   "fieldsSent": {
+    "content": "Ya está fuera el capítulo 1 de «Tu tienda vende más».\n\nUna venta online pasa por cuatro pasos: encontrar, entender, comprar y pagar. En el capítulo vemos la señal que delata cada uno en tus números, una prueba de diez minutos para hacerla tú solo y el arreglo.\n\n¿En cuál de los cuatro se le escapa la venta a tu tienda?\n\n#ecommerce #tiendaonline\n\nVídeo con mi avatar creado con IA.",
+    "platforms": [
+     {
+      "platform": "linkedin",
+      "accountId": "6ae2e281307878009bccc784",
+      "platformSpecificData": {
+       "organizationUrn": "urn:li:organization:107968246",
+       "firstComment": "El capítulo completo: https://www.youtube.com/watch?v=xOx3j_BtZZY&utm_source=linkedin&utm_medium=social&utm_campaign=tvm-cap01&utm_content=c01-li-p1"
+      }
+     }
+    ],
+    "publishNow": true
+   },
+   "publishedNow": true,
+   "validate": {
+    "http": 200,
+    "response": {
+     "valid": true,
+     "message": "No validation issues found."
+    }
+   }
+  },
+  "C01-IG-H3": {
+   "fieldsSent": {
+    "content": "",
+    "mediaItems": [
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793287455647_ec6a1843b5b75fa5_historia_h3_mas_visitas_no_1080x1920.png"
+     }
+    ],
+    "platforms": [
+     {
+      "platform": "instagram",
+      "accountId": "6ae2dd79f681a077b3f325cb",
+      "platformSpecificData": {
+       "contentType": "story",
+       "isAiGenerated": true
+      }
+     }
+    ],
+    "publishNow": true
+   },
+   "publishedNow": true,
+   "validate": {
+    "http": 200,
+    "response": {
+     "valid": true,
+     "message": "No validation issues found."
+    }
+   }
+  },
+  "C01-IG-H5": {
+   "fieldsSent": {
+    "content": "",
+    "mediaItems": [
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793287456181_b429975336deeb68_historia_h5_pagar_de_15_a_3_1080x1920.png"
+     }
+    ],
+    "platforms": [
+     {
+      "platform": "instagram",
+      "accountId": "6ae2dd79f681a077b3f325cb",
+      "platformSpecificData": {
+       "contentType": "story",
+       "isAiGenerated": false
+      }
+     }
+    ],
+    "publishNow": true
+   },
+   "publishedNow": true,
+   "validate": {
+    "http": 200,
+    "response": {
+     "valid": true,
+     "message": "No validation issues found."
+    }
+   }
+  },
+  "C01-IG-P1": {
+   "fieldsSent": {
+    "content": "Ya está: el capítulo 1 de «Tu tienda vende más».\n\nVa de lo que más se repite en una tienda online: hay visitas, pero no hay ventas. Los cuatro pasos por donde se escapa una venta (encontrar, entender, comprar y pagar) y una prueba de diez minutos para cada uno.\n\nEl capítulo completo, en YouTube: enlace en la bio.\n\n#tiendaonline #ecommerce #ventasonline",
+    "mediaItems": [
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793287456519_3e54e202561f803d_ya_esta_capitulo1_1080x1350.png",
+      "altText": "Marc mira a cámara en un salón luminoso. Texto: Ya está: capítulo 1. Tu tienda vende más, en YouTube. Logo de Brandooers SkillUp."
+     }
+    ],
+    "platforms": [
+     {
+      "platform": "instagram",
+      "accountId": "6ae2dd79f681a077b3f325cb",
+      "platformSpecificData": {
+       "isAiGenerated": true
+      }
+     }
+    ],
+    "publishNow": true
+   },
+   "publishedNow": true,
+   "validate": {
+    "http": 200,
+    "response": {
+     "valid": true,
+     "message": "No validation issues found."
+    }
+   }
+  },
+  "C01-TT-P1": {
+   "fieldsSent": {
+    "content": "Ya está disponible el capítulo 1 de «Tu tienda vende más»",
+    "mediaItems": [
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793287456980_b3d6b1e13d136948_ya_esta_capitulo1_1080x1920.png"
+     }
+    ],
+    "platforms": [
+     {
+      "platform": "tiktok",
+      "accountId": "6ae2de19064494d9f3f1b5bf"
+     }
+    ],
+    "tiktokSettings": {
+     "privacy_level": "PUBLIC_TO_EVERYONE",
+     "allow_comment": true,
+     "media_type": "photo",
+     "photo_cover_index": 0,
+     "description": "Ya está disponible el capítulo 1 de «Tu tienda vende más»: por qué tu tienda tiene visitas y no vende. Busca SkillUp Brandooers en YouTube.\n\n#tiendaonline #ecommerce #emprender\n\nLa imagen es mi avatar creado con IA.",
+     "content_preview_confirmed": true,
+     "express_consent_given": true
+    },
+    "publishNow": true
+   },
+   "publishedNow": true,
+   "validate": {
+    "http": 200,
+    "response": {
+     "valid": true,
+     "message": "No validation issues found."
+    }
+   }
+  }
+ },
+ "media_now": {
+  "C01-IG-H3": "https://media.zernio.com/temp/1793287455647_ec6a1843b5b75fa5_historia_h3_mas_visitas_no_1080x1920.png",
+  "C01-IG-H5": "https://media.zernio.com/temp/1793287456181_b429975336deeb68_historia_h5_pagar_de_15_a_3_1080x1920.png",
+  "C01-IG-P1": "https://media.zernio.com/temp/1793287456519_3e54e202561f803d_ya_esta_capitulo1_1080x1350.png",
+  "C01-TT-P1": "https://media.zernio.com/temp/1793287456980_b3d6b1e13d136948_ya_esta_capitulo1_1080x1920.png"
+ }
+}

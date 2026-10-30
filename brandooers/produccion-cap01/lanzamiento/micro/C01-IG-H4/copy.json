@@ -1,0 +1,14 @@
+{
+ "id": "C01-IG-H4",
+ "red": "instagram · historia",
+ "fecha_madrid": "mié 4-nov-2026 13:00",
+ "scheduledFor_utc": "2026-11-04T12:00:00.000Z",
+ "imagen": "../../primeras/historia_h4_donde_esta_el_salto_1080x1920.png",
+ "alt": [
+  "Embudo de ejemplo: 100 visitas, 60 ven ficha, 20 al carrito, 15 empiezan a pagar, 3 compran. ¿Dónde está el salto?"
+ ],
+ "adhesivos": "ninguno (imagen sola)",
+ "etiqueta_ia": {
+  "instagram.isAiGenerated": false
+ }
+}

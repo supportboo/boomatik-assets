@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Marco 3 · Firma · Educando innovación y estrategia</title>
+<link rel="stylesheet" href="marcos.css">
+<style>
+/* «Firma»: the lightest frame. No bezel: a 2.5 px gradient line inset 18 px (12 px at the bottom, under the captions); the brand
+   credit handwritten in Caveat on a dark tag at the top left and the logo on another at the top right, both one line high
+   (y 22-80: screen content starts at y 93, the step cards and «NÚMEROS DE EJEMPLO» lower still); the two eyes alone look out
+   from the bottom-left corner (left of the captions, under the phone screens). */
+.tag { top: 22px; height: 58px; padding: 0 26px; border-radius: 16px; border: 1.5px solid rgba(255, 255, 255, .14); }
+#cred { left: 34px; }
+#cred p { font: 700 42px/1 "Caveat"; color: var(--ide); white-space: nowrap; padding-top: 2px; }
+#marca { right: 34px; }
+#ojos { left: 40px; bottom: 26px; width: 118px; height: 74px; border-radius: 37px; justify-content: center;
+  border: 1.5px solid rgba(255, 255, 255, .14); }
+#ojos svg { width: 92px; height: auto; overflow: visible; }
+</style>
+</head>
+<body>
+<svg class="full" viewBox="0 0 1920 1080" aria-hidden="true">
+  <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1920" y2="0">
+    <stop offset="0" stop-color="#00D4FF"/><stop offset=".5" stop-color="#8B5CF6"/><stop offset="1" stop-color="#EC4899"/></linearGradient></defs>
+  <rect x="18" y="18" width="1884" height="1050" rx="30" fill="none" stroke="url(#g)" stroke-width="2.5"/>
+</svg>
+<div class="plate tag" id="cred"><p>Educando innovación y estrategia</p></div>
+<div class="plate tag" id="marca"><span class="logo">Brand<svg class="beyes" viewBox="0 0 100 58" aria-hidden="true"><defs>
+  <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#0891B2"/></linearGradient>
+  <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0891B2"/><stop offset="100%" stop-color="#E4A900"/></linearGradient>
+  <radialGradient id="ir1"><stop offset="0%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#6D28D9"/></radialGradient>
+  <radialGradient id="ir2"><stop offset="0%" stop-color="#67E8F9"/><stop offset="100%" stop-color="#0891B2"/></radialGradient></defs>
+  <g><ellipse cx="25" cy="36" rx="18" ry="18" fill="none" stroke="url(#bg1)" stroke-width="3"/><circle cx="25" cy="36" r="7.5" fill="url(#ir1)"/><circle cx="25" cy="36" r="3.4" fill="#0a0a12"/><circle cx="28" cy="33" r="1.8" fill="#fff"/></g>
+  <g><ellipse cx="73" cy="36" rx="18" ry="18" fill="none" stroke="url(#bg2)" stroke-width="3"/><circle cx="73" cy="36" r="7.5" fill="url(#ir2)"/><circle cx="73" cy="36" r="3.4" fill="#0a0a12"/><circle cx="76" cy="33" r="1.8" fill="#fff"/></g>
+</svg>ers<span class="ide">SkillUp</span></span></div>
+<div class="plate" id="ojos"><svg viewBox="0 0 100 58" aria-hidden="true">
+  <g><ellipse cx="25" cy="29" rx="18" ry="18" fill="none" stroke="url(#bg1)" stroke-width="3.4"/><circle cx="25" cy="29" r="9" fill="url(#ir1)"/><circle cx="25" cy="29" r="4" fill="#0a0a12"/><circle cx="28.5" cy="25.5" r="2.2" fill="#fff"/></g>
+  <g><ellipse cx="73" cy="29" rx="18" ry="18" fill="none" stroke="url(#bg2)" stroke-width="3.4"/><circle cx="73" cy="29" r="9" fill="url(#ir2)"/><circle cx="73" cy="29" r="4" fill="#0a0a12"/><circle cx="76.5" cy="25.5" r="2.2" fill="#fff"/></g>
+</svg></div>
+</body>
+</html>

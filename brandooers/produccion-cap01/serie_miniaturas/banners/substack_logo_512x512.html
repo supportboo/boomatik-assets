@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>substack_logo_512x512</title>
+<style>
+@font-face{font-family:"Anton";src:url("../assets/Anton.ttf")}
+@font-face{font-family:"Inter";src:url("../assets/Inter.ttf");font-weight:100 900}
+@font-face{font-family:"Caveat";src:url("../assets/Caveat.ttf");font-weight:400 700}
+@font-face{font-family:"Space Grotesk";src:url("../assets/SpaceGroteskBD.ttf");font-weight:700}
+:root{--k:#0b0918;--k2:#12102a;--w:#fff;--p:#EC4899;--c:#00D4FF;--v:#8B5CF6;--m:#b9b0d6;
+  --grad:linear-gradient(120deg,#00D4FF,#8B5CF6,#EC4899)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow:hidden;background:var(--k)}
+.stage{position:absolute;inset:0;overflow:hidden;background:var(--k)}
+.ph{position:absolute;display:block}
+.logo{display:inline-flex;align-items:center;gap:.1em;font-family:"Inter";font-weight:900;line-height:1;letter-spacing:-.02em;color:#fff;white-space:nowrap}
+.logo .beyes{width:1.269em;height:auto;margin:0 .02em;overflow:visible}
+.logo .ide{font-family:"Caveat";font-weight:700;font-size:1.05em;color:#67E8F9;margin-right:.22em;transform:translateY(.04em)}
+.dark .logo{color:#0b0918} .dark .logo .ide{color:#0891B2}
+.blk{display:inline-block;font-family:"Anton";line-height:1.04;white-space:nowrap;padding:.06em .14em 0}
+.p{background:var(--p);color:var(--k)} .c{background:var(--c);color:var(--k)} .w{background:#fff;color:var(--k)}
+.cav{font-family:"Caveat";font-weight:700;color:var(--w)}
+.sg{font-family:"Space Grotesk";font-weight:700;letter-spacing:-.02em}
+.gtxt{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+html,body{width:512px;height:512px}.serie{color:#fff;padding:.38em .7em .34em;border-radius:999px;background:var(--grad);letter-spacing:.01em}</style></head>
+<body>
+<div class="stage"><div style="position:absolute;inset:0;background:radial-gradient(420px 420px at 256px 256px,rgba(139,92,246,.50),transparent 70%),radial-gradient(420px 420px at 470px 480px,rgba(236,72,153,.30),transparent 70%),radial-gradient(420px 420px at 40px 40px,rgba(0,212,255,.22),transparent 70%)"></div>
+<div style="position:absolute;left:56px;top:150px;width:400px"><svg width="400" height="232" viewBox="0 0 100 58" aria-hidden="true"><defs><linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#0891B2"/></linearGradient><linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0891B2"/><stop offset="100%" stop-color="#E4A900"/></linearGradient><radialGradient id="ir1"><stop offset="0%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#6D28D9"/></radialGradient><radialGradient id="ir2"><stop offset="0%" stop-color="#67E8F9"/><stop offset="100%" stop-color="#0891B2"/></radialGradient></defs><g><ellipse cx="25" cy="36" rx="18" ry="18" fill="none" stroke="url(#bg1)" stroke-width="3"/><circle cx="25" cy="36" r="7.5" fill="url(#ir1)"/><circle cx="25" cy="36" r="3.4" fill="#0a0a12"/><circle cx="28" cy="33" r="1.8" fill="#fff"/></g><g><ellipse cx="73" cy="36" rx="18" ry="18" fill="none" stroke="url(#bg2)" stroke-width="3"/><circle cx="73" cy="36" r="7.5" fill="url(#ir2)"/><circle cx="73" cy="36" r="3.4" fill="#0a0a12"/><circle cx="76" cy="33" r="1.8" fill="#fff"/></g></svg></div>
+</div>
+<script>
+document.fonts.ready.then(() => {
+  for (const el of document.querySelectorAll('[data-fit]')) {
+    let s = parseFloat(el.dataset.fit), min = parseFloat(el.dataset.min || 10);
+    el.style.fontSize = s + 'px';
+    while (s > min && (el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1)) { s -= 2; el.style.fontSize = s + 'px'; }
+    el.dataset.final = s;
+  }
+  window.__fitted = true;
+});
+</script>
+</body></html>

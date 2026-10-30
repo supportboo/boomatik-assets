@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Marco 1 · Bisel · Aprende · Comparte · Aplica</title>
+<link rel="stylesheet" href="marcos.css">
+<style>
+/* «Bisel»: a solid 16 px bezel (14 px at the bottom, under the captions) with rounded inner corners and the brand gradient
+   on its inner edge; two tabs hang from the top bezel: the slogan on the left, the logo on the right (it replaces the
+   corner bug). Tabs end at y 78 (screen content starts at y 93: «TU DIAGNÓSTICO», «TIENDA DE EJEMPLO»), the left one before
+   x 715 and the right one after x 1225. */
+.tab { position: absolute; top: 14.75px; height: 63.25px; padding: 0 30px; display: flex; align-items: center;
+  border: 2.5px solid transparent; border-top: 0; border-radius: 0 0 24px 24px;
+  background: linear-gradient(#0b0918, #0b0918) padding-box,
+              linear-gradient(90deg, #00D4FF 0, #8B5CF6 960px, #EC4899 1920px) border-box fixed; }
+#tabL { left: 16px; }
+#tabR { right: 16px; }
+.slogan { font: 700 42px/1 "Space Grotesk"; letter-spacing: -.005em; color: var(--ink); white-space: nowrap; padding-top: 2px; }
+.slogan i { font-style: normal; padding: 0 .28em; }
+.slogan i.c { color: var(--cy); }
+.slogan i.p { color: var(--pk); }
+</style>
+</head>
+<body>
+<svg class="full" viewBox="0 0 1920 1080" aria-hidden="true">
+  <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1920" y2="0">
+    <stop offset="0" stop-color="#00D4FF"/><stop offset=".5" stop-color="#8B5CF6"/><stop offset="1" stop-color="#EC4899"/></linearGradient></defs>
+  <path fill="#0b0918" fill-rule="evenodd"
+        d="M0 0H1920V1080H0Z M44 16H1876A28 28 0 0 1 1904 44V1038A28 28 0 0 1 1876 1066H44A28 28 0 0 1 16 1038V44A28 28 0 0 1 44 16Z"/>
+  <rect x="16" y="16" width="1888" height="1050" rx="28" fill="none" stroke="url(#g)" stroke-width="2.5"/>
+</svg>
+<div class="tab" id="tabL"><p class="slogan">Aprende<i class="c">·</i>Comparte<i class="p">·</i>Aplica</p></div>
+<div class="tab" id="tabR"><span class="logo">Brand<svg class="beyes" viewBox="0 0 100 58" aria-hidden="true"><defs>
+  <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#0891B2"/></linearGradient>
+  <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0891B2"/><stop offset="100%" stop-color="#E4A900"/></linearGradient>
+  <radialGradient id="ir1"><stop offset="0%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#6D28D9"/></radialGradient>
+  <radialGradient id="ir2"><stop offset="0%" stop-color="#67E8F9"/><stop offset="100%" stop-color="#0891B2"/></radialGradient></defs>
+  <g><ellipse cx="25" cy="36" rx="18" ry="18" fill="none" stroke="url(#bg1)" stroke-width="3"/><circle cx="25" cy="36" r="7.5" fill="url(#ir1)"/><circle cx="25" cy="36" r="3.4" fill="#0a0a12"/><circle cx="28" cy="33" r="1.8" fill="#fff"/></g>
+  <g><ellipse cx="73" cy="36" rx="18" ry="18" fill="none" stroke="url(#bg2)" stroke-width="3"/><circle cx="73" cy="36" r="7.5" fill="url(#ir2)"/><circle cx="73" cy="36" r="3.4" fill="#0a0a12"/><circle cx="76" cy="33" r="1.8" fill="#fff"/></g>
+</svg>ers<span class="ide">SkillUp</span></span></div>
+</body>
+</html>

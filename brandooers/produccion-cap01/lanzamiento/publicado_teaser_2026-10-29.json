@@ -1,0 +1,523 @@
+{
+ "date": "2026-10-29",
+ "profile": "BRANDOOERS",
+ "pieces": {
+  "C01-IG-F0": {
+   "fieldsSent": {
+    "content": "El lunes a las 17:00 estreno el capítulo 1 de «Tu tienda vende más».\n\nVa de lo que más se repite en una tienda online: hay visitas, pero no hay ventas.\n\nVamos a ver los cuatro pasos por donde se escapa una venta (encontrar, entender, comprar y pagar) y una prueba de diez minutos para cada uno.\n\nActiva los avisos del perfil para no perdértelo.\n\n#tiendaonline #ecommerce #ventasonline",
+    "mediaItems": [
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793256259078_ca527f49fc62e6ed_teaser_lunes_capitulo1_1080x1350.png",
+      "altText": "Marc mira a cámara en un salón luminoso. Texto: El lunes, capítulo 1. Tu tienda vende más. Logo de Brandooers SkillUp."
+     }
+    ],
+    "platforms": [
+     {
+      "platform": "instagram",
+      "accountId": "6ae2dd79f681a077b3f325cb",
+      "platformSpecificData": {
+       "isAiGenerated": true
+      }
+     }
+    ],
+    "publishNow": true
+   },
+   "validate": {
+    "http": 200,
+    "response": {
+     "valid": true,
+     "message": "No validation issues found."
+    }
+   },
+   "idempotencyKey": "69663118-6a99-473b-bc3f-6143aa0f5e8a",
+   "createHttp": 201,
+   "postId": "6ae32193d9ee7f9c650e778a",
+   "status": "published",
+   "platformStatus": "published",
+   "url": "https://www.instagram.com/p/DfEzo9pgA38/",
+   "platformPostId": "18002817740810763",
+   "errorMessage": null,
+   "createResponse": {
+    "post": {
+     "_id": "6ae32193d9ee7f9c650e778a",
+     "userId": "69b0767a0c758c4cbd9b3fb1",
+     "title": "",
+     "content": "El lunes a las 17:00 estreno el capítulo 1 de «Tu tienda vende más».\n\nVa de lo que más se repite en una tienda online: hay visitas, pero no hay ventas.\n\nVamos a ver los cuatro pasos por donde se escapa una venta (encontrar, entender, comprar y pagar) y una prueba de diez minutos para cada uno.\n\nActiva los avisos del perfil para no perdértelo.\n\n#tiendaonline #ecommerce #ventasonline",
+     "mediaItems": [
+      {
+       "_id": "6ae32194d9ee7f9c650e778f",
+       "url": "https://media.zernio.com/media/1793256259078_ca527f49fc62e6ed_teaser_lunes_capitulo1_1080x1350.png",
+       "type": "image",
+       "altText": "Marc mira a cámara en un salón luminoso. Texto: El lunes, capítulo 1. Tu tienda vende más. Logo de Brandooers SkillUp."
+      }
+     ],
+     "scheduledFor": "2026-10-29T10:36:03.319Z",
+     "timezone": "Europe/Madrid",
+     "status": "publishing",
+     "tags": [],
+     "hashtags": [],
+     "mentions": [],
+     "visibility": "public",
+     "crosspostingEnabled": true,
+     "metadata": {
+      "usageCounted": true
+     },
+     "publishingClaimedAt": "2026-10-29T10:36:04.398Z",
+     "recycling": {
+      "enabled": false,
+      "gapFreq": "month",
+      "recycleCount": 0,
+      "contentVariations": [],
+      "contentVariationIndex": 0
+     },
+     "createdAt": "2026-10-29T10:36:04.361Z",
+     "updatedAt": "2026-10-29T10:36:12.072Z",
+     "platforms": [
+      {
+       "_id": "6ae32194d9ee7f9c650e778d",
+       "platform": "instagram",
+       "accountId": {
+        "_id": "6ae2dd79f681a077b3f325cb",
+        "platform": "instagram",
+        "username": "brandooers_skillup",
+        "displayName": "Marc",
+        "profilePicture": "https://scontent-mad1-1.cdninstagram.com/v/t51.82787-19/870141298_17952962103067204_1873479444706075435_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=101&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=8uNA7brZm4MQ7kNvwFt3ULl&_nc_oc=AdrsyGj56WpnxPkdK9SB5-ynLZeZKp7eu4mp-IE_yursP_Bmu1mOivdiPx1O-hGjGOs&_nc_zt=24&_nc_ht=scontent-mad1-1.cdninstagram.com&edm=AP4hL3IEAAAA&_nc_gid=F7Tjsj6IynW7Z_Mz6RiC_g&_nc_tpa=Q5bMBQJPm2jamLmk-gEuG46ZlFvXFFMOXaQvMrfwAKMoJ-TMIoduo6gyAo94UJ1lZwyiBbchTn_7PsFpaQ&oh=00_AQQMPIArRHOl1FwBfTrSMVXTTYK7x0NJz03yhd299mUfGg&oe=6AE8C185",
+        "isActive": true,
+        "profileId": "6ae2d5edd311603d41535e26"
+       },
+       "profileId": "6ae2d5edd311603d41535e26",
+       "customMedia": [],
+       "scheduledFor": "2026-10-29T10:36:03.319Z",
+       "platformSpecificData": {
+        "isAiGenerated": true
+       },
+       "status": "processing",
+       "publishAttempts": 1,
+       "contentHash": "89045c8c979007ce45956ef9f1ed3f8b"
+      }
+     ]
+    },
+    "message": "Post accepted, publishing in progress"
+   },
+   "polledAt": "2026-10-29T12:28:20"
+  },
+  "C01-FB-P0": {
+   "fieldsSent": {
+    "content": "El lunes a las 17:00 estrenamos el capítulo 1 de «Tu tienda vende más»: por qué tu tienda tiene visitas y no vende, los cuatro pasos por donde se escapa la venta y una prueba de diez minutos para cada uno.\n\n#tiendaonline\n\nLa imagen es mi avatar creado con IA.",
+    "mediaItems": [
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793256259078_ca527f49fc62e6ed_teaser_lunes_capitulo1_1080x1350.png"
+     }
+    ],
+    "platforms": [
+     {
+      "platform": "facebook",
+      "accountId": "6ae2dfbb81cdbb682c9f2766",
+      "platformSpecificData": {
+       "pageId": "1468362009686872"
+      }
+     }
+    ],
+    "publishNow": true
+   },
+   "validate": {
+    "http": 200,
+    "response": {
+     "valid": true,
+     "message": "No validation issues found."
+    }
+   },
+   "idempotencyKey": "c171879e-9a67-4db2-bee6-ec1aafdc4152",
+   "createHttp": 201,
+   "postId": "6ae3219c29f2b8a925da644b",
+   "status": "published",
+   "platformStatus": "published",
+   "url": "https://www.facebook.com/1468362009686872_122096100579536027",
+   "platformPostId": "1468362009686872_122096100579536027",
+   "errorMessage": null,
+   "createResponse": {
+    "post": {
+     "_id": "6ae3219c29f2b8a925da644b",
+     "userId": "69b0767a0c758c4cbd9b3fb1",
+     "title": "",
+     "content": "El lunes a las 17:00 estrenamos el capítulo 1 de «Tu tienda vende más»: por qué tu tienda tiene visitas y no vende, los cuatro pasos por donde se escapa la venta y una prueba de diez minutos para cada uno.\n\n#tiendaonline\n\nLa imagen es mi avatar creado con IA.",
+     "mediaItems": [
+      {
+       "_id": "6ae3219c29f2b8a925da645e",
+       "url": "https://media.zernio.com/media/1793256259078_ca527f49fc62e6ed_teaser_lunes_capitulo1_1080x1350.png",
+       "type": "image"
+      }
+     ],
+     "scheduledFor": "2026-10-29T10:36:12.397Z",
+     "timezone": "Europe/Madrid",
+     "status": "published",
+     "tags": [],
+     "hashtags": [],
+     "mentions": [],
+     "visibility": "public",
+     "crosspostingEnabled": true,
+     "metadata": {
+      "usageCounted": true
+     },
+     "publishingClaimedAt": "2026-10-29T10:36:12.978Z",
+     "recycling": {
+      "enabled": false,
+      "gapFreq": "month",
+      "recycleCount": 0,
+      "contentVariations": [],
+      "contentVariationIndex": 0
+     },
+     "createdAt": "2026-10-29T10:36:12.940Z",
+     "updatedAt": "2026-10-29T10:36:19.472Z",
+     "platforms": [
+      {
+       "_id": "6ae3219c29f2b8a925da645c",
+       "platform": "facebook",
+       "accountId": {
+        "_id": "6ae2dfbb81cdbb682c9f2766",
+        "platform": "facebook",
+        "username": "Skillup.brandooers",
+        "displayName": "Skillup.brandooers",
+        "profilePicture": "https://scontent-cdg6-1.xx.fbcdn.net/v/t39.30808-1/866902292_122095975125536027_687337448674838765_n.png?stp=cp0_dst-png_s50x50&_nc_cat=107&ccb=1-7&_nc_sid=f907e8&_nc_ohc=uOxBb-DSbdMQ7kNvwHrNZLd&_nc_oc=AdpyCX5LYRJ3bp_qKrnjfLjJ7ORzaffZkOKbvwLakIxbAL16kExaVBZvAuLtOOWTZKM&_nc_zt=24&_nc_ht=scontent-cdg6-1.xx&edm=AJdBtusEAAAA&_nc_gid=Qs0LxFQLY4kYX2IAe-RAow&_nc_tpa=Q5bMBQIpPP8Ok4eA1i3YeX-pTN1FUUSxdfvCy1Im3dHr51afJhoWyongBpYh2uZHL43imqnli1pA4rqw&oh=00_AQRjvHonITq5Jvy5NVpq7gJ4tzrm8V6D0m5ja2oIiS_QLw&oe=6AE8C715",
+        "isActive": true,
+        "profileId": "6ae2d5edd311603d41535e26"
+       },
+       "profileId": "6ae2d5edd311603d41535e26",
+       "customMedia": [],
+       "scheduledFor": "2026-10-29T10:36:12.397Z",
+       "platformSpecificData": {
+        "pageId": "1468362009686872"
+       },
+       "status": "published",
+       "publishedAt": "2026-10-29T10:36:19.357Z",
+       "platformPostId": "1468362009686872_122096100579536027",
+       "platformPostUrl": "https://www.facebook.com/1468362009686872_122096100579536027",
+       "publishAttempts": 1,
+       "contentHash": "b8c868a047de71e7a53dff7a09cd3ff5"
+      }
+     ]
+    },
+    "message": "Post published successfully"
+   },
+   "polledAt": "2026-10-29T12:28:21"
+  },
+  "C01-LI-P0": {
+   "fieldsSent": {
+    "content": "El lunes arranca «Tu tienda vende más», la serie de Brandooers SkillUp para quien tiene una tienda online.\n\nCada lunes, un capítulo de unos diez minutos. El primero responde a la pregunta que más se repite: si mi tienda tiene visitas, ¿por qué no vende?\n\nLos cuatro pasos de una venta online, la señal que delata cada uno en tus números y una prueba de diez minutos que puedes hacer tú solo.\n\nSigue la página para verlo el lunes.\n\n#ecommerce #tiendaonline",
+    "mediaItems": [
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793256259078_ca527f49fc62e6ed_teaser_lunes_capitulo1_1080x1350.png"
+     }
+    ],
+    "platforms": [
+     {
+      "platform": "linkedin",
+      "accountId": "6ae2e281307878009bccc784",
+      "platformSpecificData": {
+       "organizationUrn": "urn:li:organization:107968246"
+      }
+     }
+    ],
+    "publishNow": true
+   },
+   "validate": {
+    "http": 200,
+    "response": {
+     "valid": true,
+     "message": "No validation issues found."
+    }
+   },
+   "idempotencyKey": "d9d97bf8-9f47-4570-9630-e94b7fcb67ac",
+   "createHttp": 201,
+   "postId": "6ae321a36a4a2c510df96f6c",
+   "status": "published",
+   "platformStatus": "published",
+   "url": "https://www.linkedin.com/feed/update/urn:li:share:7521520311226368002/",
+   "platformPostId": "urn:li:share:7521520311226368002",
+   "errorMessage": null,
+   "createResponse": {
+    "post": {
+     "_id": "6ae321a36a4a2c510df96f6c",
+     "userId": "69b0767a0c758c4cbd9b3fb1",
+     "title": "",
+     "content": "El lunes arranca «Tu tienda vende más», la serie de Brandooers SkillUp para quien tiene una tienda online.\n\nCada lunes, un capítulo de unos diez minutos. El primero responde a la pregunta que más se repite: si mi tienda tiene visitas, ¿por qué no vende?\n\nLos cuatro pasos de una venta online, la señal que delata cada uno en tus números y una prueba de diez minutos que puedes hacer tú solo.\n\nSigue la página para verlo el lunes.\n\n#ecommerce #tiendaonline",
+     "mediaItems": [
+      {
+       "_id": "6ae321a46a4a2c510df96f70",
+       "url": "https://media.zernio.com/media/1793256259078_ca527f49fc62e6ed_teaser_lunes_capitulo1_1080x1350.png",
+       "type": "image"
+      }
+     ],
+     "scheduledFor": "2026-10-29T10:36:19.727Z",
+     "timezone": "Europe/Madrid",
+     "status": "published",
+     "tags": [],
+     "hashtags": [],
+     "mentions": [],
+     "visibility": "public",
+     "crosspostingEnabled": true,
+     "metadata": {
+      "usageCounted": true
+     },
+     "publishingClaimedAt": "2026-10-29T10:36:20.587Z",
+     "recycling": {
+      "enabled": false,
+      "gapFreq": "month",
+      "recycleCount": 0,
+      "contentVariations": [],
+      "contentVariationIndex": 0
+     },
+     "createdAt": "2026-10-29T10:36:20.559Z",
+     "updatedAt": "2026-10-29T10:36:26.227Z",
+     "platforms": [
+      {
+       "_id": "6ae321a46a4a2c510df96f6e",
+       "platform": "linkedin",
+       "accountId": {
+        "_id": "6ae2e281307878009bccc784",
+        "platform": "linkedin",
+        "username": "Brandooers",
+        "displayName": "Brandooers",
+        "profilePicture": "https://media.licdn.com/dms/image/v2/D4E0BAQFFG_XyGBgm1Q/company-logo_100_100/B4EZ1KhotFHAAQ-/0/1775071825144/brandooers_logo?e=1795046400&v=beta&t=ivG0mUp43bY0N1WSKpxtSX6rjBdW8RiHF4rWJ0gjAcc",
+        "isActive": true,
+        "profileId": "6ae2d5edd311603d41535e26"
+       },
+       "profileId": "6ae2d5edd311603d41535e26",
+       "customMedia": [],
+       "scheduledFor": "2026-10-29T10:36:19.727Z",
+       "platformSpecificData": {
+        "organizationUrn": "urn:li:organization:107968246"
+       },
+       "status": "published",
+       "publishedAt": "2026-10-29T10:36:26.179Z",
+       "platformPostId": "urn:li:share:7521520311226368002",
+       "platformPostUrl": "https://www.linkedin.com/feed/update/urn:li:share:7521520311226368002/",
+       "publishAttempts": 1,
+       "contentHash": "a28e3ad3b0977b06208aed48b965e915"
+      }
+     ]
+    },
+    "message": "Post published successfully"
+   },
+   "polledAt": "2026-10-29T12:28:21"
+  },
+  "C01-TT-F0": {
+   "fieldsSent": {
+    "content": "El lunes a las 17:00, capítulo 1 de «Tu tienda vende más»",
+    "mediaItems": [
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793256259558_5dfa2c45179d54cc_teaser_lunes_capitulo1_1080x1920.png"
+     }
+    ],
+    "platforms": [
+     {
+      "platform": "tiktok",
+      "accountId": "6ae2de19064494d9f3f1b5bf"
+     }
+    ],
+    "tiktokSettings": {
+     "privacy_level": "PUBLIC_TO_EVERYONE",
+     "allow_comment": true,
+     "media_type": "photo",
+     "photo_cover_index": 0,
+     "description": "El lunes a las 17:00, capítulo 1 de «Tu tienda vende más»: por qué tu tienda tiene visitas y no vende. Búscalo en YouTube: Brandooers SkillUp.\n\n#tiendaonline #ecommerce #emprender\n\nLa imagen es mi avatar creado con IA.",
+     "content_preview_confirmed": true,
+     "express_consent_given": true
+    },
+    "publishNow": true
+   },
+   "validate": {
+    "http": 200,
+    "response": {
+     "valid": true,
+     "message": "No validation issues found."
+    }
+   },
+   "idempotencyKey": "24d523a5-6ec2-46a4-9330-a9ac8b0bf9d0",
+   "createHttp": 201,
+   "postId": "6ae321aa6a4a2c510df96f79",
+   "status": "published",
+   "platformStatus": "published",
+   "url": "https://www.tiktok.com/@skillup_brandooers/video/7702036797534063905",
+   "platformPostId": "7702036797534063905",
+   "errorMessage": null,
+   "createResponse": {
+    "post": {
+     "_id": "6ae321aa6a4a2c510df96f79",
+     "userId": "69b0767a0c758c4cbd9b3fb1",
+     "title": "",
+     "content": "El lunes a las 17:00, capítulo 1 de «Tu tienda vende más»",
+     "mediaItems": [
+      {
+       "_id": "6ae321ab6a4a2c510df96f81",
+       "url": "https://media.zernio.com/media/1793256259558_5dfa2c45179d54cc_teaser_lunes_capitulo1_1080x1920.png",
+       "type": "image"
+      }
+     ],
+     "scheduledFor": "2026-10-29T10:36:26.419Z",
+     "timezone": "Europe/Madrid",
+     "status": "published",
+     "tags": [],
+     "hashtags": [],
+     "mentions": [],
+     "visibility": "public",
+     "crosspostingEnabled": true,
+     "metadata": {
+      "usageCounted": true
+     },
+     "publishingClaimedAt": "2026-10-29T10:36:27.489Z",
+     "recycling": {
+      "enabled": false,
+      "gapFreq": "month",
+      "recycleCount": 0,
+      "contentVariations": [],
+      "contentVariationIndex": 0
+     },
+     "createdAt": "2026-10-29T10:36:27.430Z",
+     "updatedAt": "2026-10-29T10:36:35.809Z",
+     "platforms": [
+      {
+       "_id": "6ae321ab6a4a2c510df96f7f",
+       "platform": "tiktok",
+       "accountId": {
+        "_id": "6ae2de19064494d9f3f1b5bf",
+        "platform": "tiktok",
+        "username": "skillup_brandooers",
+        "displayName": "skillup_brandooers",
+        "profilePicture": "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-avt-0068-euttp/6b28eaec041cc21d1a13af4e8f3085fb~tplv-tiktokx-cropcenter:168:168.jpeg?dr=10397&refresh_token=2ce6289c&x-expires=1793433600&x-signature=yAVlr0EzX7ct4BF8PIjgYKTISII%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=8aecc5ac&idc=useast2b",
+        "isActive": true,
+        "profileId": "6ae2d5edd311603d41535e26"
+       },
+       "profileId": "6ae2d5edd311603d41535e26",
+       "customMedia": [],
+       "scheduledFor": "2026-10-29T10:36:26.419Z",
+       "platformSpecificData": {
+        "tiktokSettings": {
+         "media_type": "photo",
+         "description": "El lunes a las 17:00, capítulo 1 de «Tu tienda vende más»: por qué tu tienda tiene visitas y no vende. Búscalo en YouTube: Brandooers SkillUp.\n\n#tiendaonline #ecommerce #emprender\n\nLa imagen es mi avatar creado con IA.",
+         "allow_comment": true,
+         "privacy_level": "PUBLIC_TO_EVERYONE",
+         "photo_cover_index": 0,
+         "express_consent_given": true,
+         "content_preview_confirmed": true
+        },
+        "tiktokBusinessPublishId": "p_pub_url~v2.7702036618076506144"
+       },
+       "status": "published",
+       "publishedAt": "2026-10-29T10:36:35.759Z",
+       "platformPostId": "p_pub_url~v2.7702036618076506144",
+       "publishAttempts": 1,
+       "contentHash": "d32c57d3caf49514340593940291cee4"
+      }
+     ]
+    },
+    "message": "Post published successfully"
+   },
+   "polledAt": "2026-10-29T12:28:21"
+  },
+  "C01-IG-H1": {
+   "fieldsSent": {
+    "content": "",
+    "mediaItems": [
+     {
+      "type": "image",
+      "url": "https://media.zernio.com/temp/1793256260088_dbbfab047898d5c3_historia_h1_visitas_si_ventas_no_1080x1920.png"
+     }
+    ],
+    "platforms": [
+     {
+      "platform": "instagram",
+      "accountId": "6ae2dd79f681a077b3f325cb",
+      "platformSpecificData": {
+       "contentType": "story",
+       "isAiGenerated": true
+      }
+     }
+    ],
+    "publishNow": true
+   },
+   "validate": {
+    "http": 200,
+    "response": {
+     "valid": true,
+     "message": "No validation issues found."
+    }
+   },
+   "idempotencyKey": "8385c738-89c1-4956-87c1-07adb1c46b7c",
+   "createHttp": 201,
+   "postId": "6ae321b429f2b8a925da6503",
+   "status": "published",
+   "platformStatus": "published",
+   "url": "https://www.instagram.com/stories/brandooers_skillup/4018564162979931529",
+   "platformPostId": "18224370322339351",
+   "errorMessage": null,
+   "createResponse": {
+    "post": {
+     "_id": "6ae321b429f2b8a925da6503",
+     "userId": "69b0767a0c758c4cbd9b3fb1",
+     "title": "",
+     "content": "",
+     "mediaItems": [
+      {
+       "_id": "6ae321b529f2b8a925da6518",
+       "url": "https://media.zernio.com/media/1793256260088_dbbfab047898d5c3_historia_h1_visitas_si_ventas_no_1080x1920.png",
+       "type": "image"
+      }
+     ],
+     "scheduledFor": "2026-10-29T10:36:36.092Z",
+     "timezone": "Europe/Madrid",
+     "status": "publishing",
+     "tags": [],
+     "hashtags": [],
+     "mentions": [],
+     "visibility": "public",
+     "crosspostingEnabled": true,
+     "metadata": {
+      "usageCounted": true
+     },
+     "publishingClaimedAt": "2026-10-29T10:36:37.119Z",
+     "recycling": {
+      "enabled": false,
+      "gapFreq": "month",
+      "recycleCount": 0,
+      "contentVariations": [],
+      "contentVariationIndex": 0
+     },
+     "createdAt": "2026-10-29T10:36:37.016Z",
+     "updatedAt": "2026-10-29T10:36:48.565Z",
+     "platforms": [
+      {
+       "_id": "6ae321b429f2b8a925da6514",
+       "platform": "instagram",
+       "accountId": {
+        "_id": "6ae2dd79f681a077b3f325cb",
+        "platform": "instagram",
+        "username": "brandooers_skillup",
+        "displayName": "Marc",
+        "profilePicture": "https://scontent-mad1-1.cdninstagram.com/v/t51.82787-19/870141298_17952962103067204_1873479444706075435_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=101&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=8uNA7brZm4MQ7kNvwFt3ULl&_nc_oc=AdrsyGj56WpnxPkdK9SB5-ynLZeZKp7eu4mp-IE_yursP_Bmu1mOivdiPx1O-hGjGOs&_nc_zt=24&_nc_ht=scontent-mad1-1.cdninstagram.com&edm=AP4hL3IEAAAA&_nc_gid=F7Tjsj6IynW7Z_Mz6RiC_g&_nc_tpa=Q5bMBQJPm2jamLmk-gEuG46ZlFvXFFMOXaQvMrfwAKMoJ-TMIoduo6gyAo94UJ1lZwyiBbchTn_7PsFpaQ&oh=00_AQQMPIArRHOl1FwBfTrSMVXTTYK7x0NJz03yhd299mUfGg&oe=6AE8C185",
+        "isActive": true,
+        "profileId": "6ae2d5edd311603d41535e26"
+       },
+       "profileId": "6ae2d5edd311603d41535e26",
+       "customMedia": [],
+       "scheduledFor": "2026-10-29T10:36:36.092Z",
+       "platformSpecificData": {
+        "contentType": "story",
+        "isAiGenerated": true
+       },
+       "status": "processing",
+       "publishAttempts": 1,
+       "contentHash": "14971ce2fe0ce534d97594a7b324194a"
+      }
+     ]
+    },
+    "message": "Post accepted, publishing in progress"
+   },
+   "polledAt": "2026-10-29T12:28:22"
+  }
+ }
+}

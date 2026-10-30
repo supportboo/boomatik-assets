@@ -1,0 +1,23 @@
+/* Chapter 1 thumbnails · Marc's approved rules (memory feedback_thumbnails_rourke_style): solid colours only (white, #0b0b12,
+   #EC4899, #00D4FF), no gradient or colour veil on the photo, the face never covered, text in solid blocks (Anton / Inter 900),
+   1-4 fat words + a Caveat accent, a different composition and a different Marc look in each, text only from HTML. */
+@font-face { font-family: "Anton"; src: url("../assets/fonts/Anton.ttf"); }
+@font-face { font-family: "Inter"; src: url("../assets/fonts/Inter.ttf"); font-weight: 100 900; }
+@font-face { font-family: "Caveat"; src: url("../assets/fonts/Caveat.ttf"); font-weight: 400 700; }
+:root { --k: #0b0b12; --w: #ffffff; --p: #EC4899; --c: #00D4FF; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: var(--k); }
+.ph { position: absolute; background-repeat: no-repeat; }
+.blk { position: absolute; font-family: "Anton"; font-weight: 400; line-height: .9; white-space: nowrap; padding: .1em .14em .02em; }
+.k { background: var(--k); color: var(--w); }
+.p { background: var(--p); color: var(--k); }
+.c { background: var(--c); color: var(--k); }
+.w { background: var(--w); color: var(--k); }
+.txt { position: absolute; font-family: "Anton"; line-height: .9; white-space: nowrap; }
+.cav { position: absolute; font: 700 56px/1 "Caveat"; white-space: nowrap; }
+.chip { position: absolute; font: 900 30px/1 "Inter"; letter-spacing: .01em; padding: 12px 18px 11px; border-radius: 12px; white-space: nowrap; }
+/* small brand mark: the real two-eye logo on a black pill */
+.lp { position: absolute; background: var(--k); border-radius: 999px; padding: 9px 18px 8px; display: flex; align-items: center; }
+.logo { display: inline-flex; align-items: center; gap: .115em; font: 900 26px/1 "Inter"; letter-spacing: -.02em; color: #fff; white-space: nowrap; }
+.logo .beyes { width: 1.269em; height: auto; margin: 0 .019em; overflow: visible; }
+.logo .ide { font-family: "Caveat"; font-weight: 700; font-size: .923em; color: #67E8F9; margin-left: .104em; }

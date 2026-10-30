@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Miniaturas y banners · SkillUp Brandooers</title>
+<style>
+:root{--k:#0b0918;--k2:#16132f;--w:#fff;--m:#b9b0d6;--c:#00D4FF;--p:#EC4899}
+*{box-sizing:border-box}body{margin:0;background:var(--k);color:var(--w);font:16px/1.5 Inter,system-ui,sans-serif;padding:24px 16px 80px}
+h1{font-size:28px;margin:0 0 4px}h2{font-size:20px;margin:48px 0 12px;border-top:1px solid #2a2550;padding-top:24px}
+p{color:var(--m);margin:4px 0 16px;max-width:900px}
+.row{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start;margin-bottom:28px}
+.card{background:var(--k2);border-radius:14px;padding:14px;max-width:100%}
+.card h3{margin:0 0 8px;font-size:16px;overflow-wrap:anywhere}.card small{color:var(--m)}
+.big{width:min(640px,100%)}
+.sm{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;margin-top:10px}
+.sm figure{margin:0}.sm figcaption{color:var(--m);font-size:12px}.sm img{display:block}
+.frame{position:relative;display:inline-block;max-width:100%;background:repeating-conic-gradient(#ffffff10 0 25%,#0000 0 50%) 0/20px 20px}
+.frame img{display:block;width:100%;height:auto}
+.safe{position:absolute;border:3px dashed #00D4FF;background:#00D4FF22;pointer-events:none;display:none}
+.on .safe{display:block}
+.dur{position:absolute;right:1.2%;bottom:2.5%;width:9%;height:7%;background:#000c;border-radius:4px;display:none;color:#fff;font-size:11px;align-items:center;justify-content:center}
+.on .dur{display:flex}
+label{cursor:pointer;color:var(--m);font-size:14px;display:inline-flex;gap:6px;align-items:center;margin-top:8px}
+.light{background:#fff}
+</style></head><body>
+<h1>SkillUp Brandooers · miniaturas, portadas de curso y banners</h1>
+<p>Un solo sistema visual. El canal es de marca (Innovación · Desarrollo · Estrategia) y cada curso es una lista dentro del canal y una temporada del pódcast.
+Todo el texto está compuesto en HTML y renderizado con Chrome. Cada pieza lleva un interruptor que dibuja su zona segura
+(en las miniaturas, la etiqueta de duración que YouTube pone abajo a la derecha). Principios aplicados: PRINCIPIOS.md.</p>
+<h2>Curso «Tu tienda vende más» · capítulo 1 · miniaturas A, B y C</h2>
+<p>Grande (1280x720) y a los tamaños pequeños de YouTube (320x180 y 168x94), lado a lado.</p>
+<div id="thumbs"></div>
+<h2>Portadas de curso (lista de YouTube y temporada del pódcast)</h2>
+<div id="series" class="row"></div>
+<h2>Banners y perfiles de la marca</h2>
+<div id="banners" class="row"></div>
+<h2>Alternativa con la foto de Marc (en espera)</h2>
+<p>La memoria dice que la cara de Marc no va en imágenes fijas (portadas, perfiles, Substack); por eso las piezas de arriba llevan
+la mascota de los ojos. Estas versiones con su foto solo se usan si Marc levanta esa regla.</p>
+<div id="altthumbs"></div><div id="alt" class="row"></div>
+<script>
+const THUMBS = [["", "cap01_miniatura", "cap01_miniatura · versión A (Ramonov)"], ["", "cap01_miniatura_B", "cap01_miniatura_B · versión B (Colin and Samir)"], ["", "cap01_miniatura_C", "cap01_miniatura_C · versión C (Ali Abdaal)"], ["con_foto/", "cap01_miniatura", "cap01_miniatura · versión A (Ramonov) · con foto"], ["con_foto/", "cap01_miniatura_B", "cap01_miniatura_B · versión B (Colin and Samir) · con foto"], ["con_foto/", "cap01_miniatura_C", "cap01_miniatura_C · versión C (Ali Abdaal) · con foto"]], SAFE = {"banners/youtube_banner_2560x1440": [[507, 508, 1546, 423], "YouTube: zona visible en todos los dispositivos 1546x423 centrada", 2560, 1440, "banners/youtube_banner_2560x1440.jpg", "banners"], "banners/facebook_portada_1640x624": [[266, 0, 1108, 624], "Facebook: en móvil se ve el centro 16:9 (1108x624); en escritorio la foto de perfil tapa abajo a la izquierda", 1640, 624, "banners/facebook_portada_1640x624.jpg", "banners"], "banners/linkedin_portada_1128x191": [[200, 0, 928, 191], "LinkedIn: el logo de la página tapa la parte izquierda", 1128, 191, "banners/linkedin_portada_1128x191.png", "banners"], "banners/substack_wordmark_1344x256_texto-oscuro_transparente": [[0, 0, 1344, 256], "Substack wordmark 21:4, mínimo 1344x256 (cabecera clara)", 1344, 256, "banners/substack_wordmark_1344x256_texto-oscuro_transparente.png", "banners"], "banners/substack_wordmark_1344x256_texto-blanco_transparente": [[0, 0, 1344, 256], "Substack wordmark 21:4, mínimo 1344x256 (cabecera oscura)", 1344, 256, "banners/substack_wordmark_1344x256_texto-blanco_transparente.png", "banners"], "banners/substack_banner_correo_1100x220": [[0, 0, 1100, 220], "Substack banner del correo 1100x220", 1100, 220, "banners/substack_banner_correo_1100x220.png", "banners"], "banners/substack_logo_512x512": [[75, 75, 362, 362], "Logo cuadrado (se ve recortado en círculo)", 512, 512, "banners/substack_logo_512x512.png", "banners"], "banners/perfil_1080x1080": [[158, 158, 764, 764], "Foto de perfil: se recorta en círculo", 1080, 1080, "banners/perfil_1080x1080.png", "banners"], "banners/podcast_portada_3000x3000": [[0, 0, 3000, 3000], "Portada del pódcast (marca): debe leerse a 200x200", 3000, 3000, "banners/podcast_portada_3000x3000.jpg", "banners"], "banners/serie_tu-tienda-vende-mas_lista_1280x720": [[0, 0, 1280, 720], "Portada de la lista de YouTube del curso «Tu tienda vende más»", 1280, 720, "banners/serie_tu-tienda-vende-mas_lista_1280x720.png", "series"], "banners/podcast_temporada01_tu-tienda-vende-mas_3000x3000": [[0, 0, 3000, 3000], "Portada de la temporada 1 del pódcast: debe leerse a 200x200", 3000, 3000, "banners/podcast_temporada01_tu-tienda-vende-mas_3000x3000.jpg", "series"], "con_foto/banners/youtube_banner_2560x1440": [[507, 508, 1546, 423], "YouTube: zona visible en todos los dispositivos 1546x423 centrada", 2560, 1440, "con_foto/banners/youtube_banner_2560x1440.jpg", "alt"], "con_foto/banners/facebook_portada_1640x624": [[266, 0, 1108, 624], "Facebook: en móvil se ve el centro 16:9 (1108x624); en escritorio la foto de perfil tapa abajo a la izquierda", 1640, 624, "con_foto/banners/facebook_portada_1640x624.jpg", "alt"], "con_foto/banners/linkedin_portada_1128x191": [[200, 0, 928, 191], "LinkedIn: el logo de la página tapa la parte izquierda", 1128, 191, "con_foto/banners/linkedin_portada_1128x191.png", "alt"], "con_foto/banners/perfil_1080x1080": [[158, 158, 764, 764], "Foto de perfil: se recorta en círculo", 1080, 1080, "con_foto/banners/perfil_1080x1080.png", "alt"], "con_foto/banners/perfil_claro_1080x1080": [[158, 158, 764, 764], "Foto de perfil: se recorta en círculo", 1080, 1080, "con_foto/banners/perfil_claro_1080x1080.png", "alt"], "con_foto/banners/podcast_portada_3000x3000": [[0, 0, 3000, 3000], "Portada del pódcast (marca): debe leerse a 200x200", 3000, 3000, "con_foto/banners/podcast_portada_3000x3000.jpg", "alt"], "con_foto/banners/serie_tu-tienda-vende-mas_lista_1280x720": [[0, 0, 1280, 720], "Portada de la lista de YouTube del curso «Tu tienda vende más»", 1280, 720, "con_foto/banners/serie_tu-tienda-vende-mas_lista_1280x720.png", "alt"], "con_foto/banners/podcast_temporada01_tu-tienda-vende-mas_3000x3000": [[0, 0, 3000, 3000], "Portada de la temporada 1 del pódcast: debe leerse a 200x200", 3000, 3000, "con_foto/banners/podcast_temporada01_tu-tienda-vende-mas_3000x3000.jpg", "alt"]};
+const toggle = '<label><input type="checkbox" onchange="this.closest(\'.card\').classList.toggle(\'on\',this.checked)"> ';
+for (const [dir, name, label] of THUMBS) {
+  const d = document.createElement('div'); d.className = 'row';
+  d.innerHTML = `<div class="card"><h3>${label}</h3><div class="frame big"><img src="${dir}${name}_1280x720.jpg" alt="${label}"><div class="dur">10:01</div></div>
+  ${toggle}ver la etiqueta de duración</label>
+  <div class="sm"><figure><img src="${dir}pequenas/${name}_320x180.png" width="320" height="180" alt=""><figcaption>320x180</figcaption></figure>
+  <figure><img src="${dir}pequenas/${name}_168x94.png" width="168" height="94" alt=""><figcaption>168x94 (móvil, lista)</figcaption></figure></div></div>`;
+  document.getElementById(dir ? 'altthumbs' : 'thumbs').appendChild(d);
+}
+for (const [key, [rect, note, w, h, file, section]] of Object.entries(SAFE)) {
+  const name = key.split('/').pop();
+  const [x, y, sw, sh] = rect, c = document.createElement('div'); c.className = 'card';
+  const pct = (a, b) => (a / b * 100).toFixed(3) + '%';
+  const light = name.includes('texto-oscuro') ? ' light' : '';
+  const width = Math.min(w, w > 1500 ? 900 : w > 700 ? 640 : 360);
+  const small = w === 3000 ? `<div class="sm"><figure><img src="${file}" width="200" height="200" alt=""><figcaption>200x200 (app de pódcast)</figcaption></figure></div>` : '';
+  c.innerHTML = `<h3>${name}</h3><small>${w}x${h} · ${note}</small><br>
+  <div class="frame${light}" style="width:${width}px;max-width:100%"><img src="${file}" alt="${name}">
+  <div class="safe" style="left:${pct(x,w)};top:${pct(y,h)};width:${pct(sw,w)};height:${pct(sh,h)}"></div></div><br>
+  ${toggle}ver zona segura</label>${small}`;
+  document.getElementById(section).appendChild(c);
+}
+</script></body></html>

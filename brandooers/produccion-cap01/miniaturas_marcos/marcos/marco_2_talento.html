@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Marco 2 · Cinta · Talento imparable</title>
+<link rel="stylesheet" href="marcos.css">
+<style>
+/* «Cinta»: the brandooers.com ribbon (tilted -3.5°, «TALENTO IMPARABLE») crosses the top-left corner and leaves through the
+   top edge; a thin 10 px bezel with rounded corners and the gradient edge; the logo on a dark plate at the top right.
+   The ribbon's lower edge is y 86 at x 98 (content from y 93) and y 43 over the hair line at x 800 (head from y ~60).
+   Its fill is the SkillUp CTA gradient, the brand's own pairing for white text (>= 4.5:1). */
+.ribbon { position: absolute; left: -60px; top: 32px; width: 1700px; height: 64px; transform-origin: 0 50%;
+  transform: rotate(-3.5deg); background: linear-gradient(90deg, #7C3AED 0, #6D3BDB 640px, #0E7490 1700px);
+  display: flex; align-items: center; padding-left: 100px; }
+.ribbon p { font: 700 42px/1 "Space Grotesk"; letter-spacing: .05em; color: #fff; white-space: nowrap; padding-top: 3px; }
+#plate { right: 24px; top: 20px; padding: 13px 24px 12px; border-radius: 18px; border: 1.5px solid rgba(255, 255, 255, .14); }
+</style>
+</head>
+<body>
+<svg class="full" viewBox="0 0 1920 1080" aria-hidden="true">
+  <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1920" y2="0">
+    <stop offset="0" stop-color="#00D4FF"/><stop offset=".5" stop-color="#8B5CF6"/><stop offset="1" stop-color="#EC4899"/></linearGradient></defs>
+  <path fill="#0b0918" fill-rule="evenodd"
+        d="M0 0H1920V1080H0Z M50 10H1870A40 40 0 0 1 1910 50V1030A40 40 0 0 1 1870 1070H50A40 40 0 0 1 10 1030V50A40 40 0 0 1 50 10Z"/>
+  <rect x="10" y="10" width="1900" height="1060" rx="40" fill="none" stroke="url(#g)" stroke-width="3"/>
+</svg>
+<div class="ribbon"><p>TALENTO IMPARABLE</p></div>
+<div class="plate" id="plate"><span class="logo">Brand<svg class="beyes" viewBox="0 0 100 58" aria-hidden="true"><defs>
+  <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#0891B2"/></linearGradient>
+  <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0891B2"/><stop offset="100%" stop-color="#E4A900"/></linearGradient>
+  <radialGradient id="ir1"><stop offset="0%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#6D28D9"/></radialGradient>
+  <radialGradient id="ir2"><stop offset="0%" stop-color="#67E8F9"/><stop offset="100%" stop-color="#0891B2"/></radialGradient></defs>
+  <g><ellipse cx="25" cy="36" rx="18" ry="18" fill="none" stroke="url(#bg1)" stroke-width="3"/><circle cx="25" cy="36" r="7.5" fill="url(#ir1)"/><circle cx="25" cy="36" r="3.4" fill="#0a0a12"/><circle cx="28" cy="33" r="1.8" fill="#fff"/></g>
+  <g><ellipse cx="73" cy="36" rx="18" ry="18" fill="none" stroke="url(#bg2)" stroke-width="3"/><circle cx="73" cy="36" r="7.5" fill="url(#ir2)"/><circle cx="73" cy="36" r="3.4" fill="#0a0a12"/><circle cx="76" cy="33" r="1.8" fill="#fff"/></g>
+</svg>ers<span class="ide">SkillUp</span></span></div>
+</body>
+</html>

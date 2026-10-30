@@ -1,0 +1,361 @@
+{
+ "meta": {
+  "fecha": "2026-10-29",
+  "dia_0": "lunes 2-nov-2026 (propuesto: confirmar cuando el render del capítulo 1 esté aprobado)",
+  "utm_piezas": "utm_source=<red>&utm_medium=social&utm_campaign=tvm-cap01&utm_content=<id en minúsculas> (del plan)",
+  "regla": "Nada se programa en Zernio hasta que Marc lo apruebe. Solo imágenes estáticas; los cortes de vídeo salen del render final.",
+  "llegan_con_el_render": [
+   "C01-IG-R0 reel avance (D-1)",
+   "C01-YT-S0 Short avance (D0)",
+   "C01-YT-S1 y C01-IG-R1 paso 1 (D+1)",
+   "C01-TT-1 TikTok paso 1 (D+2)",
+   "C01-POD-YT lista de pódcast (D0, ajuste en YouTube Studio)",
+   "C01-POD-SP Spotify (D+1, toma de voz nueva con coste)",
+   "C01-EM-0 y C01-EM-1 correos (dependen de la página de la hoja y del boletín)"
+  ],
+  "puerta": {
+   "veredicto": "PASA",
+   "fallos": [],
+   "comprobado": "términos prohibidos (marcas, Odoo, precios, servicios, «asistente»), emojis, signos del LinkedIn de Marc, límites de caracteres, UTM en minúsculas con campaña de Brandooers, texto pintado en las imágenes",
+   "cuentas": "todas las cuentas de publicación son del perfil BRANDOOERS de Zernio; ninguna del perfil Boomatik"
+  }
+ },
+ "piezas": [
+  {
+   "id": "C01-IG-F0",
+   "nuevo": true,
+   "red": "instagram",
+   "cuenta": "@brandooers (Zernio 6ae2dd79…)",
+   "formato": "Publicación de imagen 4:5",
+   "dia": -3,
+   "hora": "13:00",
+   "imagenes": [
+    "primeras/teaser_lunes_capitulo1_1080x1350.png"
+   ],
+   "alt": [
+    "Marc mira a cámara en un salón luminoso. Texto: El lunes, capítulo 1. Tu tienda vende más. Logo de Brandooers SkillUp."
+   ],
+   "texto": "El lunes a las 17:00 estreno el capítulo 1 de «Tu tienda vende más».\n\nVa de lo que más se repite en una tienda online: hay visitas, pero no hay ventas.\n\nVamos a ver los cuatro pasos por donde se escapa una venta (encontrar, entender, comprar y pagar) y una prueba de diez minutos para cada uno.\n\nActiva los avisos del perfil para no perdértelo.",
+   "hashtags": "#tiendaonline #ecommerce #ventasonline",
+   "etiqueta_ia": true,
+   "por_que": "Primera publicación de la cuadrícula: dice qué es la cuenta y cuándo empieza. Los reels llegan con el render.",
+   "fecha": "vie 30-oct-2026"
+  },
+  {
+   "id": "C01-LI-P0",
+   "nuevo": true,
+   "red": "linkedin",
+   "cuenta": "Página Brandooers (Zernio 6ae2e281…)",
+   "formato": "Post con imagen 4:5",
+   "dia": -3,
+   "hora": "08:30",
+   "imagenes": [
+    "primeras/teaser_lunes_capitulo1_1080x1350.png"
+   ],
+   "alt": [
+    "Marc mira a cámara en un salón luminoso. Texto: El lunes, capítulo 1. Tu tienda vende más. Logo de Brandooers SkillUp."
+   ],
+   "texto": "El lunes arranca «Tu tienda vende más», la serie de Brandooers SkillUp para quien tiene una tienda online.\n\nCada lunes, un capítulo de unos diez minutos. El primero responde a la pregunta que más se repite: si mi tienda tiene visitas, ¿por qué no vende?\n\nLos cuatro pasos de una venta online, la señal que delata cada uno en tus números y una prueba de diez minutos que puedes hacer tú solo.\n\nSigue la página para verlo el lunes.",
+   "hashtags": "#ecommerce #tiendaonline",
+   "etiqueta_ia": false,
+   "por_que": "La página estrena contenido antes que el perfil de Marc; LinkedIn no tiene interruptor de IA y la imagen es un fotograma del avatar: queda dicho en el capítulo y en el post de Marc.",
+   "fecha": "vie 30-oct-2026"
+  },
+  {
+   "id": "C01-FB-P0",
+   "nuevo": true,
+   "red": "facebook",
+   "cuenta": "Página Skillup.brandooers (Zernio 6ae2dfbb…)",
+   "formato": "Publicación de imagen 4:5",
+   "dia": -3,
+   "hora": "13:00",
+   "imagenes": [
+    "primeras/teaser_lunes_capitulo1_1080x1350.png"
+   ],
+   "alt": [
+    "Marc mira a cámara en un salón luminoso. Texto: El lunes, capítulo 1. Tu tienda vende más. Logo de Brandooers SkillUp."
+   ],
+   "texto": "El lunes a las 17:00 estrenamos el capítulo 1 de «Tu tienda vende más»: por qué tu tienda tiene visitas y no vende, los cuatro pasos por donde se escapa la venta y una prueba de diez minutos para cada uno.",
+   "hashtags": "#tiendaonline",
+   "etiqueta_ia": true,
+   "por_que": "La página no puede quedarse vacía el día del estreno; mismo arte que Instagram.",
+   "fecha": "vie 30-oct-2026"
+  },
+  {
+   "id": "C01-YT-P1",
+   "red": "youtube",
+   "cuenta": "Canal (Zernio 6ae2de27…)",
+   "formato": "Publicación de comunidad · encuesta",
+   "dia": -3,
+   "hora": "18:00",
+   "imagenes": [],
+   "alt": [],
+   "texto": "El lunes estreno el capítulo 1 de «Tu tienda vende más». Antes, una pregunta: si tu tienda tiene visitas y no vende, ¿dónde crees que se te escapa la venta?",
+   "encuesta": [
+    "Encontrar",
+    "Entender",
+    "Comprar",
+    "Pagar"
+   ],
+   "hashtags": "",
+   "etiqueta_ia": false,
+   "por_que": "Del plan. Solo si el canal ya tiene la pestaña de publicaciones (SIN DATOS en un canal nuevo); si no, se salta.",
+   "fecha": "vie 30-oct-2026"
+  },
+  {
+   "id": "C01-IG-H1",
+   "red": "instagram",
+   "cuenta": "@brandooers · historia",
+   "formato": "Historia 9:16 con encuesta",
+   "dia": -3,
+   "hora": "19:00",
+   "imagenes": [
+    "primeras/historia_h1_visitas_si_ventas_no_1080x1920.png"
+   ],
+   "alt": [
+    "Fondo negro. Texto: Visitas sí, ventas no. ¿Te suena? Foto de Marc en su salón."
+   ],
+   "texto": "Adhesivo de encuesta en la zona libre de abajo: «¿Tu tienda tiene visitas pero no vende?» · «Sí, me pasa» / «A veces»",
+   "hashtags": "",
+   "etiqueta_ia": true,
+   "dm": "¡Hola! Gracias por contestar. El lunes a las 17:00 sale el capítulo 1 y va justo de eso: dónde se escapa la venta. ¿Qué vendes en tu tienda?",
+   "por_que": "Del plan. A quien conteste o escriba se le responde a mano con el mensaje de abajo.",
+   "fecha": "vie 30-oct-2026"
+  },
+  {
+   "id": "C01-TT-F0",
+   "nuevo": true,
+   "red": "tiktok",
+   "cuenta": "@brandooers (Zernio 6ae2de19…)",
+   "formato": "Foto 9:16",
+   "dia": -1,
+   "hora": "20:00",
+   "imagenes": [
+    "primeras/teaser_lunes_capitulo1_1080x1920.png"
+   ],
+   "alt": [
+    "Marc mira a cámara en un salón luminoso. Texto: El lunes, capítulo 1. Tu tienda vende más. Logo de Brandooers SkillUp."
+   ],
+   "texto": "Mañana a las 17:00, capítulo 1 de «Tu tienda vende más»: por qué tu tienda tiene visitas y no vende. Búscalo en YouTube: Brandooers SkillUp.",
+   "hashtags": "#tiendaonline #ecommerce #emprender",
+   "etiqueta_ia": true,
+   "por_que": "Para que la cuenta no esté vacía cuando llegue el primer vídeo (C01-TT-1, miércoles). No dice «enlace en el perfil» porque una cuenta nueva aún no puede poner web.",
+   "fecha": "dom 1-nov-2026"
+  },
+  {
+   "id": "C01-IG-H2",
+   "red": "instagram",
+   "cuenta": "@brandooers · historia",
+   "formato": "Historia 9:16 con cuenta atrás",
+   "dia": -1,
+   "hora": "21:00",
+   "imagenes": [
+    "primeras/historia_h2_capitulo1_manana_1080x1920.png"
+   ],
+   "alt": [
+    "Fondo negro con los ojos de Brandooers. Texto: Capítulo 1, mañana. Tu tienda vende más, 17:00."
+   ],
+   "texto": "Adhesivo de cuenta atrás en la zona libre: «Capítulo 1 · Tu tienda vende más» hasta el lunes a las 17:00 (quien lo activa recibe el aviso)",
+   "hashtags": "",
+   "etiqueta_ia": false,
+   "por_que": "Del plan. Sin avatar: no lleva etiqueta de IA.",
+   "fecha": "dom 1-nov-2026"
+  },
+  {
+   "id": "C01-YT-L",
+   "red": "youtube",
+   "cuenta": "Canal",
+   "formato": "Vídeo largo 16:9 · 9:42",
+   "dia": 0,
+   "hora": "17:00",
+   "imagenes": [
+    "primeras/youtube_capitulo1_miniatura6_1280x720.png"
+   ],
+   "alt": [
+    "Miniatura: primer plano de Marc. Texto: ¿Más visitas? No. Arregla el paso que se rompe."
+   ],
+   "texto": "Título: Por qué tu tienda online no vende (y no son las visitas)\n\nDescripción: la de l01/final_v3/youtube_cap01.md, con la hoja en la primera línea cuando exista su página.\n\nComentario fijado: ¿En cuál de los cuatro pasos se te rompe a ti: encontrar, entender, comprar o pagar?",
+   "hashtags": "",
+   "etiqueta_ia": true,
+   "por_que": "Del plan; depende del render final. Se incluye para ver la semana completa.",
+   "fecha": "lun 2-nov-2026"
+  },
+  {
+   "id": "C01-IG-H3",
+   "red": "instagram",
+   "cuenta": "@brandooers · historia",
+   "formato": "Historia 9:16 con enlace",
+   "dia": 0,
+   "hora": "17:15",
+   "imagenes": [
+    "primeras/historia_h3_mas_visitas_no_1080x1920.png"
+   ],
+   "alt": [
+    "Fondo negro. Texto: ¿Más visitas? No. Arregla el paso que se rompe. Primer plano de Marc."
+   ],
+   "texto": "«Ya está fuera el capítulo 1.» + adhesivo de enlace al vídeo de YouTube («Ver el capítulo»)",
+   "hashtags": "",
+   "etiqueta_ia": true,
+   "por_que": "Del plan.",
+   "fecha": "lun 2-nov-2026"
+  },
+  {
+   "id": "C01-FB-P1",
+   "nuevo": true,
+   "red": "facebook",
+   "cuenta": "Página",
+   "formato": "Enlace al capítulo",
+   "dia": 0,
+   "hora": "17:30",
+   "imagenes": [],
+   "alt": [],
+   "texto": "Ya está fuera el capítulo 1 de «Tu tienda vende más»: los cuatro pasos por donde se escapa una venta online y una prueba de diez minutos para cada uno.\n\n<enlace del capítulo 1 en YouTube>",
+   "hashtags": "",
+   "etiqueta_ia": false,
+   "por_que": "La vista previa del enlace usa la miniatura del vídeo.",
+   "fecha": "lun 2-nov-2026"
+  },
+  {
+   "id": "C01-LI-P1",
+   "nuevo": true,
+   "red": "linkedin",
+   "cuenta": "Página Brandooers",
+   "formato": "Post de texto + primer comentario con el enlace",
+   "dia": 0,
+   "hora": "17:30",
+   "imagenes": [],
+   "alt": [],
+   "texto": "Ya está fuera el capítulo 1 de «Tu tienda vende más».\n\nUna venta online pasa por cuatro pasos: encontrar, entender, comprar y pagar. En el capítulo vemos la señal que delata cada uno en tus números, una prueba de diez minutos para hacerla tú solo y el arreglo.\n\n¿En cuál de los cuatro se le escapa la venta a tu tienda?",
+   "primer_comentario": "El capítulo completo: <enlace del capítulo 1 en YouTube>",
+   "hashtags": "#ecommerce #tiendaonline",
+   "etiqueta_ia": false,
+   "por_que": "El enlace va en el primer comentario (Zernio lo publica con firstComment).",
+   "fecha": "lun 2-nov-2026"
+  },
+  {
+   "id": "C01-LI-1",
+   "red": "linkedin_marc",
+   "cuenta": "Perfil personal de Marc · lo publica Marc a mano",
+   "formato": "Post de texto largo + imagen 4:5",
+   "dia": 1,
+   "hora": "08:30",
+   "imagenes": [
+    "primeras/linkedin_marc_mas_visitas_no_1080x1350.png"
+   ],
+   "alt": [
+    "Primer plano de Marc. Texto: ¿Más visitas? No. Arregla el paso que se rompe. Logo de Brandooers SkillUp."
+   ],
+   "texto": "Cuando una tienda online no vende, casi siempre se pide lo mismo: más visitas.\n\nY muchas veces es justo lo que no hace falta.\n\nUna venta online pasa por cuatro pasos: encontrar, entender, comprar y pagar. Si se rompe uno, da igual cuánta gente entre: se va por el mismo sitio.\n\nUn ejemplo con números inventados para que se entienda. De cada 100 visitas, 60 ven una ficha, 20 añaden algo al carrito, 15 empiezan a pagar y 3 compran. El salto grande no está en las visitas. Está en el pago: se pierden 4 de cada 5.\n\nAhí, pagar anuncios para traer más gente es pagar por visitas que se van por el mismo agujero.\n\nPor eso el primer capítulo de \"Tu tienda vende más\" va de esto: en cada paso, una señal en tus números, una prueba de 10 minutos que puedes hacer tú solo y el arreglo.\n\nMi favorita es la del final, la prueba del desconocido: alguien que no conoce tu tienda compra algo pensando en voz alta mientras tú miras sin ayudar. Donde se calla o duda, ahí está tu paso.\n\n¿En cuál de los cuatro pasos crees que se le escapa la venta a tu tienda, y qué te hace pensarlo?\n\nEl capítulo completo, en el primer comentario.\n\nEn el vídeo aparezco con un avatar y una voz generados con IA a partir de mi imagen y mi voz.",
+   "primer_comentario": "El capítulo: <enlace del capítulo 1 en YouTube>",
+   "hashtags": "#ecommerce #tiendaonline #ventasonline",
+   "etiqueta_ia": false,
+   "por_que": "Del plan, en primera persona. Sin rayas, sin puntos suspensivos y sin comillas latinas (regla del LinkedIn de Marc). Marc valida la frase de opinión antes de publicar.",
+   "fecha": "mar 3-nov-2026"
+  },
+  {
+   "id": "C01-IG-C1",
+   "red": "instagram",
+   "cuenta": "@brandooers",
+   "formato": "Carrusel de 8 imágenes 4:5",
+   "dia": 2,
+   "hora": "11:00",
+   "imagenes": [
+    "primeras/carrusel_4_pasos_1de8_1080x1350.png",
+    "primeras/carrusel_4_pasos_2de8_1080x1350.png",
+    "primeras/carrusel_4_pasos_3de8_1080x1350.png",
+    "primeras/carrusel_4_pasos_4de8_1080x1350.png",
+    "primeras/carrusel_4_pasos_5de8_1080x1350.png",
+    "primeras/carrusel_4_pasos_6de8_1080x1350.png",
+    "primeras/carrusel_4_pasos_7de8_1080x1350.png",
+    "primeras/carrusel_4_pasos_8de8_1080x1350.png"
+   ],
+   "alt": [
+    "Portada sobre fondo azul: ¿Dónde se rompe? Encontrar, entender, comprar y pagar, con pagar torcido. 4 pruebas de 10 minutos. Foto de Marc.",
+    "Los 4 pasos de una venta: encontrar, entender, comprar y pagar, con una frase cada uno.",
+    "Paso 1, encontrar: la señal, la prueba de 10 minutos y el arreglo. En claro: llama a tus productos como los llama tu cliente.",
+    "Paso 2, entender: la señal, la prueba de 10 minutos y el arreglo. En claro: en 5 segundos, qué es, cuánto mide y cuándo llega.",
+    "Paso 3, comprar: la señal, la prueba de 10 minutos y el arreglo. En claro: que el carrito diga el total antes de pedir nada.",
+    "Paso 4, pagar: la señal, la prueba de 10 minutos y el arreglo. En claro: compra en tu tienda desde el móvil, una vez al mes.",
+    "Embudo de ejemplo: 100 visitas, 60 ven una ficha, 20 añaden al carrito, 15 empiezan a pagar y 3 compran. El salto más grande está en pagar.",
+    "La prueba del desconocido, 5 minutos: alguien que no conoce tu tienda compra pensando en voz alta. Guárdalo; el capítulo 1 está en YouTube."
+   ],
+   "texto": "Cuatro pruebas de diez minutos, una por paso: encontrar, entender, comprar y pagar.\n\nGuárdalo para el día que te sientes a revisar tu tienda. Y si solo tienes tiempo para una, empieza por comprar en tu tienda desde el móvil.\n\nEl capítulo entero, en YouTube (enlace en la bio).",
+   "hashtags": "#tiendaonline #ecommerce #ventasonline",
+   "etiqueta_ia": true,
+   "por_que": "Del plan, adelantado del D+6 al D+2: mientras no estén los reels, la cuadrícula necesita una pieza que se guarde. En D+6 se deja libre o va un reel.",
+   "fecha": "mié 4-nov-2026"
+  },
+  {
+   "id": "C01-IG-H4",
+   "red": "instagram",
+   "cuenta": "@brandooers · historia",
+   "formato": "Historia 9:16 con test",
+   "dia": 2,
+   "hora": "13:00",
+   "imagenes": [
+    "primeras/historia_h4_donde_esta_el_salto_1080x1920.png"
+   ],
+   "alt": [
+    "Embudo de ejemplo: 100 visitas, 60 ven ficha, 20 al carrito, 15 empiezan a pagar, 3 compran. ¿Dónde está el salto?"
+   ],
+   "texto": "Adhesivo de test: «¿Dónde está el salto más grande?» · Ficha / Carrito / Pagar (correcta: Pagar)",
+   "hashtags": "",
+   "etiqueta_ia": false,
+   "por_que": "Del plan.",
+   "fecha": "mié 4-nov-2026"
+  },
+  {
+   "id": "C01-IG-H5",
+   "red": "instagram",
+   "cuenta": "@brandooers · historia",
+   "formato": "Historia 9:16 con enlace",
+   "dia": 2,
+   "hora": "13:05",
+   "imagenes": [
+    "primeras/historia_h5_pagar_de_15_a_3_1080x1920.png"
+   ],
+   "alt": [
+    "Los ojos de Brandooers. Texto: Pagar: de 15 a 3. Se pierden 4 de cada 5. Traer más visitas no lo arregla."
+   ],
+   "texto": "Adhesivo de enlace al capítulo en el minuto 7:10 («Verlo en el vídeo»)",
+   "hashtags": "",
+   "etiqueta_ia": false,
+   "por_que": "Del plan.",
+   "fecha": "mié 4-nov-2026"
+  },
+  {
+   "id": "C01-LI-2",
+   "red": "linkedin_marc",
+   "cuenta": "Perfil personal de Marc · lo publica Marc a mano",
+   "formato": "Documento PDF de 8 páginas",
+   "dia": 3,
+   "hora": "08:30",
+   "imagenes": [
+    "primeras/carrusel_4_pasos_1de8_1080x1350.png",
+    "primeras/carrusel_4_pasos_2de8_1080x1350.png",
+    "primeras/carrusel_4_pasos_3de8_1080x1350.png",
+    "primeras/carrusel_4_pasos_4de8_1080x1350.png",
+    "primeras/carrusel_4_pasos_5de8_1080x1350.png",
+    "primeras/carrusel_4_pasos_6de8_1080x1350.png",
+    "primeras/carrusel_4_pasos_7de8_1080x1350.png",
+    "primeras/carrusel_4_pasos_8de8_1080x1350.png"
+   ],
+   "pdf": "primeras/documento_4_pasos_linkedin.pdf",
+   "alt": [
+    "Portada sobre fondo azul: ¿Dónde se rompe? Encontrar, entender, comprar y pagar, con pagar torcido. 4 pruebas de 10 minutos. Foto de Marc.",
+    "Los 4 pasos de una venta: encontrar, entender, comprar y pagar, con una frase cada uno.",
+    "Paso 1, encontrar: la señal, la prueba de 10 minutos y el arreglo. En claro: llama a tus productos como los llama tu cliente.",
+    "Paso 2, entender: la señal, la prueba de 10 minutos y el arreglo. En claro: en 5 segundos, qué es, cuánto mide y cuándo llega.",
+    "Paso 3, comprar: la señal, la prueba de 10 minutos y el arreglo. En claro: que el carrito diga el total antes de pedir nada.",
+    "Paso 4, pagar: la señal, la prueba de 10 minutos y el arreglo. En claro: compra en tu tienda desde el móvil, una vez al mes.",
+    "Embudo de ejemplo: 100 visitas, 60 ven una ficha, 20 añaden al carrito, 15 empiezan a pagar y 3 compran. El salto más grande está en pagar.",
+    "La prueba del desconocido, 5 minutos: alguien que no conoce tu tienda compra pensando en voz alta. Guárdalo; el capítulo 1 está en YouTube."
+   ],
+   "texto": "Te dejo las cuatro pruebas del capítulo en un documento, para guardarlo y hacerlas con calma.\n\nUna por paso: encontrar, entender, comprar y pagar. Cada una se hace en 10 minutos, sin herramientas y sin pedir ayuda a nadie.\n\nSi solo tienes tiempo para una, haz la del pago: compra en tu propia tienda desde el móvil, con datos móviles y sin entrar en tu cuenta. Es el paso que más duele, porque esa persona ya había decidido comprar.\n\n¿Cuál vas a hacer primero esta semana?",
+   "hashtags": "#ecommerce #tiendaonline",
+   "etiqueta_ia": false,
+   "por_que": "Del plan (D+3, un día después de la ventana): mismo arte que el carrusel, ya listo.",
+   "fecha": "jue 5-nov-2026"
+  }
+ ]
+}

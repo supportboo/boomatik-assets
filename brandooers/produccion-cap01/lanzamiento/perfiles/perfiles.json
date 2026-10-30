@@ -1,0 +1,434 @@
+{
+ "meta": {
+  "fecha": "2026-10-29",
+  "marca": "Brandooers SkillUp",
+  "zernio": {
+   "perfil": "BRANDOOERS (6ae2d5edd311603d41535e26), creado el 29-oct-2026, 6 cuentas",
+   "leido": "29-oct-2026, solo lectura (GET /profiles y /accounts)"
+  },
+  "promesa": "Para quien tiene una tienda online: e-commerce, IA y redes, paso a paso. Capítulo nuevo cada lunes de «Tu tienda vende más».",
+  "usuario_unico": "Un solo nombre de usuario en todas las redes: @brandooers. En YouTube y TikTok aparecía libre el 29-oct (comprobado sin iniciar sesión). En Instagram y Facebook no se puede comprobar sin entrar: si @brandooers está cogido en Instagram, se usa @brandooers.skillup en todas (el punto vale en Instagram, TikTok, YouTube y Facebook; el guion bajo no vale en Facebook). Ahora es el momento: las cuentas tienen 0 publicaciones.",
+  "utm": "https://brandooers.com/?utm_source=<red>&utm_medium=social&utm_campaign=perfil-brandooers&utm_content=<sitio>",
+  "aviso_web": "brandooers.com habla hoy a «talento joven» («La academia que convierte talento joven en el 1%»), no a dueños de tiendas: el enlace funciona, pero la promesa no casa hasta que exista la página de «Tu tienda vende más».",
+  "sin_conectar": "Threads y X no están conectados en Zernio: no se prepara nada para ellos.",
+  "puerta": {
+   "veredicto": "PASA",
+   "fallos": [],
+   "comprobado": "términos prohibidos (marcas, Odoo, precios, servicios, «asistente»), emojis, signos del LinkedIn de Marc, límites de caracteres, UTM en minúsculas con campaña de Brandooers, texto pintado en las imágenes",
+   "cuentas": "todas las cuentas de publicación son del perfil BRANDOOERS de Zernio; ninguna del perfil Boomatik"
+  }
+ },
+ "canales": [
+  {
+   "red": "youtube",
+   "nombre_red": "YouTube",
+   "zernio_id": "6ae2de27fe4cb228868fb11b",
+   "url_hoy": "https://youtube.com/@skillup.brandooers",
+   "tipo": "Canal de marca (cuenta de Google marc@brandooers.com)",
+   "hoy": {
+    "nombre": "Marc Herrero Garcia-Robledo",
+    "usuario": "@skillup.brandooers",
+    "bio": "(vacía)",
+    "enlace": "(ninguno)",
+    "avatar": "Render 3D antiguo de los ojos con una bombilla: no se lee en pequeño y no es el logo de la web",
+    "banner": "(ninguno)",
+    "otros": "0 vídeos, 0 suscriptores"
+   },
+   "cambiar": [
+    "Nombre: hoy sale tu nombre personal; pasa a «Brandooers SkillUp»",
+    "Usuario: @brandooers",
+    "Descripción, palabras clave y enlaces: vacíos",
+    "Banner: no hay",
+    "Foto: los ojos del logo",
+    "Tráiler del canal y país"
+   ],
+   "campos": [
+    {
+     "id": "nombre",
+     "etiqueta": "Nombre del canal",
+     "valor": "Brandooers SkillUp",
+     "limite": 50
+    },
+    {
+     "id": "usuario",
+     "etiqueta": "Identificador",
+     "valor": "@brandooers",
+     "limite": 30,
+     "nota": "Si no estuviera libre: @brandooers.skillup"
+    },
+    {
+     "id": "descripcion",
+     "etiqueta": "Descripción",
+     "valor": "«Tu tienda vende más» es la serie de Brandooers SkillUp para quien tiene una tienda online en España y quiere vender más con lo que ya tiene.\n\nCada lunes, un capítulo nuevo de unos diez minutos sobre un problema real de una tienda online: por qué entran visitas y no compran, fichas que no convencen, carritos que se abandonan o pagos que se caen. En cada uno, la señal que lo delata en tus números, una prueba de diez minutos que puedes hacer tú solo y el arreglo.\n\nHablamos de e-commerce, de inteligencia artificial aplicada a la tienda y de redes sociales, con ejemplos de tiendas españolas y sin tecnicismos.\n\nSuscríbete y activa la campana para ver el capítulo del lunes.\n\nBrandooers SkillUp · Educando innovación y estrategia\n\nLos vídeos usan un avatar y una voz generados con IA a partir de la imagen y la voz reales de Marc Herrero.",
+     "limite": 1000
+    },
+    {
+     "id": "palabras",
+     "etiqueta": "Palabras clave del canal",
+     "valor": "tienda online, ecommerce, vender más online, cómo vender por internet, tienda online España, conversión tienda online, carrito abandonado, ficha de producto, inteligencia artificial para tiendas, redes sociales para tiendas, Tu tienda vende más, Brandooers, SkillUp",
+     "limite": 500
+    },
+    {
+     "id": "enlace1",
+     "etiqueta": "Enlace 1 · título «Web»",
+     "valor": "https://brandooers.com/?utm_source=youtube&utm_medium=social&utm_campaign=perfil-brandooers&utm_content=enlaces-canal"
+    },
+    {
+     "id": "enlace2",
+     "etiqueta": "Enlace 2 · título «Instagram»",
+     "valor": "https://www.instagram.com/brandooers/"
+    },
+    {
+     "id": "enlace3",
+     "etiqueta": "Enlace 3 · título «TikTok»",
+     "valor": "https://www.tiktok.com/@brandooers"
+    },
+    {
+     "id": "enlace4",
+     "etiqueta": "Enlace 4 · título «LinkedIn»",
+     "valor": "https://www.linkedin.com/company/brandooers/"
+    },
+    {
+     "id": "pais",
+     "etiqueta": "País",
+     "valor": "España"
+    },
+    {
+     "id": "categoria",
+     "etiqueta": "Categoría por defecto de las subidas",
+     "valor": "Formación"
+    },
+    {
+     "id": "ia",
+     "etiqueta": "Contenido alterado o sintético (por defecto en las subidas)",
+     "valor": "Sí: el avatar y la voz de Marc están hechos con IA"
+    },
+    {
+     "id": "trailer",
+     "etiqueta": "Tráiler del canal",
+     "valor": "Para quien aún no está suscrito: el capítulo 1 en cuanto se publique. Cuando salga el render final, sustituirlo por el gancho en frío del capítulo 1 (0:00-0:23) cortado en 16:9. Para quien ya está suscrito: «vídeo destacado» = el último capítulo."
+    }
+   ],
+   "imagenes": [
+    "perfiles/avatar_youtube_800.png",
+    "perfiles/banner_youtube_2560x1440.png"
+   ],
+   "donde": "YouTube Studio → Personalización: «Perfil» (nombre, identificador, descripción, enlaces), «Branding» (foto y banner) y «Diseño» (tráiler). Ajustes → Canal: país y palabras clave. Ajustes → Valores predeterminados de subida: categoría y contenido alterado."
+  },
+  {
+   "red": "instagram",
+   "nombre_red": "Instagram",
+   "zernio_id": "6ae2dd79f681a077b3f325cb",
+   "url_hoy": "https://instagram.com/brandooers_skillup",
+   "tipo": "Cuenta de creador (profesional)",
+   "hoy": {
+    "nombre": "Marc",
+    "usuario": "@brandooers_skillup",
+    "bio": "(vacía, según Zernio)",
+    "enlace": "(ninguno)",
+    "avatar": "El mismo render 3D de los ojos con bombilla",
+    "banner": "no aplica",
+    "otros": "0 publicaciones, 0 seguidores"
+   },
+   "cambiar": [
+    "Nombre: «Marc» pasa a «Brandooers SkillUp»",
+    "Usuario: @brandooers si está libre",
+    "Biografía y enlace: vacíos",
+    "Categoría",
+    "Foto: los ojos del logo",
+    "Historias destacadas"
+   ],
+   "campos": [
+    {
+     "id": "nombre",
+     "etiqueta": "Nombre",
+     "valor": "Brandooers SkillUp",
+     "limite": 30
+    },
+    {
+     "id": "usuario",
+     "etiqueta": "Nombre de usuario",
+     "valor": "brandooers",
+     "limite": 30,
+     "nota": "Si está cogido: brandooers.skillup (y el mismo en todas las redes)"
+    },
+    {
+     "id": "bio",
+     "etiqueta": "Biografía",
+     "valor": "Para quien tiene una tienda online\nE-commerce, IA y redes, paso a paso\nCada lunes, capítulo de «Tu tienda vende más»",
+     "limite": 150
+    },
+    {
+     "id": "enlace",
+     "etiqueta": "Enlace (título «Web»)",
+     "valor": "https://brandooers.com/?utm_source=instagram&utm_medium=social&utm_campaign=perfil-brandooers&utm_content=bio"
+    },
+    {
+     "id": "categoria",
+     "etiqueta": "Categoría",
+     "valor": "Educación"
+    },
+    {
+     "id": "ia",
+     "etiqueta": "Etiqueta de IA",
+     "valor": "Actívala al publicar cada pieza donde salga el avatar de Marc («Añadir etiqueta de IA» en Configuración avanzada)"
+    }
+   ],
+   "destacadas": [
+    {
+     "nombre": "Empieza aquí",
+     "imagen": "perfiles/destacada_empieza_1080x1920.png",
+     "que": "Quién somos y qué vas a encontrar (la historia del teaser y la del capítulo 1)"
+    },
+    {
+     "nombre": "Capítulos",
+     "imagen": "perfiles/destacada_capitulos_1080x1920.png",
+     "que": "Una historia por capítulo con su enlace"
+    },
+    {
+     "nombre": "4 pasos",
+     "imagen": "perfiles/destacada_pasos_1080x1920.png",
+     "que": "Las 4 pruebas del capítulo 1 (historias H4 y H5)"
+    },
+    {
+     "nombre": "La hoja",
+     "imagen": "perfiles/destacada_hoja_1080x1920.png",
+     "que": "Cuando exista la página de la hoja: cómo conseguirla"
+    },
+    {
+     "nombre": "Prompts",
+     "imagen": "perfiles/destacada_prompts_1080x1920.png",
+     "que": "Cuando exista la biblioteca «Prompts para tu tienda»"
+    }
+   ],
+   "imagenes": [
+    "perfiles/avatar_instagram_1080.png"
+   ],
+   "donde": "Perfil → Editar perfil (nombre, usuario, biografía, enlaces, categoría). Las destacadas se crean desde una historia publicada: «Destacar» y luego «Editar destacada → Editar portada»."
+  },
+  {
+   "red": "tiktok",
+   "nombre_red": "TikTok",
+   "zernio_id": "6ae2de19064494d9f3f1b5bf",
+   "url_hoy": "https://tiktok.com/@skillup_brandooers",
+   "tipo": "Cuenta personal",
+   "hoy": {
+    "nombre": "skillup_brandooers",
+    "usuario": "@skillup_brandooers",
+    "bio": "(vacía)",
+    "enlace": "(ninguno)",
+    "avatar": "El mismo render 3D de los ojos con bombilla",
+    "banner": "no aplica",
+    "otros": "0 vídeos, 0 seguidores"
+   },
+   "cambiar": [
+    "Nombre: hoy repite el usuario",
+    "Usuario: @brandooers (el orden del actual está al revés que en Instagram)",
+    "Biografía vacía",
+    "Pasar a cuenta de empresa para poder poner la web",
+    "Foto: los ojos del logo"
+   ],
+   "campos": [
+    {
+     "id": "nombre",
+     "etiqueta": "Nombre",
+     "valor": "Brandooers SkillUp",
+     "limite": 30
+    },
+    {
+     "id": "usuario",
+     "etiqueta": "Nombre de usuario",
+     "valor": "brandooers",
+     "limite": 24,
+     "nota": "TikTok deja cambiarlo una vez cada 30 días"
+    },
+    {
+     "id": "bio",
+     "etiqueta": "Biografía",
+     "valor": "Tu tienda online, paso a paso: e-commerce, IA y redes. Capítulo cada lunes.",
+     "limite": 80
+    },
+    {
+     "id": "enlace",
+     "etiqueta": "Web (cuando aparezca el campo)",
+     "valor": "https://brandooers.com/?utm_source=tiktok&utm_medium=social&utm_campaign=perfil-brandooers&utm_content=bio"
+    },
+    {
+     "id": "cuenta",
+     "etiqueta": "Tipo de cuenta",
+     "valor": "Cuenta de empresa, categoría «Educación». La música de las piezas es audio original con licencia, así que no hace falta la biblioteca comercial."
+    },
+    {
+     "id": "ia",
+     "etiqueta": "Etiqueta de IA",
+     "valor": "Activa «Contenido generado por IA» en cada pieza con el avatar de Marc"
+    }
+   ],
+   "imagenes": [
+    "perfiles/avatar_tiktok_720.png"
+   ],
+   "donde": "Perfil → Editar perfil (foto, nombre, usuario, biografía). Menú → Ajustes y privacidad → Cuenta → Cambiar a cuenta de empresa."
+  },
+  {
+   "red": "linkedin",
+   "nombre_red": "LinkedIn",
+   "zernio_id": "6ae2e281307878009bccc784",
+   "url_hoy": "https://www.linkedin.com/company/brandooers/",
+   "tipo": "Página de empresa «Brandooers» (Marc es administrador). El kit es para la página, no para el perfil personal de Marc.",
+   "hoy": {
+    "nombre": "Brandooers",
+    "usuario": "/company/brandooers",
+    "bio": "Eslogan: «Sales & Marketing & Productivity (HUB de Innovación Formativo & Colaborativo)»",
+    "enlace": "(no se ve sitio web)",
+    "avatar": "Los ojos sobre fondo blanco, en otro estilo",
+    "banner": "La portada gris por defecto de LinkedIn",
+    "otros": "Sector «Servicios de marketing», tipo «Asociación», 2-10 empleados, 1 seguidor"
+   },
+   "cambiar": [
+    "Eslogan mezclado en inglés y sin promesa",
+    "Sector: de «Servicios de marketing» a formación",
+    "Acerca de y sitio web",
+    "Portada y logo con la marca de la web"
+   ],
+   "campos": [
+    {
+     "id": "nombre",
+     "etiqueta": "Nombre",
+     "valor": "Brandooers SkillUp",
+     "limite": 100,
+     "nota": "La URL /company/brandooers no cambia"
+    },
+    {
+     "id": "eslogan",
+     "etiqueta": "Eslogan",
+     "valor": "Para quien tiene una tienda online: e-commerce, IA y redes, paso a paso. Capítulo nuevo cada lunes.",
+     "limite": 120
+    },
+    {
+     "id": "acerca",
+     "etiqueta": "Descripción (Acerca de)",
+     "valor": "Brandooers SkillUp es formación práctica para quien tiene una tienda online: e-commerce, inteligencia artificial y redes sociales, explicados paso a paso y sin tecnicismos.\n\nCada lunes publicamos un capítulo de «Tu tienda vende más» en YouTube. Cada capítulo toma un problema real de una tienda online (visitas que no compran, fichas que no convencen, carritos abandonados, pagos que se caen) y lo baja a tierra: la señal que lo delata en tus números, una prueba de diez minutos que puedes hacer tú solo y el arreglo.\n\nAquí compartimos cada capítulo, sus pruebas en formato documento para guardar y lo que vamos aprendiendo con tiendas españolas.\n\nEducando innovación y estrategia.",
+     "limite": 2000
+    },
+    {
+     "id": "web",
+     "etiqueta": "Sitio web",
+     "valor": "https://brandooers.com/?utm_source=linkedin&utm_medium=social&utm_campaign=perfil-brandooers&utm_content=pagina"
+    },
+    {
+     "id": "sector",
+     "etiqueta": "Sector",
+     "valor": "Proveedores de e-learning"
+    },
+    {
+     "id": "boton",
+     "etiqueta": "Botón personalizado",
+     "valor": "Visitar sitio web"
+    }
+   ],
+   "perfil_marc": "El perfil personal de Marc no se toca: es su perfil de Odoo y su firma pública es fija. Desde él solo se publican a mano sus posts en primera persona del capítulo (sin nombrar Odoo ni ofrecer servicios). Su URL incluye «partner-odoo» aunque Marc no es partner: no afecta a Brandooers, pero conviene que lo sepa.",
+   "imagenes": [
+    "perfiles/avatar_linkedin_400.png",
+    "perfiles/portada_linkedin_1128x191.png"
+   ],
+   "donde": "Página → Herramientas de administrador → Editar página: «Información de la página» (nombre, eslogan, logo, botón), «Detalles» (descripción, web, sector) y el lápiz de la portada."
+  },
+  {
+   "red": "facebook",
+   "nombre_red": "Facebook",
+   "zernio_id": "6ae2dfbb81cdbb682c9f2766",
+   "url_hoy": "https://facebook.com/1468362009686872",
+   "tipo": "Página",
+   "hoy": {
+    "nombre": "Skillup.brandooers",
+    "usuario": "(sin nombre de usuario propio; la URL es un número)",
+    "bio": "SIN DATOS (Facebook no deja leer la página sin iniciar sesión)",
+    "enlace": "SIN DATOS",
+    "avatar": "Una «S» naranja por defecto",
+    "banner": "SIN DATOS",
+    "otros": "0 seguidores"
+   },
+   "cambiar": [
+    "Nombre con aspecto de usuario",
+    "Nombre de usuario (URL con número)",
+    "Foto y portada",
+    "Biografía, categoría y web"
+   ],
+   "campos": [
+    {
+     "id": "nombre",
+     "etiqueta": "Nombre de la página",
+     "valor": "Brandooers SkillUp",
+     "limite": 75
+    },
+    {
+     "id": "usuario",
+     "etiqueta": "Nombre de usuario",
+     "valor": "brandooers",
+     "nota": "Si está cogido: brandooers.skillup"
+    },
+    {
+     "id": "bio",
+     "etiqueta": "Biografía",
+     "valor": "Para quien tiene una tienda online: e-commerce, IA y redes, paso a paso. Capítulo cada lunes.",
+     "limite": 101
+    },
+    {
+     "id": "categoria",
+     "etiqueta": "Categoría",
+     "valor": "Sitio web educativo"
+    },
+    {
+     "id": "web",
+     "etiqueta": "Sitio web",
+     "valor": "https://brandooers.com/?utm_source=facebook&utm_medium=social&utm_campaign=perfil-brandooers&utm_content=pagina"
+    },
+    {
+     "id": "boton",
+     "etiqueta": "Botón",
+     "valor": "Más información → la web"
+    },
+    {
+     "id": "ia",
+     "etiqueta": "Etiqueta de IA",
+     "valor": "Actívala en las piezas con el avatar de Marc"
+    }
+   ],
+   "imagenes": [
+    "perfiles/avatar_facebook_720.png",
+    "perfiles/portada_facebook_1640x624.png"
+   ],
+   "donde": "Cambia a la página → Editar → «Información de la página» (nombre, nombre de usuario, categoría, biografía, web) y la cámara sobre la foto y la portada."
+  },
+  {
+   "red": "google",
+   "nombre_red": "Perfil de Empresa de Google",
+   "zernio_id": "6ae2e1c93c2d9f4b3066c329",
+   "url_hoy": null,
+   "tipo": "Ficha de Google «Brandooers» (cuenta marc@brandooers.com)",
+   "hoy": {
+    "nombre": "Brandooers",
+    "usuario": "—",
+    "bio": "SIN DATOS (la API no da el contenido)",
+    "enlace": "SIN DATOS",
+    "avatar": "SIN DATOS",
+    "banner": "SIN DATOS",
+    "otros": ""
+   },
+   "cambiar": [
+    "Antes de tocarla, decidir si debe existir: Google no admite fichas de negocios que solo trabajan en línea"
+   ],
+   "campos": [
+    {
+     "id": "decision",
+     "etiqueta": "Qué hacer",
+     "valor": "No publicar nada en ella esta semana. Solo tiene sentido si SkillUp atiende en persona en un local con horario o a domicilio en una zona (SIN DATOS). Si es solo formación en línea, las directrices de Google dicen que no puede tener ficha y se arriesga a una suspensión."
+    }
+   ],
+   "imagenes": [
+    "perfiles/avatar_google_720.png"
+   ],
+   "donde": "business.google.com con marc@brandooers.com."
+  }
+ ]
+}

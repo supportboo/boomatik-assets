@@ -1,0 +1,18 @@
+/* Brandooers / SkillUp brand frames for chapter videos: transparent 1920x1080 layers laid over the whole video.
+   Tokens: scratch/brandooers/BRAND_TOKENS.md. Free zones measured on chapter 1 (_trabajo/analisis_marco.py):
+   screen and card content x 40-1879, y >= 93; captions box up to x 248-1672, y 968-1062; face zone x 720-1220, y < 650.
+   So the frame keeps to: a band of <= 16 px on the edges, the top band (y < 90) left of x 715 and right of x 1225,
+   and the bottom-left corner left of x 245. Readable text >= 28 px cap, contrast >= 4.5:1 (solid dark plates). */
+@font-face { font-family: "Inter"; src: url("../assets/fonts/Inter.ttf"); font-weight: 100 900; }
+@font-face { font-family: "Caveat"; src: url("../assets/fonts/Caveat.ttf"); font-weight: 400 700; }
+@font-face { font-family: "Space Grotesk"; src: url("../assets/fonts/SpaceGroteskBD.ttf"); font-weight: 700; }
+:root { --bg: #0b0918; --ink: #F3F0FB; --mut: #a99fc4; --cy: #00D4FF; --vi: #8B5CF6; --pk: #EC4899; --ide: #67E8F9;
+  --grad: linear-gradient(120deg, #00D4FF, #8B5CF6, #EC4899); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: transparent; }
+svg.full { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+/* the logo: real two-eye SVG between «Brand» and «ers», large-size proportions of canal/banner.html */
+.logo { display: inline-flex; align-items: center; gap: .115em; font: 900 44px/1 "Inter"; letter-spacing: -.02em; color: #fff; white-space: nowrap; }
+.logo .beyes { width: 1.269em; height: auto; margin: 0 .019em; overflow: visible; }
+.logo .ide { font-family: "Caveat"; font-weight: 700; font-size: .923em; color: var(--ide); margin-left: .104em; }
+.plate { position: absolute; display: flex; align-items: center; background: var(--bg); }

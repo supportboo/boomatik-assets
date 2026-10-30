@@ -1,0 +1,3893 @@
+{
+ "meta": {
+  "fecha": "2026-10-29",
+  "marca": "SkillUp Brandooers",
+  "comunidad": "I+D+E · Innovación, Desarrollo IA y Estrategia (Skool, freemium)",
+  "autor": "Marc Herrero",
+  "certeza": {
+   "HECHO": "dato leído en su fuente, con enlace",
+   "INFERENCIA": "conclusión razonada a partir de hechos",
+   "SIN DATOS": "no se pudo medir"
+  },
+  "estado": {
+   "disponible": "se graba antes de abrir y se abre el día de la apertura (ola 1). Hoy ningún curso está grabado en Skool.",
+   "proximamente": "visible en el aula con candado; se abre en la ola 2 o 3"
+  },
+  "gancho": "Texto de la portada: MAYÚSCULAS, 5 palabras como máximo; *palabra* = resaltada; | = salto de línea (motor serie_miniaturas/miniatura_capitulo.py). Figura: mascota de los ojos, nunca la cara de Marc.",
+  "puntos": "demanda, encaje con el público, experiencia real y camino al pago, de 1 a 5 cada uno (máximo 20). INFERENCIA: lo puntúa este estudio a partir de los datos citados.",
+  "coste_dataforseo": {
+   "total_usd": 0.191,
+   "detalle": [
+    [
+     "google_ads/search_volume/live · 415 palabras",
+     0.09
+    ],
+    [
+     "google_ads/keywords_for_keywords/live · 20 semillas, 3.804 ideas",
+     0.09
+    ],
+    [
+     "google_trends/explore/live · 5 términos, 12 meses",
+     0.011
+    ]
+   ],
+   "metodo": "Saldo de la cuenta antes (10,888 USD) y después (10,697 USD), /v3/appendix/user_data"
+  },
+  "fuentes_datos": {
+   "busquedas": "_datos/sv_2724_es.json y _datos/ideas_2724_es.json",
+   "youtube": "_datos/youtube_raw/youtube_busquedas.json",
+   "skool": "_datos/skool_raw/skool_discovery.json",
+   "skool_ayuda": "_datos/skool_help_img/ (capturas de la ayuda oficial)"
+  }
+ },
+ "bloques": [
+  {
+   "id": "0",
+   "nombre": "Empieza aquí",
+   "letra": "Entrada",
+   "para_que": "La puerta de la comunidad: qué es I+D+E, el mapa de cursos y tu primera semana. Gratis para todos."
+  },
+  {
+   "id": "A",
+   "nombre": "Tu tienda vende más",
+   "letra": "Ruta e-commerce",
+   "para_que": "La primera serie: los cuatro pasos en los que se rompe la venta online (encontrar, entender, comprar y pagar), más medir y temporadas."
+  },
+  {
+   "id": "B",
+   "nombre": "Desarrollo con IA",
+   "letra": "D de I+D+E",
+   "para_que": "Trabajar con la IA como socia: método, agentes, vídeo e imágenes."
+  },
+  {
+   "id": "C",
+   "nombre": "Visibilidad y captación",
+   "letra": "Ruta marketing",
+   "para_que": "Que te encuentren y te elijan: buscadores e IA, ficha de Google, anuncios, redes, correo y LinkedIn."
+  },
+  {
+   "id": "D",
+   "nombre": "Estrategia",
+   "letra": "E de I+D+E",
+   "para_que": "Poner orden: a quién vendes, a qué precio, con qué datos y en qué mercado."
+  },
+  {
+   "id": "E",
+   "nombre": "Innovación",
+   "letra": "I de I+D+E",
+   "para_que": "Aprender de los mejores, probar rápido y construir tus propias herramientas."
+  }
+ ],
+ "cursos": [
+  {
+   "bloque": "0",
+   "slug": "empieza-aqui",
+   "titulo": "Empieza aquí: el mapa de I+D+E",
+   "gancho": "EMPIEZA *AQUÍ*",
+   "mascota": "dos ojos con luz (marca)",
+   "promesa": "En veinte minutos sabes qué curso te toca primero y sales con tu primera prueba apuntada.",
+   "para_quien": "Todos los miembros, gratis y desde el primer día.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 1,
+   "acceso": "Abierto",
+   "capitulos_youtube": [
+    1
+   ],
+   "material_base": [
+    "capítulo 1",
+    "hoja de los 4 pasos",
+    "calculadora",
+    "10 prompts"
+   ],
+   "puntos": null,
+   "indice": [
+    [
+     "Bienvenida",
+     [
+      "Introducción: qué es I+D+E y cómo se usa",
+      "Cómo funciona la comunidad: muro, directos y niveles",
+      "Las normas y lo que aquí no hacemos"
+     ]
+    ],
+    [
+     "El mapa de cursos",
+     [
+      "Los cinco bloques y su orden",
+      "Test: qué curso te toca primero",
+      "Calendario de aperturas"
+     ]
+    ],
+    [
+     "Tu primera semana",
+     [
+      "Si tienes tienda: encuentra tu paso roto (los 4 pasos y la calculadora)",
+      "Si no: elige tu primera prueba",
+      "Publica tu presentación"
+     ]
+    ],
+    [
+     "Lo que viene",
+     [
+      "Bloque «Tu tienda vende más»: de qué irá cada curso",
+      "Bloque «Desarrollo con IA»",
+      "Bloque «Visibilidad y captación»",
+      "Bloque «Estrategia»",
+      "Bloque «Innovación»"
+     ]
+    ]
+   ],
+   "intro": "Te doy la bienvenida a I+D+E: Innovación, Desarrollo con IA y Estrategia. Soy Marc Herrero y esta es la parte práctica de SkillUp Brandooers. En YouTube y en brandooers.com cuento el porqué y el qué; aquí hacemos el cómo, con tu negocio delante.\n\nEsta comunidad es para ti si tienes una pyme o una tienda online, o si trabajas por tu cuenta, y quieres crecer usando la inteligencia artificial con cabeza y una estrategia que quepa en una página. No hace falta saber programar ni ser experto en marketing. Hacen falta ganas de probar una cosa cada semana y medirla.\n\nEl aula está ordenada en cinco bloques. «Tu tienda vende más» es para quien vende online: encontrar, entender, comprar y pagar. «Desarrollo con IA» te enseña a trabajar con la IA como con una socia: método, agentes, vídeo e imágenes. «Visibilidad y captación» va de que te encuentren y te elijan: buscadores, ficha de Google, anuncios, redes y correo. «Estrategia» pone orden: cliente, precio, datos y mercado. E «Innovación» te da el método para aprender de los mejores, probar rápido y construir tus propias herramientas.\n\nVerás cursos abiertos y cursos con candado. Los del candado están en preparación: en este mismo curso tienes de qué irá cada uno y su índice, para que sepas lo que viene. Se irán abriendo a lo largo de los meses.\n\nMi consejo: termina esta lección, haz el test del módulo 2 para saber qué curso te toca primero y publica tu presentación en el muro. A partir de ahí, una prueba por semana.",
+   "bloque_nombre": "Empieza aquí",
+   "puntuacion": null,
+   "demanda": {
+    "busquedas_google_es": [],
+    "youtube": null,
+    "youtube_extra": null,
+    "skool_espanol": null
+   },
+   "intro_palabras": 259
+  },
+  {
+   "bloque": "0",
+   "slug": "biblioteca",
+   "titulo": "Biblioteca de plantillas",
+   "gancho": "TUS *PLANTILLAS*",
+   "mascota": "lupa",
+   "promesa": "Todas las hojas, plantillas, listas y prompts de la comunidad, ordenados por bloque y listos para usar.",
+   "para_quien": "Miembros que ya se han presentado (se abre en el nivel 2).",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 2,
+   "acceso": "Por nivel: nivel 2 (5 puntos)",
+   "capitulos_youtube": [
+    1,
+    3,
+    4,
+    5,
+    6
+   ],
+   "material_base": [
+    "hoja de los 4 pasos",
+    "calculadora",
+    "biblioteca «Prompts para tu tienda»"
+   ],
+   "puntos": null,
+   "indice": [
+    [
+     "Cómo usar la biblioteca",
+     [
+      "Introducción",
+      "Cómo pedir una plantilla nueva"
+     ]
+    ],
+    [
+     "Tienda",
+     [
+      "Hoja de los 4 pasos",
+      "Las 7 comprobaciones antes de una campaña",
+      "Prompts para tu tienda (enlace a la web)"
+     ]
+    ],
+    [
+     "IA",
+     [
+      "Ficha de tu negocio para la IA",
+      "Plantilla de agente"
+     ]
+    ],
+    [
+     "Estrategia y datos",
+     [
+      "Estrategia en una página",
+      "Hoja de precios y márgenes",
+      "Cuadro semanal"
+     ]
+    ],
+    [
+     "Captación",
+     [
+      "Plantilla de imán",
+      "Calendario de contenidos"
+     ]
+    ]
+   ],
+   "intro": "Aquí está, ordenado por bloques, todo el material práctico de la comunidad: hojas, plantillas, listas de comprobación y prompts. Lo que ya está publicado gratis en brandooers.com no se copia aquí: se enlaza, para que siempre tengas la versión al día. Cada vez que se abre un curso, sus plantillas aparecen en su carpeta. Úsalas tal cual o adáptalas a tu negocio, y si echas en falta alguna, pídela en el muro con la etiqueta de su bloque. Las que más se pidan son las primeras que preparo. Esta biblioteca se abre en el nivel 2, que se consigue con cinco «me gusta» en tus publicaciones o comentarios: basta con presentarte y comentar la prueba de otra persona.",
+   "bloque_nombre": "Empieza aquí",
+   "puntuacion": null,
+   "demanda": {
+    "busquedas_google_es": [],
+    "youtube": null,
+    "youtube_extra": null,
+    "skool_espanol": null
+   },
+   "intro_palabras": 118
+  },
+  {
+   "bloque": "A",
+   "slug": "que-te-encuentren",
+   "titulo": "Que te encuentren",
+   "gancho": "QUE TE *ENCUENTREN*",
+   "mascota": "lupa",
+   "promesa": "Tus productos aparecen en Google, en ChatGPT y en el buscador de tu tienda con las palabras que usa tu cliente.",
+   "para_quien": "Dueños de tienda online con catálogo publicado, en cualquier plataforma.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 3,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [
+    1,
+    2
+   ],
+   "material_base": [
+    "capítulo 1 (paso 1)",
+    "plan de lecciones del curso 1 en SKOOL_PLAN"
+   ],
+   "puntos": {
+    "demanda": 3,
+    "encaje": 5,
+    "experiencia": 5,
+    "pago": 5
+   },
+   "indice": [
+    [
+     "Cómo te busca tu cliente",
+     [
+      "Introducción",
+      "Las palabras de tu cliente: 20 términos de reseñas, preguntas y buscador",
+      "Las preguntas que le hace a ChatGPT"
+     ]
+    ],
+    [
+     "Nombres y categorías",
+     [
+      "Renombra tus 10 más vendidos",
+      "Categorías que se recorren en tres toques",
+      "Fichas que responden la pregunta, para Google y para la IA"
+     ]
+    ],
+    [
+     "El buscador de tu tienda",
+     [
+      "Las búsquedas que no dan resultados",
+      "Sinónimos y errores frecuentes"
+     ]
+    ],
+    [
+     "Fuera de tu tienda",
+     [
+      "Google Shopping y tu catálogo: lo básico",
+      "Qué miran los asistentes de IA para recomendarte"
+     ]
+    ],
+    [
+     "Mide y compara",
+     [
+      "Visitas a ficha, semana contra semana",
+      "Publica tu victoria con su cifra"
+     ]
+    ]
+   ],
+   "intro": "Si tu tienda tiene buenos productos y poca gente llega a verlos, el problema suele estar en el primer paso: que te encuentren. En este curso trabajamos ese paso con tu tienda delante. Primero averiguamos cómo busca de verdad tu cliente, con sus palabras y no con las tuyas: las que usa en Google, las que escribe en el buscador de tu tienda y las preguntas que le hace a ChatGPT. Después renombras tus productos más vendidos, ordenas las categorías para que se llegue a cualquier ficha en tres toques y arreglas las búsquedas internas que hoy no devuelven nada. Al final vemos qué necesitan Google Shopping y los asistentes de IA para poder recomendarte. Es para ti si ya tienes una tienda online funcionando, sea cual sea la plataforma. Cada lección acaba con una práctica de menos de una hora. Cuando termines tendrás tu lista de palabras del cliente, tus diez fichas principales renombradas, un mapa de categorías claro y una cifra para comparar cada semana con la anterior.",
+   "bloque_nombre": "Tu tienda vende más",
+   "puntuacion": 18,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "google shopping",
+      "busquedas_mes": 8100,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "google merchant center",
+      "busquedas_mes": 5400,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "search console",
+      "busquedas_mes": 49500,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "palabras clave",
+      "busquedas_mes": 1000,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "seo ecommerce",
+      "busquedas_mes": 90,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "seo para tiendas online",
+      "busquedas_mes": 40,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "cómo vender más en tu tienda online",
+     "url": "https://www.youtube.com/results?search_query=c%C3%B3mo%20vender%20m%C3%A1s%20en%20tu%20tienda%20online&hl=es&gl=ES",
+     "mediana_vistas_top20": 182539,
+     "video_mas_visto": {
+      "titulo": "Cómo VENDER cualquier cosa | Consigue CLIENTES",
+      "canal": "Pedro Buerbaum",
+      "vistas": 2301589,
+      "publicado": "hace 3 a"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "tienda online",
+     "url": "https://www.skool.com/discovery?q=tienda%20online&lang=spanish",
+     "grupos_en_espanol": 93,
+     "mediana_precio_mensual_usd_30_primeros": 33.0,
+     "mayores": [
+      {
+       "nombre": "EcomMastery",
+       "miembros": 6325,
+       "url": "https://www.skool.com/ecommastery-4502"
+      },
+      {
+       "nombre": "Pau Escrig - Escala Ecommerce",
+       "miembros": 4149,
+       "url": "https://www.skool.com/pau-escrig-escala-ecommerce-8812"
+      },
+      {
+       "nombre": "Automatia Academy",
+       "miembros": 1242,
+       "url": "https://www.skool.com/automatia-academy"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 170
+  },
+  {
+   "bloque": "B",
+   "slug": "la-ia-como-socia",
+   "titulo": "La IA como socia",
+   "gancho": "LA IA COMO *SOCIA*",
+   "mascota": "dos ojos con luz",
+   "promesa": "Usas ChatGPT, Claude o Gemini con método: le das contexto, compruebas lo que dice y lo aplicas a tu negocio.",
+   "para_quien": "Dueños de pyme y de tienda, autónomos y profesionales sin perfil técnico.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 4,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [
+    12
+   ],
+   "material_base": [
+    "10 prompts de brandooers.com",
+    "pack «Seis preguntas antes de gastar» (capítulo 12)"
+   ],
+   "puntos": {
+    "demanda": 5,
+    "encaje": 5,
+    "experiencia": 4,
+    "pago": 5
+   },
+   "indice": [
+    [
+     "Cómo trabaja la IA",
+     [
+      "Introducción",
+      "Qué hace bien y en qué se equivoca",
+      "Qué asistente para qué tarea"
+     ]
+    ],
+    [
+     "Pedir bien",
+     [
+      "El encargo en cinco partes: contexto, tarea, ejemplos, formato y límites",
+      "La ficha de tu negocio para la IA",
+      "Tu biblioteca de prompts"
+     ]
+    ],
+    [
+     "Comprobar antes de usar",
+     [
+      "Hecho, suposición o sin datos",
+      "Cómo pedir fuentes y comprobarlas"
+     ]
+    ],
+    [
+     "Lo de cada semana",
+     [
+      "Textos y correos con tu voz",
+      "Reseñas y preguntas de clientes",
+      "Seis preguntas a la IA antes de gastar un euro"
+     ]
+    ],
+    [
+     "Con cabeza",
+     [
+      "Los datos que nunca le das",
+      "Cuánto cuesta y cómo controlarlo"
+     ]
+    ]
+   ],
+   "intro": "La IA no es magia ni es un juguete: es una socia que trabaja muy rápido, que a veces se equivoca con mucha seguridad y que rinde según lo bien que le expliques las cosas. En este curso aprendes a trabajar con ella con método. Primero vemos qué hace bien, en qué falla y qué asistente conviene para cada tarea. Después aprendes a hacer un buen encargo, con contexto, ejemplos, formato y límites, y preparas una ficha de tu negocio para que la IA hable con tu voz y conozca a tu cliente. Te enseño a comprobar lo que te dice antes de usarlo, separando lo que es un hecho de lo que es una suposición. Y lo aplicamos a lo de cada semana: textos, correos, reseñas, preguntas de clientes y decisiones de gasto. Es para ti si usas la IA de vez en cuando y quieres que te ahorre horas de verdad. Saldrás con tu ficha de negocio, tu biblioteca de prompts y una forma de trabajar que no depende de ninguna herramienta concreta.",
+   "bloque_nombre": "Desarrollo con IA",
+   "puntuacion": 19,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "curso ia",
+      "busquedas_mes": 3600,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "cursos de ia",
+      "busquedas_mes": 2400,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "curso inteligencia artificial",
+      "busquedas_mes": 1900,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "prompts chatgpt",
+      "busquedas_mes": 2900,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "prompt engineering",
+      "busquedas_mes": 1900,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "chatgpt",
+      "busquedas_mes": 24900000,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "claude ai",
+      "busquedas_mes": 301000,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "notebooklm",
+      "busquedas_mes": 823000,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "chatgpt para negocios",
+     "url": "https://www.youtube.com/results?search_query=chatgpt%20para%20negocios&hl=es&gl=ES",
+     "mediana_vistas_top20": 78092,
+     "video_mas_visto": {
+      "titulo": "Estos Hacks De ChatGPT Te Harán Tan Productivo Que Parece Ilegal",
+      "canal": "Adrián Sáenz",
+      "vistas": 746785,
+      "publicado": "hace 9 m"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "inteligencia artificial",
+     "url": "https://www.skool.com/discovery?q=inteligencia%20artificial&lang=spanish",
+     "grupos_en_espanol": 484,
+     "mediana_precio_mensual_usd_30_primeros": 25.5,
+     "mayores": [
+      {
+       "nombre": "IA MAKERS",
+       "miembros": 4084,
+       "url": "https://www.skool.com/ia-makers"
+      },
+      {
+       "nombre": "Aprende con Axel",
+       "miembros": 3981,
+       "url": "https://www.skool.com/aprende-con-axel-8735"
+      },
+      {
+       "nombre": "⭕️ Círculo de Crecimiento",
+       "miembros": 3121,
+       "url": "https://www.skool.com/circulodecrecimiento"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 175
+  },
+  {
+   "bloque": "C",
+   "slug": "que-la-ia-te-recomiende",
+   "titulo": "Que Google y ChatGPT te recomienden",
+   "gancho": "QUE LA IA TE *RECOMIENDE*",
+   "mascota": "lupa",
+   "promesa": "Tu web responde lo que pregunta tu cliente para que Google y los asistentes de IA la muestren y la citen.",
+   "para_quien": "Negocios con web o tienda a los que casi nadie llega desde los buscadores.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 5,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [
+    2
+   ],
+   "material_base": [],
+   "puntos": {
+    "demanda": 5,
+    "encaje": 5,
+    "experiencia": 5,
+    "pago": 4
+   },
+   "indice": [
+    [
+     "Cómo se busca ahora",
+     [
+      "Introducción",
+      "Google, las respuestas con IA y los asistentes: qué cambia",
+      "Cómo saber si hoy te citan"
+     ]
+    ],
+    [
+     "Las preguntas de tu cliente",
+     [
+      "Palabras clave a partir de lo que vendes",
+      "Qué quiere la persona detrás de cada búsqueda"
+     ]
+    ],
+    [
+     "Páginas que responden",
+     [
+      "Respuesta arriba y secciones que se entienden solas",
+      "Quién firma y por qué fiarse",
+      "Datos con fuente"
+     ]
+    ],
+    [
+     "Lo técnico imprescindible",
+     [
+      "Search Console paso a paso",
+      "Indexación, velocidad y móvil"
+     ]
+    ],
+    [
+     "Medir",
+     [
+      "Clics, posiciones y citas",
+      "Qué tocar cada mes"
+     ]
+    ]
+   ],
+   "intro": "Cada vez más gente pregunta a ChatGPT o lee la respuesta de Google antes de entrar en ninguna web. Si tu página no responde bien a esas preguntas, ni te ven ni te citan. En este curso trabajamos el posicionamiento tal y como funciona hoy. Empezamos por ver cómo buscan tus clientes y cómo comprobar si los buscadores y los asistentes de IA te mencionan. Después sacamos las palabras clave a partir de lo que de verdad vendes, no de listas genéricas, y entendemos qué quiere la persona detrás de cada búsqueda. Rehacemos tus páginas para que respondan arriba, con secciones que se entienden por sí solas, firma real y datos con fuente. Te enseño a usar Search Console paso a paso y a revisar lo técnico imprescindible sin volverte loco. Es para ti si tienes web o tienda y casi nadie llega desde los buscadores. Saldrás con tu lista de preguntas del cliente, tus páginas clave rehechas y una revisión mensual que cabe en una hora.",
+   "bloque_nombre": "Visibilidad y captación",
+   "puntuacion": 19,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "google search console",
+      "busquedas_mes": 90500,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "seo",
+      "busquedas_mes": 14800,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "posicionamiento seo",
+      "busquedas_mes": 1600,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "posicionamiento web",
+      "busquedas_mes": 1000,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "curso seo",
+      "busquedas_mes": 480,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "ai overviews",
+      "busquedas_mes": 880,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "geo seo",
+      "busquedas_mes": 590,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "seo ia",
+      "busquedas_mes": 260,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "seo 2026 tutorial",
+     "url": "https://www.youtube.com/results?search_query=seo%202026%20tutorial&hl=es&gl=ES",
+     "mediana_vistas_top20": 20639,
+     "video_mas_visto": {
+      "titulo": "Curso completo de SEO y SEO con IA para 2026 (Guía completa para principiantes)",
+      "canal": "Surfer Academy y Matt Kenyon",
+      "vistas": 331876,
+      "publicado": "hace 6 m"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": {
+     "busqueda": "aparecer en chatgpt seo",
+     "url": "https://www.youtube.com/results?search_query=aparecer%20en%20chatgpt%20seo&hl=es&gl=ES",
+     "mediana_vistas_top20": 1007,
+     "video_mas_visto": {
+      "titulo": "Cómo APARECER en ChatGPT y Google AI Overview (7 claves prácticas)",
+      "canal": "Dani Llamazares",
+      "vistas": 41895,
+      "publicado": "hace 1 a"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "skool_espanol": {
+     "busqueda": "seo",
+     "url": "https://www.skool.com/discovery?q=seo&lang=spanish",
+     "grupos_en_espanol": 52,
+     "mediana_precio_mensual_usd_30_primeros": 49.0,
+     "mayores": [
+      {
+       "nombre": "Road to Partner | Nico Seoane",
+       "miembros": 18274,
+       "url": "https://www.skool.com/roadtopartner"
+      },
+      {
+       "nombre": "Data SEO Community",
+       "miembros": 2395,
+       "url": "https://www.skool.com/data-seo-8567"
+      },
+      {
+       "nombre": "Automatia Academy",
+       "miembros": 1242,
+       "url": "https://www.skool.com/automatia-academy"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 167
+  },
+  {
+   "bloque": "E",
+   "slug": "crea-sin-programar",
+   "titulo": "Crea tus herramientas con IA sin programar",
+   "gancho": "CREA SIN *PROGRAMAR*",
+   "mascota": "dos ojos con luz",
+   "promesa": "Construyes con IA una calculadora, un panel interno o una pequeña aplicación para tu negocio sin saber programar.",
+   "para_quien": "Quien tiene en la cabeza una herramienta que le ahorraría horas y nadie se la hace.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 6,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [],
+   "material_base": [
+    "la calculadora del paso que se rompe como caso"
+   ],
+   "limite": "Herramientas para tu negocio (calculadoras, paneles, pequeñas apps). No es un curso de diseño de webs.",
+   "puntos": {
+    "demanda": 5,
+    "encaje": 4,
+    "experiencia": 5,
+    "pago": 5
+   },
+   "indice": [
+    [
+     "Qué puedes construir",
+     [
+      "Introducción",
+      "Lo que ya hacen personas sin perfil técnico",
+      "Lo que no conviene construir tú"
+     ]
+    ],
+    [
+     "Pedir bien a la IA programadora",
+     [
+      "Describir la herramienta antes de pedirla",
+      "Construir por pasos pequeños"
+     ]
+    ],
+    [
+     "Tu primera herramienta",
+     [
+      "Una calculadora para tus clientes",
+      "Un panel interno"
+     ]
+    ],
+    [
+     "Probar y cuidar",
+     [
+      "Probar con datos reales",
+      "Seguridad básica: claves y datos de clientes"
+     ]
+    ],
+    [
+     "Ponerla en marcha",
+     [
+      "Publicarla",
+      "Arreglarla cuando algo falla"
+     ]
+    ]
+   ],
+   "intro": "No soy programador y buena parte de las herramientas con las que trabajo las he construido dando instrucciones a la IA; la calculadora del paso que se rompe de brandooers.com, por ejemplo. En este curso aprendes a hacerlo tú, empezando por cosas pequeñas y útiles para tu negocio. Vemos qué tiene sentido construir y qué es mejor no tocar. Aprendes a describir la herramienta antes de pedirla y a construirla por pasos pequeños, comprobando cada uno. Haces tu primera herramienta, una calculadora para tus clientes o un panel interno, y la pruebas con datos reales. Repasamos la seguridad básica, porque una clave mal guardada o unos datos de clientes a la vista son un problema serio. Y aprendes a ponerla en marcha y a arreglarla cuando algo falla. Es para ti si tienes en la cabeza una herramienta que te ahorraría horas y nadie te la hace. Saldrás con tu primera herramienta funcionando y un método para la siguiente.",
+   "bloque_nombre": "Innovación",
+   "puntuacion": 19,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "claude code",
+      "busquedas_mes": 74000,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "lovable",
+      "busquedas_mes": 60500,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "vibe coding",
+      "busquedas_mes": 12100,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "cursor ia",
+      "busquedas_mes": 6600,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "crear app con ia",
+      "busquedas_mes": 590,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "programar con ia",
+      "busquedas_mes": 110,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "inteligencia artificial para empresas",
+     "url": "https://www.youtube.com/results?search_query=inteligencia%20artificial%20para%20empresas&hl=es&gl=ES",
+     "mediana_vistas_top20": 132384,
+     "video_mas_visto": {
+      "titulo": "Una clase magistral del pionero de la inteligencia artificial | Jürgen Schmidhuber",
+      "canal": "AprendemosJuntos",
+      "vistas": 2298668,
+      "publicado": "hace 1 a"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "automatizacion",
+     "url": "https://www.skool.com/discovery?q=automatizacion&lang=spanish",
+     "grupos_en_espanol": 476,
+     "mediana_precio_mensual_usd_30_primeros": 28.5,
+     "mayores": [
+      {
+       "nombre": "Imperio Agéntico",
+       "miembros": 4088,
+       "url": "https://www.skool.com/imperio"
+      },
+      {
+       "nombre": "Orangutan - Builders Club",
+       "miembros": 1800,
+       "url": "https://www.skool.com/orangutan"
+      },
+      {
+       "nombre": "Inmigrantes IA ",
+       "miembros": 1140,
+       "url": "https://www.skool.com/inmigrantesia"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 159
+  },
+  {
+   "bloque": "D",
+   "slug": "decide-con-datos",
+   "titulo": "Decide con datos",
+   "gancho": "DECIDE CON *DATOS*",
+   "mascota": "lupa",
+   "promesa": "Montas tu cuadro de mando con Analytics, Search Console y Clarity y separas lo que es un hecho de lo que es una suposición.",
+   "para_quien": "Negocios que tienen datos y no saben qué hacer con ellos.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 7,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [
+    3
+   ],
+   "material_base": [],
+   "no_repetir": "Herramientas y cuadro general para cualquier negocio. Los cinco números de una tienda van en «Medir y repetir».",
+   "puntos": {
+    "demanda": 5,
+    "encaje": 4,
+    "experiencia": 5,
+    "pago": 4
+   },
+   "indice": [
+    [
+     "Qué medir",
+     [
+      "Introducción",
+      "De la decisión a la cifra",
+      "Hecho, suposición o sin datos"
+     ]
+    ],
+    [
+     "Tus fuentes",
+     [
+      "Google Analytics 4 sin perderte",
+      "Search Console",
+      "Clarity: ver dónde se atasca la gente"
+     ]
+    ],
+    [
+     "Tu cuadro",
+     [
+      "Un cuadro de mando en una pantalla",
+      "Que se actualice solo"
+     ]
+    ],
+    [
+     "Leer bien",
+     [
+      "Compararte contigo, no con medias ajenas",
+      "Coincidencia no es causa",
+      "Cuándo un cambio es real"
+     ]
+    ],
+    [
+     "La rutina",
+     [
+      "Quince minutos a la semana y una hora al mes"
+     ]
+    ]
+   ],
+   "intro": "Casi todos los negocios tienen datos y casi ninguno decide con ellos. O se miran demasiadas cifras, o se miran las que no importan, o se sacan conclusiones de dos días de visitas. En este curso montas un cuadro de mando que se entiende de un vistazo y te ayuda a decidir. Empezamos al revés de lo habitual: primero la decisión que quieres tomar y después la cifra que la responde. Te enseño una costumbre que cambia mucho: marcar cada dato como hecho, suposición o sin datos. Después aprendes a sacar lo importante de Google Analytics, de Search Console y de Clarity, que te deja ver dónde se atasca la gente en tu web. Lo juntamos en una sola pantalla que se actualiza sola y aprendes a leerla bien: comparar tu negocio consigo mismo, no confundir coincidencia con causa y saber cuándo un cambio es real. Es para ti si tienes datos y no sabes qué hacer con ellos. Saldrás con tu cuadro de mando y tu rutina semanal de quince minutos.",
+   "bloque_nombre": "Estrategia",
+   "puntuacion": 18,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "google analytics",
+      "busquedas_mes": 60500,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "search console",
+      "busquedas_mes": 49500,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "kpi",
+      "busquedas_mes": 18100,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "dashboard",
+      "busquedas_mes": 18100,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "looker studio",
+      "busquedas_mes": 14800,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "google analytics 4",
+      "busquedas_mes": 6600,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "microsoft clarity",
+      "busquedas_mes": 2900,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "cuadro de mando",
+      "busquedas_mes": 1900,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": null,
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "marketing digital",
+     "url": "https://www.skool.com/discovery?q=marketing%20digital&lang=spanish",
+     "grupos_en_espanol": 256,
+     "mediana_precio_mensual_usd_30_primeros": 27.0,
+     "mayores": [
+      {
+       "nombre": "Autobot Cash Academy",
+       "miembros": 10569,
+       "url": "https://www.skool.com/autobotcashacademy"
+      },
+      {
+       "nombre": "Vive del Marketing",
+       "miembros": 3306,
+       "url": "https://www.skool.com/marketing-digital"
+      },
+      {
+       "nombre": "⭕️ Círculo de Crecimiento",
+       "miembros": 3121,
+       "url": "https://www.skool.com/circulodecrecimiento"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 172
+  },
+  {
+   "bloque": "A",
+   "slug": "ficha-en-5-segundos",
+   "titulo": "La ficha que se entiende en 5 segundos",
+   "gancho": "TU FICHA EN *5 SEGUNDOS*",
+   "mascota": "lupa",
+   "promesa": "Tu ficha responde qué es, para quién, cuánto mide y cuándo llega antes de que el cliente se vaya.",
+   "para_quien": "Tiendas online cuyas visitas llegan a la ficha pero no añaden al carrito.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 8,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [
+    6,
+    7,
+    11
+   ],
+   "material_base": [
+    "prompt «La primera pantalla de tu ficha»"
+   ],
+   "puntos": {
+    "demanda": 2,
+    "encaje": 5,
+    "experiencia": 5,
+    "pago": 5
+   },
+   "indice": [
+    [
+     "La primera pantalla",
+     [
+      "Introducción",
+      "Qué decide el cliente en la primera pantalla del móvil",
+      "La prueba del desconocido en tu ficha"
+     ]
+    ],
+    [
+     "Texto que vende sin sonar a IA",
+     [
+      "La descripción en cuatro bloques",
+      "El prompt «La primera pantalla de tu ficha»",
+      "Cómo quitarle el tono de IA"
+     ]
+    ],
+    [
+     "Fotos que responden",
+     [
+      "Las seis fotos que necesita cada ficha, con tu móvil",
+      "Dónde ayuda la IA y dónde engaña"
+     ]
+    ],
+    [
+     "Dudas resueltas en la ficha",
+     [
+      "Las preguntas de tu cliente antes de comprar",
+      "Preguntas frecuentes por ficha (plantilla)",
+      "Opiniones: cómo pedirlas y mostrarlas"
+     ]
+    ],
+    [
+     "Mide y compara",
+     [
+      "Añadidos al carrito por ficha",
+      "Publica tu antes y después"
+     ]
+    ]
+   ],
+   "intro": "Tu cliente llega a la ficha y en unos segundos decide si sigue o se va. En ese rato tiene que entender qué es, si es para él, cuánto mide o qué incluye y cuándo le llega. En este curso rehacemos tus fichas para que respondan a eso a la primera. Empezamos por la primera pantalla del móvil, que es la que de verdad se ve. Luego escribes la descripción en cuatro bloques con ayuda de la IA, pero sin que suene a IA, y preparas las seis fotos que necesita cada producto con tu propio móvil. Después llevamos a la ficha las preguntas que hoy te hacen por correo o por WhatsApp, para que el cliente no tenga que hacerlas. Es para ti si vendes online y tus visitas llegan a las fichas pero no añaden al carrito. Saldrás con tus fichas principales rehechas, una plantilla para el resto del catálogo y la cifra de añadidos al carrito para compararla cada semana.",
+   "bloque_nombre": "Tu tienda vende más",
+   "puntuacion": 17,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "copywriting",
+      "busquedas_mes": 3600,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "fichas de producto",
+      "busquedas_mes": 260,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "fotos de producto",
+      "busquedas_mes": 210,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "descripcion de producto",
+      "busquedas_mes": 50,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "cómo vender más en tu tienda online",
+     "url": "https://www.youtube.com/results?search_query=c%C3%B3mo%20vender%20m%C3%A1s%20en%20tu%20tienda%20online&hl=es&gl=ES",
+     "mediana_vistas_top20": 182539,
+     "video_mas_visto": {
+      "titulo": "Cómo VENDER cualquier cosa | Consigue CLIENTES",
+      "canal": "Pedro Buerbaum",
+      "vistas": 2301589,
+      "publicado": "hace 3 a"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "ecommerce",
+     "url": "https://www.skool.com/discovery?q=ecommerce&lang=spanish",
+     "grupos_en_espanol": 240,
+     "mediana_precio_mensual_usd_30_primeros": 39.0,
+     "mayores": [
+      {
+       "nombre": "Crea tu Ecommerce Global",
+       "miembros": 1641,
+       "url": "https://www.skool.com/connection-drop-6443"
+      },
+      {
+       "nombre": "Anto Ecom Club",
+       "miembros": 913,
+       "url": "https://www.skool.com/antoecomclub"
+      },
+      {
+       "nombre": "Iniciación Escala",
+       "miembros": 688,
+       "url": "https://www.skool.com/iniciacion-escala"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 163
+  },
+  {
+   "bloque": "B",
+   "slug": "tu-equipo-de-agentes",
+   "titulo": "Tu equipo de agentes",
+   "gancho": "TU EQUIPO DE *AGENTES*",
+   "mascota": "dos ojos con luz",
+   "promesa": "Delegas tareas repetitivas en agentes de IA y automatizaciones sin programar, con límites y control de gasto.",
+   "para_quien": "Negocios pequeños y autónomos a los que el día se les va en tareas repetitivas.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 9,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [],
+   "material_base": [],
+   "puntos": {
+    "demanda": 5,
+    "encaje": 4,
+    "experiencia": 5,
+    "pago": 5
+   },
+   "indice": [
+    [
+     "Qué es un agente",
+     [
+      "Introducción",
+      "Agente, automatización y asistente: en qué se diferencian",
+      "Qué tareas delegar y cuáles no"
+     ]
+    ],
+    [
+     "Tu primer agente",
+     [
+      "La ficha del agente: papel, conocimiento y límites",
+      "Darle tus documentos",
+      "Probarlo antes de fiarte"
+     ]
+    ],
+    [
+     "Automatizaciones",
+     [
+      "Disparador, pasos y resultado",
+      "Conectar correo, hojas y formularios",
+      "Que no duplique ni se dispare solo"
+     ]
+    ],
+    [
+     "Un equipo que se coordina",
+     [
+      "Repartir el trabajo entre varios agentes",
+      "Elegir el modelo según la tarea y el coste"
+     ]
+    ],
+    [
+     "Bajo control",
+     [
+      "Topes de gasto y registro",
+      "Aprender de cada corrección"
+     ]
+    ]
+   ],
+   "intro": "Hay tareas que repites cada semana y que una máquina puede hacer por ti: contestar lo de siempre, ordenar pedidos o contactos, preparar un informe o resumir correos. En este curso aprendes a delegarlas en agentes de IA y automatizaciones, sin programar. Empezamos por entender qué es un agente y qué tareas conviene delegar y cuáles no. Luego creas tu primer agente con su ficha: qué papel tiene, qué sabe de tu negocio y qué no puede hacer nunca. Después montamos automatizaciones que conectan tu correo, tus hojas y tus formularios, con cuidado para que no dupliquen nada ni se disparen solas. Y cuando tengas varios, te enseño a coordinarlos y a elegir el modelo adecuado para cada tarea según lo que cuesta. Es para ti si tu día se te va en tareas repetitivas. Terminarás con un agente funcionando, una automatización probada y un tope de gasto que no se pasa.",
+   "bloque_nombre": "Desarrollo con IA",
+   "puntuacion": 19,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "n8n",
+      "busquedas_mes": 49500,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "zapier",
+      "busquedas_mes": 14800,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "agentes ia",
+      "busquedas_mes": 1900,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "agentes de ia",
+      "busquedas_mes": 1300,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "automatizacion de procesos",
+      "busquedas_mes": 480,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "curso n8n",
+      "busquedas_mes": 320,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "agentes de ia tutorial español",
+     "url": "https://www.youtube.com/results?search_query=agentes%20de%20ia%20tutorial%20espa%C3%B1ol&hl=es&gl=ES",
+     "mediana_vistas_top20": 149494,
+     "video_mas_visto": {
+      "titulo": "Agentes IA en 18 minutos (lo que el 95% no entiende)",
+      "canal": "Benjamín Cordero",
+      "vistas": 559080,
+      "publicado": "hace 6 m"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "agentes ia",
+     "url": "https://www.skool.com/discovery?q=agentes%20ia&lang=spanish",
+     "grupos_en_espanol": 262,
+     "mediana_precio_mensual_usd_30_primeros": 37.0,
+     "mayores": [
+      {
+       "nombre": "Imperio Agéntico",
+       "miembros": 4088,
+       "url": "https://www.skool.com/imperio"
+      },
+      {
+       "nombre": "Soluciones Artificiales",
+       "miembros": 541,
+       "url": "https://www.skool.com/soluciones-artificiales"
+      },
+      {
+       "nombre": "Botlab | Vende Asistentes IA",
+       "miembros": 504,
+       "url": "https://www.skool.com/botlab-partnership"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 152
+  },
+  {
+   "bloque": "C",
+   "slug": "anuncios-con-cuentas",
+   "titulo": "Anuncios con las cuentas claras",
+   "gancho": "ANUNCIOS CON *CUENTAS*",
+   "mascota": "lupa",
+   "promesa": "Lanzas anuncios en Meta y Google sabiendo cuánto puedes pagar por cliente y midiendo bien cada venta.",
+   "para_quien": "Quien quiere anunciarse, o ya lo hace sin saber si le compensa.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 10,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [],
+   "material_base": [],
+   "puntos": {
+    "demanda": 5,
+    "encaje": 4,
+    "experiencia": 4,
+    "pago": 4
+   },
+   "indice": [
+    [
+     "Antes de gastar",
+     [
+      "Introducción",
+      "Cuánto puedes pagar por un cliente",
+      "Medición lista antes del primer euro: conversiones y consentimiento"
+     ]
+    ],
+    [
+     "Meta: Instagram y Facebook",
+     [
+      "Una estructura sencilla",
+      "Leer los resultados sin engañarte"
+     ]
+    ],
+    [
+     "Google",
+     [
+      "Búsquedas con intención clara",
+      "Shopping si tienes tienda",
+      "Palabras negativas"
+     ]
+    ],
+    [
+     "Creatividades",
+     [
+      "Ángulos y ganchos: una matriz de pruebas",
+      "Cuándo una creatividad se cansa"
+     ]
+    ],
+    [
+     "Presupuesto y decisiones",
+     [
+      "Topes diarios y mensuales",
+      "Subir, mantener o cortar"
+     ]
+    ]
+   ],
+   "intro": "Los anuncios pueden acelerar un negocio o quemar dinero muy deprisa. La diferencia está en hacer las cuentas antes y en medir bien después. En este curso no empezamos por la plataforma, sino por tus números: cuánto puedes pagar por conseguir un cliente sin perder dinero. Después dejamos la medición lista antes de gastar el primer euro, con las conversiones bien registradas y el consentimiento en orden. Montamos campañas sencillas en Meta, para Instagram y Facebook, y en Google, con búsquedas de intención clara y Shopping si tienes tienda. Trabajamos las creatividades con ángulos y ganchos distintos para saber qué funciona con tu público, y aprendes a leer los resultados sin dejarte engañar por las cifras bonitas. Al final fijas topes de gasto y una regla para decidir cuándo subir, mantener o cortar. Es para ti si quieres anunciarte o ya lo haces sin tener claro si te compensa. Saldrás con tus cuentas, tu medición comprobada y tu primera campaña con tope.",
+   "bloque_nombre": "Visibilidad y captación",
+   "puntuacion": 17,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "google ads",
+      "busquedas_mes": 110000,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "meta ads",
+      "busquedas_mes": 18100,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "roas",
+      "busquedas_mes": 14800,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "facebook ads",
+      "busquedas_mes": 8100,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "tiktok ads",
+      "busquedas_mes": 6600,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "curso google ads",
+      "busquedas_mes": 320,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "curso meta ads",
+      "busquedas_mes": 210,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "meta ads 2026 tutorial",
+     "url": "https://www.youtube.com/results?search_query=meta%20ads%202026%20tutorial&hl=es&gl=ES",
+     "mediana_vistas_top20": 134700,
+     "video_mas_visto": {
+      "titulo": "Tutorial Completo De Meta Ads Para Principiantes (2026)",
+      "canal": "Adrián Sáenz",
+      "vistas": 1128367,
+      "publicado": "hace 2 a"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "meta ads",
+     "url": "https://www.skool.com/discovery?q=meta%20ads&lang=spanish",
+     "grupos_en_espanol": 242,
+     "mediana_precio_mensual_usd_30_primeros": 27.0,
+     "mayores": [
+      {
+       "nombre": "Meta Ads Performance",
+       "miembros": 3297,
+       "url": "https://www.skool.com/emdi-performance"
+      },
+      {
+       "nombre": "Media Buyers HQ",
+       "miembros": 954,
+       "url": "https://www.skool.com/media-buyers"
+      },
+      {
+       "nombre": "AD Masters | Meta Ads Avanzado",
+       "miembros": 648,
+       "url": "https://www.skool.com/social-media-master"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 162
+  },
+  {
+   "bloque": "D",
+   "slug": "estrategia-en-una-pagina",
+   "titulo": "Tu estrategia en una página",
+   "gancho": "ESTRATEGIA EN *1 PÁGINA*",
+   "mascota": "dos ojos con luz",
+   "promesa": "Decides a quién vendes, por qué te eligen y qué haces los próximos 90 días, todo en una página.",
+   "para_quien": "Dueños de pyme y autónomos que sienten que van apagando fuegos sin rumbo.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 11,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [
+    13
+   ],
+   "material_base": [
+    "plan de 90 días en una página (capítulo 13)"
+   ],
+   "puntos": {
+    "demanda": 4,
+    "encaje": 5,
+    "experiencia": 4,
+    "pago": 4
+   },
+   "indice": [
+    [
+     "Dónde juegas",
+     [
+      "Introducción",
+      "Tu cliente ideal, con sus palabras",
+      "Frente a qué alternativas compites de verdad"
+     ]
+    ],
+    [
+     "Por qué te eligen",
+     [
+      "Tu propuesta de valor",
+      "Lo que solo tú puedes demostrar"
+     ]
+    ],
+    [
+     "Tu modelo en una hoja",
+     [
+      "El lienzo del modelo de negocio, sin rellenar por rellenar",
+      "Lo que dejas de hacer"
+     ]
+    ],
+    [
+     "Plan de 90 días",
+     [
+      "Tres objetivos medibles",
+      "Pruebas semanales y revisión mensual"
+     ]
+    ]
+   ],
+   "intro": "Muchos negocios hacen muchas cosas a la vez y ninguna del todo bien. No por falta de ganas, sino porque nadie ha decidido con claridad para quién trabajan y por qué les tendrían que elegir. En este curso tomamos esas decisiones y las dejamos en una sola página. Empezamos por tu cliente ideal, descrito con sus propias palabras y no con una ficha inventada. Vemos frente a qué alternativas compites de verdad, que a veces no es la competencia que crees, y escribimos tu propuesta de valor con lo que puedes demostrar. Repasamos tu modelo de negocio en una hoja y, lo más difícil, decidimos qué dejas de hacer. Con todo eso montamos un plan de 90 días con tres objetivos medibles, pruebas semanales y una revisión al mes. Es para ti si tienes la sensación de ir apagando fuegos sin rumbo. Saldrás con tu estrategia en una página, lista para colgarla en la pared y revisarla cada mes.",
+   "bloque_nombre": "Estrategia",
+   "puntuacion": 17,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "modelo canvas",
+      "busquedas_mes": 4400,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "buyer persona",
+      "busquedas_mes": 4400,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "propuesta de valor",
+      "busquedas_mes": 1300,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "plan de marketing",
+      "busquedas_mes": 1300,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "modelo de negocio",
+      "busquedas_mes": 1300,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "plan de negocio",
+      "busquedas_mes": 1000,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "estrategia de marketing",
+      "busquedas_mes": 880,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "modelo de negocio canvas explicado",
+     "url": "https://www.youtube.com/results?search_query=modelo%20de%20negocio%20canvas%20explicado&hl=es&gl=ES",
+     "mediana_vistas_top20": 63881,
+     "video_mas_visto": {
+      "titulo": "Modelo Canvas | Cómo aplicar el modelo Canvas en el lienzo | Ejemplo práctico",
+      "canal": "Trabajar Desde Casa",
+      "vistas": 5834774,
+      "publicado": "hace 12 a"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "estrategia",
+     "url": "https://www.skool.com/discovery?q=estrategia&lang=spanish",
+     "grupos_en_espanol": 1000,
+     "mediana_precio_mensual_usd_30_primeros": 37.0,
+     "mayores": [
+      {
+       "nombre": "MONETIZA ACADEMY",
+       "miembros": 1737,
+       "url": "https://www.skool.com/monetizaacademy"
+      },
+      {
+       "nombre": "LYFTA CLUB",
+       "miembros": 1419,
+       "url": "https://www.skool.com/lyftaclub"
+      },
+      {
+       "nombre": "1% CLUB",
+       "miembros": 790,
+       "url": "https://www.skool.com/conratrades"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 159
+  },
+  {
+   "bloque": "E",
+   "slug": "radar-de-innovacion",
+   "titulo": "Radar de innovación: aprende de los mejores",
+   "gancho": "APRENDE DE LOS *MEJORES*",
+   "mascota": "dos ojos con luz",
+   "promesa": "Detectas qué hacen los mejores de tu sector y de otros, lo adaptas a tu negocio y mides si funciona.",
+   "para_quien": "Dueños de pyme que sienten que el mundo va más rápido que su negocio.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 12,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [],
+   "material_base": [
+    "circuito líder → paquete de conocimiento → prueba → medida"
+   ],
+   "puntos": {
+    "demanda": 2,
+    "encaje": 4,
+    "experiencia": 5,
+    "pago": 4
+   },
+   "indice": [
+    [
+     "El método",
+     [
+      "Introducción",
+      "Ir a la fuente, nunca al resumen del resumen",
+      "Copiar la estructura, nunca el material"
+     ]
+    ],
+    [
+     "Tu radar",
+     [
+      "A quién seguir y dónde mirar",
+      "Una hora a la semana de radar"
+     ]
+    ],
+    [
+     "El giro propio",
+     [
+      "De idea ajena a prueba tuya",
+      "Lo que no encaja con tu marca"
+     ]
+    ],
+    [
+     "Medir y decidir",
+     [
+      "Funciona, empeora o todavía no se sabe",
+      "Tu archivo de aprendizajes"
+     ]
+    ]
+   ],
+   "intro": "Innovar en una pyme no va de inventar algo que nadie ha hecho. Va de fijarte en quién lo está haciendo bien, entender por qué le funciona y adaptarlo a tu negocio antes que los demás. En este curso te enseño el método con el que trabajo cada semana. Primero aprendes a ir a la fuente: lo que dice y hace el referente, no el resumen de alguien que lo resumió. Después montas tu radar: a quién seguir, en tu sector y fuera de él, y cómo revisarlo en una hora a la semana. Lo importante viene luego: copiar la estructura y no el material, darle tu giro y convertirlo en una prueba pequeña en tu negocio. Por último mides el resultado y lo clasificas en tres cajones: funciona, empeora o todavía no se sabe. Lo que funciona se queda y lo que empeora se retira. Es para ti si sientes que el mundo va más rápido que tu negocio. Saldrás con tu radar montado y tu primera prueba en marcha.",
+   "bloque_nombre": "Innovación",
+   "puntuacion": 15,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "google trends",
+      "busquedas_mes": 49500,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "design thinking",
+      "busquedas_mes": 5400,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "lean startup",
+      "busquedas_mes": 1900,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "innovacion empresarial",
+      "busquedas_mes": 170,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "tendencias marketing",
+      "busquedas_mes": 50,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": null,
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "innovacion",
+     "url": "https://www.skool.com/discovery?q=innovacion&lang=spanish",
+     "grupos_en_espanol": 47,
+     "mediana_precio_mensual_usd_30_primeros": 23.0,
+     "mayores": [
+      {
+       "nombre": "Plennia Global",
+       "miembros": 1135,
+       "url": "https://www.skool.com/plennia-global-4629"
+      },
+      {
+       "nombre": "Docentes IA",
+       "miembros": 691,
+       "url": "https://www.skool.com/docentes-innovadores-con-ia-6978"
+      },
+      {
+       "nombre": "TCP Robotics Academy",
+       "miembros": 676,
+       "url": "https://www.skool.com/tcp-robotics-academy-1744"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 171
+  },
+  {
+   "bloque": "A",
+   "slug": "carrito-sin-sustos",
+   "titulo": "El carrito sin sustos",
+   "gancho": "CARRITO SIN *SUSTOS*",
+   "mascota": "lupa",
+   "promesa": "El cliente ve el total, con envío y plazos, antes de darte ningún dato.",
+   "para_quien": "Tiendas con carritos que se llenan y no llegan al pago.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 13,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [
+    5,
+    8
+   ],
+   "material_base": [
+    "prompt «El aviso de envío gratis»",
+    "plantilla de devoluciones (pendiente de revisión legal)"
+   ],
+   "puntos": {
+    "demanda": 2,
+    "encaje": 5,
+    "experiencia": 4,
+    "pago": 5
+   },
+   "indice": [
+    [
+     "Dónde se asusta el cliente",
+     [
+      "Introducción",
+      "Recorre tu carrito como un desconocido",
+      "Las sorpresas más comunes"
+     ]
+    ],
+    [
+     "Envío y plazos claros",
+     [
+      "¿Envío gratis? Las cuentas antes de decidir",
+      "El aviso de envío gratis que sube el carrito",
+      "Plazos de entrega que se entienden"
+     ]
+    ],
+    [
+     "Devoluciones que dan confianza",
+     [
+      "La política en lenguaje claro (plantilla)",
+      "Dónde mostrarla"
+     ]
+    ],
+    [
+     "Menos pasos",
+     [
+      "Comprar sin registrarse",
+      "Lo que sobra en tu carrito"
+     ]
+    ],
+    [
+     "Mide y compara",
+     [
+      "Carritos que pasan a pago",
+      "Publica tu victoria"
+     ]
+    ]
+   ],
+   "intro": "Muchas ventas se pierden en el carrito, cuando el cliente ya ha decidido comprar. Casi siempre por una sorpresa: un gasto de envío que no esperaba, un plazo que no se entiende, una política de devoluciones que asusta o un formulario que pide demasiado. En este curso recorres tu carrito como lo haría un desconocido y quitas esas sorpresas una a una. Hacemos las cuentas del envío gratis antes de decidir nada, para que no regales el margen, y escribimos el aviso que anima a sumar un producto más. Reescribes tu política de devoluciones en lenguaje claro, con una plantilla, y la colocas donde da confianza. Por último, quitamos los pasos que sobran. Es para ti si en tu tienda se llenan carritos que no llegan al pago. Terminarás con un carrito sin sorpresas, tus cuentas del envío en una hoja y la cifra de carritos que pasan a pago para seguirla cada semana.",
+   "bloque_nombre": "Tu tienda vende más",
+   "puntuacion": 16,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "politica de devoluciones",
+      "busquedas_mes": 480,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "carrito abandonado",
+      "busquedas_mes": 70,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "envio gratis tienda online",
+      "busquedas_mes": 10,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "por qué mi tienda online no vende",
+     "url": "https://www.youtube.com/results?search_query=por%20qu%C3%A9%20mi%20tienda%20online%20no%20vende&hl=es&gl=ES",
+     "mediana_vistas_top20": 24257,
+     "video_mas_visto": {
+      "titulo": "Cómo VENDER cualquier cosa | Consigue CLIENTES",
+      "canal": "Pedro Buerbaum",
+      "vistas": 2301589,
+      "publicado": "hace 3 a"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "ecommerce",
+     "url": "https://www.skool.com/discovery?q=ecommerce&lang=spanish",
+     "grupos_en_espanol": 240,
+     "mediana_precio_mensual_usd_30_primeros": 39.0,
+     "mayores": [
+      {
+       "nombre": "Crea tu Ecommerce Global",
+       "miembros": 1641,
+       "url": "https://www.skool.com/connection-drop-6443"
+      },
+      {
+       "nombre": "Anto Ecom Club",
+       "miembros": 913,
+       "url": "https://www.skool.com/antoecomclub"
+      },
+      {
+       "nombre": "Iniciación Escala",
+       "miembros": 688,
+       "url": "https://www.skool.com/iniciacion-escala"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 154
+  },
+  {
+   "bloque": "B",
+   "slug": "tu-avatar-y-tu-voz",
+   "titulo": "Vídeo con IA: tu avatar y tu voz",
+   "gancho": "TU AVATAR *HABLA*",
+   "mascota": "dos ojos con luz",
+   "promesa": "Produces vídeos con tu avatar y tu voz clonada, con permiso, calidad y etiqueta de IA, sin grabarte cada semana.",
+   "para_quien": "Quien quiere hacer vídeo para su negocio y no tiene tiempo de grabarse.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 14,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [],
+   "material_base": [
+    "el propio capítulo 1 (avatar + voz)"
+   ],
+   "puntos": {
+    "demanda": 5,
+    "encaje": 4,
+    "experiencia": 5,
+    "pago": 4
+   },
+   "indice": [
+    [
+     "Antes de empezar",
+     [
+      "Introducción",
+      "Qué se puede hacer hoy y qué no",
+      "Consentimiento, derechos y etiqueta de IA"
+     ]
+    ],
+    [
+     "Tu voz",
+     [
+      "Clonar tu voz bien",
+      "Escribir para que suene natural: pausas y ritmo"
+     ]
+    ],
+    [
+     "Tu avatar",
+     [
+      "Grabar la toma base",
+      "Encuadres, fondos y escenas"
+     ]
+    ],
+    [
+     "Guion y montaje",
+     [
+      "Gancho, capítulo y cierre",
+      "Cortes, subtítulos y recursos sin tapar la cara"
+     ]
+    ],
+    [
+     "Calidad y publicación",
+     [
+      "Revisar sincronía, sonido y cortes antes de publicar",
+      "Formatos para YouTube, Shorts y reels"
+     ]
+    ]
+   ],
+   "intro": "Grabarte cada semana cuesta tiempo, luz, sitio y ganas. Con un avatar y tu voz clonada puedes publicar con constancia sin ponerte delante de la cámara cada vez. Así hago yo los capítulos de este canal, y en este curso te enseño a hacerlo bien. Empezamos por lo que no se negocia: tu consentimiento, los derechos de imagen y de voz, y cómo avisar de que el vídeo está hecho con IA. Después clonamos tu voz y aprendes a escribir para que suene natural, con pausas y ritmo de conversación. Grabas la toma base de tu avatar, eliges encuadres y escenas, y montamos un capítulo con gancho, cuerpo y cierre, con subtítulos y recursos que nunca tapan la cara. Antes de publicar revisamos la sincronía de la boca, el sonido y los cortes, porque un fallo pequeño se nota mucho. Es para ti si quieres hacer vídeo para tu negocio y no tienes tiempo de grabarte. Saldrás con tu voz, tu avatar y tu primer vídeo revisado.",
+   "bloque_nombre": "Desarrollo con IA",
+   "puntuacion": 18,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "elevenlabs",
+      "busquedas_mes": 90500,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "heygen",
+      "busquedas_mes": 40500,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "higgsfield",
+      "busquedas_mes": 40500,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "crear videos con ia",
+      "busquedas_mes": 8100,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "generar videos con ia",
+      "busquedas_mes": 4400,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "video ia",
+      "busquedas_mes": 4400,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "voz ia",
+      "busquedas_mes": 2900,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "clonar voz",
+      "busquedas_mes": 720,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "avatar ia",
+      "busquedas_mes": 390,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "crear videos con ia",
+     "url": "https://www.youtube.com/results?search_query=crear%20videos%20con%20ia&hl=es&gl=ES",
+     "mediana_vistas_top20": 71858,
+     "video_mas_visto": {
+      "titulo": "Las 3 mejores herramientas para crear videos con AI",
+      "canal": "Platzi",
+      "vistas": 887640,
+      "publicado": "hace 2 a"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "videos con ia",
+     "url": "https://www.skool.com/discovery?q=videos%20con%20ia&lang=spanish",
+     "grupos_en_espanol": 413,
+     "mediana_precio_mensual_usd_30_primeros": 11.0,
+     "mayores": [
+      {
+       "nombre": "Club de Monetización",
+       "miembros": 825,
+       "url": "https://www.skool.com/club-de-monetizacion-1765"
+      },
+      {
+       "nombre": "AI-Tube Automation",
+       "miembros": 418,
+       "url": "https://www.skool.com/kreacion-de-contenido-faceless-6290"
+      },
+      {
+       "nombre": "Metamorfosis Creator",
+       "miembros": 367,
+       "url": "https://www.skool.com/metamorfosis-creator-9215"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 167
+  },
+  {
+   "bloque": "C",
+   "slug": "tu-lista-de-correo",
+   "titulo": "Correo que vende: imanes, boletín y secuencias",
+   "gancho": "TU LISTA DE *CORREO*",
+   "mascota": "dos ojos con luz",
+   "promesa": "Construyes tu propia lista con un recurso útil y un boletín que la gente quiere abrir, con permiso y sin depender de ninguna red.",
+   "para_quien": "Negocios que dependen de las redes o de los anuncios para que les encuentren.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 15,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [
+    9
+   ],
+   "material_base": [
+    "boletín de Substack con bienvenida automática",
+    "hoja de los 4 pasos como imán"
+   ],
+   "puntos": {
+    "demanda": 4,
+    "encaje": 4,
+    "experiencia": 4,
+    "pago": 4
+   },
+   "indice": [
+    [
+     "Por qué el correo",
+     [
+      "Introducción",
+      "Lo que no controlas en redes y sí en tu lista"
+     ]
+    ],
+    [
+     "El imán",
+     [
+      "Un recurso que tu cliente quiere de verdad",
+      "Hojas, plantillas y calculadoras"
+     ]
+    ],
+    [
+     "Permiso y ley",
+     [
+      "Consentimiento con prueba y doble confirmación",
+      "Baja en un clic"
+     ]
+    ],
+    [
+     "Boletín y secuencias",
+     [
+      "El correo de bienvenida",
+      "Una carta por semana",
+      "Secuencias antes y después de la compra"
+     ]
+    ],
+    [
+     "Medir",
+     [
+      "Altas, aperturas, clics y bajas",
+      "Qué cambiar cuando no se abre"
+     ]
+    ]
+   ],
+   "intro": "Las redes te prestan la audiencia; tu lista de correo es tuya. Si mañana cambia un algoritmo, tus suscriptores siguen ahí. En este curso construyes esa lista paso a paso. Empezamos por el imán: un recurso que tu cliente quiere de verdad, como una hoja, una plantilla o una calculadora, y no un PDF genérico. Lo hacemos con el permiso en regla, con casilla sin marcar, doble confirmación y baja en un clic, para cumplir la ley y para que tus correos lleguen. Después escribimos el correo de bienvenida, montamos una carta semanal que se lee con gusto y preparamos secuencias que acompañan al cliente antes y después de comprar. Y aprendemos a medir altas, aperturas, clics y bajas para mejorar cada mes. Es para ti si dependes de las redes o de los anuncios para que te encuentren. Saldrás con tu imán publicado, tu bienvenida automática y tu primera carta enviada.",
+   "bloque_nombre": "Visibilidad y captación",
+   "puntuacion": 16,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "substack",
+      "busquedas_mes": 40500,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "email marketing",
+      "busquedas_mes": 9900,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "newsletter",
+      "busquedas_mes": 9900,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "funnel de ventas",
+      "busquedas_mes": 1300,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "lead magnet",
+      "busquedas_mes": 880,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "embudo de ventas",
+      "busquedas_mes": 880,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "email marketing tutorial",
+     "url": "https://www.youtube.com/results?search_query=email%20marketing%20tutorial&hl=es&gl=ES",
+     "mediana_vistas_top20": 20854,
+     "video_mas_visto": {
+      "titulo": "Learn Email Marketing in 39 Minutes!",
+      "canal": "Alex Hormozi",
+      "vistas": 778308,
+      "publicado": "hace 1 a"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "marketing digital",
+     "url": "https://www.skool.com/discovery?q=marketing%20digital&lang=spanish",
+     "grupos_en_espanol": 256,
+     "mediana_precio_mensual_usd_30_primeros": 27.0,
+     "mayores": [
+      {
+       "nombre": "Autobot Cash Academy",
+       "miembros": 10569,
+       "url": "https://www.skool.com/autobotcashacademy"
+      },
+      {
+       "nombre": "Vive del Marketing",
+       "miembros": 3306,
+       "url": "https://www.skool.com/marketing-digital"
+      },
+      {
+       "nombre": "⭕️ Círculo de Crecimiento",
+       "miembros": 3121,
+       "url": "https://www.skool.com/circulodecrecimiento"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 152
+  },
+  {
+   "bloque": "D",
+   "slug": "precios-con-margen",
+   "titulo": "Precios que dejan margen",
+   "gancho": "PRECIOS CON *MARGEN*",
+   "mascota": "lupa",
+   "promesa": "Calculas tu precio desde tus costes, tu valor y tu competencia, y sabes cuánto puedes descontar sin perder dinero.",
+   "para_quien": "Quien trabaja mucho y tiene la sensación de ganar poco.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 16,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [
+    5,
+    10
+   ],
+   "material_base": [
+    "hoja de margen en rebajas (capítulo 10)"
+   ],
+   "puntos": {
+    "demanda": 3,
+    "encaje": 5,
+    "experiencia": 4,
+    "pago": 4
+   },
+   "indice": [
+    [
+     "Tus números",
+     [
+      "Introducción",
+      "El coste real de lo que vendes, también tu tiempo",
+      "Margen y punto muerto"
+     ]
+    ],
+    [
+     "Poner precio",
+     [
+      "Desde el coste, el valor y la competencia",
+      "Tres niveles: entrada, recomendado y completo"
+     ]
+    ],
+    [
+     "Descuentos y envíos",
+     [
+      "Cuánto puedes descontar",
+      "Envío gratis: cuándo sale a cuenta"
+     ]
+    ],
+    [
+     "Subir precios",
+     [
+      "Cuándo y cómo anunciarlo",
+      "Qué pasa con los clientes que ya tienes"
+     ]
+    ],
+    [
+     "La caja",
+     [
+      "El flujo de caja en una hoja"
+     ]
+    ]
+   ],
+   "intro": "El precio es la decisión que más dinero mueve y la que menos se piensa. Muchas veces se copia el de la competencia o se pone a ojo, y luego los descuentos se comen lo poco que queda. En este curso calculas tus precios con números. Primero sacamos el coste real de lo que vendes, incluido tu tiempo, y vemos cuánto tienes que vender para no perder dinero. Después ponemos precio desde tres miradas: lo que te cuesta, lo que vale para tu cliente y lo que cobran otros. Aprendes a ofrecer niveles, uno de entrada, uno recomendado y uno completo, para que cada cliente elija. Hacemos las cuentas de descuentos y envíos gratis antes de lanzarlos y vemos cómo subir precios sin perder a quien ya te compra. Cerramos con una hoja de caja sencilla para saber cómo vas cada mes. Es para ti si trabajas mucho y tienes la sensación de ganar poco. Saldrás con tu hoja de precios y márgenes y tus reglas de descuento.",
+   "bloque_nombre": "Estrategia",
+   "puntuacion": 16,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "rentabilidad",
+      "busquedas_mes": 1600,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "flujo de caja",
+      "busquedas_mes": 1000,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "margen de beneficio",
+      "busquedas_mes": 260,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "calcular margen",
+      "busquedas_mes": 210,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "estrategia de precios",
+      "busquedas_mes": 210,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "como poner precio a un producto",
+      "busquedas_mes": 50,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "cómo fijar el precio de tu producto",
+     "url": "https://www.youtube.com/results?search_query=c%C3%B3mo%20fijar%20el%20precio%20de%20tu%20producto&hl=es&gl=ES",
+     "mediana_vistas_top20": 70867,
+     "video_mas_visto": {
+      "titulo": "Cómo sacar la ganancia de un producto o servicio (FÓRMULA CORRECTA)",
+      "canal": "Sistema Empresarial Aguilar",
+      "vistas": 1777771,
+      "publicado": "hace 6 a"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "emprendedores",
+     "url": "https://www.skool.com/discovery?q=emprendedores&lang=spanish",
+     "grupos_en_espanol": 785,
+     "mediana_precio_mensual_usd_30_primeros": 33.5,
+     "mayores": [
+      {
+       "nombre": "Genio Lector",
+       "miembros": 38145,
+       "url": "https://www.skool.com/genio-lector"
+      },
+      {
+       "nombre": "Road to Partner | Nico Seoane",
+       "miembros": 18274,
+       "url": "https://www.skool.com/roadtopartner"
+      },
+      {
+       "nombre": "Imperio Digital Academy",
+       "miembros": 11149,
+       "url": "https://www.skool.com/imperio-digital-academy-9836"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 168
+  },
+  {
+   "bloque": "E",
+   "slug": "experimentos-de-una-semana",
+   "titulo": "Experimentos de una semana",
+   "gancho": "PRUEBA, MIDE, *DECIDE*",
+   "mascota": "lupa",
+   "promesa": "Conviertes cada idea en una prueba pequeña con fecha, cifra y decisión, y dejas de cambiar cosas a ciegas.",
+   "para_quien": "Quien tiene muchas ideas y poco tiempo para saber cuáles valen.",
+   "estado": "disponible",
+   "ola": 1,
+   "orden": 17,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [],
+   "material_base": [],
+   "no_repetir": "Método general de experimentos para cualquier negocio. El ciclo semanal propio de una tienda está en «Medir y repetir».",
+   "puntos": {
+    "demanda": 1,
+    "encaje": 4,
+    "experiencia": 4,
+    "pago": 3
+   },
+   "indice": [
+    [
+     "La prueba pequeña",
+     [
+      "Introducción",
+      "De idea a hipótesis",
+      "La prueba más pequeña que responde"
+     ]
+    ],
+    [
+     "Diseñar",
+     [
+      "Una sola cosa cada vez",
+      "Cuánto tiempo y cuántos datos"
+     ]
+    ],
+    [
+     "Pruebas A/B sin trampas",
+     [
+      "Cuándo merece la pena",
+      "Errores que dan resultados falsos"
+     ]
+    ],
+    [
+     "Decidir y aprender",
+     [
+      "Mantener, revertir o repetir",
+      "Tu registro de pruebas"
+     ]
+    ]
+   ],
+   "intro": "La mayoría de los cambios en un negocio se hacen a ojo: se cambia la web, el precio o el anuncio y nadie sabe si fue a mejor. En este curso aprendes a convertir cada idea en una prueba pequeña con fecha, cifra y decisión. Empezamos por pasar de una idea vaga a una hipótesis clara y por diseñar la prueba más pequeña que puede responderla. Aprendes a cambiar una sola cosa cada vez, a decidir cuánto tiempo dejarla correr y cuántos datos necesitas antes de fiarte. Vemos cuándo merece la pena una prueba A/B y qué errores dan resultados falsos aunque los números parezcan claros. Y cerramos el ciclo: mantener, revertir o repetir, con un registro donde queda lo aprendido para no volver a probar lo mismo. Es para ti si tienes muchas ideas y poco tiempo para saber cuáles valen. Saldrás con tu plantilla de prueba y tu primer experimento en marcha.",
+   "bloque_nombre": "Innovación",
+   "puntuacion": 12,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "growth hacking",
+      "busquedas_mes": 590,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "growth marketing",
+      "busquedas_mes": 480,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "lean startup",
+      "busquedas_mes": 1900,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": null,
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "innovacion",
+     "url": "https://www.skool.com/discovery?q=innovacion&lang=spanish",
+     "grupos_en_espanol": 47,
+     "mediana_precio_mensual_usd_30_primeros": 23.0,
+     "mayores": [
+      {
+       "nombre": "Plennia Global",
+       "miembros": 1135,
+       "url": "https://www.skool.com/plennia-global-4629"
+      },
+      {
+       "nombre": "Docentes IA",
+       "miembros": 691,
+       "url": "https://www.skool.com/docentes-innovadores-con-ia-6978"
+      },
+      {
+       "nombre": "TCP Robotics Academy",
+       "miembros": 676,
+       "url": "https://www.skool.com/tcp-robotics-academy-1744"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 154
+  },
+  {
+   "bloque": "A",
+   "slug": "temporadas",
+   "titulo": "Temporadas sin regalar el margen",
+   "gancho": "REBAJAS SIN *REGALAR*",
+   "mascota": "lupa",
+   "promesa": "Preparas Black Friday, Navidad y rebajas con seis semanas de antelación y con las cuentas hechas.",
+   "para_quien": "Tiendas a las que las campañas siempre pillan con prisas.",
+   "estado": "proximamente",
+   "ola": 2,
+   "orden": 18,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [
+    4,
+    7,
+    10
+   ],
+   "material_base": [
+    "lista de las 7 comprobaciones",
+    "hoja de margen en rebajas (capítulo 10, revisión legal del precio anterior)"
+   ],
+   "puntos": {
+    "demanda": 2,
+    "encaje": 5,
+    "experiencia": 4,
+    "pago": 4
+   },
+   "indice": [
+    [
+     "Tu calendario",
+     [
+      "Introducción",
+      "Las fechas que mueven tu sector",
+      "Qué preparar seis semanas antes"
+     ]
+    ],
+    [
+     "Antes de lanzar",
+     [
+      "Las siete comprobaciones",
+      "Productos que sí venden y hay en stock"
+     ]
+    ],
+    [
+     "Descuentos con cuentas",
+     [
+      "Hasta dónde puedes bajar (hoja de margen)",
+      "El precio anterior en rebajas: lo que dice la norma"
+     ]
+    ],
+    [
+     "Navidad",
+     [
+      "Lo que pregunta el cliente antes de regalar",
+      "Plazos y devoluciones de regalos"
+     ]
+    ],
+    [
+     "Después de la campaña",
+     [
+      "Medir y apuntar para el año que viene"
+     ]
+    ]
+   ],
+   "intro": "Las campañas de temporada pueden salvarte el trimestre o comerse el margen. La diferencia casi siempre está en prepararlas con tiempo y con números. En este curso montas tu calendario de fechas, eliges qué productos empujar según lo que de verdad vendes y tienes en stock, y repasas las siete comprobaciones que conviene hacer antes de lanzar nada. Hacemos las cuentas del descuento en una hoja para saber hasta dónde puedes bajar, y vemos qué dice la norma sobre el precio anterior en rebajas para que no te metas en líos. Preparamos también lo que pregunta el cliente en Navidad: plazos, regalos y devoluciones. Y cuando acaba la campaña, la medimos y dejamos apuntado lo aprendido para el año siguiente. Es para ti si vendes online y las campañas te pillan siempre con prisas. Saldrás con tu calendario, tu hoja de márgenes y tu lista de comprobación.",
+   "bloque_nombre": "Tu tienda vende más",
+   "puntuacion": 15,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "descuentos",
+      "busquedas_mes": 8100,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "cupones descuento",
+      "busquedas_mes": 1600,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "campañas black friday",
+      "busquedas_mes": 110,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "rebajas tienda online",
+      "busquedas_mes": 30,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": null,
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "ecommerce",
+     "url": "https://www.skool.com/discovery?q=ecommerce&lang=spanish",
+     "grupos_en_espanol": 240,
+     "mediana_precio_mensual_usd_30_primeros": 39.0,
+     "mayores": [
+      {
+       "nombre": "Crea tu Ecommerce Global",
+       "miembros": 1641,
+       "url": "https://www.skool.com/connection-drop-6443"
+      },
+      {
+       "nombre": "Anto Ecom Club",
+       "miembros": 913,
+       "url": "https://www.skool.com/antoecomclub"
+      },
+      {
+       "nombre": "Iniciación Escala",
+       "miembros": 688,
+       "url": "https://www.skool.com/iniciacion-escala"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 147
+  },
+  {
+   "bloque": "A",
+   "slug": "tus-cinco-numeros",
+   "titulo": "Medir y repetir: tus cinco números",
+   "gancho": "TUS 5 *NÚMEROS*",
+   "mascota": "lupa",
+   "promesa": "Un cuadro semanal de cinco números para saber en qué paso pierdes la venta y si tu cambio funcionó.",
+   "para_quien": "Tiendas que hacen cambios y no saben si funcionan.",
+   "estado": "proximamente",
+   "ola": 2,
+   "orden": 19,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [
+    3,
+    13
+   ],
+   "material_base": [
+    "calculadora del paso que se rompe (brandooers.com/calculadora/)"
+   ],
+   "no_repetir": "Solo los cinco números de una tienda y su ciclo semanal. Las herramientas (Analytics, Search Console, Clarity) se enseñan en «Decide con datos» y aquí se enlazan.",
+   "puntos": {
+    "demanda": 3,
+    "encaje": 5,
+    "experiencia": 5,
+    "pago": 4
+   },
+   "indice": [
+    [
+     "Tus cinco números",
+     [
+      "Introducción",
+      "Dónde sale cada número en tus estadísticas",
+      "La calculadora del paso que se rompe"
+     ]
+    ],
+    [
+     "Compararte contigo",
+     [
+      "Semana contra semana",
+      "Cuántos datos hacen falta para fiarte"
+     ]
+    ],
+    [
+     "El ciclo semanal",
+     [
+      "Una prueba por semana",
+      "El diario de pruebas (plantilla)"
+     ]
+    ],
+    [
+     "Tu plan de 90 días",
+     [
+      "El plan en una página con los cuatro pasos",
+      "Publica tu plan"
+     ]
+    ]
+   ],
+   "intro": "Cambiar cosas en la tienda sin medir es ir a ciegas. En este curso montas un cuadro sencillo con cinco números que ya tienes en tus estadísticas, y con ellos sabes en qué paso pierdes la venta: encontrar, entender, comprar o pagar. Usamos la calculadora del paso que se rompe y aprendes a comparar tu tienda consigo misma, semana contra semana, en vez de con cifras de otros que no sabes de dónde salen. También vemos cuántos datos hacen falta para fiarte de un cambio y cuándo es pura casualidad. Con eso entras en el ciclo semanal: una prueba, una medida y una decisión. Al final lo juntas todo en un plan de 90 días en una sola página. Es para ti si haces cambios en tu tienda y no sabes si funcionan. Terminarás con tu cuadro semanal, tu diario de pruebas y tu plan de 90 días publicado en la comunidad.",
+   "bloque_nombre": "Tu tienda vende más",
+   "puntuacion": 17,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "kpi",
+      "busquedas_mes": 18100,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "google analytics 4",
+      "busquedas_mes": 6600,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "tasa de conversion ecommerce",
+      "busquedas_mes": 20,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "por qué mi tienda online no vende",
+     "url": "https://www.youtube.com/results?search_query=por%20qu%C3%A9%20mi%20tienda%20online%20no%20vende&hl=es&gl=ES",
+     "mediana_vistas_top20": 24257,
+     "video_mas_visto": {
+      "titulo": "Cómo VENDER cualquier cosa | Consigue CLIENTES",
+      "canal": "Pedro Buerbaum",
+      "vistas": 2301589,
+      "publicado": "hace 3 a"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "tienda online",
+     "url": "https://www.skool.com/discovery?q=tienda%20online&lang=spanish",
+     "grupos_en_espanol": 93,
+     "mediana_precio_mensual_usd_30_primeros": 33.0,
+     "mayores": [
+      {
+       "nombre": "EcomMastery",
+       "miembros": 6325,
+       "url": "https://www.skool.com/ecommastery-4502"
+      },
+      {
+       "nombre": "Pau Escrig - Escala Ecommerce",
+       "miembros": 4149,
+       "url": "https://www.skool.com/pau-escrig-escala-ecommerce-8812"
+      },
+      {
+       "nombre": "Automatia Academy",
+       "miembros": 1242,
+       "url": "https://www.skool.com/automatia-academy"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 152
+  },
+  {
+   "bloque": "A",
+   "slug": "pagar-desde-el-movil",
+   "titulo": "Pagar desde el móvil",
+   "gancho": "PAGA DESDE EL *MÓVIL*",
+   "mascota": "lupa",
+   "promesa": "Compras de prueba desde el móvil sin atascos y un correo que recupera carritos sin perseguir a nadie.",
+   "para_quien": "Tiendas con pedidos que se empiezan y no se pagan.",
+   "estado": "proximamente",
+   "ola": 2,
+   "orden": 20,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [
+    4,
+    9
+   ],
+   "material_base": [
+    "prompt «Las sorpresas del pago»",
+    "tres plantillas de correo de carrito (capítulo 9)"
+   ],
+   "puntos": {
+    "demanda": 1,
+    "encaje": 5,
+    "experiencia": 4,
+    "pago": 4
+   },
+   "indice": [
+    [
+     "La compra de prueba",
+     [
+      "Introducción",
+      "Haz una compra de prueba desde el móvil",
+      "Las sorpresas del pago (prompt)"
+     ]
+    ],
+    [
+     "Formas de pago",
+     [
+      "Las que espera tu cliente",
+      "Errores de pago y mensajes que se entienden"
+     ]
+    ],
+    [
+     "Recuperar sin perseguir",
+     [
+      "Tres correos de carrito (plantillas)",
+      "Cuándo y cuántas veces, con permiso"
+     ]
+    ],
+    [
+     "Mide y compara",
+     [
+      "Pedidos pagados frente a iniciados",
+      "Publica tu victoria"
+     ]
+    ]
+   ],
+   "intro": "El último paso es el más caro de perder: el cliente ya quiere pagar y algo se lo impide. Suele pasar en el móvil, con un formulario incómodo, un método de pago que no está o un error que nadie entiende. En este curso haces compras de prueba desde tu propio móvil, como cualquier cliente, y apuntas cada tropiezo. Revisamos qué formas de pago espera tu público, cómo explicar los errores para que la gente no abandone y qué cambiar primero. Después preparamos tres correos de carrito abandonado que recuerdan sin agobiar, con la frecuencia justa y el permiso adecuado. Es para ti si tienes pedidos que se empiezan y no se pagan. Saldrás con tu lista de arreglos del pago ordenada por importancia, tus tres correos listos para tu herramienta de correo y la cifra de pedidos pagados frente a iniciados para compararla cada semana.",
+   "bloque_nombre": "Tu tienda vende más",
+   "puntuacion": 14,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "recuperar carritos abandonados",
+      "busquedas_mes": 10,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "carrito abandonado",
+      "busquedas_mes": 70,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "por qué mi tienda online no vende",
+     "url": "https://www.youtube.com/results?search_query=por%20qu%C3%A9%20mi%20tienda%20online%20no%20vende&hl=es&gl=ES",
+     "mediana_vistas_top20": 24257,
+     "video_mas_visto": {
+      "titulo": "Cómo VENDER cualquier cosa | Consigue CLIENTES",
+      "canal": "Pedro Buerbaum",
+      "vistas": 2301589,
+      "publicado": "hace 3 a"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "ecommerce",
+     "url": "https://www.skool.com/discovery?q=ecommerce&lang=spanish",
+     "grupos_en_espanol": 240,
+     "mediana_precio_mensual_usd_30_primeros": 39.0,
+     "mayores": [
+      {
+       "nombre": "Crea tu Ecommerce Global",
+       "miembros": 1641,
+       "url": "https://www.skool.com/connection-drop-6443"
+      },
+      {
+       "nombre": "Anto Ecom Club",
+       "miembros": 913,
+       "url": "https://www.skool.com/antoecomclub"
+      },
+      {
+       "nombre": "Iniciación Escala",
+       "miembros": 688,
+       "url": "https://www.skool.com/iniciacion-escala"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 146
+  },
+  {
+   "bloque": "C",
+   "slug": "tu-ficha-de-google",
+   "titulo": "Tu ficha de Google trae clientes",
+   "gancho": "TU FICHA DE *GOOGLE*",
+   "mascota": "lupa",
+   "promesa": "Tu ficha de Google completa, con reseñas y publicaciones, para que te elija quien busca cerca.",
+   "para_quien": "Negocios con local o que atienden en una zona concreta.",
+   "estado": "proximamente",
+   "ola": 2,
+   "orden": 21,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [],
+   "material_base": [],
+   "puntos": {
+    "demanda": 4,
+    "encaje": 4,
+    "experiencia": 4,
+    "pago": 3
+   },
+   "indice": [
+    [
+     "La ficha completa",
+     [
+      "Introducción",
+      "Nombre, categorías y horarios sin errores",
+      "Fotos reales que ayudan"
+     ]
+    ],
+    [
+     "Reseñas",
+     [
+      "Cómo pedirlas con enlace o código QR",
+      "Cómo responderlas, también las malas"
+     ]
+    ],
+    [
+     "Publicaciones",
+     [
+      "Qué publicar cada semana",
+      "Ofertas y eventos"
+     ]
+    ],
+    [
+     "Todo coherente",
+     [
+      "Nombre, dirección y teléfono iguales en todas partes",
+      "Cambios que propone Google y suspensiones"
+     ]
+    ],
+    [
+     "Medir",
+     [
+      "Llamadas, rutas y visitas desde la ficha"
+     ]
+    ]
+   ],
+   "intro": "Si tu negocio tiene local o trabajas en una zona concreta, tu ficha de Google puede traerte más clientes que tu web. Es lo primero que ve quien busca cerca, y muchas veces decide ahí mismo si te llama. En este curso la dejas completa y viva. Revisamos nombre, categorías, horarios y fotos para que no haya errores que te resten. Aprendes a pedir reseñas de forma natural, con un enlace o un código QR, y a responderlas todas, también las malas, sin meterte en problemas. Preparamos publicaciones sencillas para cada semana con tus novedades, ofertas o eventos. Comprobamos que tu nombre, tu dirección y tu teléfono son iguales en todas partes, y vemos qué hacer cuando Google cambia algo de tu ficha sin avisar. Es para ti si tienes un negocio local o de servicios por zona. Saldrás con tu ficha al día, tu sistema para conseguir reseñas y la cifra de llamadas y rutas que te trae cada mes.",
+   "bloque_nombre": "Visibilidad y captación",
+   "puntuacion": 15,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "google business profile",
+      "busquedas_mes": 18100,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "reseñas google",
+      "busquedas_mes": 18100,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "google mi negocio",
+      "busquedas_mes": 1000,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "seo local",
+      "busquedas_mes": 720,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "ficha de google",
+      "busquedas_mes": 320,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "ficha de google business profile",
+     "url": "https://www.youtube.com/results?search_query=ficha%20de%20google%20business%20profile&hl=es&gl=ES",
+     "mediana_vistas_top20": 1641,
+     "video_mas_visto": {
+      "titulo": "Google Business Profile | Tutorial 2025 Paso a Paso 🥇 TOP #1 en Google Maps",
+      "canal": "Dani Llamazares",
+      "vistas": 186380,
+      "publicado": "hace 1 a"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "pymes",
+     "url": "https://www.skool.com/discovery?q=pymes&lang=spanish",
+     "grupos_en_espanol": 30,
+     "mediana_precio_mensual_usd_30_primeros": 30.5,
+     "mayores": [
+      {
+       "nombre": "Imperio Agéntico",
+       "miembros": 4088,
+       "url": "https://www.skool.com/imperio"
+      },
+      {
+       "nombre": "Mercado Libre: Negocio Redondo",
+       "miembros": 556,
+       "url": "https://www.skool.com/mercado-libre-negocio-redondo-5035"
+      },
+      {
+       "nombre": "Dania Plus: Club Creadores IA",
+       "miembros": 555,
+       "url": "https://www.skool.com/academia-de-agentes-ia-2100"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 161
+  },
+  {
+   "bloque": "B",
+   "slug": "imagenes-con-ia",
+   "titulo": "Imágenes con IA que no se notan",
+   "gancho": "IA QUE *NO SE NOTA*",
+   "mascota": "lupa",
+   "promesa": "Creas imágenes de producto y de ambiente con IA fieles al producto real y sin aspecto artificial.",
+   "para_quien": "Tiendas y negocios que hacen sus propias fotos y quieren más variedad.",
+   "estado": "proximamente",
+   "ola": 2,
+   "orden": 22,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [
+    11
+   ],
+   "material_base": [],
+   "puntos": {
+    "demanda": 4,
+    "encaje": 4,
+    "experiencia": 4,
+    "pago": 3
+   },
+   "indice": [
+    [
+     "Antes de generar",
+     [
+      "Introducción",
+      "El producto real primero: fotos de referencia",
+      "Cuándo IA y cuándo el móvil"
+     ]
+    ],
+    [
+     "Pedir la imagen",
+     [
+      "El prompt con medidas, no con adjetivos",
+      "Producto en contexto y fondos"
+     ]
+    ],
+    [
+     "Que no parezca IA",
+     [
+      "Los fallos que delatan una imagen",
+      "Revisión antes de publicar"
+     ]
+    ],
+    [
+     "Texto e imagen",
+     [
+      "Por qué el texto no lo dibuja la IA",
+      "Portadas y banners con plantilla"
+     ]
+    ],
+    [
+     "Coste y derechos",
+     [
+      "Cuánto cuesta cada imagen",
+      "Licencias y uso comercial"
+     ]
+    ]
+   ],
+   "intro": "La IA puede darte fotos de ambiente, fondos y variantes de producto que antes costaban una sesión de fotos. Pero si la imagen no se parece al producto real, o se nota que es artificial, pierdes la confianza del cliente. En este curso aprendes a generar imágenes que respetan tu producto y no delatan la IA. Partimos siempre del producto real: sus fotos, colores y detalles. Después aprendes a pedir la imagen con medidas y no con adjetivos, a colocar el producto en un contexto creíble y a revisar los fallos típicos antes de publicar: manos, reflejos, letras deformadas o piezas que no existen. Verás por qué el texto de una portada se compone aparte con una plantilla y no lo dibuja la IA. Y cerramos con lo práctico: cuánto cuesta cada imagen y qué licencias necesitas. Es para ti si haces tus propias fotos y quieres más variedad sin perder realismo. Saldrás con tu método de prompt, tu lista de revisión y tus primeras imágenes listas para la ficha.",
+   "bloque_nombre": "Desarrollo con IA",
+   "puntuacion": 15,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "nano banana",
+      "busquedas_mes": 165000,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "midjourney",
+      "busquedas_mes": 60500,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "crear imagenes con ia",
+      "busquedas_mes": 14800,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "imagenes con ia",
+      "busquedas_mes": 2400,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "fotos de producto",
+      "busquedas_mes": 210,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": null,
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "inteligencia artificial",
+     "url": "https://www.skool.com/discovery?q=inteligencia%20artificial&lang=spanish",
+     "grupos_en_espanol": 484,
+     "mediana_precio_mensual_usd_30_primeros": 25.5,
+     "mayores": [
+      {
+       "nombre": "IA MAKERS",
+       "miembros": 4084,
+       "url": "https://www.skool.com/ia-makers"
+      },
+      {
+       "nombre": "Aprende con Axel",
+       "miembros": 3981,
+       "url": "https://www.skool.com/aprende-con-axel-8735"
+      },
+      {
+       "nombre": "⭕️ Círculo de Crecimiento",
+       "miembros": 3121,
+       "url": "https://www.skool.com/circulodecrecimiento"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 170
+  },
+  {
+   "bloque": "C",
+   "slug": "redes-con-metodo",
+   "titulo": "Redes con método: un vídeo, muchas piezas",
+   "gancho": "REDES CON *MÉTODO*",
+   "mascota": "dos ojos con luz",
+   "promesa": "Conviertes una pieza larga a la semana en cortos, carruseles y publicaciones para cada red, con un calendario que puedes mantener.",
+   "para_quien": "Negocios y profesionales que saben que tienen que estar en redes y no saben cómo sostenerlo.",
+   "estado": "proximamente",
+   "ola": 2,
+   "orden": 23,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [],
+   "material_base": [
+    "plan de micropiezas por capítulo",
+    "mecánica comentario a mensaje"
+   ],
+   "condicion": "Se abre cuando la propia serie tenga 8 semanas medidas frente a su mediana (regla «solo lo probado»).",
+   "puntos": {
+    "demanda": 4,
+    "encaje": 4,
+    "experiencia": 3,
+    "pago": 4
+   },
+   "indice": [
+    [
+     "El sistema",
+     [
+      "Introducción",
+      "Lo corto da alcance, lo largo da autoridad y el correo da control",
+      "En qué redes estar según tu cliente"
+     ]
+    ],
+    [
+     "La pieza de la semana",
+     [
+      "El tema desde las preguntas del cliente",
+      "Guion con gancho"
+     ]
+    ],
+    [
+     "De una pieza a muchas",
+     [
+      "Cortes para Shorts, reels y TikTok",
+      "Carruseles y documentos de LinkedIn",
+      "Un texto para cada red"
+     ]
+    ],
+    [
+     "Comentarios que abren conversación",
+     [
+      "Una palabra clave por pieza",
+      "Responder con permiso y sin agobiar"
+     ]
+    ],
+    [
+     "Calendario y medida",
+     [
+      "Un calendario que puedes mantener",
+      "Comparar cada pieza con lo que suelen darte las tuyas"
+     ]
+    ]
+   ],
+   "intro": "Publicar en todas las redes cada día agota a cualquiera. La alternativa es trabajar con un sistema: una pieza larga a la semana y, a partir de ella, todo lo demás. En este curso te enseño ese método, el mismo que aplico con este canal. Primero decidimos en qué redes estar según dónde está tu cliente, no según la moda. Luego eliges el tema de la semana a partir de las preguntas reales de tus clientes y escribes un guion con gancho. De esa pieza sacamos cortos para Shorts, reels y TikTok, carruseles, documentos para LinkedIn y un texto adaptado a cada red. Aprendes a convertir los comentarios en conversaciones, con una palabra clave por pieza y siempre con permiso. Y lo ordenamos todo en un calendario que puedas mantener, midiendo cada pieza frente a lo que suelen darte las tuyas. Es para ti si sabes que tienes que estar en redes y no sabes cómo sostenerlo. Saldrás con tu sistema semanal y tu calendario del mes.",
+   "bloque_nombre": "Visibilidad y captación",
+   "puntuacion": 15,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "youtube shorts",
+      "busquedas_mes": 18100,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "community manager",
+      "busquedas_mes": 8100,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "reels instagram",
+      "busquedas_mes": 1600,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "marca personal",
+      "busquedas_mes": 1300,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "carrusel instagram",
+      "busquedas_mes": 1300,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "curso community manager",
+      "busquedas_mes": 480,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "calendario de contenidos",
+      "busquedas_mes": 170,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "crear un canal de youtube con ia",
+     "url": "https://www.youtube.com/results?search_query=crear%20un%20canal%20de%20youtube%20con%20ia&hl=es&gl=ES",
+     "mediana_vistas_top20": 129174,
+     "video_mas_visto": {
+      "titulo": "Creo un canal de YouTube Automatizado MONETIZABLE con IA GRATIS 📈 Guía Completa FÁCIL",
+      "canal": "Alejavi Rivera",
+      "vistas": 817729,
+      "publicado": "hace 2 a"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "redes sociales",
+     "url": "https://www.skool.com/discovery?q=redes%20sociales&lang=spanish",
+     "grupos_en_espanol": 350,
+     "mediana_precio_mensual_usd_30_primeros": 29.0,
+     "mayores": [
+      {
+       "nombre": "Escuela de creadores",
+       "miembros": 9970,
+       "url": "https://www.skool.com/escuela-de-creadores"
+      },
+      {
+       "nombre": "FÓRMULA 100k  🚀",
+       "miembros": 1884,
+       "url": "https://www.skool.com/formula-100k"
+      },
+      {
+       "nombre": "MONETIZA ACADEMY",
+       "miembros": 1737,
+       "url": "https://www.skool.com/monetizaacademy"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 167
+  },
+  {
+   "bloque": "D",
+   "slug": "hay-demanda",
+   "titulo": "¿Hay demanda? Investiga tu mercado con datos",
+   "gancho": "¿HAY *DEMANDA*?",
+   "mascota": "lupa",
+   "promesa": "Antes de lanzar algo, mides cuánta gente lo busca, quién compite y qué dicen los clientes, con fuentes que puedes citar.",
+   "para_quien": "Quien va a tomar una decisión importante y no quiere hacerlo a ciegas.",
+   "estado": "proximamente",
+   "ola": 2,
+   "orden": 24,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [],
+   "material_base": [
+    "este mismo estudio de catálogo como ejemplo"
+   ],
+   "puntos": {
+    "demanda": 3,
+    "encaje": 4,
+    "experiencia": 5,
+    "pago": 3
+   },
+   "indice": [
+    [
+     "La pregunta",
+     [
+      "Introducción",
+      "De una idea a una pregunta que se puede responder"
+     ]
+    ],
+    [
+     "Demanda",
+     [
+      "Volúmenes de búsqueda y tendencias",
+      "Estadística oficial para dimensionar"
+     ]
+    ],
+    [
+     "Competencia",
+     [
+      "Quién compite de verdad: búsqueda, anuncios y oferta",
+      "Precios y mensajes"
+     ]
+    ],
+    [
+     "La voz del cliente",
+     [
+      "Reseñas, foros y preguntas reales",
+      "Sus palabras para tus textos"
+     ]
+    ],
+    [
+     "Decidir",
+     [
+      "El informe de una página, con certeza por dato"
+     ]
+    ]
+   ],
+   "intro": "Antes de lanzar un producto, abrir una línea nueva o invertir en una campaña, conviene saber si hay gente que lo quiere. Y eso se puede averiguar con datos, sin encuestas caras ni corazonadas. En este curso aprendes a investigar tu mercado como lo hemos hecho para preparar el aula de esta comunidad. Primero conviertes la idea en una pregunta concreta. Después mides la demanda con volúmenes de búsqueda y tendencias, y la dimensionas con estadística oficial. Analizas quién compite de verdad, qué ofrece, a qué precio y con qué mensajes. Y escuchas al cliente donde habla sin filtro, en reseñas, foros y preguntas reales, apuntando sus palabras para usarlas luego en tus textos. Todo termina en un informe de una página en el que cada dato lleva su fuente y su grado de certeza. Es para ti si vas a tomar una decisión importante y no quieres hacerlo a ciegas. Saldrás con tu método, tus fuentes y tu primer informe.",
+   "bloque_nombre": "Estrategia",
+   "puntuacion": 15,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "google trends",
+      "busquedas_mes": 49500,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "buyer persona",
+      "busquedas_mes": 4400,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "estudio de mercado",
+      "busquedas_mes": 1300,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "palabras clave",
+      "busquedas_mes": 1000,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "analisis de la competencia",
+      "busquedas_mes": 320,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "como hacer un estudio de mercado",
+      "busquedas_mes": 170,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": null,
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "estrategia",
+     "url": "https://www.skool.com/discovery?q=estrategia&lang=spanish",
+     "grupos_en_espanol": 1000,
+     "mediana_precio_mensual_usd_30_primeros": 37.0,
+     "mayores": [
+      {
+       "nombre": "MONETIZA ACADEMY",
+       "miembros": 1737,
+       "url": "https://www.skool.com/monetizaacademy"
+      },
+      {
+       "nombre": "LYFTA CLUB",
+       "miembros": 1419,
+       "url": "https://www.skool.com/lyftaclub"
+      },
+      {
+       "nombre": "1% CLUB",
+       "miembros": 790,
+       "url": "https://www.skool.com/conratrades"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 161
+  },
+  {
+   "bloque": "C",
+   "slug": "linkedin-sin-agobiar",
+   "titulo": "LinkedIn para vender sin parecer vendedor",
+   "gancho": "LINKEDIN SIN *AGOBIAR*",
+   "mascota": "dos ojos con luz",
+   "promesa": "Conviertes tu perfil y tus publicaciones de LinkedIn en conversaciones con clientes, a mano y sin automatismos prohibidos.",
+   "para_quien": "Autónomos, consultores y quien vende a otras empresas.",
+   "estado": "proximamente",
+   "ola": 3,
+   "orden": 25,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [],
+   "material_base": [],
+   "puntos": {
+    "demanda": 2,
+    "encaje": 3,
+    "experiencia": 3,
+    "pago": 3
+   },
+   "indice": [
+    [
+     "El perfil",
+     [
+      "Introducción",
+      "El perfil como página de aterrizaje",
+      "Titular y extracto que dicen a quién ayudas"
+     ]
+    ],
+    [
+     "Publicar",
+     [
+      "Publicaciones que hacen pensar, no que informan",
+      "Documentos y carruseles"
+     ]
+    ],
+    [
+     "Conversar",
+     [
+      "Comentarios con valor",
+      "Invitaciones personales",
+      "Del mensaje a la llamada, con permiso"
+     ]
+    ],
+    [
+     "Ritmo y medida",
+     [
+      "Una rutina de veinte minutos al día",
+      "Qué medir: conversaciones, no «me gusta»"
+     ]
+    ]
+   ],
+   "intro": "Si vendes servicios o trabajas con otras empresas, LinkedIn es el sitio donde están tus clientes. Pero casi todo el mundo lo usa mal: publica noticias que nadie comenta o manda mensajes de venta a desconocidos. En este curso aprendes a usarlo para tener conversaciones de verdad. Convertimos tu perfil en una página que dice en segundos a quién ayudas y cómo. Escribes publicaciones en primera persona que hacen pensar en vez de informar, y aprendes a comentar con criterio en las publicaciones de tus posibles clientes. Después vemos cómo invitar a contactos con un mensaje personal y cómo pasar de un intercambio a una llamada, siempre con permiso y sin herramientas que LinkedIn prohíbe. Todo cabe en una rutina de veinte minutos al día. Es para ti si eres autónomo, consultor o vendes a empresas. Saldrás con tu perfil rehecho, tu rutina diaria y tus primeras conversaciones abiertas.",
+   "bloque_nombre": "Visibilidad y captación",
+   "puntuacion": 11,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "linkedin ads",
+      "busquedas_mes": 1600,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "curso linkedin",
+      "busquedas_mes": 390,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "linkedin para empresas",
+      "busquedas_mes": 260,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "perfil de linkedin",
+      "busquedas_mes": 260,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "social selling",
+      "busquedas_mes": 170,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": {
+     "busqueda": "marca personal linkedin",
+     "url": "https://www.youtube.com/results?search_query=marca%20personal%20linkedin&hl=es&gl=ES",
+     "mediana_vistas_top20": 14588,
+     "video_mas_visto": {
+      "titulo": "Cómo Crear una Marca Personal en 2027 | Guía Completa (Más Seguidores y Ventas en Redes Sociales)",
+      "canal": "Jordi Segués | Negocios · Desarrollo Personal",
+      "vistas": 652287,
+      "publicado": "hace 1 a"
+     },
+     "certeza": "HECHO (cifras visibles en la página) · INFERENCIA (que reflejen demanda en España: la lista mezcla vídeos de otros países y en inglés)",
+     "fuente": "YouTube, página pública de resultados (hl=es, gl=ES), leída el 29-10-2026; mediana de visualizaciones de los ~20 primeros vídeos"
+    },
+    "youtube_extra": null,
+    "skool_espanol": {
+     "busqueda": "marca personal",
+     "url": "https://www.skool.com/discovery?q=marca%20personal&lang=spanish",
+     "grupos_en_espanol": 656,
+     "mediana_precio_mensual_usd_30_primeros": 40.0,
+     "mayores": [
+      {
+       "nombre": "INFOCUS ACADEMY",
+       "miembros": 2042,
+       "url": "https://www.skool.com/infocus-academy"
+      },
+      {
+       "nombre": "Atajo al Éxito",
+       "miembros": 1493,
+       "url": "https://www.skool.com/atajoalexito"
+      },
+      {
+       "nombre": "LYFTA CLUB",
+       "miembros": 1419,
+       "url": "https://www.skool.com/lyftaclub"
+      }
+     ],
+     "certeza": "HECHO (lo que muestra Skool) · INFERENCIA (precio = el que enseña la tarjeta; en grupos freemium puede ser el del plan de pago)",
+     "fuente": "Skool Discovery, búsqueda pública con filtro de idioma español (lang=spanish), leída el 29-10-2026"
+    }
+   },
+   "intro_palabras": 149
+  },
+  {
+   "bloque": "D",
+   "slug": "marketing-sin-multas",
+   "titulo": "Marketing sin multas",
+   "gancho": "MARKETING SIN *MULTAS*",
+   "mascota": "lupa",
+   "promesa": "Sabes qué exige la ley a tus correos, cookies, anuncios, reseñas y contenidos con IA, y cuándo llamar a tu asesoría.",
+   "para_quien": "Quien hace marketing por su cuenta y quiere evitar sustos legales.",
+   "estado": "proximamente",
+   "ola": 3,
+   "orden": 26,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [
+    8,
+    10
+   ],
+   "material_base": [],
+   "condicion": "Cada lección pasa por la revisión de los agentes legales y, antes de abrir, por la asesoría de Marc.",
+   "puntos": {
+    "demanda": 3,
+    "encaje": 4,
+    "experiencia": 3,
+    "pago": 2
+   },
+   "indice": [
+    [
+     "Lo básico",
+     [
+      "Introducción",
+      "Las normas que te afectan: protección de datos, comercio electrónico y consumo",
+      "Lo que este curso no sustituye"
+     ]
+    ],
+    [
+     "Datos y correos",
+     [
+      "Base legal y consentimiento",
+      "Comunicaciones comerciales y bajas"
+     ]
+    ],
+    [
+     "Tu web",
+     [
+      "Cookies y aviso legal",
+      "Accesibilidad"
+     ]
+    ],
+    [
+     "Publicidad",
+     [
+      "Precios, rebajas y precio anterior",
+      "Reseñas, testimonios y colaboraciones con creadores"
+     ]
+    ],
+    [
+     "IA",
+     [
+      "Cuándo etiquetar contenido hecho con IA",
+      "Voces y caras: consentimiento"
+     ]
+    ]
+   ],
+   "intro": "Una campaña puede salir muy bien y aun así meterte en un lío: un correo enviado sin permiso, unas cookies que se cargan antes de aceptar, un precio tachado que no cumple o un vídeo con IA sin avisar. En este curso repasamos lo que la ley española y europea exige a lo que haces cada día en marketing, explicado en llano. Vemos cuándo puedes escribir a alguien y cómo guardar la prueba de su permiso, qué tiene que llevar tu web, qué reglas hay para precios, rebajas, reseñas y colaboraciones con creadores, y qué cambia con la normativa europea de inteligencia artificial cuando usas avatares, voces o imágenes generadas. No soy abogado y este curso no sustituye a uno: te ayuda a detectar los riesgos a tiempo y a saber qué preguntar a tu asesoría. Es para ti si haces marketing por tu cuenta y quieres trabajar tranquilo. Saldrás con tu lista de comprobación legal y tus textos básicos revisados.",
+   "bloque_nombre": "Estrategia",
+   "puntuacion": 12,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "lssi",
+      "busquedas_mes": 5400,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "ley de inteligencia artificial",
+      "busquedas_mes": 1300,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "proteccion de datos empresa",
+      "busquedas_mes": 1000,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "politica de cookies",
+      "busquedas_mes": 390,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "aviso legal web",
+      "busquedas_mes": 90,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": null,
+    "youtube_extra": null,
+    "skool_espanol": null
+   },
+   "intro_palabras": 161
+  },
+  {
+   "bloque": "E",
+   "slug": "monta-tu-escuela",
+   "titulo": "Monta tu escuela: de un vídeo semanal a una comunidad",
+   "gancho": "TU SABER, *TU ESCUELA*",
+   "mascota": "dos ojos con luz",
+   "promesa": "Conviertes lo que sabes en una serie semanal, un boletín y una comunidad, paso a paso y midiendo cada fase.",
+   "para_quien": "Expertos y profesionales que quieren convertir lo que saben en audiencia.",
+   "estado": "proximamente",
+   "ola": 3,
+   "orden": 27,
+   "acceso": "Privado + plan de pago",
+   "capitulos_youtube": [],
+   "material_base": [
+    "el propio embudo de Brandooers"
+   ],
+   "condicion": "Se abre cuando cada fase del embudo propio tenga resultados medidos (regla «solo lo probado»).",
+   "puntos": {
+    "demanda": 4,
+    "encaje": 3,
+    "experiencia": 2,
+    "pago": 3
+   },
+   "indice": [
+    [
+     "El embudo",
+     [
+      "Introducción",
+      "Lo corto, lo largo y el correo",
+      "Qué va gratis y qué de pago"
+     ]
+    ],
+    [
+     "La serie",
+     [
+      "El capítulo semanal, con avatar o con cámara",
+      "Una página por capítulo"
+     ]
+    ],
+    [
+     "Audio y boletín",
+     [
+      "El pódcast sin grabar de nuevo",
+      "La carta semanal"
+     ]
+    ],
+    [
+     "La comunidad",
+     [
+      "Aula y muro",
+      "Niveles, directos y permanencia"
+     ]
+    ],
+    [
+     "Medir",
+     [
+      "Cada fase con su cifra"
+     ]
+    ]
+   ],
+   "intro": "Si sabes hacer algo bien, puedes enseñarlo, y enseñar es una de las mejores formas de que te conozcan. En este curso te cuento paso a paso cómo estoy montando esta escuela: un capítulo semanal en vídeo, una página por capítulo, un pódcast sacado de los mismos vídeos, un boletín por correo y esta comunidad. Vemos el embudo completo, qué va gratis y qué de pago, cómo producir la serie con avatar o con cámara, cómo sacar el audio sin grabar de nuevo y cómo montar el aula, el muro, los niveles y los directos para que la gente se quede. Abriré este curso cuando tenga resultados medidos de cada fase, porque solo enseño lo que he comprobado. Es para ti si eres experto en algo y quieres convertirlo en audiencia. Saldrás con tu embudo dibujado, tu serie planificada y tu comunidad lista para abrir.",
+   "bloque_nombre": "Innovación",
+   "puntuacion": 12,
+   "demanda": {
+    "busquedas_google_es": [
+     {
+      "keyword": "podcast",
+      "busquedas_mes": 74000,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "substack",
+      "busquedas_mes": 40500,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "skool",
+      "busquedas_mes": 27100,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "como hacer un podcast",
+      "busquedas_mes": 590,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "vender cursos online",
+      "busquedas_mes": 90,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     },
+     {
+      "keyword": "crear curso online",
+      "busquedas_mes": 70,
+      "certeza": "HECHO",
+      "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+     }
+    ],
+    "youtube": null,
+    "youtube_extra": null,
+    "skool_espanol": null
+   },
+   "intro_palabras": 145
+  }
+ ],
+ "decision_marc": [
+  {
+   "tema": "Tu tienda con Odoo (montar y llevar una tienda online sobre Odoo)",
+   "demanda": [
+    {
+     "keyword": "odoo",
+     "busquedas_mes": 49500,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "odoo erp",
+     "busquedas_mes": 1600,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "odoo tutorial",
+     "busquedas_mes": 140,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "curso odoo",
+     "busquedas_mes": 110,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "odoo ecommerce",
+     "busquedas_mes": 70,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    }
+   ],
+   "por_que_fuera": "Marc trabaja dentro de Odoo: no puede vender servicios ni hablar como Odoo. Solo cabría como material de aprendizaje con la oferta oficial y con el visto bueno previo de Odoo."
+  },
+  {
+   "tema": "Verifactu y factura electrónica para autónomos y pymes",
+   "demanda": [
+    {
+     "keyword": "verifactu",
+     "busquedas_mes": 60500,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "facturacion electronica",
+     "busquedas_mes": 9900,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    }
+   ],
+   "por_que_fuera": "Mucha demanda, pero es terreno de software de gestión y facturación (donde está Odoo) y fiscal; riesgo de parecer consultoría y de error normativo."
+  },
+  {
+   "tema": "Cómo elegir un ERP o un CRM para tu pyme",
+   "demanda": [
+    {
+     "keyword": "erp",
+     "busquedas_mes": 18100,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "que es un erp",
+     "busquedas_mes": 4400,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "crm",
+     "busquedas_mes": 27100,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "que es un crm",
+     "busquedas_mes": 3600,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "erp para pymes",
+     "busquedas_mes": 210,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "software de gestion",
+     "busquedas_mes": 590,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    }
+   ],
+   "por_que_fuera": "Cualquier comparativa pone a Odoo frente a sus competidores; choca con la norma de no recomendar herramientas que compitan con la oferta oficial de Odoo."
+  },
+  {
+   "tema": "Crea tu web o tu landing con IA",
+   "demanda": [
+    {
+     "keyword": "crear pagina web",
+     "busquedas_mes": 3600,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "diseño web",
+     "busquedas_mes": 3600,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "landing page",
+     "busquedas_mes": 5400,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "crear web con ia",
+     "busquedas_mes": 390,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "diseño web con ia",
+     "busquedas_mes": 90,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    }
+   ],
+   "por_que_fuera": "Hacer webs es el negocio de otra marca de Marc, que no aparece en Brandooers. «Crea sin programar» se limita a herramientas internas para no pisarlo."
+  }
+ ],
+ "fuera_por_norma": [
+  {
+   "tema": "Cursos de plataforma: Shopify, WooCommerce, PrestaShop",
+   "demanda": [
+    {
+     "keyword": "shopify",
+     "busquedas_mes": 135000,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "woocommerce",
+     "busquedas_mes": 5400,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "prestashop",
+     "busquedas_mes": 6600,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    }
+   ],
+   "motivo": "Compiten con la oferta de comercio electrónico de Odoo. La ruta «Tu tienda vende más» es válida para cualquier plataforma sin enseñar ninguna."
+  },
+  {
+   "tema": "Dropshipping",
+   "demanda": [
+    {
+     "keyword": "dropshipping",
+     "busquedas_mes": 22200,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    }
+   ],
+   "motivo": "No es experiencia nuestra (no se enseña lo no probado) y en Skool en español está saturado."
+  },
+  {
+   "tema": "FUNDAE y formación bonificada",
+   "demanda": [
+    {
+     "keyword": "fundae",
+     "busquedas_mes": 49500,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "curso fundae",
+     "busquedas_mes": 5400,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    },
+    {
+     "keyword": "formacion bonificada",
+     "busquedas_mes": 480,
+     "certeza": "HECHO",
+     "fuente": "DataForSEO · Google Ads search_volume, España (2724), español, leído el 29-10-2026; media mensual de 12 meses"
+    }
+   ],
+   "motivo": "Es el escalón 3 (SkillUp para empresas), no la comunidad de pago para personas."
+  }
+ ],
+ "skool_proximamente": {
+  "hechos": [
+   {
+    "dato": "Cinco formas de acceso por curso: Abierto, Por nivel, Compra suelta, Por días desde el alta y Privado. Con Privado aparece el acceso por plan (Tier) y se combinan «nivel O plan», «compra O plan» y «días O plan».",
+    "fuente": "https://help.skool.com/article/23-how-to-set-permissions-for-a-course",
+    "certeza": "HECHO"
+   },
+   {
+    "dato": "Un curso por nivel sigue apareciendo en la lista del aula de los miembros que aún no lo tienen: tarjeta con la portada atenuada en gris, candado y el aviso «Course unlocks at Level 2»; el título y la descripción se leen debajo.",
+    "fuente": "https://help.skool.com/article/145-how-does-level-locked-courses-work (texto y captura)",
+    "certeza": "HECHO"
+   },
+   {
+    "dato": "Un curso sin acceso (privado o de pago) se ve igual, con el aviso «You don't have access to this course».",
+    "fuente": "https://help.skool.com/article/101-how-to-unlock-a-locked-course-or-an-event (captura)",
+    "certeza": "HECHO"
+   },
+   {
+    "dato": "Los cursos se publican por defecto; si se pasan a borrador, desaparecen para los miembros. Un borrador NO sirve para enseñar un curso con candado.",
+    "fuente": "https://help.skool.com/article/143-how-to-publish-a-course",
+    "certeza": "HECHO"
+   },
+   {
+    "dato": "Cada página (lección) tiene su interruptor de publicada: solo se ve cuando está publicada. Las páginas se agrupan en carpetas (módulos).",
+    "fuente": "https://help.skool.com/article/166-what-is-classroom",
+    "certeza": "HECHO"
+   },
+   {
+    "dato": "Goteo por página: una lección se abre X días después del alta; el miembro ve el título y el aviso «Module unlocks in 14 days».",
+    "fuente": "https://help.skool.com/article/53-how-to-drip-the-content (texto y captura)",
+    "certeza": "HECHO"
+   },
+   {
+    "dato": "Tamaño de portada de curso: la ayuda oficial no lo da. Una documentación no oficial indica 1460 × 752 px en JPG; Skool convierte PNG y WebP a JPG, rechaza SVG y acepta hasta unos 10 MB.",
+    "fuente": "https://skool-api.cristiantala.com/docs/files/",
+    "certeza": "INFERENCIA (fuente no oficial, medida empírica)"
+   },
+   {
+    "dato": "Texto del aviso de candado con la interfaz en español y límite de caracteres de la descripción del curso.",
+    "fuente": "—",
+    "certeza": "SIN DATOS"
+   },
+   {
+    "dato": "Cómo ve un miembro del plan gratis un curso Privado sin plan asignado dentro de un grupo freemium.",
+    "fuente": "—",
+    "certeza": "SIN DATOS (se comprueba con una cuenta de prueba antes de abrir)"
+   }
+  ],
+  "recomendacion": [
+   "Curso «Empieza aquí» el primero del aula, en Abierto. Lleva la introducción general (el «doc de introducción» con portada llamativa) y un módulo «Lo que viene» con una lección por bloque: de qué irá cada curso y su índice completo. Así todo el mundo lee lo que viene aunque el curso tenga candado.",
+   "Cada curso «próximamente»: se crea publicado (nunca en borrador), con su portada, su título y una descripción que empieza por «Próximamente ·» y sigue con la promesa. Acceso: Privado, sin plan y sin nadie asignado. Sale con candado para todos y solo lo ven por dentro los administradores.",
+   "Dentro del curso «próximamente» se van montando las lecciones como páginas no publicadas. La primera, «Introducción», con el texto de este catálogo.",
+   "El día que se abre: se publican las páginas y se cambia el acceso. Si es de pago, Privado + plan de pago (y, si se quiere regalar una muestra, «nivel O plan»). Si es gratis, Abierto. Se quita «Próximamente ·» de la descripción y se anuncia en el muro.",
+   "No usar Por nivel 9 ni Por días para simular «próximamente»: el aviso diría «se abre en el nivel 9» o «en N días», que no es verdad. No usar Borrador: esconde el curso.",
+   "Alternativa si Marc quiere que cada curso se pueda abrir para leer su propia introducción: curso en Abierto con solo «Introducción» publicada y el resto de páginas sin publicar, y «Próximamente ·» en la descripción. No lleva candado, y cuando pase a Privado + plan de pago los del plan gratis dejarán de ver esa introducción, por eso también está en «Empieza aquí».",
+   "Antes de abrir: en el grupo privado, entrar con una cuenta de prueba del plan gratis y otra del plan de pago, y hacer captura de cómo se ve cada tipo de curso."
+  ],
+  "portada": [
+   "Diseñar a 1460 × 752 px (INFERENCIA, ver arriba) y exportar en JPG de calidad 85-90 % y menos de 10 MB.",
+   "Con candado, Skool tapa la portada con gris y pone el candado y el aviso en el centro: la portada casi no se lee. Lo que vende un curso cerrado es el título y la descripción; la portada luce cuando se abre.",
+   "Mismo sistema que las miniaturas de la serie (serie_miniaturas/miniatura_capitulo.py): gancho en mayúsculas, como mucho cinco palabras, una palabra resaltada, mascota de los ojos a la derecha y nunca la cara de Marc. Color de acento por bloque para que el aula se lea por bloques."
+  ]
+ }
+}
